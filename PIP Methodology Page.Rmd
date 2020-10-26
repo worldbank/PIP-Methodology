@@ -22,7 +22,21 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <span style="color:red">Daniel</span>
 
-Introduction to page and purpose of page.
+This page explains the methods used to derive the global, region, and country level poverty counts. The page is divided into six sections:
+
+
+*1. Acquiring household survey data:*
+
+*2. Constructing welfare aggregates:*
+
+*3. Generating survey estimates:*
+
+*4. Calculating poverty and inequality:*
+
+*5. Generating global and regional estimates:*
+
+*6. Refernences:*
+
 
 Please cite this page as: 
 
@@ -30,13 +44,15 @@ World Bank. 2020. "Poverty and Inequality Platform Methodology." March 2020 vers
 
 For old versions of this page, please see [link to follow].
 
-# Household survey data
+# Acquiring household survey data
 <span style="color:red">Daniel</span>
 
 ## Selection criteria and source of data
 <span style="color:red">Daniel</span>
 
-Mostly household surveys, explain very briefly what a household survey is, that NSOs conduct them. EU-SILC and LIS for some countries, a subset of these based on admin data. Link to more country information (country methodology pages).
+For developing countries, mostly 0fficial surveys used by the government for monitoring poverty. Occasionally surveys are dropped due to quality concerns with the survey design, welfare aggregate or auxilliary data. Decision made by GPWG, reason summarized in What's New. 
+
+The data mostly come from household surveys, explain very briefly what a household survey is, that NSOs conduct them. EU-SILC and LIS for some countries, a subset of these based on admin data. Link to more country information (country methodology pages).
 
 ## Representativeness
 <span style="color:red">Daniel</span>
@@ -53,7 +69,7 @@ Mention countries exclusevely relying on binned data.
 
 Mostly receive data through country engagement, poverty economist, processed and harmonized through GMD.
 
-# Welfare aggregate
+# Constructing welfare aggregates
 <span style="color:red">Daniel</span>
 
 
@@ -65,7 +81,7 @@ Explain briefly each, advantages and disadvantages of each (PSPR 2018 annex has 
 ## Within-survey spatial/temporal delfation
 <span style="color:red">Samuel</span>
 
-Explain that some countries use spatial/temporal deflation but not all.Explain what spatial temporal deflation means. Mention India/China/Indonesia. Explain decimal years and that for EU-SILC/LIS, the reported year is the year before the survey year.
+Explain that some countries use spatial/temporal deflation but not all. Explain what spatial temporal deflation means. Mention India/China/Indonesia. Explain decimal years and that for EU-SILC/LIS, the reported year is the year before the survey year.
 
 ## Questionnaire design
 <span style="color:red">Daniel</span>
@@ -75,7 +91,8 @@ Use the India MMRP/URP example (PSPR 2018 has material).
 
 ## Imputed rent
 <span style="color:red">Andres</span>
-What it means to include it, when it is included. Use the China/LAC examples to show the relevance.
+
+What it means to include it, when it is included. Use China/LAC examples to show the relevance.
 
 ## Treatment of binned data
 <span style="color:red">Christoph and Samuel</span>
@@ -98,7 +115,7 @@ Explain the comparaiblity database and link to it
 ## Consumer Price Indices (CPIs)
 <span style="color:red">Samuel</span>
 
-Short paragraph summary of why CPIs are needed, which CPIs we use and link to the CPI paper
+Short paragraph summary of why CPIs are needed, which CPIs we use, and link to the CPI paper
 
 ## Purchasing Power Parities (PPPs)
 <span style="color:red">Samuel</span>
@@ -115,37 +132,38 @@ Explain in one paragraph or so how the international poverty line was derived an
 
 Explain how higher lines are derived and link to Jolliffe & Prydz paper
 
-# Measures of poverty and inequality
+# Calculating poverty and inequality
 <span style="color:red">Daniel</span>
 
 ## FGT measures
-<span style="color:red">Aleksander</span>
+<span style="color:red">Aleksander and Samuel</span>
+
 In this subsectoin and the one below, let's write the name of each measure in Povcalnet and provide formulas for how they are derived. The FGT formulas should be easily available online
 
 ## Inequality measures
-<span style="color:red">Aleksander</span>.
-Can we get to the source coded find out how the various other measures are calculated and list it here?
+<span style="color:red">Aleksander and Samuel</span>.
+
+Can we get to the source code find out how the various other measures are calculated and list it here?
 
 # Generating global and regional estimates
 
 ## National accounts data
 <span style="color:red">Nishant</span>
 
-Explain in a short paragraph the national accounts data used and link to national accounts paper
+Explain in a short paragraph the national accounts data used, countries where we use specific sources, and link to national accounts paper.
 
 ## Extrapolations
 <span style="color:red">Nishant</span>
+
 Explain how/why we extrapolate, provide the formula, discuss the no-use of a passthrough rate (perhaps refer to relevant literature on this) and link to national accounts paper. 
+
+
+Explain the India exception.
 
 ## Interpolations
 <span style="color:red">Nishant</span>
+
 Explain how/why we interpolate and provide the two different interpolation formulas (in the national accounts paper). 
-
-
-## India exception
-<span style="color:red">Nishant</span>
-
-Explain the India exception 
 
 ## Choosing between consumption and income estimates
 <span style="color:red">Daniel</span>
