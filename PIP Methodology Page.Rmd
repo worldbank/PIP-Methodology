@@ -176,7 +176,7 @@ Explain the regions used and where the set of 218 countries comes from.
 ## Population
 <span style="color:red">Marta</span>
 
-Explain the population data that we use.
+Population data are taken from the World Bank’s [World Development Indicators](http://datatopics.worldbank.org/world-development-indicators/). The regional and global population may differ from the aggregates given in the World Development Indicators, because PIP uses the classification of economies based on whether they are IBRD eligible or recently graduated (see Regions and universe of countries below). The regional total population only includes economies that are IBRD eligible or recently graduated. The remaining economies are included in the group "Other high income" (see [World Bank, 2016](https://openknowledge.worldbank.org/bitstream/handle/10986/25078/9781464809583.pdf), p. 49 for a list of economies). Furthermore, the regional total in PIP also includes economies without a household survey or other missing data. Hence, the sum of the populations of the economies that are included in PIP is less than the regional total.
 
 ## Missing countries
 <span style="color:red">Marta</span>
