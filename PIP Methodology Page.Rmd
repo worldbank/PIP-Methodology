@@ -76,7 +76,8 @@ Mostly receive data through country engagement, poverty economist, processed and
 ## Income or consumption
 <span style="color:red">Marta</span>
 
-Explain briefly each, advantages and disadvantages of each (PSPR 2018 annex has material on this). Explain how zero/negative incomes are treated.
+The welfare measure used for poverty measurement is based on either income or consumption household survey data. The differences between income and consumption matter for comparing trends and levels of poverty. Countries typically choose the concept that can be more accurately measured and that is more relevant to the context, while balancing concerns about respondent burden. On the one hand, consumption measures of poverty require a wide range of questions and are thus more time-consuming. Income measures, on the other hand, are difficult to obtain when a large fraction of the population works in the informal sector or is self-employed, which is frequently the case in poorer economies. Also, when households produce their own food with limited market interactions, it is harder to measure income than consumption. 
+Both approaches to measuring poverty have advantages and disadvantages. The consumption approach is arguably more directly connected to economic welfare. Income measures of poverty also suffer from the disadvantage that incomes might be very low—even negative—in a given period, whereas consumption is smoothed to safeguard against such shocks.  Consumption-based measures of poverty, conversely, are often more time intensive and require detailed price data and often post-fieldwork adjustments. Also, the design of consumption questionnaires varies widely and, as shown by numerous experiments, can have significant effects on final poverty estimates ([Beegle et al. 2012](https://elibrary.worldbank.org/doi/pdf/10.1596/1813-9450-6372); [Deaton 2001](https://academic.oup.com/wbro/article/16/2/125/1681034); [Jolliffe 2001]()). Income measures often rely on no more than a handful of questions and can, at times, be verified from other sources. Moreover, given that incomes can be very low or negative, poverty rates are typically higher when income is used rather than consumption. For a given poverty rate, poor households also tend to be further below the poverty line when income is used, as explained by the earlier point about very low incomes: although it is plausible for households to have zero income in a given period, subsistence requires a minimum level of consumption, which is strictly above zero (World Bank 2018). For this reason, PIP’s current practice is to drop observations with negative welfare, while zeros are included.
 
 ## Within-survey spatial/temporal delfation
 <span style="color:red">Samuel</span>
@@ -189,7 +190,7 @@ Population data are taken from the World Bank’s [World Development Indicators]
 ## Missing countries
 <span style="color:red">Marta</span>
 
-Explain how we treat countries with missing data and derive the regional/global headcounts
+The current method assigns the population-weighted average to missing countries. Explain how we treat countries with missing data and derive the regional/global headcounts
 
 ## Coverage rule
 <span style="color:red">Marta</span>
