@@ -5,8 +5,10 @@ output:
     number_sections: yes
   word_document: default
   pdf_document: default
+bibliography: references.bib
 ---
 
+```{=html}
 <style type="text/css">
 h1 { /* Header 1 */
   font-size: 28px;
@@ -15,15 +17,15 @@ h2 { /* Header 2 */
     font-size: 22px;
 }
 </style>
-
+```
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-<span style="color:red">Daniel</span>
+[Daniel]{style="color:red"}
 
-This page explains the methods used to derive the global, region, and country level poverty counts. The page is divided into six sections:
-
+This page explains the methods used to derive the global, region, and country
+level poverty counts. The page is divided into six sections:
 
 *1. Acquiring household survey data:*
 
@@ -37,156 +39,277 @@ This page explains the methods used to derive the global, region, and country le
 
 *6. Refernences:*
 
+Please cite this page as:
 
-Please cite this page as: 
-
-World Bank. 2020. "Poverty and Inequality Platform Methodology." March 2020 version. Available at [link to follow].
+World Bank. 2020. "Poverty and Inequality Platform Methodology." March 2020
+version. Available at [link to follow].
 
 For old versions of this page, please see [link to follow].
 
 # Acquiring household survey data
-<span style="color:red">Daniel</span>
+
+[Daniel]{style="color:red"}
 
 ## Selection criteria and source of data
-<span style="color:red">Daniel</span>
 
-For developing countries, mostly 0fficial surveys used by the government for monitoring poverty. Occasionally surveys are dropped due to quality concerns with the survey design, welfare aggregate or auxilliary data. Decision made by GPWG, reason summarized in What's New. 
+[Daniel]{style="color:red"}
 
-The data mostly come from household surveys, explain very briefly what a household survey is, that NSOs conduct them. EU-SILC and LIS for some countries, a subset of these based on admin data. Link to more country information (country methodology pages).
+For developing countries, mostly 0fficial surveys used by the government for
+monitoring poverty. Occasionally surveys are dropped due to quality concerns
+with the survey design, welfare aggregate or auxilliary data. Decision made by
+GPWG, reason summarized in What's New.
+
+The data mostly come from household surveys, explain very briefly what a
+household survey is, that NSOs conduct them. EU-SILC and LIS for some countries,
+a subset of these based on admin data. Link to more country information (country
+methodology pages).
 
 ## Representativeness
-<span style="color:red">Daniel</span>
 
-Discuss within-country spatial coverage. Mention that non-national surveys are also available but not used for regional/global numbers (Argentina exception). 
-Temporal coverage; often covers one year, 
-## Binned vs. micro data
-<span style="color:red">Daniel</span>
+[Daniel]{style="color:red"}
 
-Mention countries exclusevely relying on binned data. 
+Discuss within-country spatial coverage. Mention that non-national surveys are
+also available but not used for regional/global numbers (Argentina exception).
+Temporal coverage; often covers one year, \#\# Binned vs. micro data
+[Daniel]{style="color:red"}
+
+Mention countries exclusevely relying on binned data.
 
 ## How data are obtained
-<span style="color:red">Daniel</span>
 
-Mostly receive data through country engagement, poverty economist, processed and harmonized through GMD.
+[Daniel]{style="color:red"}
+
+Mostly receive data through country engagement, poverty economist, processed and
+harmonized through GMD.
 
 # Constructing welfare aggregates
-<span style="color:red">Daniel</span>
 
+[Daniel]{style="color:red"}
 
 ## Income or consumption
-<span style="color:red">Marta</span>
 
-Explain briefly each, advantages and disadvantages of each (PSPR 2018 annex has material on this). Explain how zero/negative incomes are treated.
+[Marta]{style="color:red"}
+
+Explain briefly each, advantages and disadvantages of each (PSPR 2018 annex has
+material on this). Explain how zero/negative incomes are treated.
 
 ## Within-survey spatial/temporal delfation
-<span style="color:red">Samuel</span>
 
-Explain that some countries use spatial/temporal deflation but not all. Explain what spatial temporal deflation means. Mention India/China/Indonesia. Explain decimal years and that for EU-SILC/LIS, the reported year is the year before the survey year.
+[Samuel]{style="color:red"}
+
+Explain that some countries use spatial/temporal deflation but not all. Explain
+what spatial temporal deflation means. Mention India/China/Indonesia. Explain
+decimal years and that for EU-SILC/LIS, the reported year is the year before the
+survey year.
 
 ## Questionnaire design
-<span style="color:red">Daniel</span>
 
-Discuss the relevance of questionnaire design for the consumption aggregate (perhaps refer to some of the papers on the topic).
-Use the India MMRP/URP example (PSPR 2018 has material).
+[Daniel]{style="color:red"}
+
+Discuss the relevance of questionnaire design for the consumption aggregate
+(perhaps refer to some of the papers on the topic). Use the India MMRP/URP
+example (PSPR 2018 has material).
 
 ## Imputed rent
-<span style="color:red">Andres</span>
 
-What it means to include it, when it is included. Use China/LAC examples to show the relevance.
+[Andres]{style="color:red"}
+
+What it means to include it, when it is included. Use China/LAC examples to show
+the relevance.
 
 ## Treatment of binned data
-<span style="color:red">Christoph and Samuel</span>
 
-Let's put down the actual formulas we use here to convert binned data into distributions.
+[Christoph and Samuel]{style="color:red"}
+
+Let's put down the actual formulas we use here to convert binned data into
+distributions.
 
 ## Equivalence scale
-<span style="color:red">Daniel</span>
 
-Mention per capita assumptions, drawbacks of it, and why we are still assuming it.
+[Daniel]{style="color:red"}
+
+Mention per capita assumptions, drawbacks of it, and why we are still assuming
+it.
 
 ## Comparability database
-<span style="color:red">Andres</span>
 
-Explain the comparaiblity database and link to it
+In September 2019, the PovcalNet team and the Poverty GP put together the
+[Comparability Over Time
+](https://datacatalog.worldbank.org/dataset/comparability-over-time-country-level-international-poverty-measures)
+dataset, which provides metadata on the comparability of poverty estimates from
+[PovcalNet](http://iresearch.worldbank.org/PovcalNet "Opens in a new window")
+within countries over time. The complete documentation of this dataset is
+available in Atamanov et al [-@atamanov2019] (Section 4). The following excerpt
+from this document clearly explains the motivation of this dataset:
+
+> As countries frequently improve household surveys and measurement methodology,
+> strict comparability of poverty estimates over time is often limited. Within a
+> country, we assume comparability of poverty estimates over time unless there
+> is a known change to survey methodology, measurement or data structure. Thus,
+> the assessment of comparability is country-dependent and relies on the
+> accumulation of knowledge from past and current Bank staff in the countries,
+> as well as close dialogue with national data producers with knowledge of
+> survey design and methodology
+
+### Application {.unnumbered}
+
+The comparability dataset is practically useful in any estimation that compares
+welfare aggregates from household surveys over time. In the blog [*Apples to
+apples --- PovcalNet introduces a new comparability
+indicator*](https://blogs.worldbank.org/opendata/apples-apples-povcalnet-introduces-new-comparability-indicator)*,*
+the authors present two examples on how to merge the comparability dataset with
+the [PovcalNet](http://iresearch.worldbank.org/PovcalNet/home.aspx) estimates.
+Both charts in the blog could be replicated in R and/or Stata by running the
+scripts available in the
+[worldbank/Global\_Poverty\_Blogs](https://github.com/worldbank/Global_Poverty_Blogs/tree/master/bg_povcalnet_comparability)
+repository.
+
+### Access the data {.unnumbered}
+
+The dataset could be accessed in different ways. The official version is
+available in the [Development Data
+Hub](https://datacatalog.worldbank.org/dataset/comparability-over-time-country-level-international-poverty-measures)
+of the World Bank. However, it is possible to access it directly from R, Stata,
+or Python by calling this file,
+"[https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/506801/povcalnet\_comparability.csv".](https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/506801/povcalnet_comparability.csv".)
+
+#### R {.unnumbered}
+
+```{r, eval = FALSE}
+link <- "https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/506801/povcalnet_comparability.csv"
+df   <- readr::read_csv(link)
+```
+
+#### Stata {.unnumbered}
+
+```{stata, eval = FALSE}
+local dh "https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/506801/povcalnet_comparability.csv"
+import delimited using "`dh'", clear
+```
+
+#### Python {.unnumbered}
+
+```{python, eval = FALSE}
+import pandas as pd
+link = "https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/506801/povcalnet_comparability.csv"
+df   = pd.read_csv(path)
+```
+
+Each observation of the comparability dataset represents a survey point which is
+the combination of ISO3 country code (`countrycode`), `year`, survey acronym
+(`survname`), Welfare type (i.e., income or consumption) (`datatype`), and
+survey coverage (`coveragetype`). Variable `comparabiliy` specified the
+comparability over time with the following logic. The oldest comparable series
+in each country starts with the value zero (0) in the `comparability` variable.
+When comparability is broken, the value changes to one (1) for the year of the
+break and it goes on until the comparability is broken again in a subsequent
+year. The process repeats until the most recent surveys point available. Thus,
+to get the most recent comparable spell, you need the `max(comparability)` by
+`countrycode, survname, datatype, coveragetype`.
 
 # Generating survey estimates
-<span style="color:red">Daniel</span>
+
+[Daniel]{style="color:red"}
 
 ## Consumer Price Indices (CPIs)
-<span style="color:red">Samuel</span>
 
-Short paragraph summary of why CPIs are needed, which CPIs we use, and link to the CPI paper
+[Samuel]{style="color:red"}
+
+Short paragraph summary of why CPIs are needed, which CPIs we use, and link to
+the CPI paper
 
 ## Purchasing Power Parities (PPPs)
-<span style="color:red">Samuel</span>
 
-Short paragraph summary of why PPPs are needed, which PPPs we use and link to the PPP paper
+[Samuel]{style="color:red"}
+
+Short paragraph summary of why PPPs are needed, which PPPs we use and link to
+the PPP paper
 
 ## Derivation of the international poverty line
-<span style="color:red">Samuel</span>
 
-Explain in one paragraph or so how the international poverty line was derived and link to the RCS and Ferreira et al. paper
+[Samuel]{style="color:red"}
+
+Explain in one paragraph or so how the international poverty line was derived
+and link to the RCS and Ferreira et al. paper
 
 ## Derivation of other global poverty lines
-<span style="color:red">Samuel</span>
+
+[Samuel]{style="color:red"}
 
 Explain how higher lines are derived and link to Jolliffe & Prydz paper
 
 # Calculating poverty and inequality
-<span style="color:red">Daniel</span>
+
+[Daniel]{style="color:red"}
 
 ## FGT measures
-<span style="color:red">Aleksander and Samuel</span>
 
-In this subsectoin and the one below, let's write the name of each measure in Povcalnet and provide formulas for how they are derived. The FGT formulas should be easily available online
+[Aleksander and Samuel]{style="color:red"}
+
+In this subsectoin and the one below, let's write the name of each measure in
+Povcalnet and provide formulas for how they are derived. The FGT formulas should
+be easily available online
 
 ## Inequality measures
-<span style="color:red">Aleksander and Samuel</span>.
 
-Can we get to the source code find out how the various other measures are calculated and list it here?
+[Aleksander and Samuel]{style="color:red"}.
+
+Can we get to the source code find out how the various other measures are
+calculated and list it here?
 
 # Generating global and regional estimates
 
 ## National accounts data
-<span style="color:red">Nishant</span>
 
-Explain in a short paragraph the national accounts data used, countries where we use specific sources, and link to national accounts paper.
+[Nishant]{style="color:red"}
+
+Explain in a short paragraph the national accounts data used, countries where we
+use specific sources, and link to national accounts paper.
 
 ## Extrapolations
-<span style="color:red">Nishant</span>
 
-Explain how/why we extrapolate, provide the formula, discuss the no-use of a passthrough rate (perhaps refer to relevant literature on this) and link to national accounts paper. 
+[Nishant]{style="color:red"}
 
+Explain how/why we extrapolate, provide the formula, discuss the no-use of a
+passthrough rate (perhaps refer to relevant literature on this) and link to
+national accounts paper.
 
 Explain the India exception.
 
 ## Interpolations
-<span style="color:red">Nishant</span>
 
-Explain how/why we interpolate and provide the two different interpolation formulas (in the national accounts paper). 
+[Nishant]{style="color:red"}
+
+Explain how/why we interpolate and provide the two different interpolation
+formulas (in the national accounts paper).
 
 ## Choosing between consumption and income estimates
-<span style="color:red">Daniel</span>
+
+[Daniel]{style="color:red"}
 
 ## Regions and universe of countries
-<span style="color:red">Marta</span>
+
+[Marta]{style="color:red"}
 
 Explain the regions used and where the set of 218 countries comes from.
 
 ## Population
-<span style="color:red">Marta</span>
+
+[Marta]{style="color:red"}
 
 Explain the population data that we use.
 
 ## Missing countries
-<span style="color:red">Marta</span>
 
-Explain how we treat countries with missing data and derive the regional/global headcounts
+[Marta]{style="color:red"}
+
+Explain how we treat countries with missing data and derive the regional/global
+headcounts
 
 ## Coverage rule
-<span style="color:red">Marta</span>
+
+[Marta]{style="color:red"}
 
 Explain the coverage rule
 
 # References
-
