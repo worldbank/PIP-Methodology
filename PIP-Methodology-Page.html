@@ -476,8 +476,8 @@ h2 { /* Header 2 */
 <p><span style="color:red">Marta</span></p>
 <p>Explain briefly each, advantages and disadvantages of each (PSPR 2018 annex has material on this). Explain how zero/negative incomes are treated.</p>
 </div>
-<div id="within-survey-spatialtemporal-delfation" class="section level2" number="2.2">
-<h2 number="2.2"><span class="header-section-number">2.2</span> Within-survey spatial/temporal delfation</h2>
+<div id="within-survey-spatialtemporal-deflation" class="section level2" number="2.2">
+<h2 number="2.2"><span class="header-section-number">2.2</span> Within-survey spatial/temporal deflation</h2>
 <p><span style="color:red">Samuel</span></p>
 <p>Explain that some countries use spatial/temporal deflation but not all. Explain what spatial temporal deflation means. Mention India/China/Indonesia. Explain decimal years and that for EU-SILC/LIS, the reported year is the year before the survey year.</p>
 </div>
@@ -488,8 +488,26 @@ h2 { /* Header 2 */
 </div>
 <div id="imputed-rent" class="section level2" number="2.4">
 <h2 number="2.4"><span class="header-section-number">2.4</span> Imputed rent</h2>
-<p><span style="color:red">Andres</span></p>
-<p>What it means to include it, when it is included. Use China/LAC examples to show the relevance.</p>
+<p>During the process of constructing a welfare aggregate, housing is arguably the most important and difficult of all the components to include. From a conceptual point of view, housing could be understood as any other durable good. Its present value is not relevant for the analysis of current welfare because purchasing a house is such a large and relatively rare expenditure that is should not be included the in welfare aggregate.<span class="citation">(Deaton and Zaidi 2002, 35)</span>. The objective is instead on measuring the value of the of occupying the dwelling for the length of the survey period.</p>
+<p>Whether the welfare aggregate is based on consumption or income, accounting for housing is equally important. When the welfare aggregate is based on consumption, household surveys usually record the value of rent paid by market tenants. Since rent is the market value of occupying a house for a given period of time, it is feasible and empirically viable to estimate the flow of housing services. Yet, the same information is not available for household owners, even though they also “consume” housing services. By not including the value of housing “consumed” by owners, it would look like two household with the very same consumption patterns have different welfare just because one pays rent and the other does not. In fact, the market tenant would look better off than the household owner because the consumption of the former is higher than the one of the latter.</p>
+<p>When the welfare aggregate is based on income the logic is similar. In this case, the welfare aggregate should be composed by the remuneration of all the assets of the household including labor, capital, and durable goods such as houses and cars <span class="citation">(Gasparini and Sosa Escudero 2004)</span>. Families that own their housing receive an implicit value that is equivalent to the amount of money they would have to pay in the market if they had to rent a dwelling similar to the one they are currently living in.</p>
+<p>In the context of the Global Monitoring Database (GMD), each country has its own methodological approach to input the implicit value of housing to dwelling owners. The Latin American Region (LAC) is the only one that applies the same methodology, or at least principles, to input rents in all its countries. All the other regions do not have a consolidated approach so they adopt whatever the National Statistics Office (NSO) of each country provides.</p>
+<p>The methodology used by the LAC region could be found here [<span style="color:red">Ask for document to the LAC team</span>]. Yet, below you may find a short summary of the decision tree used in LAC to account for housing rents.</p>
+<ol style="list-style-type: decimal">
+<li>If the National Statistics Office (NSO) of the country releases their own estimate to account for own-housing rent, the SEDLAC project adopts that variable.  </li>
+</ol>
+<!-- -->
+<ol start="2" style="list-style-type: decimal">
+<li>If the NSO does not release a variable to account for own-housing rent, the value reported by owners in the household survey to the question “How much would you have to pay a month if you had to rent this house?” is taken as the implicit rent.  </li>
+</ol>
+<!-- -->
+<ol start="3" style="list-style-type: decimal">
+<li><p>If the questionnaire does not ask the self-reported rent question to owners, the utility obtained from living in a dwelling is obtained from a hedonic model that uses quantile regression of the sum of the utilities derived from the characteristics of the dwelling (e.g., geographical location, surrounding characteristics, and structural attributes), which is the implicit rent when monetarized <span class="citation">(Rosen 1974)</span>.</p></li>
+<li><p>Finally, if the questionnaire does not allow to identify ownership of the dwelling, no rent is imputed to owners. That is, the imputation is 0% of total income.</p></li>
+</ol>
+<p>Step 3 in the list above. which is the most complex of all the steps in the decision tree is applied only to four countries: Argentina, Brazil, Ecuador, and Honduras.</p>
+<p>According to Deaton and Zaidi <span class="citation">(2002)</span>, there are four main approaches to input rents to dwelling owners plus a few other alternatives suggested in Balcazar et al <span class="citation">(2017)</span>. Besides the LAC region, the rest of the countries apply either one of these methodologies or perform no imputation at all, which is equivalent to input zero (0) implicit rent to the dwelling owners.</p>
+<p><span style="color:blue">Daniel: I don’t know the example of CHN. Do you have any documentation about it? Is there something else you would like to add?</span></p>
 </div>
 <div id="treatment-of-binned-data" class="section level2" number="2.5">
 <h2 number="2.5"><span class="header-section-number">2.5</span> Treatment of binned data</h2>
@@ -513,7 +531,7 @@ h2 { /* Header 2 */
 </div>
 <div id="access-the-data" class="section level3 unnumbered" number>
 <h3 class="unnumbered" number>Access the data</h3>
-<p>The dataset could be accessed in different ways. The official version is available in the <a href="https://datacatalog.worldbank.org/dataset/comparability-over-time-country-level-international-poverty-measures">Development Data Hub</a> of the World Bank. However, it is possible to access it directly from R, Stata, or Python by calling this file, &quot;<a href="https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/506801/povcalnet_comparability.csv%22.">https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/506801/povcalnet_comparability.csv&quot;.</a></p>
+<p>The dataset could be accessed in different ways. The official version is available in the <a href="https://datacatalog.worldbank.org/dataset/comparability-over-time-country-level-international-poverty-measures">Development Data Hub</a> of the World Bank. However, it is possible to access it directly from R, Stata, or Python by calling this file, &quot;<a href="https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/506801/povcalnet_comparability.csv%22." class="uri">https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/506801/povcalnet_comparability.csv%22.</a></p>
 <div id="r" class="section level4 unnumbered" number>
 <h4 class="unnumbered" number>R</h4>
 <pre class="r"><code>link &lt;- &quot;https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/506801/povcalnet_comparability.csv&quot;
@@ -620,6 +638,18 @@ df   = pd.read_csv(path)</code></pre>
 <div id="refs" class="references hanging-indent">
 <div id="ref-atamanov2019">
 <p>Atamanov, Aziz, R. Andres Castaneda Aguilar, Carolina Diaz-Bonilla, Dean Jolliffe, Christoph Lakner, Daniel Gerszon Mahler, Jose Montes, et al. 2019. “September 2019 Povcalnet Update.” Washington, DC. <a href="https://openknowledge.worldbank.org/handle/10986/32478">https://openknowledge.worldbank.org/handle/10986/32478</a>.</p>
+</div>
+<div id="ref-balcazar2017">
+<p>Balcázar, Carlos Felipe, Lidia Ceriani, Sergio Olivieri, and Marco Ranzani. 2017. “Rent-Imputation for Welfare Measurement: A Review of Methodologies and Empirical Findings.” <em>Review of Income and Wealth</em> 63 (4): 881–98. <a href="https://doi.org/https://doi.org/10.1111/roiw.12312">https://doi.org/https://doi.org/10.1111/roiw.12312</a>.</p>
+</div>
+<div id="ref-deaton2002">
+<p>Deaton, Angus, and Salman Zaidi. 2002. <em>Guidelines for Constructing Consumption Aggregates for Welfare Analysis</em>. Washington, DC: World Bank Publications. <a href="http://ideas.repec.org/p/fth/priwds/192.html">http://ideas.repec.org/p/fth/priwds/192.html</a>.</p>
+</div>
+<div id="ref-gasparini2004">
+<p>Gasparini, Leonardo, and Walter Sosa Escudero. 2004. “Implicit Rents from Own-Housing and Income Distribution: Econometric Estimates for Greater Buenos Aires.” <em>Documentos de Trabajo Del CEDLAS</em> no. 14. <a href="http://hdl.handle.net/10915/3576">http://hdl.handle.net/10915/3576</a>.</p>
+</div>
+<div id="ref-rosen1974">
+<p>Rosen, Sherwin. 1974. “Hedonic Prices and Implicit Markets: Product Differentiation in Pure Competition.” <em>Journal of Political Economy</em> 82 (1): 34–55. <a href="http://www.jstor.org/stable/1830899">http://www.jstor.org/stable/1830899</a>.</p>
 </div>
 </div>
 </div>
