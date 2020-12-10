@@ -16,8 +16,9 @@ h2 { /* Header 2 */
 }
 </style>
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+<!-- install.packages("knitr") -->
+```{r setup, include=FALSE} 
+knitr::opts_chunk$set(echo = TRUE) 
 ```
 
 <span style="color:red">Daniel</span>
@@ -116,6 +117,8 @@ Explain the comparaiblity database and link to it
 <span style="color:red">Samuel</span>
 
 Short paragraph summary of why CPIs are needed, which CPIs we use, and link to the CPI paper
+
+Consumer price indices (CPIs) summarize the prices of a representative basket of good and services consumed by households within an economy over a period of time. Inflation (deflation) occurs when there is a positive (negative) change in the CPI between two time periods. With inflation, the same amount of rupees is expected to buy more today than in one year from today. CPIs are used to deflate nominal consumption expenditure of households, so that the well-being of households can be evaluated and compared between two time periods at constant prices. 
 
 ## Purchasing Power Parities (PPPs)
 <span style="color:red">Samuel</span>
