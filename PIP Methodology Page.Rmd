@@ -208,10 +208,12 @@ Regions are defined using the PIP classification, which differs from the regiona
 Population data are taken from the World Bank’s [World Development Indicators](http://datatopics.worldbank.org/world-development-indicators/). The regional and global population may differ from the aggregates given in the World Development Indicators, because PIP uses the classification of economies based on whether they are IBRD eligible or recently graduated (See [Regions and universe of countries section](#regionsandcountries)). The regional total population only includes economies that are IBRD eligible or recently graduated. The remaining economies are included in the group "Other high income" (see [World Bank, 2016](https://openknowledge.worldbank.org/bitstream/handle/10986/25078/9781464809583.pdf#page=49) and [Regions and universe of countries section](#regionsandcountries) for a list of economies). Furthermore, the regional total in PIP also includes economies without a household survey or other missing data. Hence, the sum of the populations of the economies that are included in PIP is less than the regional total.
 
 ## Missing countries
+<span style="color:red">Marta</span>
 
 Some economies have no household survey data that can be used to monitor poverty (or they lack the national accounts data for a particular reference year). In order to include these economies in the regional and global poverty estimates, it is assumed that they have a poverty headcount equal to their region's population-weighted average. This is then used to estimate the number of people living in poverty using population data from the World Development Indicators (See [Population section](#population)). Regions are defined using PIP's classification, which differs from the regional classifications typically used by the World Bank (See [Regions and universe of countries section](#regionsandcountries)).
 
 ## Coverage rule
+<span style="color:red">Marta</span>
 
 The coverage rule is used to determine whether a particular lineup year has sufficient population coverage to allow the estimation of regional and global poverty aggregates to be made. The coverage rule is calculated using data for survey years within three years either side of a lineup year. 
 Regional estimates are displayed if data cover 50 percent of the population in the region. For regions in which the surveys within three years either side of the lineup year account for less than half of the regional population, the regional poverty estimate is not reported. 
