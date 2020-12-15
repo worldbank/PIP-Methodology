@@ -5,8 +5,10 @@ output:
     number_sections: yes
   pdf_document: default
   word_document: default
+bibliography: references.bib
 ---
 
+```{=html}
 <style type="text/css">
 h1 { /* Header 1 */
   font-size: 28px;
@@ -18,15 +20,14 @@ body {
 text-align: justify}
 
 </style>
-
+```
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-<span style="color:red">Daniel</span>
+[Daniel]{style="color:red"}
 
 This page explains the methods used to derive the global, region, and country level poverty counts. The page is divided into six sections:
-
 
 *1. Acquiring household survey data:*
 
@@ -40,200 +41,212 @@ This page explains the methods used to derive the global, region, and country le
 
 *6. Refernences:*
 
-
-Please cite this page as: 
+Please cite this page as:
 
 World Bank. 2020. "Poverty and Inequality Platform Methodology." March 2020 version. Available at [link to follow].
 
 For old versions of this page, please see [link to follow].
 
 # Acquiring household survey data
-<span style="color:red">Daniel</span>
+
+[Daniel]{style="color:red"}
 
 ## Selection criteria and source of data
-<span style="color:red">Daniel</span>
 
-For developing countries, mostly 0fficial surveys used by the government for monitoring poverty. Occasionally surveys are dropped due to quality concerns with the survey design, welfare aggregate or auxilliary data. Decision made by GPWG, reason summarized in What's New. 
+[Daniel]{style="color:red"}
+
+For developing countries, mostly 0fficial surveys used by the government for monitoring poverty. Occasionally surveys are dropped due to quality concerns with the survey design, welfare aggregate or auxilliary data. Decision made by GPWG, reason summarized in What's New.
 
 The data mostly come from household surveys, explain very briefly what a household survey is, that NSOs conduct them. EU-SILC and LIS for some countries, a subset of these based on admin data. Link to more country information (country methodology pages).
 
 ## Representativeness
-<span style="color:red">Daniel</span>
 
-Discuss within-country spatial coverage. Mention that non-national surveys are also available but not used for regional/global numbers (Argentina exception). 
-Temporal coverage; often covers one year, 
-## Binned vs. micro data
-<span style="color:red">Daniel</span>
+[Daniel]{style="color:red"}
 
-Mention countries exclusevely relying on binned data. 
+Discuss within-country spatial coverage. Mention that non-national surveys are also available but not used for regional/global numbers (Argentina exception). Temporal coverage; often covers one year, \#\# Binned vs. micro data [Daniel]{style="color:red"}
+
+Mention countries exclusevely relying on binned data.
 
 ## How data are obtained
-<span style="color:red">Daniel</span>
+
+[Daniel]{style="color:red"}
 
 Mostly receive data through country engagement, poverty economist, processed and harmonized through GMD.
 
 # Constructing welfare aggregates
-<span style="color:red">Daniel</span>
 
+[Daniel]{style="color:red"}
 
 ## Income or consumption
-<span style="color:red">Marta</span>
 
-The welfare measure used for poverty measurement is based on either income or consumption household survey data. The differences between income and consumption matter for comparing trends and levels of poverty. Countries typically choose the concept that can be more accurately measured and that is more relevant to the context, while balancing concerns about respondent burden. On the one hand, consumption measures of poverty require a wide range of questions and are thus more time-consuming. Income measures, on the other hand, are difficult to obtain when a large fraction of the population works in the informal sector or is self-employed, which is frequently the case in poorer economies. Also, when households produce their own food with limited market interactions, it is harder to measure income than consumption. 
+[Marta]{style="color:red"}
 
-Both approaches to measuring poverty have advantages and disadvantages. The consumption approach is arguably more directly connected to economic welfare. Income measures of poverty also suffer from the disadvantage that incomes might be very low—even negative—in a given period, whereas consumption is smoothed to safeguard against such shocks.  Consumption-based measures of poverty, conversely, are often more time intensive and require detailed price data and often post-fieldwork adjustments. Also, the design of consumption questionnaires varies widely and, as shown by numerous experiments, can have significant effects on final poverty estimates ([Beegle et al. 2012](https://elibrary.worldbank.org/doi/pdf/10.1596/1813-9450-6372); [Deaton 2001](https://academic.oup.com/wbro/article/16/2/125/1681034); [Jolliffe 2001](https://content.iospress.com/articles/journal-of-economic-and-social-measurement/jem00192)). 
+The welfare measure used for poverty measurement is based on either income or consumption household survey data. The differences between income and consumption matter for comparing trends and levels of poverty. Countries typically choose the concept that can be more accurately measured and that is more relevant to the context, while balancing concerns about respondent burden. On the one hand, consumption measures of poverty require a wide range of questions and are thus more time-consuming. Income measures, on the other hand, are difficult to obtain when a large fraction of the population works in the informal sector or is self-employed, which is frequently the case in poorer economies. Also, when households produce their own food with limited market interactions, it is harder to measure income than consumption.
 
-Income measures often rely on no more than a handful of questions and can, at times, be verified from other sources. Moreover, given that incomes can be very low or negative, poverty rates are typically higher when income is used rather than consumption. For a given poverty rate, poor households also tend to be further below the poverty line when income is used, as explained by the earlier point about very low incomes: although it is plausible for households to have zero income in a given period, subsistence requires a minimum level of consumption, which is strictly above zero ([World Bank 2018](https://openknowledge.worldbank.org/bitstream/handle/10986/30418/9781464813306.pdf#page=178)). For this reason, PIP’s current practice is to drop observations with negative welfare, while zeros are included.
+Both approaches to measuring poverty have advantages and disadvantages. The consumption approach is arguably more directly connected to economic welfare. Income measures of poverty also suffer from the disadvantage that incomes might be very low---even negative---in a given period, whereas consumption is smoothed to safeguard against such shocks. Consumption-based measures of poverty, conversely, are often more time intensive and require detailed price data and often post-fieldwork adjustments. Also, the design of consumption questionnaires varies widely and, as shown by numerous experiments, can have significant effects on final poverty estimates (@beegle2012 @deaton2001 @jolliffe2001)
+
+Income measures often rely on no more than a handful of questions and can, at times, be verified from other sources. Moreover, given that incomes can be very low or negative, poverty rates are typically higher when income is used rather than consumption. For a given poverty rate, poor households also tend to be further below the poverty line when income is used, as explained by the earlier point about very low incomes: although it is plausible for households to have zero income in a given period, subsistence requires a minimum level of consumption, which is strictly above zero ( @worldbank2018 ). For this reason, PIP's current practice is to drop observations with negative welfare, while zeros are included.
 
 ## Within-survey spatial/temporal delfation
-<span style="color:red">Samuel</span>
+
+[Samuel]{style="color:red"}
 
 Explain that some countries use spatial/temporal deflation but not all. Explain what spatial temporal deflation means. Mention India/China/Indonesia. Explain decimal years and that for EU-SILC/LIS, the reported year is the year before the survey year.
 
 ## Questionnaire design
-<span style="color:red">Daniel</span>
 
-Discuss the relevance of questionnaire design for the consumption aggregate (perhaps refer to some of the papers on the topic).
-Use the India MMRP/URP example (PSPR 2018 has material).
+[Daniel]{style="color:red"}
+
+Discuss the relevance of questionnaire design for the consumption aggregate (perhaps refer to some of the papers on the topic). Use the India MMRP/URP example (PSPR 2018 has material).
 
 ## Imputed rent
-<span style="color:red">Andres</span>
+
+[Andres]{style="color:red"}
 
 What it means to include it, when it is included. Use China/LAC examples to show the relevance.
 
 ## Treatment of binned data
-<span style="color:red">Christoph and Samuel</span>
+
+[Christoph and Samuel]{style="color:red"}
 
 Let's put down the actual formulas we use here to convert binned data into distributions.
 
 ## Equivalence scale
-<span style="color:red">Daniel</span>
+
+[Daniel]{style="color:red"}
 
 Mention per capita assumptions, drawbacks of it, and why we are still assuming it.
 
 ## Comparability database
-<span style="color:red">Andres</span>
+
+[Andres]{style="color:red"}
 
 Explain the comparaiblity database and link to it
 
 # Generating survey estimates
-<span style="color:red">Daniel</span>
+
+[Daniel]{style="color:red"}
 
 ## Consumer Price Indices (CPIs)
-<span style="color:red">Samuel</span>
+
+[Samuel]{style="color:red"}
 
 Short paragraph summary of why CPIs are needed, which CPIs we use, and link to the CPI paper
 
 ## Purchasing Power Parities (PPPs)
-<span style="color:red">Samuel</span>
+
+[Samuel]{style="color:red"}
 
 Short paragraph summary of why PPPs are needed, which PPPs we use and link to the PPP paper
 
 ## Derivation of the international poverty line
-<span style="color:red">Samuel</span>
+
+[Samuel]{style="color:red"}
 
 Explain in one paragraph or so how the international poverty line was derived and link to the RCS and Ferreira et al. paper
 
 ## Derivation of other global poverty lines
-<span style="color:red">Samuel</span>
+
+[Samuel]{style="color:red"}
 
 Explain how higher lines are derived and link to Jolliffe & Prydz paper
 
 # Calculating poverty and inequality
-<span style="color:red">Daniel</span>
+
+[Daniel]{style="color:red"}
 
 ## FGT measures
-<span style="color:red">Aleksander and Samuel</span>
+
+[Aleksander and Samuel]{style="color:red"}
 
 In this subsectoin and the one below, let's write the name of each measure in Povcalnet and provide formulas for how they are derived. The FGT formulas should be easily available online
 
 ## Inequality measures
-<span style="color:red">Aleksander and Samuel</span>.
+
+[Aleksander and Samuel]{style="color:red"}.
 
 Can we get to the source code find out how the various other measures are calculated and list it here?
 
 # Generating global and regional estimates
 
 ## National accounts data
-<span style="color:red">Nishant</span>
+
+[Nishant]{style="color:red"}
 
 Explain in a short paragraph the national accounts data used, countries where we use specific sources, and link to national accounts paper.
 
 ## Extrapolations
-<span style="color:red">Nishant</span>
 
-Explain how/why we extrapolate, provide the formula, discuss the no-use of a passthrough rate (perhaps refer to relevant literature on this) and link to national accounts paper. 
+[Nishant]{style="color:red"}
 
+Explain how/why we extrapolate, provide the formula, discuss the no-use of a passthrough rate (perhaps refer to relevant literature on this) and link to national accounts paper.
 
 Explain the India exception.
 
 ## Interpolations
-<span style="color:red">Nishant</span>
 
-Explain how/why we interpolate and provide the two different interpolation formulas (in the national accounts paper). 
+[Nishant]{style="color:red"}
+
+Explain how/why we interpolate and provide the two different interpolation formulas (in the national accounts paper).
 
 ## Choosing between consumption and income estimates
-<span style="color:red">Daniel</span>
+
+[Daniel]{style="color:red"}
 
 ## Regions and universe of countries {#regionsandcountries}
-<span style="color:red">Marta</span>
+
+[Marta]{style="color:red"}
 
 Regions are defined using the PIP classification, which differs from the regional classifications typically used by the World Bank. Some economies, mostly high-income economies, are excluded from the geographical regions and are included as a separate group (referred to as other high income, industrialized economies, or rest of the world in earlier publications). The list of economies included in each region is as follows:
 
-* **East Asia and Pacific:** 
-    + American Samoa, Cambodia, China, Fiji, Indonesia, Kiribati, Korea (Democratic People’s Republic of), Lao People’s Democratic Republic, Malaysia, Marshall Islands, Micronesia Federated States of, Mongolia, Myanmar, Northern Mariana Islands, Palau, Papua New Guinea, Philippines, Samoa, Solomon Islands, Thailand, Timor-Leste, Tonga, Tuvalu, Vanuatu, Vietnam.
+-   **East Asia and Pacific:**
 
-* **Europe and Central Asia:** 
-    + Albania, Armenia, Azerbaijan, Belarus, Bosnia and Herzegovina, Bulgaria, Croatia, Czech Republic, Estonia, Georgia, Hungary, Kazakhstan, Kosovo, Kyrgyz Republic, Latvia, Lithuania, Moldova, Montenegro, North Macedonia, Poland, Romania, Russian Federation, Serbia, Slovak Republic, Slovenia, Tajikistan, Ukraine, Uzbekistan.
+    -   American Samoa, Cambodia, China, Fiji, Indonesia, Kiribati, Korea (Democratic People's Republic of), Lao People's Democratic Republic, Malaysia, Marshall Islands, Micronesia Federated States of, Mongolia, Myanmar, Northern Mariana Islands, Palau, Papua New Guinea, Philippines, Samoa, Solomon Islands, Thailand, Timor-Leste, Tonga, Tuvalu, Vanuatu, Vietnam.
 
-* **Latin America and the Caribbean:** 
-  + Argentina, Barbados, Belize, Bolivia, Brazil, Chile, Colombia, Costa Rica, Cuba, Dominica, Dominican Republic, Ecuador, El Salvador, Grenada, Guatemala, Guyana, Haiti, Honduras, Jamaica, Mexico, Nicaragua, Panama, Paraguay, Peru, St. Kitts and Nevis, St. Lucia, St. Vincent and the Grenadines, Suriname, Trinidad and Tobago, Uruguay, Venezuela, Republica Bolivariana de.
+-   **Europe and Central Asia:**
 
-* **Middle East and North Africa:**
-  + Algeria, Djibouti, Egypt, Arab Republic of, Iran, Islamic Republic of, Iraq, Jordan, Lebanon, Libya, Morocco, Oman, Syrian Arab Republic, Tunisia, West Bank and Gaza, Yemen, Republic of.
+    -   Albania, Armenia, Azerbaijan, Belarus, Bosnia and Herzegovina, Bulgaria, Croatia, Czech Republic, Estonia, Georgia, Hungary, Kazakhstan, Kosovo, Kyrgyz Republic, Latvia, Lithuania, Moldova, Montenegro, North Macedonia, Poland, Romania, Russian Federation, Serbia, Slovak Republic, Slovenia, Tajikistan, Ukraine, Uzbekistan.
 
-* **Other High Income:** 
-  + Andorra, Antigua and Barbuda, Aruba, Australia, Austria, Bahamas, the, Bahrain, Belgium, Bermuda, British Virgin Islands, Brunei Darussalam, Canada, Cayman Islands, Channel Islands, Curacao, Cyprus, Denmark, Faroe Islands, Finland, France, French Polynesia, Germany, Gibraltar, Greece, Greenland, Guam, Hong Kong SAR, China, Iceland, Ireland, Isle of Man, Israel, Italy, Japan, Korea, Republic of, Kuwait, Liechtenstein, Macao SAR, China, Malta, Monaco, Nauru, Netherlands, New Caledonia, New Zealand, Norway, Portugal, Puerto Rico, Qatar, San Marino, Saudi Arabia, Singapore, Sint Maarten, Spain, St. Martin, Sweden, Switzerland, Taiwan, China, Turks and Caicos Islands, United Arab Emirates, United Kingdom, United States, Virgin Islands, US. 
+-   **Latin America and the Caribbean:**
 
-*	**South Asia:**
-    + Afghanistan, Bangladesh, Bhutan, India, Maldives, Nepal, Pakistan, Sri Lanka
-  
-*	**Sub-Saharan Africa:** 
-    + Angola, Benin, Botswana, Burkina Faso, Burundi, Cabo Verde, Cameroon, Central African Republic, Chad, Comoros, Congo, Democratic Republic of, Congo, Republic of, Cote d’Ivoire, Equatorial Guinea, Eritrea, Eswatini, Ethiopia, Gabon, Gambia, the, Ghana, Guinea, Guinea-Bissau, Kenya, Lesotho, Liberia, Madagascar, Malawi, Mali, Mauritania, Mauritius, Mozambique, Namibia, Niger, Nigeria, Rwanda, Sao Tome and Principe, Senegal, Seychelles, Sierra Leone, Somalia, South Africa, South Sudan, Sudan, Tanzania, Togo, Uganda, Zambia, Zimbabwe.
+    -   Argentina, Barbados, Belize, Bolivia, Brazil, Chile, Colombia, Costa Rica, Cuba, Dominica, Dominican Republic, Ecuador, El Salvador, Grenada, Guatemala, Guyana, Haiti, Honduras, Jamaica, Mexico, Nicaragua, Panama, Paraguay, Peru, St. Kitts and Nevis, St. Lucia, St. Vincent and the Grenadines, Suriname, Trinidad and Tobago, Uruguay, Venezuela, Republica Bolivariana de.
 
+-   **Middle East and North Africa:**
+
+    -   Algeria, Djibouti, Egypt, Arab Republic of, Iran, Islamic Republic of, Iraq, Jordan, Lebanon, Libya, Morocco, Oman, Syrian Arab Republic, Tunisia, West Bank and Gaza, Yemen, Republic of.
+
+-   **Other High Income:**
+
+    -   Andorra, Antigua and Barbuda, Aruba, Australia, Austria, Bahamas, the, Bahrain, Belgium, Bermuda, British Virgin Islands, Brunei Darussalam, Canada, Cayman Islands, Channel Islands, Curacao, Cyprus, Denmark, Faroe Islands, Finland, France, French Polynesia, Germany, Gibraltar, Greece, Greenland, Guam, Hong Kong SAR, China, Iceland, Ireland, Isle of Man, Israel, Italy, Japan, Korea, Republic of, Kuwait, Liechtenstein, Macao SAR, China, Malta, Monaco, Nauru, Netherlands, New Caledonia, New Zealand, Norway, Portugal, Puerto Rico, Qatar, San Marino, Saudi Arabia, Singapore, Sint Maarten, Spain, St. Martin, Sweden, Switzerland, Taiwan, China, Turks and Caicos Islands, United Arab Emirates, United Kingdom, United States, Virgin Islands, US.
+
+-   **South Asia:**
+
+    -   Afghanistan, Bangladesh, Bhutan, India, Maldives, Nepal, Pakistan, Sri Lanka
+
+-   **Sub-Saharan Africa:**
+
+    -   Angola, Benin, Botswana, Burkina Faso, Burundi, Cabo Verde, Cameroon, Central African Republic, Chad, Comoros, Congo, Democratic Republic of, Congo, Republic of, Cote d'Ivoire, Equatorial Guinea, Eritrea, Eswatini, Ethiopia, Gabon, Gambia, the, Ghana, Guinea, Guinea-Bissau, Kenya, Lesotho, Liberia, Madagascar, Malawi, Mali, Mauritania, Mauritius, Mozambique, Namibia, Niger, Nigeria, Rwanda, Sao Tome and Principe, Senegal, Seychelles, Sierra Leone, Somalia, South Africa, South Sudan, Sudan, Tanzania, Togo, Uganda, Zambia, Zimbabwe.
 
 ## Population {#population}
-<span style="color:red">Marta</span>
 
-Population data are taken from the World Bank’s [World Development Indicators](http://datatopics.worldbank.org/world-development-indicators/). The regional and global population may differ from the aggregates given in the World Development Indicators, because PIP uses the classification of economies based on whether they are IBRD eligible or recently graduated (See [Regions and universe of countries section](#regionsandcountries)). The regional total population only includes economies that are IBRD eligible or recently graduated. The remaining economies are included in the group "Other high income" (see [World Bank, 2016](https://openknowledge.worldbank.org/bitstream/handle/10986/25078/9781464809583.pdf#page=49) and [Regions and universe of countries section](#regionsandcountries) for a list of economies). Furthermore, the regional total in PIP also includes economies without a household survey or other missing data. Hence, the sum of the populations of the economies that are included in PIP is less than the regional total.
+[Marta]{style="color:red"}
+
+Population data are taken from the World Bank's [World Development Indicators](http://datatopics.worldbank.org/world-development-indicators/). The regional and global population may differ from the aggregates given in the World Development Indicators, because PIP uses the classification of economies based on whether they are IBRD eligible or recently graduated (See [Regions and universe of countries section](#regionsandcountries)). The regional total population only includes economies that are IBRD eligible or recently graduated. The remaining economies are included in the group "Other high income" (see @worldbank2016 and [Regions and universe of countries section](#regionsandcountries) for a list of economies). Furthermore, the regional total in PIP also includes economies without a household survey or other missing data. Hence, the sum of the populations of the economies that are included in PIP is less than the regional total.
 
 ## Missing countries
-<span style="color:red">Marta</span>
+
+[Marta]{style="color:red"}
 
 Some economies have no household survey data that can be used to monitor poverty (or they lack the national accounts data for a particular reference year). In order to include these economies in the regional and global poverty estimates, it is assumed that they have a poverty headcount equal to their region's population-weighted average. This is then used to estimate the number of people living in poverty using population data from the World Development Indicators (See [Population section](#population)). Regions are defined using PIP's classification, which differs from the regional classifications typically used by the World Bank (See [Regions and universe of countries section](#regionsandcountries)).
 
 ## Coverage rule
-<span style="color:red">Marta</span>
 
-The coverage rule is used to determine whether a particular lineup year has sufficient population coverage to allow the estimation of regional and global poverty aggregates to be made. The coverage rule is calculated using data for survey years within three years either side of a lineup year. 
-Regional estimates are displayed if data cover 50 percent of the population in the region. For regions in which the surveys within three years either side of the lineup year account for less than half of the regional population, the regional poverty estimate is not reported. 
+[Marta]{style="color:red"}
+
+The coverage rule is used to determine whether a particular lineup year has sufficient population coverage to allow the estimation of regional and global poverty aggregates to be made. The coverage rule is calculated using data for survey years within three years either side of a lineup year. Regional estimates are displayed if data cover 50 percent of the population in the region. For regions in which the surveys within three years either side of the lineup year account for less than half of the regional population, the regional poverty estimate is not reported.
 
 A third additional requirement is applied to determine if the global poverty estimate can be reported in a line-up year. This requirement addresses the goal of focusing the measurement of global poverty on economies where most of the poor live. Specifically, it tries to avoid a situation in which the global population threshold is met by having recent data in the high-income countries, East Asia and Pacific, and Latin America and the Caribbean, which together account for a very small share of the global extreme poor. Under this requirement, global poverty estimates are reported only if data are representative of at least 50 percent of the population in low-income and lower-middle-income countries, because most of the poor live in these groups of countries. The World Bank classification of economies according to income groups in the lineup year is used (see [here](https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups)).
 
-This requirement is only applied to the global poverty estimate, not at the regional level (for more details see [Castaneda et al., 2020](https://documents.worldbank.org/en/publication/documents-reports/documentdetail/144451599591697923/september-2020-povcalnet-update-what-s-new)). 
+This requirement is only applied to the global poverty estimate, not at the regional level (for more details see @castanedaaguilar2020 ).
 
 # References
-
-Beegle, Kathleen, Joachim De Weerdt, Jed Friedman, and John Gibson. “Methods of Household Consumption Measurement through Surveys: Experimental Results from Tanzania.” Journal of Development Economics 1, no. 98 (2012): 3–18.
-
-Castaneda, R. Andres Aguilar, Tony Fujs, Dean Jolliffe, Christoph Lakner, Daniel Gerszon Mahler, Minh C. Nguyen, Marta Schoch, David L. Vargas Mogollon, Martha C. Viveros Mendoza, and Samuel Kofi Tetteh Baah. “September 2020 PovcalNet Update: What’s New.” World Bank, 2020.
-
-Deaton, Angus. “Counting the World’s Poor: Problems and Possible Solutions.” The World Bank Research Observer 16, no. 2 (2001): 125–147.
-
-Jolliffe, Dean. “Measuring Absolute and Relative Poverty: The Sensitivity of Estimated Household Consumption to Survey Design.” Journal of Economic and Social Measurement 27, no. 1–2 (2001): 1–23.
-
-World Bank. Poverty and Shared Prosperity 2016. Washington, DC: World Bank, 2016. https://doi.org/10.1596/978-1-4648-0958-3.
-
-World Bank. Poverty and Shared Prosperity 2018. Washington, DC: World Bank, 2018. https://doi.org/10.1596/978-1-4648-1330-6.
-
-
