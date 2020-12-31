@@ -1,12 +1,18 @@
 ---
 title: "Poverty and Inequality Platform Methodology"
+zotero: "PovcalNet Team"
 output:
   html_document:
     number_sections: yes
-  word_document: default
   pdf_document: default
+  word_document: default
+editor_options: 
+  markdown: 
+    wrap: 72
+bibliography: references.bib
 ---
 
+```{=html}
 <style type="text/css">
 h1 { /* Header 1 */
   font-size: 28px;
@@ -15,16 +21,17 @@ h2 { /* Header 2 */
     font-size: 22px;
 }
 </style>
-
+```
 <!-- install.packages("knitr") -->
-```{r setup, include=FALSE} 
+
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE) 
 ```
 
-<span style="color:red">Daniel</span>
+[Daniel]{style="color:red"}
 
-This page explains the methods used to derive the global, region, and country level poverty counts. The page is divided into six sections:
-
+This page explains the methods used to derive the global, region, and
+country level poverty counts. The page is divided into six sections:
 
 *1. Acquiring household survey data:*
 
@@ -38,158 +45,559 @@ This page explains the methods used to derive the global, region, and country le
 
 *6. Refernences:*
 
+Please cite this page as:
 
-Please cite this page as: 
-
-World Bank. 2020. "Poverty and Inequality Platform Methodology." March 2020 version. Available at [link to follow].
+World Bank. 2020. "Poverty and Inequality Platform Methodology." March
+2020 version. Available at [link to follow].
 
 For old versions of this page, please see [link to follow].
 
 # Acquiring household survey data
-<span style="color:red">Daniel</span>
+
+[Daniel]{style="color:red"}
 
 ## Selection criteria and source of data
-<span style="color:red">Daniel</span>
 
-For developing countries, mostly 0fficial surveys used by the government for monitoring poverty. Occasionally surveys are dropped due to quality concerns with the survey design, welfare aggregate or auxilliary data. Decision made by GPWG, reason summarized in What's New. 
+[Daniel]{style="color:red"}
 
-The data mostly come from household surveys, explain very briefly what a household survey is, that NSOs conduct them. EU-SILC and LIS for some countries, a subset of these based on admin data. Link to more country information (country methodology pages).
+For developing countries, mostly 0fficial surveys used by the government
+for monitoring poverty. Occasionally surveys are dropped due to quality
+concerns with the survey design, welfare aggregate or auxilliary data.
+Decision made by GPWG, reason summarized in What's New.
+
+The data mostly come from household surveys, explain very briefly what a
+household survey is, that NSOs conduct them. EU-SILC and LIS for some
+countries, a subset of these based on admin data. Link to more country
+information (country methodology pages).
 
 ## Representativeness
-<span style="color:red">Daniel</span>
 
-Discuss within-country spatial coverage. Mention that non-national surveys are also available but not used for regional/global numbers (Argentina exception). 
-Temporal coverage; often covers one year, 
-## Binned vs. micro data
-<span style="color:red">Daniel</span>
+[Daniel]{style="color:red"}
 
-Mention countries exclusevely relying on binned data. 
+Discuss within-country spatial coverage. Mention that non-national
+surveys are also available but not used for regional/global numbers
+(Argentina exception). Temporal coverage; often covers one year, \#\#
+Binned vs. micro data [Daniel]{style="color:red"}
+
+Mention countries exclusevely relying on binned data.
 
 ## How data are obtained
-<span style="color:red">Daniel</span>
 
-Mostly receive data through country engagement, poverty economist, processed and harmonized through GMD.
+[Daniel]{style="color:red"}
+
+Mostly receive data through country engagement, poverty economist,
+processed and harmonized through GMD.
 
 # Constructing welfare aggregates
-<span style="color:red">Daniel</span>
 
+[Daniel]{style="color:red"}
 
 ## Income or consumption
-<span style="color:red">Marta</span>
 
-Explain briefly each, advantages and disadvantages of each (PSPR 2018 annex has material on this). Explain how zero/negative incomes are treated.
+[Marta]{style="color:red"}
+
+Explain briefly each, advantages and disadvantages of each (PSPR 2018
+annex has material on this). Explain how zero/negative incomes are
+treated.
 
 ## Within-survey spatial/temporal delfation
-<span style="color:red">Samuel</span>
 
-Explain that some countries use spatial/temporal deflation but not all. Explain what spatial temporal deflation means. Mention India/China/Indonesia. Explain decimal years and that for EU-SILC/LIS, the reported year is the year before the survey year.
+[Samuel]{style="color:red"}
+
+Explain that some countries use spatial/temporal deflation but not all.
+Explain what spatial temporal deflation means. Mention
+India/China/Indonesia. Explain decimal years and that for EU-SILC/LIS,
+the reported year is the year before the survey year.
+
+Poverty estimates are based on household welfare aggregates that are
+constructed from income or consumption surveys. Consumption surveys are
+often the source of data for most developing countries and are conducted
+over a period of time, sometimes spanning two calendar years. The
+Gambia, for example, has a survey or decimal year as 2015.31, meaning
+that 69% of the months of the fieldwork fall in 2015 while 31% of the
+fieldwork months fall in 2016. By convention, the year that is reported
+is the floor of the decimal year (e.g. 2015 in the case of the Gambia
+mentioned above). For EU-SILC/LIS countries, the reported year is the
+year before the survey year.
+
+Household welfare aggregates are adjusted for temporal and/or spatial
+price differences within surveys, but not in all cases. Household
+consumption expenditure could be converted into the prices of a
+particular month or the average price level observed in a survey year
+(e.g. with a consumer price index). Similarly, household consumption
+expenditure could be converted into the prices of a particular location
+(e.g., capital city) or the national average price level obtained from
+both rural and urban prices (e.g. with a spatial price index). China,
+India and Indonesia have rural/urban PPPs that are used to deflate
+household welfare aggregates to account for spatial price differences
+(more details in Section \@ref(purchasing-power-parities-ppps).
+Sometimes, a spatio-temporal price index is used to jointly adjust for
+both spatial and temporal price differences (e.g. the household welfare
+aggregate from the survey conducted in Ghana (2016.75) is evaluated at
+2013 Greater Accra regional prices). These temporal and/or spatial price
+adjustments are important for constructing welfare aggregates in real
+terms.
 
 ## Questionnaire design
-<span style="color:red">Daniel</span>
 
-Discuss the relevance of questionnaire design for the consumption aggregate (perhaps refer to some of the papers on the topic).
-Use the India MMRP/URP example (PSPR 2018 has material).
+[Daniel]{style="color:red"}
+
+Discuss the relevance of questionnaire design for the consumption
+aggregate (perhaps refer to some of the papers on the topic). Use the
+India MMRP/URP example (PSPR 2018 has material).
 
 ## Imputed rent
-<span style="color:red">Andres</span>
 
-What it means to include it, when it is included. Use China/LAC examples to show the relevance.
+[Andres]{style="color:red"}
+
+What it means to include it, when it is included. Use China/LAC examples
+to show the relevance.
 
 ## Treatment of binned data
-<span style="color:red">Christoph and Samuel</span>
 
-Let's put down the actual formulas we use here to convert binned data into distributions.
+[Christoph and Samuel]{style="color:red"}
 
-## Equivalence scale
-<span style="color:red">Daniel</span>
+Let's put down the actual formulas we use here to convert binned data
+into distributions.
 
-Mention per capita assumptions, drawbacks of it, and why we are still assuming it.
+In addition to micro data, grouped data are used as another source of
+data for estimating poverty and inequality when micro data are not
+available (e.g. China data). Grouped data are consumption expenditure or
+income organized in graduated class intervals or bins (e.g. see Table 1
+below).
+
+**Table 1: Size distribution of consumption expenditure in rural India,
+1983**
+
++-------------+-----------+-------------+--------------+---------------+
+| a\. Monthly | b\. P     | c\. Mean    | d\.          | e\.           |
+| per capita  | roportion | monthly per | Cumulative   | Cumulative    |
+| expenditure | of        | capita      | proportion   | proportion of |
+| in Rs       | persons   | expenditure | of           | consumption   |
+|             | (%)       | in Rs       | population   | expenditure   |
+|             |           |             | ($p$)        | ($L$)         |
++=============+===========+=============+==============+===============+
+| 0 -- 30     | 0.92      | 24.84       | 0.0092       | 0.00208       |
++-------------+-----------+-------------+--------------+---------------+
+| 30 -- 40    | 2.47      | 35.80       | 0.0339       | 0.01013       |
++-------------+-----------+-------------+--------------+---------------+
+| 40 -- 50    | 5.11      | 45.36       | 0.085        | 0.03122       |
++-------------+-----------+-------------+--------------+---------------+
+| 50 -- 60    | 7.90      | 55.10       | 0.164        | 0.07083       |
++-------------+-----------+-------------+--------------+---------------+
+| 60 -- 70    | 9.69      | 64.92       | 0.2609       | 0.12808       |
++-------------+-----------+-------------+--------------+---------------+
+| 70 -- 85    | 15.24     | 77.08       | 0.4133       | 0.23498       |
++-------------+-----------+-------------+--------------+---------------+
+| 85 -- 100   | 13.64     | 91.75       | 0.5497       | 0.34887       |
++-------------+-----------+-------------+--------------+---------------+
+| 100 -- 125  | 16.99     | 110.64      | 0.7196       | 0.51994       |
++-------------+-----------+-------------+--------------+---------------+
+| 125 -- 150  | 10.00     | 134.90      | 0.8196       | 0.6427        |
++-------------+-----------+-------------+--------------+---------------+
+| 150 -- 200  | 9.78      | 167.76      | 0.9174       | 0.79201       |
++-------------+-----------+-------------+--------------+---------------+
+| 200 -- 250  | 3.96      | 215.48      | 0.957        | 0.86966       |
++-------------+-----------+-------------+--------------+---------------+
+| 250 -- 300  | 1.81      | 261.66      | 0.9751       | 0.91277       |
++-------------+-----------+-------------+--------------+---------------+
+| 300 and     | 2.49      | 384.97      | 1            | 1             |
+| above       |           |             |              |               |
++-------------+-----------+-------------+--------------+---------------+
+| All         | 100.00    | 109.90      |              |               |
+| expenditure |           |             |              |               |
+| classes     |           |             |              |               |
++-------------+-----------+-------------+--------------+---------------+
+
+*Source: @datt1998*
+
+Columns (d) and (e) in Table 1 are used as inputs to derive a Lorenz
+function. Of the many approaches in the literature that could be used,
+the general quadratic (GQ) Lorenz function and the Beta Lorenz function
+are two approaches that tend to estimate poverty and inequality fairly
+accurately. Due to its computational simplicity, the general quadratic
+(GQ) Lorenz function is preferred. For poverty and inequality measures,
+the following parameterized GQ Lorenz function is specified and
+estimated:
+
+$$
+L(1-L) = a(p^2-L) + bL(p-1) + c(p-L),
+$$
+
+where $p$ is the cumulative proportion of population, $L$ is the
+cumulative proportion of consumption expenditure or income, and $a$,
+$b$, $c$ are parameter estimates.
+
+See Section \@ref(calculating-poverty-and-inequality) below for the
+formulae used to estimate poverty and inequality measures for grouped
+data. For the details, see @datt1998.
+
+## Equivalence scale 
+
+[Daniel]{style="color:red"}
+
+Mention per capita assumptions, drawbacks of it, and why we are still
+assuming it.
 
 ## Comparability database
-<span style="color:red">Andres</span>
+
+[Andres]{style="color:red"}
 
 Explain the comparaiblity database and link to it
 
 # Generating survey estimates
-<span style="color:red">Daniel</span>
+
+[Daniel]{style="color:red"}
 
 ## Consumer Price Indices (CPIs)
-<span style="color:red">Samuel</span>
 
-Short paragraph summary of why CPIs are needed, which CPIs we use, and link to the CPI paper
+[Samuel]{style="color:red"}
 
-Consumer price indices (CPIs) summarize the prices of a representative basket of good and services consumed by households within an economy over a period of time. Inflation (deflation) occurs when there is a positive (negative) change in the CPI between two time periods. With inflation, the same amount of rupees is expected to buy more today than in one year from today. CPIs are used to deflate nominal consumption expenditure of households, so that the well-being of households can be evaluated and compared between two time periods at constant prices. 
+Short paragraph summary of why CPIs are needed, which CPIs we use, and
+link to the CPI paper
+
+Consumer price indices (CPIs) summarize the prices of a representative
+basket of good and services consumed by households within an economy
+over a period of time. Inflation (deflation) occurs when there is a
+positive (negative) change in the CPI between two time periods. With
+inflation, the same amount of rupees is expected to buy more today than
+in one year from today. CPIs are used to deflate nominal consumption
+expenditure of households, so that the well-being of households can be
+evaluated and compared between two time periods at constant prices.
+
+The primary source of CPI data for PovcalNet updates is the IMF's
+International Financial Statistics (IFS) monthly CPI series
+[@lakner2018]. The simple average of the monthly CPI series is used as
+annual CPI series. When IFS data are missing, other sources of CPI data
+are obtained from the World Economic Outlook (WEO), National Statistical
+Offices (NSOs), and International Labor Organization (ILO), among
+others. For more details on the different sources of CPI data used for
+global poverty measurement, see Figure 1 of @lakner2018 and "What's New"
+technical notes accompanying PovcalNet updates (e.g. the latest
+[September 2020 PovcalNet Update: What's
+New](https://blogs.worldbank.org/opendata/september-2020-global-poverty-update-world-bank-new-annual-poverty-estimates-using-revised)).
+
+CPI series are expressed in the prices of the ICP reference year,
+currently 2011.
 
 ## Purchasing Power Parities (PPPs)
-<span style="color:red">Samuel</span>
 
-Short paragraph summary of why PPPs are needed, which PPPs we use and link to the PPP paper
+[Samuel]{style="color:red"}
+
+Short paragraph summary of why PPPs are needed, which PPPs we use and
+link to the PPP paper
+
+Purchasing power parities (PPPs) are used in global poverty estimation
+to adjust for relative price differences across countries. PPPs are
+price indices that measure how much it costs to purchase a basket of
+goods and services in one country compared to how much it costs to
+purchase the same basket of goods and services in a reference country,
+typically the United States. PPP exchange rates are preferred to market
+exchange rates for the measurement of global poverty because the latter
+overestimates poverty in developing countries, where non-tradable
+services are relatively cheap (i.e., the Balassa-Samuelson-Penn effect).
+The revised 2011 PPPs are currently used to convert household
+consumption or income aggregates, originally expressed in local currency
+units, into a common internationally comparable currency unit.
+
+The PPP estimates published by the ICP are used for global poverty
+measurement. A few special cases are described in the following. PPPs
+are imputed for six countries, namely Egypt, Iraq, Jordan, Lao, Myanmar
+and Yemen, where there are concerns over the coverage and/or quality of
+the underlying ICP price collection [@atamanov2018a;@atamanov2020a]. To
+account for "urban bias" in ICP data collection, rural-urban PPPs are
+also imputed for China, India and Indonesia using official national
+PPPs, the ratio of urban to rural poverty line, and the urban share in
+ICP price data collection
+[@chen2008;@chen2010;@jolliffe2015a;@ferreira2016].
 
 ## Derivation of the international poverty line
-<span style="color:red">Samuel</span>
 
-Explain in one paragraph or so how the international poverty line was derived and link to the RCS and Ferreira et al. paper
+[Samuel]{style="color:red"}
+
+Explain in one paragraph or so how the international poverty line was
+derived and link to the RCS and Ferreira et al. paper
+
+The international poverty line (IPL) summarizes and converts into
+PPP-adjusted dollars the national poverty lines of a reference group of
+poorest countries in the world. Ravallion, Chen and Sangraula (2009)
+selected 15 poorest countries based on household final consumption
+expenditure per capita of countries around 2008 when the 2005 PPPs were
+released. The 15 poorest countries at the time were Ethiopia, Ghana, The
+Gambia, Guinea-Bissau, Mali, Mozambique, Malawi, Niger, Nepal, Rwanda,
+Sierra Leone, Chad, Tajikistan, Tanzania, and Uganda. An IPL of
+\$1.25/day per person, expressed in 2005 PPP dollars, was determined as
+the mean of the national poverty lines of these countries. When the 2011
+PPPs were released in 2014, the same 15 national poverty lines were
+used, but now converted to 2011 PPPs yielding an IPL of \$1.88, which
+was rounded to \$1.90 [@ferreira2015;@ferreira2016]. When the 2011 PPPs
+got revised in 2020, the IPL was similarly updated but remains unchanged
+at \$1.90 [@atamanov2020b;@worldbank2020].
 
 ## Derivation of other global poverty lines
-<span style="color:red">Samuel</span>
+
+[Samuel]{style="color:red"}
 
 Explain how higher lines are derived and link to Jolliffe & Prydz paper
 
+In addition to the IPL, the World Bank uses two higher poverty lines to
+measure and monitor poverty in countries with a low incidence of
+poverty. These higher lines, namely \$3.20 and \$5.50 in revised 2011
+PPPs, correspond to the national poverty lines of countries the World
+Bank classifies as lower- and upper-middle income countries,
+respectively. @jolliffe2016 used "implicit national poverty lines" to
+derive global poverty lines, including the IPL and higher lines.
+Implicit national poverty lines are defined as the percentiles that
+correspond to the national poverty rates that countries report,
+regardless of differences in methodology. Implicit national poverty
+lines are retrieved from
+[PovcalNet](http://iresearch.worldbank.org/PovcalNet/home.aspx), which
+contains all the Word Bank's consumption and income distributions
+denominated in 2011 PPP dollars per capita. @jolliffe2016 suggested a
+robust IPL estimate of \$1.90 as the median of national implicit poverty
+lines for low income countries from their approach. They further
+proposed, as higher global poverty lines, \$3.20 and \$5.50 as the
+median values of implicit poverty lines corresponding to lower- and
+upper-middle income countries. These lines were originally defined in
+original 2011 PPPs, but have later been updated using the revised 2011
+PPPs with virtually no changes observed [@ferreira2015;@ferreira2016].
+
 # Calculating poverty and inequality
-<span style="color:red">Daniel</span>
+
+[Daniel]{style="color:red"}
+
+For micro data, the poverty and inequality measures briefly described
+below are mainly based on @haughton2009. For grouped data, the poverty
+and inequality are based on @datt1998.
 
 ## FGT measures
-<span style="color:red">Aleksander and Samuel</span>
 
-In this subsectoin and the one below, let's write the name of each measure in Povcalnet and provide formulas for how they are derived. The FGT formulas should be easily available online
+[Aleksander and Samuel]{style="color:red"}
+
+In this subsectoin and the one below, let's write the name of each
+measure in Povcalnet and provide formulas for how they are derived. The
+FGT formulas should be easily available online
+
+**Poverty headcount index**: The poverty headcount index ($P_0$) is a
+measure of the proportion of the population that is counted as poor. The
+poverty headcount index is obtained from micro data with the following
+expression:$$ P_0 = \frac{1}{N} \sum_{i=1}^{N} I (y_i < z) $$
+
+where $N$ is the total population size, $y_i$ is consumption expenditure
+or income of individual $i$, $z$ is the poverty line, and $I(.)$ is an
+indicator function that takes on the value 1 if the bracketed expression
+is true or 0 otherwise.
+
+Headcount:
+<https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R>
+
+For grouped data, the poverty headcount is obtained using the following
+expression:
+
+$$
+P_0 = - \frac{1}{2m}[n + r(b+2z/\mu)((b+2z/\mu)^2)-m)^{-1/2}],
+$$
+
+where $m$ = $b^2 - 4a$, $n = 2be - 4c$, $r = (n^2 - 4me^2)^{1/2}$,
+$e = -(a + b + c + 1)$, $z$ is the poverty line, $\mu$ is the mean
+consumption expenditure or income, and $a, b, c$ are the parameter
+estimates of the GQ Lorenz function.
+
+**Poverty gap index**: The poverty gap index ($P_1$) is a measure that
+adds up the extent to which individuals on average fall below the
+poverty line, and expresses it as a percentage of the poverty line. It
+is given as:
+
+$$ P_1 = \frac{1}{N} \sum_{i=1}^{N} \frac{G_i}{z} $$ with
+$G_i = (z - y_i) × I (y_i < z)$, where $G_i$ is defined as the poverty
+gap (i.e. poverty line ($z$) less consumption expenditure or income
+($y_i$)) of poor individuals; the gap is considered to be zero for
+everyone else. The poverty gap index shows the average minimum cost of
+eliminating poverty (relative to the poverty line) using targeted
+transfers, expressed as a percentage of the poverty line.
+
+Gap:
+<https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R>
+
+For grouped data, the poverty gap index is obtained using the following
+expression:
+
+$$
+P_1 = P_0 - (\mu/z)L(P_0),
+$$
+
+with all variables defined as before.
+
+**Poverty severity index**: The poverty severity index ($P_2$) is a
+measure of the weighted sum of poverty gaps (as a proportion of the
+poverty line), where the weights are the proportionate poverty gaps
+themselves. It is given as:
+
+$$ P_1 = \frac{1}{N} \sum_{i=1}^{N} \left(\frac{G_i}{z} \right)^2 $$
+
+Also known as the poverty squared gap index, the poverty severity index
+accounts for inequality among the poor.
+
+Severity:
+<https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R>
+
+For grouped data, the poverty severity index is obtained using the
+following expression:
+
+$$
+P_2 = 2(P_1) - P_0 - \left(\frac{\mu}{z}\right)^2 \left[aP_0 + bL(P_0) - \left(\frac{r}{16}\right)ln \left(\frac{1 - P_0/s_1}{1 - P_0/s_2}\right)     \right]
+$$
+
+where $s_1 = (r- n)/(2m)$, $s_2 = -(r + n)/(2m)$, and all other variable
+are defined as before.
+
+**The Watts index**: The Watts index ($W$) is also an
+inequality-sensitive poverty measure that is given as:
+
+$$ W  = \frac{1}{N} \sum_{i=1}^{q} ln \left(\frac{z}{y_i} \right) $$
+
+where $N$ individuals in the population are indexed in ascending order
+of consumption expenditure (or income), and the sum is taken over $q$
+individuals whose consumption expenditure or income $y_i$ falls below
+the poverty line $z$. This formula applies for both micro and grouped
+data.
+
+Watts:
+<https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R>
 
 ## Inequality measures
-<span style="color:red">Aleksander and Samuel</span>.
 
-Can we get to the source code find out how the various other measures are calculated and list it here?
+[Aleksander and Samuel]{style="color:red"}
+
+Can we get to the source code find out how the various other measures
+are calculated and list it here?
+
+**Gini coefficient**: The Gini coefficient is derived from the Lorenz
+curve, which plots cumulative consumption expenditure (or income) share
+(on the y-axis) against cumulative population share (on the x-axis). A
+45-degree line is defined over the Lorenz curve as a line of perfect
+equality. The Gini coefficient is the area between the line 45-degree
+line and the Lorenz curve. Let $A$ be the area between the 45-degree
+line and the Lorenz curve, and let $B$ be the area under the Lorenz
+curve. The Gini coefficient ($Gini$) is given as: $\frac{A}{A + B}= 2A$
+(since $A + B = 0.5$).
+
+Formally, if $x_i$ is a point on the x-axis, and $y_i$ a point on the
+y-axis, then
+
+$$ Gini = 1 - \sum_{i=1}^{N} (x_i - x_{i-1})(y_i + y_{i-1}).
+$$
+
+When there are $N$ equal intervals on the x-axis, the equation above
+simplifies to:
+
+$$ Gini = 1 - \frac{1}{N}\sum_{i=1}^{N} (y_i + y_{i-1}). $$
+
+The Gini coefficient ranges from 0 (perfect equality) to 1 (complete
+inequality).
+
+Gini:
+<https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_gini.R>
+
+For grouped data, the Gini coefficient is obtained using the following
+expression
+<!--# would be nice to have this in one conditional equation with one curly bracket to the left, for example -->:
+
+$$
+Gini = \frac{e}{2} - \frac{n(b + 2)}{4m} + \frac{r^2}{8m\sqrt{-m}} \left[\sin^{-1} \frac{(2m + n)}{r} - \sin^{-1}\frac{n}{r} \right] \text{if $m<0$}
+$$
+
+$$
+Gini = \frac{e}{2} - \frac{n(b + 2)}{4m} + \frac{r^2}{8m\sqrt{m}} ln\left[\text{abs}\left( \frac{2m + n + 2\sqrt{m}(a + c - 1)}{n - 2e\sqrt{m}}\right) \right] \text{if $m>0$}
+$$
+
+with all variables defined as before.
+
+**Mean log deviation**: The mean log deviation (MLD) belongs to the
+family of generalized entropy (GE) inequality measures. It is given as:
+
+$$ MLD  = \frac{1}{N} \sum_{i=1}^{N} ln \left(\frac{\bar{y}}{y_i} \right) $$
+
+where $N$ is the total population size, $\bar{y}$ is the mean
+consumption expenditure or income per person, and $y_i$ is consumption
+expenditure or income of individual $i$. The mean log deviation has a
+minimum value of 0 (perfect equality) and has no upper bound. This
+formula applies for both micro and grouped data.
+
+**MLD**:
+<https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_mld.R>
+
+**Polarization**: The polarization index ($P$) measures the extent to
+which the distribution of consumption expenditure or income is "spread
+out" and bi-modal. It is given as:
+
+$$
+P =  \frac{2(\mu^* - \mu^L)}{m}
+$$
+
+where $\mu^*$ is the distribution-correction mean (i.e.
+$\mu(1 - Gini)$), $\mu^L$ is the mean of the poorest half of the
+population, and $m$ is the median. Like the Gini coefficient, the
+polarization index ranges from 0 (no polarization) to 1 (complete
+polarization). The polarization index is based on @wolfson1994 and
+@ravallion1996. This formula applies for both micro and grouped data.
+
+**Polarization**:
+<https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_polarization.R>
 
 # Generating global and regional estimates
 
 ## National accounts data
-<span style="color:red">Nishant</span>
 
-Explain in a short paragraph the national accounts data used, countries where we use specific sources, and link to national accounts paper.
+[Nishant]{style="color:red"}
+
+Explain in a short paragraph the national accounts data used, countries
+where we use specific sources, and link to national accounts paper.
 
 ## Extrapolations
-<span style="color:red">Nishant</span>
 
-Explain how/why we extrapolate, provide the formula, discuss the no-use of a passthrough rate (perhaps refer to relevant literature on this) and link to national accounts paper. 
+[Nishant]{style="color:red"}
 
+Explain how/why we extrapolate, provide the formula, discuss the no-use
+of a passthrough rate (perhaps refer to relevant literature on this) and
+link to national accounts paper.
 
 Explain the India exception.
 
 ## Interpolations
-<span style="color:red">Nishant</span>
 
-Explain how/why we interpolate and provide the two different interpolation formulas (in the national accounts paper). 
+[Nishant]{style="color:red"}
+
+Explain how/why we interpolate and provide the two different
+interpolation formulas (in the national accounts paper).
 
 ## Choosing between consumption and income estimates
-<span style="color:red">Daniel</span>
+
+[Daniel]{style="color:red"}
 
 ## Regions and universe of countries
-<span style="color:red">Marta</span>
+
+[Marta]{style="color:red"}
 
 Explain the regions used and where the set of 218 countries comes from.
 
 ## Population
-<span style="color:red">Marta</span>
+
+[Marta]{style="color:red"}
 
 Explain the population data that we use.
 
 ## Missing countries
-<span style="color:red">Marta</span>
 
-Explain how we treat countries with missing data and derive the regional/global headcounts
+[Marta]{style="color:red"}
+
+Explain how we treat countries with missing data and derive the
+regional/global headcounts
 
 ## Coverage rule
-<span style="color:red">Marta</span>
+
+[Marta]{style="color:red"}
 
 Explain the coverage rule
 
 # References
-
