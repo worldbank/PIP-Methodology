@@ -453,16 +453,14 @@ inequality) (source code: [micro
 data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_gini.R)).
 
 For grouped data, the Gini coefficient is obtained using the following
-expression
-<!--# would be nice to have this in one conditional equation with one curly bracket to the left, for example -->:
+expression:
 
 $$
-Gini = \frac{e}{2} - \frac{n(b + 2)}{4m} + \frac{r^2}{8m\sqrt{-m}} \left[\sin^{-1} \frac{(2m + n)}{r} - \sin^{-1}\frac{n}{r} \right] \text{if $m<0$}
-$$
-
-$$
-Gini = \frac{e}{2} - \frac{n(b + 2)}{4m} + \frac{r^2}{8m\sqrt{m}} ln\left[\text{abs}\left( \frac{2m + n + 2\sqrt{m}(a + c - 1)}{n - 2e\sqrt{m}}\right) \right] \text{if $m>0$}
-$$
+Gini = \begin{cases}
+ \frac{e}{2} - \frac{n(b + 2)}{4m} + \frac{r^2}{8m\sqrt{-m}} \left[\sin^{-1} \frac{(2m + n)}{r} - \sin^{-1}\frac{n}{r} \right] & \text{if $m<0$} \\ 
+ \frac{e}{2} - \frac{n(b + 2)}{4m} + \frac{r^2}{8m\sqrt{m}} ln\left[\text{abs}\left( \frac{2m + n + 2\sqrt{m}(a + c - 1)}{n - 2e\sqrt{m}}\right) \right]  & \text{if $m>0$}
+ \end{cases} 
+ $$
 
 with all variables defined as before (source code: [grouped
 data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R)).
