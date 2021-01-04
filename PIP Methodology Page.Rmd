@@ -3,10 +3,13 @@ title: "Poverty and Inequality Platform Methodology"
 output:
   html_document:
     number_sections: yes
+    toc: true
+    toc_float: true
   word_document: default
   pdf_document: default
 ---
 
+```{=html}
 <style type="text/css">
 h1 { /* Header 1 */
   font-size: 28px;
@@ -15,178 +18,189 @@ h2 { /* Header 2 */
     font-size: 22px;
 }
 </style>
-
+```
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-<span style="color:red">Daniel</span>
+<!-- INTRODUCTION -->
 
-This page explains the methods used to derive the global, region, and country level poverty counts. The page is divided into six sections:
+This page describes the types of the methods used to derive the global, regional, and country-level poverty and inequality estimates.
 
-
-*1. Acquiring household survey data:*
-
-*2. Constructing welfare aggregates:*
-
-*3. Generating survey estimates:*
-
-*4. Calculating poverty and inequality:*
-
-*5. Generating global and regional estimates:*
-
-*6. Refernences:*
-
-
-Please cite this page as: 
+Please cite this page as:
 
 World Bank. 2020. "Poverty and Inequality Platform Methodology." March 2020 version. Available at [link to follow].
 
 For old versions of this page, please see [link to follow].
 
 # Acquiring household survey data
-<span style="color:red">Daniel</span>
+
+This section describes the types of data used for measuring poverty and inequality and how the data are selected and obtained.
 
 ## Selection criteria and source of data
-<span style="color:red">Daniel</span>
 
-For developing countries, mostly 0fficial surveys used by the government for monitoring poverty. Occasionally surveys are dropped due to quality concerns with the survey design, welfare aggregate or auxilliary data. Decision made by GPWG, reason summarized in What's New. 
+For developing countries, the Poverty and Inequality Platform relies mostly on household surveys carried out by the countries' National Statistical Offices (NSO) sed by the government for monitoring poverty. Occasionally such surveys are not considered due to quality concerns with the survey design, welfare aggregate or auxilliary data. Whenever such decisions are made, they are done by the Global Poverty Working Group within the World Bank and the reason for the exlusion of a data point is summarized in "What's New" documents.
 
-The data mostly come from household surveys, explain very briefly what a household survey is, that NSOs conduct them. EU-SILC and LIS for some countries, a subset of these based on admin data. Link to more country information (country methodology pages).
+For EU high-income countries (with the exception of Germany), where available, the data are obtained from the EU Statistics on Income and Living COnditions (EU-SILC). For other high-income economies, Australia, Canada, Germany, Israel, Japan, South Korea, Taiwan, China, and the United States, data from Luxembourg Income Study (LIS) Database are used. These data rely on surveys carried out by NSOs or by academic institutions. Data from the LIS database are also used for EU countries for years predating EU-SILC.
 
 ## Representativeness
-<span style="color:red">Daniel</span>
 
-Discuss within-country spatial coverage. Mention that non-national surveys are also available but not used for regional/global numbers (Argentina exception). 
-Temporal coverage; often covers one year, 
+[Daniel]{style="color:red"}
+
+Discuss within-country spatial coverage. Mention that non-national surveys are also available but not used for regional/global numbers (Argentina exception). Temporal coverage; often covers one year,
+
 ## Binned vs. micro data
-<span style="color:red">Daniel</span>
 
-Mention countries exclusevely relying on binned data. 
+[Daniel]{style="color:red"}
+
+Mention countries exclusevely relying on binned data.
 
 ## How data are obtained
-<span style="color:red">Daniel</span>
 
-Mostly receive data through country engagement, poverty economist, processed and harmonized through GMD.
+Most of the data for the East Asia & Pacific, the Middle East & North Africa, South Asia, and Sub-Saharan Africa are obtained from country's National Statistical Offices. In many low-income countries, the Poverty and Equity Global Practice of the World Bank is cooperating with the National Statistical Offices and supporting their efforts to conduct household surveys and messure poverty. Data are obtained through these partnerships.
+
+For Latin America and the Carribean, most of the data are obtained from CEDLAS's Socio-Economic Database for Latin America and the Caribbean (SEDLAC).
+
+For most high income countries data are obtained through the Luxemburg Income Study.
+
+All of the data are harmonized by the Povety and Equity Global Practice and then passed on the Poverty and Equity Platform.
 
 # Constructing welfare aggregates
-<span style="color:red">Daniel</span>
 
+Several different concepts of poverty exist, building on different philosophical notions of what well-being, and the absence of well-being entails. The Poverty and Equity Platform utilizes a monetary measure of poverty throughout.
 
 ## Income or consumption
-<span style="color:red">Marta</span>
+
+[Marta]{style="color:red"}
 
 Explain briefly each, advantages and disadvantages of each (PSPR 2018 annex has material on this). Explain how zero/negative incomes are treated.
 
 ## Within-survey spatial/temporal delfation
-<span style="color:red">Samuel</span>
+
+[Samuel]{style="color:red"}
 
 Explain that some countries use spatial/temporal deflation but not all. Explain what spatial temporal deflation means. Mention India/China/Indonesia. Explain decimal years and that for EU-SILC/LIS, the reported year is the year before the survey year.
 
 ## Questionnaire design
-<span style="color:red">Daniel</span>
 
-Discuss the relevance of questionnaire design for the consumption aggregate (perhaps refer to some of the papers on the topic).
-Use the India MMRP/URP example (PSPR 2018 has material).
+[Daniel]{style="color:red"}
+
+Discuss the relevance of questionnaire design for the consumption aggregate (perhaps refer to some of the papers on the topic). Use the India MMRP/URP example (PSPR 2018 has material).
 
 ## Imputed rent
-<span style="color:red">Andres</span>
+
+[Andres]{style="color:red"}
 
 What it means to include it, when it is included. Use China/LAC examples to show the relevance.
 
 ## Treatment of binned data
-<span style="color:red">Christoph and Samuel</span>
+
+[Christoph and Samuel]{style="color:red"}
 
 Let's put down the actual formulas we use here to convert binned data into distributions.
 
 ## Equivalence scale
-<span style="color:red">Daniel</span>
 
-Mention per capita assumptions, drawbacks of it, and why we are still assuming it.
+All welfare aggregates are converted per capita forms by dividing with the number of household members. Implicit behind this converstion is an assumption that all household members have equal consumption levels or derive equal welfare from the total household income. This is a strong assupmtion, and evidence has shown that females often get less than an equal part (see World Bank 2018 chapter 5 and references therein). If different household members have different needed, which could be the case if children, for example, require less consumption than adults, then comparing welfare per capita might be misleading. An alternative assumption, often used by countries themselves when measuring poverty, is to use an adult equivalence scale. Such a scale defines the consumption need of each houeshold member, often based on sex and age and size of the household, and calculates the consumption per adult equivalent rather than per person. Despite of its compelling features, the lack of agreement on the equivalence scale levels across countries, and the more difficult interpretation of the final welfare numbers has prevented the World Bank from using such numbers for global poverty monitoring thus far. \@
 
 ## Comparability database
-<span style="color:red">Andres</span>
+
+[Andres]{style="color:red"}
 
 Explain the comparaiblity database and link to it
 
 # Generating survey estimates
-<span style="color:red">Daniel</span>
+
+[Daniel]{style="color:red"}
 
 ## Consumer Price Indices (CPIs)
-<span style="color:red">Samuel</span>
+
+[Samuel]{style="color:red"}
 
 Short paragraph summary of why CPIs are needed, which CPIs we use, and link to the CPI paper
 
 ## Purchasing Power Parities (PPPs)
-<span style="color:red">Samuel</span>
+
+[Samuel]{style="color:red"}
 
 Short paragraph summary of why PPPs are needed, which PPPs we use and link to the PPP paper
 
 ## Derivation of the international poverty line
-<span style="color:red">Samuel</span>
+
+[Samuel]{style="color:red"}
 
 Explain in one paragraph or so how the international poverty line was derived and link to the RCS and Ferreira et al. paper
 
 ## Derivation of other global poverty lines
-<span style="color:red">Samuel</span>
+
+[Samuel]{style="color:red"}
 
 Explain how higher lines are derived and link to Jolliffe & Prydz paper
 
 # Calculating poverty and inequality
-<span style="color:red">Daniel</span>
+
+[Daniel]{style="color:red"}
 
 ## FGT measures
-<span style="color:red">Aleksander and Samuel</span>
+
+[Aleksander and Samuel]{style="color:red"}
 
 In this subsectoin and the one below, let's write the name of each measure in Povcalnet and provide formulas for how they are derived. The FGT formulas should be easily available online
 
 ## Inequality measures
-<span style="color:red">Aleksander and Samuel</span>.
+
+[Aleksander and Samuel]{style="color:red"}.
 
 Can we get to the source code find out how the various other measures are calculated and list it here?
 
 # Generating global and regional estimates
 
 ## National accounts data
-<span style="color:red">Nishant</span>
+
+[Nishant]{style="color:red"}
 
 Explain in a short paragraph the national accounts data used, countries where we use specific sources, and link to national accounts paper.
 
 ## Extrapolations
-<span style="color:red">Nishant</span>
 
-Explain how/why we extrapolate, provide the formula, discuss the no-use of a passthrough rate (perhaps refer to relevant literature on this) and link to national accounts paper. 
+[Nishant]{style="color:red"}
 
+Explain how/why we extrapolate, provide the formula, discuss the no-use of a passthrough rate (perhaps refer to relevant literature on this) and link to national accounts paper.
 
 Explain the India exception.
 
 ## Interpolations
-<span style="color:red">Nishant</span>
 
-Explain how/why we interpolate and provide the two different interpolation formulas (in the national accounts paper). 
+[Nishant]{style="color:red"}
+
+Explain how/why we interpolate and provide the two different interpolation formulas (in the national accounts paper).
 
 ## Choosing between consumption and income estimates
-<span style="color:red">Daniel</span>
+
+Some countries have both consumption and income estimates of poverty. For lining up survey estimates to a reference year, the Poverty and Equite Platform chooses between consumption and income estimates of poverty in the following decision tree
 
 ## Regions and universe of countries
-<span style="color:red">Marta</span>
+
+[Marta]{style="color:red"}
 
 Explain the regions used and where the set of 218 countries comes from.
 
 ## Population
-<span style="color:red">Marta</span>
+
+[Marta]{style="color:red"}
 
 Explain the population data that we use.
 
 ## Missing countries
-<span style="color:red">Marta</span>
+
+[Marta]{style="color:red"}
 
 Explain how we treat countries with missing data and derive the regional/global headcounts
 
 ## Coverage rule
-<span style="color:red">Marta</span>
+
+[Marta]{style="color:red"}
 
 Explain the coverage rule
 
 # References
-
