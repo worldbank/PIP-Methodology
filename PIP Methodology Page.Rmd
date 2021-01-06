@@ -3,8 +3,10 @@ title: "Poverty and Inequality Platform Methodology"
 output:
   html_document:
     number_sections: yes
-  pdf_document: default
+    toc: true
+    toc_float: true
   word_document: default
+  pdf_document: default
 bibliography: references.bib
 ---
 
@@ -25,21 +27,9 @@ text-align: justify}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-[Daniel]{style="color:red"}
+<!-- INTRODUCTION -->
 
-This page explains the methods used to derive the global, region, and country level poverty counts. The page is divided into six sections:
-
-*1. Acquiring household survey data:*
-
-*2. Constructing welfare aggregates:*
-
-*3. Generating survey estimates:*
-
-*4. Calculating poverty and inequality:*
-
-*5. Generating global and regional estimates:*
-
-*6. Refernences:*
+This page describes the methods used to derive the global, regional, and country-level poverty and inequality estimates.
 
 Please cite this page as:
 
@@ -49,33 +39,41 @@ For old versions of this page, please see [link to follow].
 
 # Acquiring household survey data
 
-[Daniel]{style="color:red"}
+This section describes the types of data used for measuring poverty and inequality and how the data are selected and obtained.
 
 ## Selection criteria and source of data
 
-[Daniel]{style="color:red"}
+For developing countries, the Poverty and Inequality Platform relies mostly on household surveys carried out by the countries' National Statistical Offices (NSO) sed by the government for monitoring poverty. Occasionally such surveys are not considered due to quality concerns with the survey design, welfare aggregate or auxilliary data. Whenever such decisions are made, they are done by the Global Poverty Working Group within the World Bank and the reason for the exlusion of a data point is summarized in "What's New" documents.
 
-For developing countries, mostly 0fficial surveys used by the government for monitoring poverty. Occasionally surveys are dropped due to quality concerns with the survey design, welfare aggregate or auxilliary data. Decision made by GPWG, reason summarized in What's New.
-
-The data mostly come from household surveys, explain very briefly what a household survey is, that NSOs conduct them. EU-SILC and LIS for some countries, a subset of these based on admin data. Link to more country information (country methodology pages).
+For EU high-income countries (with the exception of Germany), where available, the data are obtained from the EU Statistics on Income and Living COnditions (EU-SILC). For other high-income economies, Australia, Canada, Germany, Israel, Japan, South Korea, Taiwan, China, and the United States, data from Luxembourg Income Study (LIS) Database are used. These data rely on surveys carried out by NSOs or by academic institutions. Data from the LIS database are also used for EU countries for years predating EU-SILC.
 
 ## Representativeness
 
 [Daniel]{style="color:red"}
 
-Discuss within-country spatial coverage. Mention that non-national surveys are also available but not used for regional/global numbers (Argentina exception). Temporal coverage; often covers one year, \#\# Binned vs. micro data [Daniel]{style="color:red"}
+Discuss within-country spatial coverage. Mention that non-national surveys are also available but not used for regional/global numbers (Argentina exception). Temporal coverage; often covers one year,
+
+## Binned vs. micro data
+
+[Daniel]{style="color:red"}
 
 Mention countries exclusevely relying on binned data.
 
 ## How data are obtained
 
-[Daniel]{style="color:red"}
+Most of the data for the East Asia & Pacific, the Middle East & North Africa, South Asia, and Sub-Saharan Africa are obtained from country's National Statistical Offices. In many low-income countries, the Poverty and Equity Global Practice of the World Bank is cooperating with the National Statistical Offices and supporting their efforts to conduct household surveys and messure poverty. Data are obtained through these partnerships.
 
-Mostly receive data through country engagement, poverty economist, processed and harmonized through GMD.
+For Latin America and the Carribean, most of the data are obtained from CEDLAS's Socio-Economic Database for Latin America and the Caribbean (SEDLAC).
+
+For most high income countries data are obtained through the Luxemburg Income Study.
+
+All of the data are harmonized by the Povety and Equity Global Practice and then passed on the Poverty and Equity Platform.
 
 # Constructing welfare aggregates
 
 [Daniel]{style="color:red"}
+
+Several different concepts of poverty exist, building on different philosophical notions of what well-being, and the absence of well-being entails. The Poverty and Equity Platform utilizes a monetary measure of poverty throughout.
 
 ## Income or consumption
 
@@ -137,9 +135,7 @@ Let's put down the actual formulas we use here to convert binned data into distr
 
 ## Equivalence scale
 
-[Daniel]{style="color:red"}
-
-Mention per capita assumptions, drawbacks of it, and why we are still assuming it.
+All welfare aggregates are converted per capita forms by dividing with the number of household members. Implicit behind this converstion is an assumption that all household members have equal consumption levels or derive equal welfare from the total household income. This is a strong assupmtion, and evidence has shown that females often get less than an equal part (see World Bank 2018 chapter 5 and references therein). If different household members have different needed, which could be the case if children, for example, require less consumption than adults, then comparing welfare per capita might be misleading. An alternative assumption, often used by countries themselves when measuring poverty, is to use an adult equivalence scale. Such a scale defines the consumption need of each houeshold member, often based on sex and age and size of the household, and calculates the consumption per adult equivalent rather than per person. Despite of its compelling features, the lack of agreement on the equivalence scale levels across countries, and the more difficult interpretation of the final welfare numbers has prevented the World Bank from using such numbers for global poverty monitoring thus far. \@
 
 ## Comparability database
 
