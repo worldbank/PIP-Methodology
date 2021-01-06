@@ -33,29 +33,48 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <!-- INTRODUCTION -->
 
-This page describes the methods used to derive the global, regional, and country-level poverty and inequality estimates.
+This page describes the methods used to derive the global, regional, and
+country-level poverty and inequality estimates.
 
 Please cite this page as:
 
-World Bank. 2020. "Poverty and Inequality Platform Methodology." March 2020 version. Available at [link to follow].
+World Bank. 2020. "Poverty and Inequality Platform Methodology." March
+2020 version. Available at [link to follow].
 
 For old versions of this page, please see [link to follow].
 
 # Acquiring household survey data
 
-This section describes the types of data used for measuring poverty and inequality and how the data are selected and obtained.
+This section describes the types of data used for measuring poverty and
+inequality and how the data are selected and obtained.
 
 ## Selection criteria and source of data
 
-For developing countries, the Poverty and Inequality Platform relies mostly on household surveys carried out by the countries' National Statistical Offices (NSO) sed by the government for monitoring poverty. Occasionally such surveys are not considered due to quality concerns with the survey design, welfare aggregate or auxilliary data. Whenever such decisions are made, they are done by the Global Poverty Working Group within the World Bank and the reason for the exlusion of a data point is summarized in "What's New" documents.
+For developing countries, the Poverty and Inequality Platform relies
+mostly on household surveys carried out by the countries' National
+Statistical Offices (NSO) sed by the government for monitoring poverty.
+Occasionally such surveys are not considered due to quality concerns
+with the survey design, welfare aggregate or auxilliary data. Whenever
+such decisions are made, they are done by the Global Poverty Working
+Group within the World Bank and the reason for the exlusion of a data
+point is summarized in "What's New" documents.
 
-For EU high-income countries (with the exception of Germany), where available, the data are obtained from the EU Statistics on Income and Living COnditions (EU-SILC). For other high-income economies, Australia, Canada, Germany, Israel, Japan, South Korea, Taiwan, China, and the United States, data from Luxembourg Income Study (LIS) Database are used. These data rely on surveys carried out by NSOs or by academic institutions. Data from the LIS database are also used for EU countries for years predating EU-SILC.
+For EU high-income countries (with the exception of Germany), where
+available, the data are obtained from the EU Statistics on Income and
+Living COnditions (EU-SILC). For other high-income economies, Australia,
+Canada, Germany, Israel, Japan, South Korea, Taiwan, China, and the
+United States, data from Luxembourg Income Study (LIS) Database are
+used. These data rely on surveys carried out by NSOs or by academic
+institutions. Data from the LIS database are also used for EU countries
+for years predating EU-SILC.
 
 ## Representativeness
 
 [Daniel]{style="color:red"}
 
-Discuss within-country spatial coverage. Mention that non-national surveys are also available but not used for regional/global numbers (Argentina exception). Temporal coverage; often covers one year,
+Discuss within-country spatial coverage. Mention that non-national
+surveys are also available but not used for regional/global numbers
+(Argentina exception). Temporal coverage; often covers one year,
 
 ## Binned vs. micro data
 
@@ -65,24 +84,75 @@ Mention countries exclusevely relying on binned data.
 
 ## How data are obtained
 
-Most of the data for the East Asia & Pacific, the Middle East & North Africa, South Asia, and Sub-Saharan Africa are obtained from country's National Statistical Offices. In many low-income countries, the Poverty and Equity Global Practice of the World Bank is cooperating with the National Statistical Offices and supporting their efforts to conduct household surveys and messure poverty. Data are obtained through these partnerships.
+Most of the data for the East Asia & Pacific, the Middle East & North
+Africa, South Asia, and Sub-Saharan Africa are obtained from country's
+National Statistical Offices. In many low-income countries, the Poverty
+and Equity Global Practice of the World Bank is cooperating with the
+National Statistical Offices and supporting their efforts to conduct
+household surveys and messure poverty. Data are obtained through these
+partnerships.
 
-For Latin America and the Carribean, most of the data are obtained from CEDLAS's Socio-Economic Database for Latin America and the Caribbean (SEDLAC).
+For Latin America and the Carribean, most of the data are obtained from
+CEDLAS's Socio-Economic Database for Latin America and the Caribbean
+(SEDLAC).
 
-For most high income countries data are obtained through the Luxemburg Income Study.
+For most high income countries data are obtained through the Luxemburg
+Income Study.
 
-All of the data are harmonized by the Povety and Equity Global Practice and then passed on the Poverty and Equity Platform.
+All of the data are harmonized by the Povety and Equity Global Practice
+and then passed on the Poverty and Equity Platform.
 
 # Constructing welfare aggregates
 
 [Daniel]{style="color:red"}
 
-Several different concepts of poverty exist, building on different philosophical notions of what well-being, and the absence of well-being entails. The Poverty and Equity Platform utilizes a monetary measure of poverty throughout.
+Several different concepts of poverty exist, building on different
+philosophical notions of what well-being, and the absence of well-being
+entails. The Poverty and Equity Platform utilizes a monetary measure of
+poverty throughout.
 
 ## Income or consumption
 
 [Marta]{style="color:red"}
 
+The welfare measure used for poverty measurement is based on either
+income or consumption household survey data. The differences between
+income and consumption matter for comparing trends and levels of
+poverty. Countries typically choose the concept that can be more
+accurately measured and that is more relevant to the context, while
+balancing concerns about respondent burden. On the one hand, consumption
+measures of poverty require a wide range of questions and are thus more
+time-consuming. Income measures, on the other hand, are difficult to
+obtain when a large fraction of the population works in the informal
+sector or is self-employed, which is frequently the case in poorer
+economies. Also, when households produce their own food with limited
+market interactions, it is harder to measure income than consumption.
+
+Both approaches to measuring poverty have advantages and disadvantages.
+The consumption approach is arguably more directly connected to economic
+welfare. Income measures of poverty also suffer from the disadvantage
+that incomes might be very low---even negative---in a given period,
+whereas consumption is smoothed to safeguard against such shocks.
+Consumption-based measures of poverty, conversely, are often more time
+intensive and require detailed price data and often post-fieldwork
+adjustments. Also, the design of consumption questionnaires varies
+widely and, as shown by numerous experiments, can have significant
+effects on final poverty estimates (@beegle2012 @deaton2001
+@jolliffe2001)
+
+Income measures often rely on no more than a handful of questions and
+can, at times, be verified from other sources. Moreover, given that
+incomes can be very low or negative, poverty rates are typically higher
+when income is used rather than consumption. For a given poverty rate,
+poor households also tend to be further below the poverty line when
+income is used, as explained by the earlier point about very low
+incomes: although it is plausible for households to have zero income in
+a given period, subsistence requires a minimum level of consumption,
+which is strictly above zero ( @worldbank2018 ). For this reason, PIP's
+current practice is to drop observations with negative welfare, while
+zeros are included.
+
+## Within-survey spatial/temporal delfation
 
 [Samuel]{style="color:red"}
 
@@ -124,15 +194,45 @@ for constructing welfare aggregates in real terms.
 
 [Daniel]{style="color:red"}
 
-Discuss the relevance of questionnaire design for the consumption aggregate (perhaps refer to some of the papers on the topic). Use the India MMRP/URP example (PSPR 2018 has material).
+Discuss the relevance of questionnaire design for the consumption
+aggregate (perhaps refer to some of the papers on the topic). Use the
+India MMRP/URP example (PSPR 2018 has material).
 
 ## Imputed rent
 
-During the process of constructing a welfare aggregate, housing is arguably the most important and difficult of all the components to include. From a conceptual point of view, housing could be understood as any other durable good. Its present value is not relevant for the analysis of current welfare because purchasing a house is such a large and relatively rare expenditure that is should not be included the in welfare aggregate.[@deaton2002, p.35]. The objective is instead on measuring the value of the of occupying the dwelling for the length of the survey period.
+During the process of constructing a welfare aggregate, housing is
+arguably the most important and difficult of all the components to
+include. From a conceptual point of view, housing could be understood as
+any other durable good. Its present value is not relevant for the
+analysis of current welfare because purchasing a house is such a large
+and relatively rare expenditure that is should not be included the in
+welfare aggregate.[@deaton2002, p.35]. The objective is instead on
+measuring the value of the of occupying the dwelling for the length of
+the survey period.
 
-Whether the welfare aggregate is based on consumption or income, accounting for housing is equally important. When the welfare aggregate is based on consumption, household surveys usually record the value of rent paid by market tenants. Since rent is the market value of occupying a house for a given period of time, it is feasible and empirically viable to estimate the flow of housing services. Yet, the same information is not available for household owners, even though they also "consume" housing services. By not including the value of housing "consumed" by owners, it would look like two household with the very same consumption patterns have different welfare just because one pays rent and the other does not. In fact, the market tenant would look better off than the household owner because the consumption of the former is higher than the one of the latter.
+Whether the welfare aggregate is based on consumption or income,
+accounting for housing is equally important. When the welfare aggregate
+is based on consumption, household surveys usually record the value of
+rent paid by market tenants. Since rent is the market value of occupying
+a house for a given period of time, it is feasible and empirically
+viable to estimate the flow of housing services. Yet, the same
+information is not available for household owners, even though they also
+"consume" housing services. By not including the value of housing
+"consumed" by owners, it would look like two household with the very
+same consumption patterns have different welfare just because one pays
+rent and the other does not. In fact, the market tenant would look
+better off than the household owner because the consumption of the
+former is higher than the one of the latter.
 
-When the welfare aggregate is based on income the logic is similar. In this case, the welfare aggregate should be composed by the remuneration of all the assets of the household including labor, capital, and durable goods such as houses and cars [@gasparini2004]. Families that own their housing receive an implicit value that is equivalent to the amount of money they would have to pay in the market if they had to rent a dwelling similar to the one they are currently living in.
+When the welfare aggregate is based on income the logic is similar. In
+this case, the welfare aggregate should be composed by the remuneration
+of all the assets of the household including labor, capital, and durable
+goods such as houses and cars [@gasparini2004]. Families that own their
+housing receive an implicit value that is equivalent to the amount of
+money they would have to pay in the market if they had to rent a
+dwelling similar to the one they are currently living in.
+
+## Treatment of binned data
 
 [Christoph and Samuel]{style="color:red"}
 
@@ -164,21 +264,70 @@ measures are based on the parameter estimates (see Section
 
 ## Equivalence scale
 
-All welfare aggregates are converted per capita forms by dividing with the number of household members. Implicit behind this converstion is an assumption that all household members have equal consumption levels or derive equal welfare from the total household income. This is a strong assupmtion, and evidence has shown that females often get less than an equal part (see World Bank 2018 chapter 5 and references therein). If different household members have different needed, which could be the case if children, for example, require less consumption than adults, then comparing welfare per capita might be misleading. An alternative assumption, often used by countries themselves when measuring poverty, is to use an adult equivalence scale. Such a scale defines the consumption need of each houeshold member, often based on sex and age and size of the household, and calculates the consumption per adult equivalent rather than per person. Despite of its compelling features, the lack of agreement on the equivalence scale levels across countries, and the more difficult interpretation of the final welfare numbers has prevented the World Bank from using such numbers for global poverty monitoring thus far. \@
+All welfare aggregates are converted per capita forms by dividing with
+the number of household members. Implicit behind this converstion is an
+assumption that all household members have equal consumption levels or
+derive equal welfare from the total household income. This is a strong
+assupmtion, and evidence has shown that females often get less than an
+equal part (see World Bank 2018 chapter 5 and references therein). If
+different household members have different needed, which could be the
+case if children, for example, require less consumption than adults,
+then comparing welfare per capita might be misleading. An alternative
+assumption, often used by countries themselves when measuring poverty,
+is to use an adult equivalence scale. Such a scale defines the
+consumption need of each houeshold member, often based on sex and age
+and size of the household, and calculates the consumption per adult
+equivalent rather than per person. Despite of its compelling features,
+the lack of agreement on the equivalence scale levels across countries,
+and the more difficult interpretation of the final welfare numbers has
+prevented the World Bank from using such numbers for global poverty
+monitoring thus far. \@
 
 ## Comparability database
 
-In September 2019, the PovcalNet team and the Poverty GP put together the [Comparability Over Time](https://datacatalog.worldbank.org/dataset/comparability-over-time-country-level-international-poverty-measures) dataset, which provides metadata on the comparability of poverty estimates from [PovcalNet](http://iresearch.worldbank.org/PovcalNet "Opens in a new window") within countries over time. The complete documentation of this dataset is available in Atamanov et al [-@atamanov2019] (Section 4). The following excerpt from this document clearly explains the motivation of this dataset:
+In September 2019, the PovcalNet team and the Poverty GP put together
+the [Comparability Over
+Time](https://datacatalog.worldbank.org/dataset/comparability-over-time-country-level-international-poverty-measures)
+dataset, which provides metadata on the comparability of poverty
+estimates from
+[PovcalNet](http://iresearch.worldbank.org/PovcalNet "Opens in a new window")
+within countries over time. The complete documentation of this dataset
+is available in Atamanov et al [-@atamanov2019] (Section 4). The
+following excerpt from this document clearly explains the motivation of
+this dataset:
 
-> As countries frequently improve household surveys and measurement methodology, strict comparability of poverty estimates over time is often limited. Within a country, we assume comparability of poverty estimates over time unless there is a known change to survey methodology, measurement or data structure. Thus, the assessment of comparability is country-dependent and relies on the accumulation of knowledge from past and current Bank staff in the countries, as well as close dialogue with national data producers with knowledge of survey design and methodology
+> As countries frequently improve household surveys and measurement
+> methodology, strict comparability of poverty estimates over time is
+> often limited. Within a country, we assume comparability of poverty
+> estimates over time unless there is a known change to survey
+> methodology, measurement or data structure. Thus, the assessment of
+> comparability is country-dependent and relies on the accumulation of
+> knowledge from past and current Bank staff in the countries, as well
+> as close dialogue with national data producers with knowledge of
+> survey design and methodology
 
 ### Application {.unnumbered}
 
-The comparability dataset is practically useful in any estimation that compares welfare aggregates from household surveys over time. In the blog [*Apples to apples --- PovcalNet introduces a new comparability indicator*](https://blogs.worldbank.org/opendata/apples-apples-povcalnet-introduces-new-comparability-indicator)*,* the authors present two examples on how to merge the comparability dataset with the [PovcalNet](http://iresearch.worldbank.org/PovcalNet/home.aspx) estimates. Both charts in the blog could be replicated in R and/or Stata by running the scripts available in the [worldbank/Global_Poverty_Blogs](https://github.com/worldbank/Global_Poverty_Blogs/tree/master/bg_povcalnet_comparability) repository.
+The comparability dataset is practically useful in any estimation that
+compares welfare aggregates from household surveys over time. In the
+blog [*Apples to apples --- PovcalNet introduces a new comparability
+indicator*](https://blogs.worldbank.org/opendata/apples-apples-povcalnet-introduces-new-comparability-indicator)*,*
+the authors present two examples on how to merge the comparability
+dataset with the
+[PovcalNet](http://iresearch.worldbank.org/PovcalNet/home.aspx)
+estimates. Both charts in the blog could be replicated in R and/or Stata
+by running the scripts available in the
+[worldbank/Global_Poverty_Blogs](https://github.com/worldbank/Global_Poverty_Blogs/tree/master/bg_povcalnet_comparability)
+repository.
 
 ### Access the data {.unnumbered}
 
-The dataset could be accessed in different ways. The official version is available in the [Development Data Hub](https://datacatalog.worldbank.org/dataset/comparability-over-time-country-level-international-poverty-measures) of the World Bank. However, it is possible to access it directly from R, Stata, or Python by calling this file, "<https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/506801/povcalnet_comparability.csv%22.>
+The dataset could be accessed in different ways. The official version is
+available in the [Development Data
+Hub](https://datacatalog.worldbank.org/dataset/comparability-over-time-country-level-international-poverty-measures)
+of the World Bank. However, it is possible to access it directly from R,
+Stata, or Python by calling this file,
+"<https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/506801/povcalnet_comparability.csv%22.>
 
 #### R {.unnumbered}
 
@@ -202,7 +351,18 @@ link = "https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/506801/
 df   = pd.read_csv(path)
 ```
 
-Each observation of the comparability dataset represents a survey point which is the combination of ISO3 country code (`countrycode`), `year`, survey acronym (`survname`), Welfare type (i.e., income or consumption) (`datatype`), and survey coverage (`coveragetype`). Variable `comparabiliy` specified the comparability over time with the following logic. The oldest comparable series in each country starts with the value zero (0) in the `comparability` variable. When comparability is broken, the value changes to one (1) for the year of the break and it goes on until the comparability is broken again in a subsequent year. The process repeats until the most recent surveys point available. Thus, to get the most recent comparable spell, you need the `max(comparability)` by `countrycode, survname, datatype, coveragetype`.
+Each observation of the comparability dataset represents a survey point
+which is the combination of ISO3 country code (`countrycode`), `year`,
+survey acronym (`survname`), Welfare type (i.e., income or consumption)
+(`datatype`), and survey coverage (`coveragetype`). Variable
+`comparabiliy` specified the comparability over time with the following
+logic. The oldest comparable series in each country starts with the
+value zero (0) in the `comparability` variable. When comparability is
+broken, the value changes to one (1) for the year of the break and it
+goes on until the comparability is broken again in a subsequent year.
+The process repeats until the most recent surveys point available. Thus,
+to get the most recent comparable spell, you need the
+`max(comparability)` by `countrycode, survname, datatype, coveragetype`.
 
 # Generating survey estimates
 
@@ -267,7 +427,7 @@ the underlying ICP price collection [@atamanov2018; @atamanov2020]. To
 account for "urban bias" in ICP data collection, rural-urban PPPs are
 also imputed for China, India and Indonesia using official national
 PPPs, the ratio of urban to rural poverty line, and the urban share in
-ICP price data collection [@chen2008; @chen2010; @jolliffe2015a;
+ICP price data collection [@chen2008; @chen2010; @jolliffe2015;
 @ferreira2016].
 
 ## Derivation of the international poverty line
@@ -289,7 +449,7 @@ Sierra Leone, Chad, Tajikistan, Tanzania, and Uganda. An IPL of
 the mean of the national poverty lines of these countries. When the 2011
 PPPs were released in 2014, the same 15 national poverty lines were
 used, but now converted to 2011 PPPs yielding an IPL of \$1.88, which
-was rounded to \$1.90 [@ferreira2015g;@ferreira2016]. When the 2011 PPPs
+was rounded to \$1.90 [@ferreira2015; @ferreira2016]. When the 2011 PPPs
 got revised in 2020, the IPL was similarly updated but remains unchanged
 at \$1.90 [@atamanov2020; @worldbank2020].
 
@@ -304,23 +464,15 @@ measure and monitor poverty in countries with a low incidence of
 poverty. These higher lines, namely \$3.20 and \$5.50 in revised 2011
 PPPs, correspond to the national poverty lines of countries the World
 Bank classifies as lower- and upper-middle income countries,
-respectively. @jolliffe2016 used "implicit national poverty lines" to
-derive global poverty lines, including the IPL and higher lines.
-Implicit national poverty lines are defined as the percentiles that
-correspond to the national poverty rates that countries report,
-regardless of differences in methodology. Implicit national poverty
-lines are retrieved from
-[PovcalNet](http://iresearch.worldbank.org/PovcalNet/home.aspx), which
-contains all the Word Bank's consumption expenditure and income
-distributions denominated in 2011 PPP dollars per capita. @jolliffe2016
-suggested a robust IPL estimate of \$1.90 as the median of national
-implicit poverty lines for low income countries from their approach.
-They further proposed, as higher global poverty lines, \$3.20 and \$5.50
-as the median values of implicit poverty lines corresponding to lower-
-and upper-middle income countries, respectively. These lines were
-originally defined in original 2011 PPPs, but have later been updated
-using the revised 2011 PPPs with virtually no changes observed
-[@jolliffe2016;@atamanov2020;@worldbank2020].
+respectively. @jolliffe2016 and income distributions denominated in 2011
+PPP dollars per capita. @jolliffe2016 suggested a robust IPL estimate of
+\$1.90 as the median of national implicit poverty lines for low income
+countries from their approach. They further proposed, as higher global
+poverty lines, \$3.20 and \$5.50 as the median values of implicit
+poverty lines corresponding to lower- and upper-middle income countries,
+respectively. These lines were originally defined in original 2011 PPPs,
+but have later been updated using the revised 2011 PPPs with virtually
+no changes observed [@jolliffe2016; @atamanov2020; @worldbank2020].
 
 # Calculating poverty and inequality {#sec:title}
 
@@ -510,45 +662,131 @@ data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_s
 
 ## National accounts data
 
-Two national accounts sources are used: Household Final Consumption Expenditure (HFCE) and Gross Domestic Product (GDP) -- both in per capita terms and in typically in constant USD. Due to its close conceptual relation with the household survey welfare measure, when available, HFCE is used as the preferred national accounts data for extrapolation and interpolation methods. In Sub-Saharan Africa however, HFCE estimates at constant prices are both sparse and the empirical correlation between growth in HFCE and growth in survey mean is not as strong (Ravallion, 2003). Hence, GDP is preferred for this region. World Development Indicator (WDI) database is the primary source for the HFCE data (in particular "Households Final Consumption Expenditure per capita (constant 2010 US\$)” [Series code NE.CON.PRVT.PC.KD]) and the GDP data (in particular “GDP per capita (constant 2010 US\$)” [Series code NY.GDP.PCAP.KD]). Where WDI data is not available, we use data from the Maddison Project Database (MPD) (for details, see Bolt et al., 2018). For a few cases where both the WDI and MPD is not available or known to be erroneous, country-specific sources -- such as national statistics, research papers, or other versions of the data -- is used. For a detailed discussion on the sources of national accounts data see Prydz et al. 2019.
-
-
+Two national accounts sources are used: Household Final Consumption
+Expenditure (HFCE) and Gross Domestic Product (GDP) -- both in per
+capita terms and in typically in constant USD. Due to its close
+conceptual relation with the household survey welfare measure, when
+available, HFCE is used as the preferred national accounts data for
+extrapolation and interpolation methods. In Sub-Saharan Africa however,
+HFCE estimates at constant prices are both sparse and the empirical
+correlation between growth in HFCE and growth in survey mean is not as
+strong (Ravallion, 2003). Hence, GDP is preferred for this region. World
+Development Indicator (WDI) database is the primary source for the HFCE
+data (in particular "Households Final Consumption Expenditure per capita
+(constant 2010 US\$)" [Series code NE.CON.PRVT.PC.KD]) and the GDP data
+(in particular "GDP per capita (constant 2010 US\$)" [Series code
+NY.GDP.PCAP.KD]). Where WDI data is not available, we use data from the
+Maddison Project Database (MPD) (for details, see Bolt et al., 2018).
+For a few cases where both the WDI and MPD is not available or known to
+be erroneous, country-specific sources -- such as national statistics,
+research papers, or other versions of the data -- is used. For a
+detailed discussion on the sources of national accounts data see Prydz
+et al. 2019.
 
 ## Extrapolations
 
-Global poverty is estimated for each reference year utilizing the surveys from all countries. For countries with no surveys available for a specific reference year, country-level poverty count is extrapolated using consumption or income aggregate from the closest survey and the growth rates from national accounts. The extrapolation of the survey mean ($m$) from year $t_0$ to reference year 𝑡𝑟 can be summarized as follows: 
+Global poverty is estimated for each reference year utilizing the
+surveys from all countries. For countries with no surveys available for
+a specific reference year, country-level poverty count is extrapolated
+using consumption or income aggregate from the closest survey and the
+growth rates from national accounts. The extrapolation of the survey
+mean ($m$) from year $t_0$ to reference year 𝑡𝑟 can be summarized as
+follows:
 
 $$m_{tr} = \dfrac{n_{tr}}{n_{to}} \times m_{to}$$
 
-where $n$ is the national accounts mean. Poverty for the reference year is then estimated using this extrapolated distribution.
+where $n$ is the national accounts mean. Poverty for the reference year
+is then estimated using this extrapolated distribution.
 
-Importantly, the extrapolation method assumes distribution-neutral growth, i.e. the consumption or income aggregate of the entire distribution grows at the same national average rate. If a survey is available after the reference year, that information is also used: An average of the two extrapolated estimates is then reported, (inversely) weighted by their relative distance from the reference year. In the cases where the reference year falls after the latest available survey of a country, or before the first available survey, the income or consumption vector from the closest survey is extrapolated using per capita growth rates from national accounts between the survey year and reference year. The mechanics of the extrapolation and interpolation are described in more detail in Ravallion (2003), Chen and Ravallion (2004) and Jolliffe et al. (2014).
+Importantly, the extrapolation method assumes distribution-neutral
+growth, i.e. the consumption or income aggregate of the entire
+distribution grows at the same national average rate. If a survey is
+available after the reference year, that information is also used: An
+average of the two extrapolated estimates is then reported, (inversely)
+weighted by their relative distance from the reference year. In the
+cases where the reference year falls after the latest available survey
+of a country, or before the first available survey, the income or
+consumption vector from the closest survey is extrapolated using per
+capita growth rates from national accounts between the survey year and
+reference year. The mechanics of the extrapolation and interpolation are
+described in more detail in Ravallion (2003), Chen and Ravallion (2004)
+and Jolliffe et al. (2014).
 
 ### Pass-through rate for India
 
-Evidence exists that there are differences in growth rates between growth in national accounts aggregates and growth in welfare aggregate captured in household surveys. The growth in survey aggregate has historically been lower than the growth in national accounts (for example see Ravallion, 2003; Deaton, 2005; Pinkovskiy & Sala-i-Martin, 2016; Lakner et al., 2020). Hence, a pass-through, i.e. the fraction of growth in national accounts captured in household surveys, is used to calculate the survey growth rates from national accounts for the extrapolation method. 
+Evidence exists that there are differences in growth rates between
+growth in national accounts aggregates and growth in welfare aggregate
+captured in household surveys. The growth in survey aggregate has
+historically been lower than the growth in national accounts (for
+example see Ravallion, 2003; Deaton, 2005; Pinkovskiy & Sala-i-Martin,
+2016; Lakner et al., 2020). Hence, a pass-through, i.e. the fraction of
+growth in national accounts captured in household surveys, is used to
+calculate the survey growth rates from national accounts for the
+extrapolation method.
 
-India is a particular case where the pass-through methodology is applied. The latest available survey for India is from 2011/12. Poverty headcount for India after 2011 is calculated using the extrapolation method defined above with a national accounts growth rate adjusted for a pass-through rate. Up to 2015, an implied pass-through rate is calculated using the poverty estimates for 2014/15 reported in Newhouse & Vyas (2019). The national pass-through rate in India for the period 2012-2015 is estimated to be 0.65. The 0.65 national pass-through rate is calculated as the population-weighted average of the rural pass-through rate (0.699) and urban pass-through rate (0.551), which are calibrated using the poverty estimates from Newhouse and Vyas (2018) for 2014/15 (for more details, see Chen et al., 2018).
+India is a particular case where the pass-through methodology is
+applied. The latest available survey for India is from 2011/12. Poverty
+headcount for India after 2011 is calculated using the extrapolation
+method defined above with a national accounts growth rate adjusted for a
+pass-through rate. Up to 2015, an implied pass-through rate is
+calculated using the poverty estimates for 2014/15 reported in Newhouse
+& Vyas (2019). The national pass-through rate in India for the period
+2012-2015 is estimated to be 0.65. The 0.65 national pass-through rate
+is calculated as the population-weighted average of the rural
+pass-through rate (0.699) and urban pass-through rate (0.551), which are
+calibrated using the poverty estimates from Newhouse and Vyas (2018) for
+2014/15 (for more details, see Chen et al., 2018).
 
-Poverty for years 2016-2018 is estimated using a pass-through rate calculated using a global sample of surveys (for more detail, see Lakner et al., 2020; Ifeyani et al., 2020). This estimated pass-through rate of 0.67 is used to extrapolate poverty in India for this period (for more detail, see Ifeyani et al, 2020).    
-
+Poverty for years 2016-2018 is estimated using a pass-through rate
+calculated using a global sample of surveys (for more detail, see Lakner
+et al., 2020; Ifeyani et al., 2020). This estimated pass-through rate of
+0.67 is used to extrapolate poverty in India for this period (for more
+detail, see Ifeyani et al, 2020).
 
 ## Interpolations
 
-In cases where the reference year falls between two surveys, poverty is estimated for the reference year using both extrapolated surveys (before and after the reference year). To adjust estimates to the reference year, one of two approaches are used, depending on the correspondence in growth between national accounts and survey data (and similarly, conditional on both surveys being either both consumption or income surveys). 
+In cases where the reference year falls between two surveys, poverty is
+estimated for the reference year using both extrapolated surveys (before
+and after the reference year). To adjust estimates to the reference
+year, one of two approaches are used, depending on the correspondence in
+growth between national accounts and survey data (and similarly,
+conditional on both surveys being either both consumption or income
+surveys).
 
-### Interpolation (same direction) 
+### Interpolation (same direction)
 
-“Same direction interpolation” is used when growth in the survey mean between the two surveys is of the same sign as the real growth from national accounts from the first survey to the reference year, and from the reference year to the second survey. The mean for the reference year $t_r$,$m_{tr}$, is estimated by taking the mean of the two closest surveys before and after $t_r$ ($m_{t0}$ and $m_{t1}$) and interpolating the survey means using national accounts data for periods $t_0$, $t_1$, and $t_r$ ($n_{t0}$, $n_{t1}$, and $n_{tr}$). The interpolation formula is as follows:
+"Same direction interpolation" is used when growth in the survey mean
+between the two surveys is of the same sign as the real growth from
+national accounts from the first survey to the reference year, and from
+the reference year to the second survey. The mean for the reference year
+$t_r$,$m_{tr}$, is estimated by taking the mean of the two closest
+surveys before and after $t_r$ ($m_{t0}$ and $m_{t1}$) and interpolating
+the survey means using national accounts data for periods $t_0$, $t_1$,
+and $t_r$ ($n_{t0}$, $n_{t1}$, and $n_{tr}$). The interpolation formula
+is as follows:
 
 $$m_{tr} = \dfrac{(m_{t1} - m_{t0})}{(n_{t1} - n_{t0})} \times (n_{tr} - n_{t0}) + m_{t0}$$
 
-After this alignment, there are two distributions both which have the same mean for the reference year but different rates of poverty since their distributions are unchanged from their reference point. The estimate of poverty from these two distributions is the weighted average poverty rate from both distributions where whereby each poverty estimate is weighted by the inverse of the relative distance between the survey year and the reference year. If a reference year falls two years after he first survey and one year after the second survey, the poverty estimate from the first survey is given a weight of 1/3 and the estimate from the second survey a weight of 2/3.
+After this alignment, there are two distributions both which have the
+same mean for the reference year but different rates of poverty since
+their distributions are unchanged from their reference point. The
+estimate of poverty from these two distributions is the weighted average
+poverty rate from both distributions where whereby each poverty estimate
+is weighted by the inverse of the relative distance between the survey
+year and the reference year. If a reference year falls two years after
+he first survey and one year after the second survey, the poverty
+estimate from the first survey is given a weight of 1/3 and the estimate
+from the second survey a weight of 2/3.
 
-### Interpolation (diverging directions) 
+### Interpolation (diverging directions)
 
-If the growth rates in surveys and national accounts diverge, an approach similar to the extrapolation is applied to the two closest surveys. Poverty for the reference year is estimated using both distributions and the estimates are averaged using weights inverse to the distance 5 between the survey year and the reference year. The mechanics of the extrapolation and interpolation are described in box 6.4 in Jolliffe et al. (2015) and in Appendix A of World Bank (2018).
-
+If the growth rates in surveys and national accounts diverge, an
+approach similar to the extrapolation is applied to the two closest
+surveys. Poverty for the reference year is estimated using both
+distributions and the estimates are averaged using weights inverse to
+the distance 5 between the survey year and the reference year. The
+mechanics of the extrapolation and interpolation are described in box
+6.4 in Jolliffe et al. (2015) and in Appendix A of World Bank (2018).
 
 ## Choosing between consumption and income estimates
 
@@ -558,56 +796,144 @@ If the growth rates in surveys and national accounts diverge, an approach simila
 
 [Marta]{style="color:red"}
 
-Regions are defined using the PIP classification, which differs from the regional classifications typically used by the World Bank. Some economies, mostly high-income economies, are excluded from the geographical regions and are included as a separate group (referred to as other high income, industrialized economies, or rest of the world in earlier publications). The list of economies included in each region is as follows:
+Regions are defined using the PIP classification, which differs from the
+regional classifications typically used by the World Bank. Some
+economies, mostly high-income economies, are excluded from the
+geographical regions and are included as a separate group (referred to
+as other high income, industrialized economies, or rest of the world in
+earlier publications). The list of economies included in each region is
+as follows:
 
 -   **East Asia and Pacific:**
 
-    -   American Samoa, Cambodia, China, Fiji, Indonesia, Kiribati, Korea (Democratic People's Republic of), Lao People's Democratic Republic, Malaysia, Marshall Islands, Micronesia Federated States of, Mongolia, Myanmar, Northern Mariana Islands, Palau, Papua New Guinea, Philippines, Samoa, Solomon Islands, Thailand, Timor-Leste, Tonga, Tuvalu, Vanuatu, Vietnam.
+    -   American Samoa, Cambodia, China, Fiji, Indonesia, Kiribati,
+        Korea (Democratic People's Republic of), Lao People's Democratic
+        Republic, Malaysia, Marshall Islands, Micronesia Federated
+        States of, Mongolia, Myanmar, Northern Mariana Islands, Palau,
+        Papua New Guinea, Philippines, Samoa, Solomon Islands, Thailand,
+        Timor-Leste, Tonga, Tuvalu, Vanuatu, Vietnam.
 
 -   **Europe and Central Asia:**
 
-    -   Albania, Armenia, Azerbaijan, Belarus, Bosnia and Herzegovina, Bulgaria, Croatia, Czech Republic, Estonia, Georgia, Hungary, Kazakhstan, Kosovo, Kyrgyz Republic, Latvia, Lithuania, Moldova, Montenegro, North Macedonia, Poland, Romania, Russian Federation, Serbia, Slovak Republic, Slovenia, Tajikistan, Ukraine, Uzbekistan.
+    -   Albania, Armenia, Azerbaijan, Belarus, Bosnia and Herzegovina,
+        Bulgaria, Croatia, Czech Republic, Estonia, Georgia, Hungary,
+        Kazakhstan, Kosovo, Kyrgyz Republic, Latvia, Lithuania, Moldova,
+        Montenegro, North Macedonia, Poland, Romania, Russian
+        Federation, Serbia, Slovak Republic, Slovenia, Tajikistan,
+        Ukraine, Uzbekistan.
 
 -   **Latin America and the Caribbean:**
 
-    -   Argentina, Barbados, Belize, Bolivia, Brazil, Chile, Colombia, Costa Rica, Cuba, Dominica, Dominican Republic, Ecuador, El Salvador, Grenada, Guatemala, Guyana, Haiti, Honduras, Jamaica, Mexico, Nicaragua, Panama, Paraguay, Peru, St. Kitts and Nevis, St. Lucia, St. Vincent and the Grenadines, Suriname, Trinidad and Tobago, Uruguay, Venezuela, Republica Bolivariana de.
+    -   Argentina, Barbados, Belize, Bolivia, Brazil, Chile, Colombia,
+        Costa Rica, Cuba, Dominica, Dominican Republic, Ecuador, El
+        Salvador, Grenada, Guatemala, Guyana, Haiti, Honduras, Jamaica,
+        Mexico, Nicaragua, Panama, Paraguay, Peru, St. Kitts and Nevis,
+        St. Lucia, St. Vincent and the Grenadines, Suriname, Trinidad
+        and Tobago, Uruguay, Venezuela, Republica Bolivariana de.
 
 -   **Middle East and North Africa:**
 
-    -   Algeria, Djibouti, Egypt, Arab Republic of, Iran, Islamic Republic of, Iraq, Jordan, Lebanon, Libya, Morocco, Oman, Syrian Arab Republic, Tunisia, West Bank and Gaza, Yemen, Republic of.
+    -   Algeria, Djibouti, Egypt, Arab Republic of, Iran, Islamic
+        Republic of, Iraq, Jordan, Lebanon, Libya, Morocco, Oman, Syrian
+        Arab Republic, Tunisia, West Bank and Gaza, Yemen, Republic of.
 
 -   **Other High Income:**
 
-    -   Andorra, Antigua and Barbuda, Aruba, Australia, Austria, Bahamas, the, Bahrain, Belgium, Bermuda, British Virgin Islands, Brunei Darussalam, Canada, Cayman Islands, Channel Islands, Curacao, Cyprus, Denmark, Faroe Islands, Finland, France, French Polynesia, Germany, Gibraltar, Greece, Greenland, Guam, Hong Kong SAR, China, Iceland, Ireland, Isle of Man, Israel, Italy, Japan, Korea, Republic of, Kuwait, Liechtenstein, Macao SAR, China, Malta, Monaco, Nauru, Netherlands, New Caledonia, New Zealand, Norway, Portugal, Puerto Rico, Qatar, San Marino, Saudi Arabia, Singapore, Sint Maarten, Spain, St. Martin, Sweden, Switzerland, Taiwan, China, Turks and Caicos Islands, United Arab Emirates, United Kingdom, United States, Virgin Islands, US.
+    -   Andorra, Antigua and Barbuda, Aruba, Australia, Austria,
+        Bahamas, the, Bahrain, Belgium, Bermuda, British Virgin Islands,
+        Brunei Darussalam, Canada, Cayman Islands, Channel Islands,
+        Curacao, Cyprus, Denmark, Faroe Islands, Finland, France, French
+        Polynesia, Germany, Gibraltar, Greece, Greenland, Guam, Hong
+        Kong SAR, China, Iceland, Ireland, Isle of Man, Israel, Italy,
+        Japan, Korea, Republic of, Kuwait, Liechtenstein, Macao SAR,
+        China, Malta, Monaco, Nauru, Netherlands, New Caledonia, New
+        Zealand, Norway, Portugal, Puerto Rico, Qatar, San Marino, Saudi
+        Arabia, Singapore, Sint Maarten, Spain, St. Martin, Sweden,
+        Switzerland, Taiwan, China, Turks and Caicos Islands, United
+        Arab Emirates, United Kingdom, United States, Virgin Islands,
+        US.
 
 -   **South Asia:**
 
-    -   Afghanistan, Bangladesh, Bhutan, India, Maldives, Nepal, Pakistan, Sri Lanka
+    -   Afghanistan, Bangladesh, Bhutan, India, Maldives, Nepal,
+        Pakistan, Sri Lanka
 
 -   **Sub-Saharan Africa:**
 
-    -   Angola, Benin, Botswana, Burkina Faso, Burundi, Cabo Verde, Cameroon, Central African Republic, Chad, Comoros, Congo, Democratic Republic of, Congo, Republic of, Cote d'Ivoire, Equatorial Guinea, Eritrea, Eswatini, Ethiopia, Gabon, Gambia, the, Ghana, Guinea, Guinea-Bissau, Kenya, Lesotho, Liberia, Madagascar, Malawi, Mali, Mauritania, Mauritius, Mozambique, Namibia, Niger, Nigeria, Rwanda, Sao Tome and Principe, Senegal, Seychelles, Sierra Leone, Somalia, South Africa, South Sudan, Sudan, Tanzania, Togo, Uganda, Zambia, Zimbabwe.
+    -   Angola, Benin, Botswana, Burkina Faso, Burundi, Cabo Verde,
+        Cameroon, Central African Republic, Chad, Comoros, Congo,
+        Democratic Republic of, Congo, Republic of, Cote d'Ivoire,
+        Equatorial Guinea, Eritrea, Eswatini, Ethiopia, Gabon, Gambia,
+        the, Ghana, Guinea, Guinea-Bissau, Kenya, Lesotho, Liberia,
+        Madagascar, Malawi, Mali, Mauritania, Mauritius, Mozambique,
+        Namibia, Niger, Nigeria, Rwanda, Sao Tome and Principe, Senegal,
+        Seychelles, Sierra Leone, Somalia, South Africa, South Sudan,
+        Sudan, Tanzania, Togo, Uganda, Zambia, Zimbabwe.
 
 ## Population {#population}
 
 [Marta]{style="color:red"}
 
-Population data are taken from the World Bank's [World Development Indicators](http://datatopics.worldbank.org/world-development-indicators/). The regional and global population may differ from the aggregates given in the World Development Indicators, because PIP uses the classification of economies based on whether they are IBRD eligible or recently graduated (See [Regions and universe of countries section](#regionsandcountries)). The regional total population only includes economies that are IBRD eligible or recently graduated. The remaining economies are included in the group "Other high income" (see @worldbank2016 and [Regions and universe of countries section](#regionsandcountries) for a list of economies). Furthermore, the regional total in PIP also includes economies without a household survey or other missing data. Hence, the sum of the populations of the economies that are included in PIP is less than the regional total.
+Population data are taken from the World Bank's [World Development
+Indicators](http://datatopics.worldbank.org/world-development-indicators/).
+The regional and global population may differ from the aggregates given
+in the World Development Indicators, because PIP uses the classification
+of economies based on whether they are IBRD eligible or recently
+graduated (See [Regions and universe of countries
+section](#regionsandcountries)). The regional total population only
+includes economies that are IBRD eligible or recently graduated. The
+remaining economies are included in the group "Other high income" (see
+@worldbank2016 and [Regions and universe of countries
+section](#regionsandcountries) for a list of economies). Furthermore,
+the regional total in PIP also includes economies without a household
+survey or other missing data. Hence, the sum of the populations of the
+economies that are included in PIP is less than the regional total.
 
 ## Missing countries
 
 [Marta]{style="color:red"}
 
-Some economies have no household survey data that can be used to monitor poverty (or they lack the national accounts data for a particular reference year). In order to include these economies in the regional and global poverty estimates, it is assumed that they have a poverty headcount equal to their region's population-weighted average. This is then used to estimate the number of people living in poverty using population data from the World Development Indicators (See [Population section](#population)). Regions are defined using PIP's classification, which differs from the regional classifications typically used by the World Bank (See [Regions and universe of countries section](#regionsandcountries)).
+Some economies have no household survey data that can be used to monitor
+poverty (or they lack the national accounts data for a particular
+reference year). In order to include these economies in the regional and
+global poverty estimates, it is assumed that they have a poverty
+headcount equal to their region's population-weighted average. This is
+then used to estimate the number of people living in poverty using
+population data from the World Development Indicators (See [Population
+section](#population)). Regions are defined using PIP's classification,
+which differs from the regional classifications typically used by the
+World Bank (See [Regions and universe of countries
+section](#regionsandcountries)).
 
 ## Coverage rule
 
 [Marta]{style="color:red"}
 
-The coverage rule is used to determine whether a particular lineup year has sufficient population coverage to allow the estimation of regional and global poverty aggregates to be made. The coverage rule is calculated using data for survey years within three years either side of a lineup year. Regional estimates are displayed if data cover 50 percent of the population in the region. For regions in which the surveys within three years either side of the lineup year account for less than half of the regional population, the regional poverty estimate is not reported.
+The coverage rule is used to determine whether a particular lineup year
+has sufficient population coverage to allow the estimation of regional
+and global poverty aggregates to be made. The coverage rule is
+calculated using data for survey years within three years either side of
+a lineup year. Regional estimates are displayed if data cover 50 percent
+of the population in the region. For regions in which the surveys within
+three years either side of the lineup year account for less than half of
+the regional population, the regional poverty estimate is not reported.
 
-A third additional requirement is applied to determine if the global poverty estimate can be reported in a line-up year. This requirement addresses the goal of focusing the measurement of global poverty on economies where most of the poor live. Specifically, it tries to avoid a situation in which the global population threshold is met by having recent data in the high-income countries, East Asia and Pacific, and Latin America and the Caribbean, which together account for a very small share of the global extreme poor. Under this requirement, global poverty estimates are reported only if data are representative of at least 50 percent of the population in low-income and lower-middle-income countries, because most of the poor live in these groups of countries. The World Bank classification of economies according to income groups in the lineup year is used (see [here](https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups)).
+A third additional requirement is applied to determine if the global
+poverty estimate can be reported in a line-up year. This requirement
+addresses the goal of focusing the measurement of global poverty on
+economies where most of the poor live. Specifically, it tries to avoid a
+situation in which the global population threshold is met by having
+recent data in the high-income countries, East Asia and Pacific, and
+Latin America and the Caribbean, which together account for a very small
+share of the global extreme poor. Under this requirement, global poverty
+estimates are reported only if data are representative of at least 50
+percent of the population in low-income and lower-middle-income
+countries, because most of the poor live in these groups of countries.
+The World Bank classification of economies according to income groups in
+the lineup year is used (see
+[here](https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups)).
 
-This requirement is only applied to the global poverty estimate, not at the regional level (for more details see @castanedaaguilar2020 ).
+This requirement is only applied to the global poverty estimate, not at
+the regional level (for more details see @castanedaaguilar2020 ).
 
 # References
