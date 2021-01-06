@@ -27,8 +27,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [Daniel]{style="color:red"}
 
-This page explains the methods used to derive the global, region, and country
-level poverty counts. The page is divided into six sections:
+This page explains the methods used to derive the global, region, and country level poverty counts. The page is divided into six sections:
 
 *1. Acquiring household survey data:*
 
@@ -44,8 +43,7 @@ level poverty counts. The page is divided into six sections:
 
 Please cite this page as:
 
-World Bank. 2020. "Poverty and Inequality Platform Methodology." March 2020
-version. Available at [link to follow].
+World Bank. 2020. "Poverty and Inequality Platform Methodology." March 2020 version. Available at [link to follow].
 
 For old versions of this page, please see [link to follow].
 
@@ -57,24 +55,15 @@ For old versions of this page, please see [link to follow].
 
 [Daniel]{style="color:red"}
 
-For developing countries, mostly 0fficial surveys used by the government for
-monitoring poverty. Occasionally surveys are dropped due to quality concerns
-with the survey design, welfare aggregate or auxilliary data. Decision made by
-GPWG, reason summarized in What's New.
+For developing countries, mostly 0fficial surveys used by the government for monitoring poverty. Occasionally surveys are dropped due to quality concerns with the survey design, welfare aggregate or auxilliary data. Decision made by GPWG, reason summarized in What's New.
 
-The data mostly come from household surveys, explain very briefly what a
-household survey is, that NSOs conduct them. EU-SILC and LIS for some countries,
-a subset of these based on admin data. Link to more country information (country
-methodology pages).
+The data mostly come from household surveys, explain very briefly what a household survey is, that NSOs conduct them. EU-SILC and LIS for some countries, a subset of these based on admin data. Link to more country information (country methodology pages).
 
 ## Representativeness
 
 [Daniel]{style="color:red"}
 
-Discuss within-country spatial coverage. Mention that non-national surveys are
-also available but not used for regional/global numbers (Argentina exception).
-Temporal coverage; often covers one year, \#\# Binned vs. micro data
-[Daniel]{style="color:red"}
+Discuss within-country spatial coverage. Mention that non-national surveys are also available but not used for regional/global numbers (Argentina exception). Temporal coverage; often covers one year, \#\# Binned vs. micro data [Daniel]{style="color:red"}
 
 Mention countries exclusevely relying on binned data.
 
@@ -82,8 +71,7 @@ Mention countries exclusevely relying on binned data.
 
 [Daniel]{style="color:red"}
 
-Mostly receive data through country engagement, poverty economist, processed and
-harmonized through GMD.
+Mostly receive data through country engagement, poverty economist, processed and harmonized through GMD.
 
 # Constructing welfare aggregates
 
@@ -103,156 +91,69 @@ Income measures often rely on no more than a handful of questions and can, at ti
 
 [Samuel]{style="color:red"}
 
-Explain that some countries use spatial/temporal deflation but not all. Explain
-what spatial temporal deflation means. Mention India/China/Indonesia. Explain
-decimal years and that for EU-SILC/LIS, the reported year is the year before the
-survey year.
+Explain that some countries use spatial/temporal deflation but not all. Explain what spatial temporal deflation means. Mention India/China/Indonesia. Explain decimal years and that for EU-SILC/LIS, the reported year is the year before the survey year.
 
 ## Questionnaire design
 
 [Daniel]{style="color:red"}
 
-Discuss the relevance of questionnaire design for the consumption aggregate
-(perhaps refer to some of the papers on the topic). Use the India MMRP/URP
-example (PSPR 2018 has material).
+Discuss the relevance of questionnaire design for the consumption aggregate (perhaps refer to some of the papers on the topic). Use the India MMRP/URP example (PSPR 2018 has material).
 
 ## Imputed rent
 
-During the process of constructing a welfare aggregate, housing is arguably the
-most important and difficult of all the components to include. From a conceptual
-point of view, housing could be understood as any other durable good. Its
-present value is not relevant for the analysis of current welfare because
-purchasing a house is such a large and relatively rare expenditure that is
-should not be included the in welfare aggregate.[@deaton2002, p.35]. The
-objective is instead on measuring the value of the of occupying the dwelling for
-the length of the survey period.
+During the process of constructing a welfare aggregate, housing is arguably the most important and difficult of all the components to include. From a conceptual point of view, housing could be understood as any other durable good. Its present value is not relevant for the analysis of current welfare because purchasing a house is such a large and relatively rare expenditure that is should not be included the in welfare aggregate.[@deaton2002, p.35]. The objective is instead on measuring the value of the of occupying the dwelling for the length of the survey period.
 
-Whether the welfare aggregate is based on consumption or income, accounting for
-housing is equally important. When the welfare aggregate is based on
-consumption, household surveys usually record the value of rent paid by market
-tenants. Since rent is the market value of occupying a house for a given period
-of time, it is feasible and empirically viable to estimate the flow of housing
-services. Yet, the same information is not available for household owners, even
-though they also "consume" housing services. By not including the value of
-housing "consumed" by owners, it would look like two household with the very
-same consumption patterns have different welfare just because one pays rent and
-the other does not. In fact, the market tenant would look better off than the
-household owner because the consumption of the former is higher than the one of
-the latter.
+Whether the welfare aggregate is based on consumption or income, accounting for housing is equally important. When the welfare aggregate is based on consumption, household surveys usually record the value of rent paid by market tenants. Since rent is the market value of occupying a house for a given period of time, it is feasible and empirically viable to estimate the flow of housing services. Yet, the same information is not available for household owners, even though they also "consume" housing services. By not including the value of housing "consumed" by owners, it would look like two household with the very same consumption patterns have different welfare just because one pays rent and the other does not. In fact, the market tenant would look better off than the household owner because the consumption of the former is higher than the one of the latter.
 
-When the welfare aggregate is based on income the logic is similar. In this
-case, the welfare aggregate should be composed by the remuneration of all the
-assets of the household including labor, capital, and durable goods such as
-houses and cars [@gasparini2004]. Families that own their housing receive an
-implicit value that is equivalent to the amount of money they would have to pay
-in the market if they had to rent a dwelling similar to the one they are
-currently living in.
+When the welfare aggregate is based on income the logic is similar. In this case, the welfare aggregate should be composed by the remuneration of all the assets of the household including labor, capital, and durable goods such as houses and cars [@gasparini2004]. Families that own their housing receive an implicit value that is equivalent to the amount of money they would have to pay in the market if they had to rent a dwelling similar to the one they are currently living in.
 
-In the context of the Global Monitoring Database (GMD), each country has its own
-methodological approach to input the implicit value of housing to dwelling
-owners. The Latin American Region (LAC) is the only one that applies the same
-methodology, or at least principles, to input rents in all its countries. All
-the other regions do not have a consolidated approach so they adopt whatever the
-National Statistics Office (NSO) of each country provides.
+In the context of the Global Monitoring Database (GMD), each country has its own methodological approach to input the implicit value of housing to dwelling owners. The Latin American Region (LAC) is the only one that applies the same methodology, or at least principles, to input rents in all its countries. All the other regions do not have a consolidated approach so they adopt whatever the National Statistics Office (NSO) of each country provides.
 
-The methodology used by the LAC region could be found here [[Ask for document to
-the LAC team]{style="color:red"}]. Yet, below you may find a short summary of
-the decision tree used in LAC to account for housing rents.
+The methodology used by the LAC region could be found here [[Ask for document to the LAC team]{style="color:red"}]. Yet, below you may find a short summary of the decision tree used in LAC to account for housing rents.
 
-1.  If the National Statistics Office (NSO) of the country releases their own
-    estimate to account for own-housing rent, the SEDLAC project adopts that
-    variable.  
+1.  If the National Statistics Office (NSO) of the country releases their own estimate to account for own-housing rent, the SEDLAC project adopts that variable.  
 
-```{=html}
 <!-- -->
-```
-2.  If the NSO does not release a variable to account for own-housing rent, the
-    value reported by owners in the household survey to the question "How much
-    would you have to pay a month if you had to rent this house?" is taken as
-    the implicit rent.  
 
-```{=html}
+2.  If the NSO does not release a variable to account for own-housing rent, the value reported by owners in the household survey to the question "How much would you have to pay a month if you had to rent this house?" is taken as the implicit rent.  
+
 <!-- -->
-```
-3.  If the questionnaire does not ask the self-reported rent question to owners,
-    the utility obtained from living in a dwelling is obtained from a hedonic
-    model that uses quantile regression of the sum of the utilities derived from
-    the characteristics of the dwelling (e.g., geographical location,
-    surrounding characteristics, and structural attributes), which is the
-    implicit rent when monetarized [@rosen1974].
 
-4.  Finally, if the questionnaire does not allow to identify ownership of the
-    dwelling, no rent is imputed to owners. That is, the imputation is 0% of
-    total income.
+3.  If the questionnaire does not ask the self-reported rent question to owners, the utility obtained from living in a dwelling is obtained from a hedonic model that uses quantile regression of the sum of the utilities derived from the characteristics of the dwelling (e.g., geographical location, surrounding characteristics, and structural attributes), which is the implicit rent when monetarized [@rosen1974].
 
-Step 3 in the list above. which is the most complex of all the steps in the
-decision tree is applied only to four countries: Argentina, Brazil, Ecuador, and
-Honduras.
+4.  Finally, if the questionnaire does not allow to identify ownership of the dwelling, no rent is imputed to owners. That is, the imputation is 0% of total income.
 
-According to Deaton and Zaidi [-@deaton2002], there are four main approaches to
-input rents to dwelling owners plus a few other alternatives suggested in
-Balcazar et al [-@balcazar2017]. Besides the LAC region, the rest of the
-countries apply either one of these methodologies or perform no imputation at
-all, which is equivalent to input zero (0) implicit rent to the dwelling owners.
+Step 3 in the list above. which is the most complex of all the steps in the decision tree is applied only to four countries: Argentina, Brazil, Ecuador, and Honduras.
 
-[Daniel: I don't know the example of CHN. Do you have any documentation about
-it? Is there something else you would like to add?]{style="color:blue"}
+According to Deaton and Zaidi [-@deaton2002], there are four main approaches to input rents to dwelling owners plus a few other alternatives suggested in Balcazar et al [-@balcazar2017]. Besides the LAC region, the rest of the countries apply either one of these methodologies or perform no imputation at all, which is equivalent to input zero (0) implicit rent to the dwelling owners.
+
+[Daniel: I don't know the example of CHN. Do you have any documentation about it? Is there something else you would like to add?]{style="color:blue"}
 
 ## Treatment of binned data
 
 [Christoph and Samuel]{style="color:red"}
 
-Let's put down the actual formulas we use here to convert binned data into
-distributions.
+Let's put down the actual formulas we use here to convert binned data into distributions.
 
 ## Equivalence scale
 
 [Daniel]{style="color:red"}
 
-Mention per capita assumptions, drawbacks of it, and why we are still assuming
-it.
+Mention per capita assumptions, drawbacks of it, and why we are still assuming it.
 
 ## Comparability database
 
-In September 2019, the PovcalNet team and the Poverty GP put together the
-[Comparability Over
-Time](https://datacatalog.worldbank.org/dataset/comparability-over-time-country-level-international-poverty-measures)
-dataset, which provides metadata on the comparability of poverty estimates from
-[PovcalNet](http://iresearch.worldbank.org/PovcalNet "Opens in a new window")
-within countries over time. The complete documentation of this dataset is
-available in Atamanov et al [-@atamanov2019] (Section 4). The following excerpt
-from this document clearly explains the motivation of this dataset:
+In September 2019, the PovcalNet team and the Poverty GP put together the [Comparability Over Time](https://datacatalog.worldbank.org/dataset/comparability-over-time-country-level-international-poverty-measures) dataset, which provides metadata on the comparability of poverty estimates from [PovcalNet](http://iresearch.worldbank.org/PovcalNet "Opens in a new window") within countries over time. The complete documentation of this dataset is available in Atamanov et al [-@atamanov2019] (Section 4). The following excerpt from this document clearly explains the motivation of this dataset:
 
-> As countries frequently improve household surveys and measurement methodology,
-> strict comparability of poverty estimates over time is often limited. Within a
-> country, we assume comparability of poverty estimates over time unless there
-> is a known change to survey methodology, measurement or data structure. Thus,
-> the assessment of comparability is country-dependent and relies on the
-> accumulation of knowledge from past and current Bank staff in the countries,
-> as well as close dialogue with national data producers with knowledge of
-> survey design and methodology
+> As countries frequently improve household surveys and measurement methodology, strict comparability of poverty estimates over time is often limited. Within a country, we assume comparability of poverty estimates over time unless there is a known change to survey methodology, measurement or data structure. Thus, the assessment of comparability is country-dependent and relies on the accumulation of knowledge from past and current Bank staff in the countries, as well as close dialogue with national data producers with knowledge of survey design and methodology
 
 ### Application {.unnumbered}
 
-The comparability dataset is practically useful in any estimation that compares
-welfare aggregates from household surveys over time. In the blog [*Apples to
-apples --- PovcalNet introduces a new comparability
-indicator*](https://blogs.worldbank.org/opendata/apples-apples-povcalnet-introduces-new-comparability-indicator)*,*
-the authors present two examples on how to merge the comparability dataset with
-the [PovcalNet](http://iresearch.worldbank.org/PovcalNet/home.aspx) estimates.
-Both charts in the blog could be replicated in R and/or Stata by running the
-scripts available in the
-[worldbank/Global\_Poverty\_Blogs](https://github.com/worldbank/Global_Poverty_Blogs/tree/master/bg_povcalnet_comparability)
-repository.
+The comparability dataset is practically useful in any estimation that compares welfare aggregates from household surveys over time. In the blog [*Apples to apples --- PovcalNet introduces a new comparability indicator*](https://blogs.worldbank.org/opendata/apples-apples-povcalnet-introduces-new-comparability-indicator)*,* the authors present two examples on how to merge the comparability dataset with the [PovcalNet](http://iresearch.worldbank.org/PovcalNet/home.aspx) estimates. Both charts in the blog could be replicated in R and/or Stata by running the scripts available in the [worldbank/Global_Poverty_Blogs](https://github.com/worldbank/Global_Poverty_Blogs/tree/master/bg_povcalnet_comparability) repository.
 
 ### Access the data {.unnumbered}
 
-The dataset could be accessed in different ways. The official version is
-available in the [Development Data
-Hub](https://datacatalog.worldbank.org/dataset/comparability-over-time-country-level-international-poverty-measures)
-of the World Bank. However, it is possible to access it directly from R, Stata,
-or Python by calling this file,
-"<https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/506801/povcalnet_comparability.csv%22.>
+The dataset could be accessed in different ways. The official version is available in the [Development Data Hub](https://datacatalog.worldbank.org/dataset/comparability-over-time-country-level-international-poverty-measures) of the World Bank. However, it is possible to access it directly from R, Stata, or Python by calling this file, "<https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/506801/povcalnet_comparability.csv%22.>
 
 #### R {.unnumbered}
 
@@ -276,17 +177,7 @@ link = "https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/506801/
 df   = pd.read_csv(path)
 ```
 
-Each observation of the comparability dataset represents a survey point which is
-the combination of ISO3 country code (`countrycode`), `year`, survey acronym
-(`survname`), Welfare type (i.e., income or consumption) (`datatype`), and
-survey coverage (`coveragetype`). Variable `comparabiliy` specified the
-comparability over time with the following logic. The oldest comparable series
-in each country starts with the value zero (0) in the `comparability` variable.
-When comparability is broken, the value changes to one (1) for the year of the
-break and it goes on until the comparability is broken again in a subsequent
-year. The process repeats until the most recent surveys point available. Thus,
-to get the most recent comparable spell, you need the `max(comparability)` by
-`countrycode, survname, datatype, coveragetype`.
+Each observation of the comparability dataset represents a survey point which is the combination of ISO3 country code (`countrycode`), `year`, survey acronym (`survname`), Welfare type (i.e., income or consumption) (`datatype`), and survey coverage (`coveragetype`). Variable `comparabiliy` specified the comparability over time with the following logic. The oldest comparable series in each country starts with the value zero (0) in the `comparability` variable. When comparability is broken, the value changes to one (1) for the year of the break and it goes on until the comparability is broken again in a subsequent year. The process repeats until the most recent surveys point available. Thus, to get the most recent comparable spell, you need the `max(comparability)` by `countrycode, survname, datatype, coveragetype`.
 
 # Generating survey estimates
 
@@ -296,22 +187,19 @@ to get the most recent comparable spell, you need the `max(comparability)` by
 
 [Samuel]{style="color:red"}
 
-Short paragraph summary of why CPIs are needed, which CPIs we use, and link to
-the CPI paper
+Short paragraph summary of why CPIs are needed, which CPIs we use, and link to the CPI paper
 
 ## Purchasing Power Parities (PPPs)
 
 [Samuel]{style="color:red"}
 
-Short paragraph summary of why PPPs are needed, which PPPs we use and link to
-the PPP paper
+Short paragraph summary of why PPPs are needed, which PPPs we use and link to the PPP paper
 
 ## Derivation of the international poverty line
 
 [Samuel]{style="color:red"}
 
-Explain in one paragraph or so how the international poverty line was derived
-and link to the RCS and Ferreira et al. paper
+Explain in one paragraph or so how the international poverty line was derived and link to the RCS and Ferreira et al. paper
 
 ## Derivation of other global poverty lines
 
@@ -327,16 +215,13 @@ Explain how higher lines are derived and link to Jolliffe & Prydz paper
 
 [Aleksander and Samuel]{style="color:red"}
 
-In this subsectoin and the one below, let's write the name of each measure in
-Povcalnet and provide formulas for how they are derived. The FGT formulas should
-be easily available online
+In this subsectoin and the one below, let's write the name of each measure in Povcalnet and provide formulas for how they are derived. The FGT formulas should be easily available online
 
 ## Inequality measures
 
 [Aleksander and Samuel]{style="color:red"}.
 
-Can we get to the source code find out how the various other measures are
-calculated and list it here?
+Can we get to the source code find out how the various other measures are calculated and list it here?
 
 # Generating global and regional estimates
 
@@ -344,16 +229,13 @@ calculated and list it here?
 
 [Nishant]{style="color:red"}
 
-Explain in a short paragraph the national accounts data used, countries where we
-use specific sources, and link to national accounts paper.
+Explain in a short paragraph the national accounts data used, countries where we use specific sources, and link to national accounts paper.
 
 ## Extrapolations
 
 [Nishant]{style="color:red"}
 
-Explain how/why we extrapolate, provide the formula, discuss the no-use of a
-passthrough rate (perhaps refer to relevant literature on this) and link to
-national accounts paper.
+Explain how/why we extrapolate, provide the formula, discuss the no-use of a passthrough rate (perhaps refer to relevant literature on this) and link to national accounts paper.
 
 Explain the India exception.
 
