@@ -223,23 +223,45 @@ Can we get to the source code find out how the various other measures are calcul
 
 ## National accounts data
 
-[Nishant]{style="color:red"}
+Two national accounts sources are used: Household Final Consumption Expenditure (HFCE) and Gross Domestic Product (GDP) -- both in per capita terms and in typically in constant USD. Due to its close conceptual relation with the household survey welfare measure, when available, HFCE is used as the preferred national accounts data for extrapolation and interpolation methods. In Sub-Saharan Africa however, HFCE estimates at constant prices are both sparse and the empirical correlation between growth in HFCE and growth in survey mean is not as strong (Ravallion, 2003). Hence, GDP is preferred for this region. World Development Indicator (WDI) database is the primary source for the HFCE data (in particular "Households Final Consumption Expenditure per capita (constant 2010 US\$)” [Series code NE.CON.PRVT.PC.KD]) and the GDP data (in particular “GDP per capita (constant 2010 US\$)” [Series code NY.GDP.PCAP.KD]). Where WDI data is not available, we use data from the Maddison Project Database (MPD) (for details, see Bolt et al., 2018). For a few cases where both the WDI and MPD is not available or known to be erroneous, country-specific sources -- such as national statistics, research papers, or other versions of the data -- is used. For a detailed discussion on the sources of national accounts data see Prydz et al. 2019.
 
-Explain in a short paragraph the national accounts data used, countries where we use specific sources, and link to national accounts paper.
+
 
 ## Extrapolations
 
-[Nishant]{style="color:red"}
+Global poverty is estimated for each reference year utilizing the surveys from all countries. For countries with no surveys available for a specific reference year, country-level poverty count is extrapolated using consumption or income aggregate from the closest survey and the growth rates from national accounts. The extrapolation of the survey mean ($m$) from year $t_0$ to reference year 𝑡𝑟 can be summarized as follows: 
 
-Explain how/why we extrapolate, provide the formula, discuss the no-use of a passthrough rate (perhaps refer to relevant literature on this) and link to national accounts paper.
+$$m_{tr} = \dfrac{n_{tr}}{n_{to}} \times m_{to}$$
 
-Explain the India exception.
+where $n$ is the national accounts mean. Poverty for the reference year is then estimated using this extrapolated distribution.
+
+Importantly, the extrapolation method assumes distribution-neutral growth, i.e. the consumption or income aggregate of the entire distribution grows at the same national average rate. If a survey is available after the reference year, that information is also used: An average of the two extrapolated estimates is then reported, (inversely) weighted by their relative distance from the reference year. In the cases where the reference year falls after the latest available survey of a country, or before the first available survey, the income or consumption vector from the closest survey is extrapolated using per capita growth rates from national accounts between the survey year and reference year. The mechanics of the extrapolation and interpolation are described in more detail in Ravallion (2003), Chen and Ravallion (2004) and Jolliffe et al. (2014).
+
+### Pass-through rate for India
+
+Evidence exists that there are differences in growth rates between growth in national accounts aggregates and growth in welfare aggregate captured in household surveys. The growth in survey aggregate has historically been lower than the growth in national accounts (for example see Ravallion, 2003; Deaton, 2005; Pinkovskiy & Sala-i-Martin, 2016; Lakner et al., 2020). Hence, a pass-through, i.e. the fraction of growth in national accounts captured in household surveys, is used to calculate the survey growth rates from national accounts for the extrapolation method. 
+
+India is a particular case where the pass-through methodology is applied. The latest available survey for India is from 2011/12. Poverty headcount for India after 2011 is calculated using the extrapolation method defined above with a national accounts growth rate adjusted for a pass-through rate. Up to 2015, an implied pass-through rate is calculated using the poverty estimates for 2014/15 reported in Newhouse & Vyas (2019). The national pass-through rate in India for the period 2012-2015 is estimated to be 0.65. The 0.65 national pass-through rate is calculated as the population-weighted average of the rural pass-through rate (0.699) and urban pass-through rate (0.551), which are calibrated using the poverty estimates from Newhouse and Vyas (2018) for 2014/15 (for more details, see Chen et al., 2018).
+
+Poverty for years 2016-2018 is estimated using a pass-through rate calculated using a global sample of surveys (for more detail, see Lakner et al., 2020; Ifeyani et al., 2020). This estimated pass-through rate of 0.67 is used to extrapolate poverty in India for this period (for more detail, see Ifeyani et al, 2020).    
+
 
 ## Interpolations
 
-[Nishant]{style="color:red"}
+In cases where the reference year falls between two surveys, poverty is estimated for the reference year using both extrapolated surveys (before and after the reference year). To adjust estimates to the reference year, one of two approaches are used, depending on the correspondence in growth between national accounts and survey data (and similarly, conditional on both surveys being either both consumption or income surveys). 
 
-Explain how/why we interpolate and provide the two different interpolation formulas (in the national accounts paper).
+### Interpolation (same direction) 
+
+“Same direction interpolation” is used when growth in the survey mean between the two surveys is of the same sign as the real growth from national accounts from the first survey to the reference year, and from the reference year to the second survey. The mean for the reference year $t_r$,$m_{tr}$, is estimated by taking the mean of the two closest surveys before and after $t_r$ ($m_{t0}$ and $m_{t1}$) and interpolating the survey means using national accounts data for periods $t_0$, $t_1$, and $t_r$ ($n_{t0}$, $n_{t1}$, and $n_{tr}$). The interpolation formula is as follows:
+
+$$m_{tr} = \dfrac{(m_{t1} - m_{t0})}{(n_{t1} - n_{t0})} \times (n_{tr} - n_{t0}) + m_{t0}$$
+
+After this alignment, there are two distributions both which have the same mean for the reference year but different rates of poverty since their distributions are unchanged from their reference point. The estimate of poverty from these two distributions is the weighted average poverty rate from both distributions where whereby each poverty estimate is weighted by the inverse of the relative distance between the survey year and the reference year. If a reference year falls two years after he first survey and one year after the second survey, the poverty estimate from the first survey is given a weight of 1/3 and the estimate from the second survey a weight of 2/3.
+
+### Interpolation (diverging directions) 
+
+If the growth rates in surveys and national accounts diverge, an approach similar to the extrapolation is applied to the two closest surveys. Poverty for the reference year is estimated using both distributions and the estimates are averaged using weights inverse to the distance 5 between the survey year and the reference year. The mechanics of the extrapolation and interpolation are described in box 6.4 in Jolliffe et al. (2015) and in Appendix A of World Bank (2018).
+
 
 ## Choosing between consumption and income estimates
 
