@@ -1,5 +1,5 @@
 ---
-title: "Poverty and Inequality Platform Methodology"
+title: "Poverty and Inequality Platform Methodology Handbook"
 zotero: "PovcalNet Team"
 output:
   html_document:
@@ -36,8 +36,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <!-- INTRODUCTION -->
 
-This page describes the methods used to derive the country-level,
-regional, and global poverty and inequality estimates.
+This page describes the methods used to derive the country, regional,
+and global poverty and inequality estimates.
 
 Please cite this page as:
 
@@ -55,36 +55,67 @@ inequality and how the data are selected and obtained.
 
 For developing countries, the Poverty and Inequality Platform relies
 mostly on household surveys carried out by the countries' National
-Statistical Offices (NSO) for monitoring poverty.
+Statistical Offices (NSO) for monitoring poverty. These surveys
+typically interview a random sample of households in the country details
+about their income and consumption patterns and much more.
 
 For high-income countries in the European Union (with the exception of
-Germany), the data are obtained from the EU Statistics on Income and
-Living Conditions (EU-SILC). For other high-income economies, Australia,
-Canada, Germany, Israel, Japan, South Korea, Taiwan, China, and the
-United States, data from the Luxembourg Income Study (LIS) Database are
-used. These data rely on surveys carried out by NSOs or by academic
+Germany), the data are obtained from the [EU Statistics on Income and
+Living Conditions
+(EU-SILC)](https://ec.europa.eu/eurostat/web/microdata/european-union-statistics-on-income-and-living-conditions).
+For other high-income economies, Australia, Canada, Germany, Israel,
+Japan, South Korea, Taiwan, China, and the United States, data from the
+[Luxembourg Income Study (LIS) Database](https://www.lisdatacenter.org)
+are used. These data rely on surveys carried out by NSOs or by academic
 institutions. Data from the LIS database are also used for high-income
-countries from the European union for years predating EU-SILC.
+countries from the European Union for years predating EU-SILC.
 
-Occasionally, a survey filling the above criteria will not considered
-due to quality concerns with the survey design, welfare aggregate or
-auxiliary data. Whenever such decisions are made, they are done by the
-Global Poverty Working Group within the World Bank and the reason for
-the exclusion of a data point is summarized in "What's New" documents.
+Occasionally, a survey filling the above criteria will not incorporated
+into the platform due to quality concerns with the survey design,
+welfare aggregate or because the auxiliary data needed (such as
+[consumer price indices](#CPIs) and (purchasing power
+parities)[\#PPPs])) are unavailable. Whenever such decisions are made,
+they are done by the Global Poverty Working Group within the World Bank
+and the reason for the exclusion of a data point is summarized in the
+"What's New" documents.
 
-## Representativeness
+## Representativeness {#representativeness}
 
-[Daniel]{style="color:red"}
+In the majority of cases, the surveys used are representative of all
+households in the country. This means that they are based on a random
+selection of all households in the country, typically defined from the
+most recent census. Two factors prevent these surveys from being
+representative of the entire population:
 
-Discuss within-country spatial coverage. Mention that non-national
-surveys are also available but not used for regional/global numbers
-(Argentina exception). Temporal coverage; often covers one year,
+1.  Nome individuals do not reside in households and hence are not
+    captured by the above frame. This particularly concerns homeless
+    people and individuals residing in nursery homes, prisons, and
+    displacement camps.
+2.  At times, conflicts and extreme weather events may prevent the
+    enumerators from going to certain parts of the country. In these,
+    case some geographical areas may be excluded from the survey. The
+    2018-19 Nigeria Living Standards Survey, for example, is not
+    representative of the Borno state, since parts of the state became
+    inaccessible over the course of the survey.
 
-## Binned vs. micro data
+For the purpose of calculating global or regional poverty, the poverty
+rates estimated in the surveys are assumed to be representative of the
+entire population despite of the two shortcomings above. This is largely
+due to the difficult of acquiring any alternative poverty estimate for
+such populations. In certain scenarios, the survey design allows the
+consumption or income of households not covered to be
+[imputed](#imputed), in which case the second problem is addressed.
 
-[Daniel]{style="color:red"}
-
-Mention countries exclusively relying on binned data.
+The PIP also contains some surveys which explicitly only targets the
+urban or rural part of the population. These surveys are indicated as
+[waiting to see how it will appear in PIP]. These surveys are not used
+for the purposes of calculating regional or global poverty, with only
+one exception. This exception concerns Argentina which has no nationally
+representative surveys, and but only surveys representative of its urban
+population. For the urban population of Argentina, these surveys are
+used for the regional and global poverty counts, while the rural
+population of Argentina gets the same treatment as [countries for which
+we have no data](#nodata).
 
 ## How data are obtained
 
@@ -104,8 +135,43 @@ For most high-income countries data are obtained through the Luxembourg
 Income Study.
 
 All of the data are harmonized by the Poverty and Equity Global Practice
-of the World Bank and then passed on the Poverty and Inequality
+of the World Bank and then passed on to the Poverty and Inequality
 Platform.
+
+## Grouped vs. unit record data
+
+In some cases, countries are unwilling to share unit-record data with
+the World Bank but they are willing to share grouped, data. These data
+are aggregated, often to 5,10, 20 or 100 quantiles of the distribution.
+This means, for example, that a country might share the mean income of
+each percentile or income share of each percentile. For the purposes of
+estimating poverty and inequality, a Lorenz curve is estimated
+([described here](#treatmentgroups)) from these grouped data upon which
+inequality and poverty can be estimated. Grouped data are used for
+Algeria, China Guyana, Suriname, Turkmenistan, Trinidad & Tobago,
+Venezuela, and the United Arab Emirates. In PIP, grouped data are
+indicated with an [wait to see how it will be indicated] while
+unit-record data is indicated with a [wait to see how it will be
+indicated].
+
+## Multiply imputed micro data {#imputed}
+
+At times unit record data from household surveys are not representative
+of all households since conflict or other safety concerns prohibit
+enumerators from getting to all areas of a country (see discussion
+[here](#representativeness)). In some of these cases, some household
+information was collected, either because part of the interviews were
+finished before a crisis unfolded, or because shorter interviews without
+a full welfare aggregate were conducted in an attempt to minimize safety
+risks. In these cases, a full welfare aggregate can be imputed using
+statistical models. In an attempt to minimize the uncertainty of such
+methods, described in greater detail in [South Sudan and Somalia
+papers], they often work by creating multiple imputed datasets,
+calculating statistics of interest in each of these dataset, and
+averaging over them to aquire a final estimate (see XX for details).
+
+Currently such data are used for South Sudan [insert year] and Somalia
+[insert year].
 
 # Constructing welfare aggregates {#welfareaggregate}
 
@@ -230,7 +296,7 @@ housing receive an implicit value that is equivalent to the amount of
 money they would have to pay in the market if they had to rent a
 dwelling similar to the one they are currently living in.
 
-## Treatment of binned data
+## Treatment of grouped data {#treatmentgroups}
 
 [Christoph and Samuel]{style="color:red"}
 
@@ -482,6 +548,8 @@ based on formulae in @haughton2009, while the poverty and inequality
 measures estimated from grouped data are mainly based on formulae in
 @datt1998.
 
+[Some discussion of imputed estimates]
+
 ## Poverty measures
 
 **Poverty headcount index**: The poverty headcount index ($P_0$) is a
@@ -653,7 +721,7 @@ to interpolate and extrapolate data points as well as how to treat
 countries without any poverty data. This section explains how these
 calculations are made.
 
-## Extrapolations {#extrapolations}
+## Extrapolationshau {#extrapolations}
 
 When estimating global poverty for a recent year, one is met by the
 challenge that most countries do not have recent data on poverty. For
@@ -687,7 +755,7 @@ growth in welfare observed in surveys. Evidence exists that there are
 differences in growth rates between growth in national accounts
 aggregates and growth in welfare aggregate captured in household
 surveys. The growth in survey aggregate has historically been lower than
-the growth in national accounts (for example see @ravallion;
+the growth in national accounts (for example see @ravallion2003;
 @deaton2005; @pinkovskiy2016; @lakner2020). Hence, a pass-through, i.e.
 the fraction of growth in national accounts captured in household
 surveys, is used to calculate the survey growth rates from national
