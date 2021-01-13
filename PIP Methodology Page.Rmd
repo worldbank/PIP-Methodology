@@ -44,8 +44,6 @@ Please cite this page as:
 World Bank. 2020. "Poverty and Inequality Platform Methodology
 Handbook." March 2020 version. Available at [link to follow].
 
-For old versions of this page, please see [link to follow].
-
 # Acquiring household survey data
 
 This section describes the types of data used for measuring poverty and
@@ -138,7 +136,7 @@ All of the data are harmonized by the Poverty and Equity Global Practice
 of the World Bank and then passed on to the Poverty and Inequality
 Platform.
 
-## Grouped vs. unit record data
+## Grouped vs. unit record data {#grouped}
 
 In some cases, countries are unwilling to share unit-record data with
 the World Bank but they are willing to share grouped, data. These data
@@ -176,26 +174,35 @@ Currently such data are used for South Sudan [insert year] and Somalia
 # Constructing welfare aggregates {#welfareaggregate}
 
 Several different concepts of poverty exist, building on different
-philosophical notions of what well-being, and the absence of well-being
+philosophical notions of what welfare, and the absence of welfare
 entails. The Poverty and Inequality Platform utilizes a monetary measure
-of poverty throughout.
+of poverty throughout the platform. Monetary poverty is estimated from
+an aggregation of household's income or the value of their consumption
+-- which we refer to jointly a welfare aggregate. This section explains
+in detail how such income and consumption aggregates are constructed.
 
 ## Income or consumption {#incomeorconsumption}
 
-[Marta]{style="color:red"}
-
 The welfare measure used for poverty measurement is based on either
-income or consumption household survey data. The differences between
-income and consumption matter for comparing trends and levels of
-poverty. Countries typically choose the concept that can be more
-accurately measured and that is more relevant to the context, while
-balancing concerns about respondent burden. On the one hand, consumption
-measures of poverty require a wide range of questions and are thus more
-time-consuming. Income measures, on the other hand, are difficult to
-obtain when a large fraction of the population works in the informal
-sector or is self-employed, which is frequently the case in poorer
-economies. Also, when households produce their own food with limited
-market interactions, it is harder to measure income than consumption.
+income or consumption household survey data.
+[[Marta]{style="color:red"}: Could you add some sentences here on what
+exactly an income aggregate and a consumption aggregate measure at a
+very basic level? Like what concept of income do we use? What are the
+main items a consumption aggregate contain? Perhaps also mention in a
+sentence or so what they don't include and give a shout out to OPHI and
+the 2018 PSPR.]
+
+The differences between income and consumption matter for comparing
+trends and levels of poverty. Countries typically choose the concept
+that can be more accurately measured and that is more relevant to the
+context, while balancing concerns about respondent burden. On the one
+hand, consumption measures of poverty require a wide range of questions
+and are thus more time-consuming. Income measures, on the other hand,
+are difficult to obtain when a large fraction of the population works in
+the informal sector or is self-employed, which is frequently the case in
+poorer economies. Also, when households produce their own food with
+limited market interactions, it is harder to measure income than
+consumption.
 
 Both approaches to measuring poverty have advantages and disadvantages.
 The consumption approach is arguably more directly connected to economic
@@ -221,58 +228,51 @@ which is strictly above zero ( @worldbank2018 ). For this reason, PIP's
 current practice is to drop observations with negative welfare, while
 zeros are included.
 
-## Within-survey spatial/temporal deflation
-
-[Samuel]{style="color:red"}
-
-Poverty estimates are based on household welfare aggregates that are
-constructed from income or consumption surveys. Consumption surveys are
-often the source of data for most developing countries and are conducted
-over a period of time, sometimes spanning two calendar years. The
-Gambia, for example, has a survey or decimal year as 2015.31, meaning
-that 69% of the months of the fieldwork fall in 2015 while 31% of the
-fieldwork months fall in 2016. By convention, the year that is reported
-is the floor of the decimal year (e.g. 2015 in the case of the Gambia
-mentioned above). For EU-SILC/LIS countries, the reported year is the
-year before the survey year.
-
-Household welfare aggregates are adjusted for temporal and/or spatial
-price differences within surveys, but not in all cases. Household
-consumption expenditure could be converted into the prices of a
-particular month or the average price level observed in a survey year
-(e.g. with a consumer price index). Similarly, household consumption
-expenditure could be converted into the prices of a particular location
-(e.g. capital city) or the national average price level obtained from
-both rural and urban prices (e.g. with a spatial price index). China,
-India and Indonesia have rural/urban PPPs that are used to deflate
-household welfare aggregates to account for spatial price differences
-within these countries (more details in Section
-\@ref(purchasing-power-parities-ppps). Sometimes, a spatio-temporal
-price index is used to jointly adjust for both spatial and temporal
-price differences (e.g. the household welfare aggregate from the survey
-conducted in Ghana (2016.75) is evaluated at 2013 Greater Accra regional
-prices). These temporal and/or spatial price adjustments are important
-for constructing welfare aggregates in real terms.
-
 ## Questionnaire design
 
-[Daniel]{style="color:red"}
+Constructing a welfare aggregate, particularly consumption aggregates,
+requires many specific questions to be asked in household surveys. There
+are many different ways to ask survey respondents about their
+consumption habits, and how one asks has a significant effect on how
+people respond. Consumption aggregates are sensitive to whether
+respondents recall consumption from memory or use consumption diaries,
+how many, and how detailed, consumption items are listed, and length of
+the time period interviewers ask respondents to recall (see
+[@deweerdt2020] for a recent review).
 
-Discuss the relevance of questionnaire design for the consumption
-aggregate (perhaps refer to some of the papers on the topic). Use the
-India MMRP/URP example (PSPR 2018 has material).
+Recall period, for example, affects reported consumption through two
+main channels: memory decay and telescoping. A longer recall period is
+better at encompassing expenditure on infrequently purchased items, but
+it can lead to underreporting if respondents forget about the past
+purchases. Despite lower average consumption, measured poverty might be
+lower under the longer recall period because it captures the purchases
+of low frequency items of households in the lower parts of the
+distribution. Short recall periods can mitigate underreporting but can
+lead to telescoping, where respondents mistakenly report the consumption
+that took place outside of the reference period.
+
+India provides one important example of the relevance of the recall
+period for poverty estimation. The official 2004--05 poverty rate for
+India based on a uniform recall period of 30 days was 27.5 percent.
+Using a mixed recall period of 7 and 30 days on food, pan, and tobacco
+and a 365 day recall period for non-food items, the corresponding figure
+was 21.8 percent ([@worldbank2018a]).
+
+Changes in questionnaire design imply that poverty estimates within
+countries are incomparable. Whenever such changes have occurred, they
+are marked in the [comparability database](#comparability).
 
 ## Imputed rent
 
 During the process of constructing a welfare aggregate, housing is
 arguably the most important and difficult of all the components to
 include. From a conceptual point of view, housing could be understood as
-any other durable good. Its present value is not relevant for the
+any other durable good: Its present value is not relevant for the
 analysis of current welfare because purchasing a house is such a large
 and relatively rare expenditure that is should not be included the in
-welfare aggregate.[@deaton2002, p.35]. The objective is instead on
-measuring the value of the of occupying the dwelling for the length of
-the survey period.
+welfare aggregate (@deaton2002, p.35). The objective is instead on
+measuring the value of the occupying the dwelling for a month, or
+another limited duration.
 
 Whether the welfare aggregate is based on consumption or income,
 accounting for housing is equally important. When the welfare aggregate
@@ -296,115 +296,147 @@ housing receive an implicit value that is equivalent to the amount of
 money they would have to pay in the market if they had to rent a
 dwelling similar to the one they are currently living in.
 
-## Treatment of grouped data {#treatmentgroups}
+Several methods exist to impute rent, see for example @balcázar2017.
+However, due to the data needs of these approaches imputed rent is not
+always computed, leading to housing to be excluded from the welfare
+aggregate. Across the surveys used in the Poverty and Inequality
+Platform, it varies between country and within country whether imputed
+rent is included. Due to the value of housing services relative to total
+welfare, this can matter a great deal for poverty [comparisons over time
+and across countries](#comparability).
 
-[Christoph and Samuel]{style="color:red"}
+## Within-survey spatial/temporal deflation
 
-In addition to micro data, grouped data are used as another source of
-data for estimating poverty and inequality when micro data are not
-available (e.g. China data). Grouped data are consumption expenditure or
-income organized in graduated class intervals or bins (e.g. see [Table
-1](https://rpubs.com/tsamuel/709173)). Grouped data can be used to
-derive a Lorenz function that may be used to estimate poverty and
-inequality measures. Two main approaches in the literature---the general
-quadratic (GQ) Lorenz function and the Beta Lorenz function---tend to
-estimate poverty and inequality fairly accurately [@datt1998]. Due to
-its computational simplicity, the general quadratic (GQ) Lorenz function
-is preferred. A parameterized GQ Lorenz function is estimated using the
-following specification:
+When constructing a welfare aggregate, one is met with the challenge
+that prices differ geographically within a country and develop over the
+time of the fieldwork. This means that the same level of income can have
+a different value for different households, and that households that
+have the same consumption patterns can have very different consumption
+aggregates if the prices they face differ. To make the welfare
+aggregates comparable across time and space, spatial and temporal price
+deflation are frequently carried out. Whether or not such deflation is
+carried out depends on availability of price data and the
+country-specific practices. Whenever a country switches from not
+spatially deflating to spatially deflating, this might lead to
+[incomparable](#comparability) poverty estimates over time.
 
-$$
-L(1-L) = a(p^2-L) + bL(p-1) + c(p-L),
-$$
+### Spatial deflation
 
-where $p$ is the cumulative proportion of population, $L$ is the
-cumulative proportion of consumption expenditure or income, and $a$,
-$b$, $c$ are parameter estimates [@datt1998]. Poverty and inequality
-measures are based on the parameter estimates (see Section
-\@ref(calculating-poverty-and-inequality)).
+Suppose a household pays \$1 for a kilo of rice in an urban center,
+while a rural household in the same country only pays \$0.5 for a
+similar quality and amount of rice. If one were to assess poverty based
+on the value of the goods and services consumed without accounting for
+these price differences, everything else equal, one would conclude that
+the rural household is poorer than the urban household. Yet,
+from a welfare perspective, it is certainly not obvious that the urban
+household is better off. To properly compare the welfare levels of the
+two households one would need to account for the differences in price
+levels that the two households face.
+
+Household consumption expenditure could be converted into the prices of
+a reference location, such as the capital city or the national average
+price level obtained from both rural and urban prices (e.g. with a
+spatial price index).
+
+Currently most surveys from East Asia and Pacific, Latin America and the
+Caribbean, and Europe and Central Asia are spatially deflated, while it
+is less common in Sub-Saharan Africa, South Asia and the Middle East and
+North Africa. China, India and Indonesia have rural/urban PPPs that are
+used to deflate household welfare aggregates to account for spatial
+price differences within these countries (more details in [section on
+PPPs](#PPPs)).
+
+### Temporal deflation
+
+Household surveys are often carried out over several months, leading to
+the possibility that prices evolve notably over this period. If
+unaccounted for, this means that two households at the same location
+that have the same consumption but are interviewed at the beginning and
+the end of the fieldwork may have very different consumption aggregates.
+Accounting for such temporal deflation implies choosing a reference
+period and deflation all consumption aggregates to that period. This can
+be a specific year, quarter or month. The exact time chosen for reach
+survey is listed in the appendix table of the most recent What's New
+document. Temporal deflation is not carried out in all cases.
+
+Sometimes, a spatio-temporal price index is used to jointly adjust for
+both spatial and temporal price differences. The household welfare
+aggregate from the survey conducted in Ghana in 2016-17, for example, is
+evaluated at 2013 Greater Accra regional prices.
 
 ## Equivalence scale
 
-All welfare aggregates are converted per capita forms by dividing with
-the number of household members. Implicit behind this converstion is an
-assumption that all household members have equal consumption levels or
-derive equal welfare from the total household income. This is a strong
-assupmtion, and evidence has shown that females often get less than an
-equal part (see World Bank 2018 chapter 5 and references therein). If
-different household members have different needed, which could be the
-case if children, for example, require less consumption than adults,
-then comparing welfare per capita might be misleading. An alternative
-assumption, often used by countries themselves when measuring poverty,
-is to use an adult equivalence scale. Such a scale defines the
-consumption need of each houeshold member, often based on sex and age
-and size of the household, and calculates the consumption per adult
-equivalent rather than per person. Despite of its compelling features,
-the lack of agreement on the equivalence scale levels across countries,
-and the more difficult interpretation of the final welfare numbers has
-prevented the World Bank from using such numbers for global poverty
-monitoring thus far. \@
+[ [Samuel]{style="color:red"}: You know much more about this than me --
+any chance you could kindly review this subsection and make whatever
+edits/corrections/additions you find necessary? Is there an important
+source to add?]
 
-## Comparability database
+All welfare aggregates are converted into per capita terms by dividing
+the total household welfare with the number of household members. Behind
+this conversion lies an assumption that all household members have equal
+consumption levels or derive equal welfare from the total household
+income. This is a strong assumption, and evidence has shown that females
+often get less than an equal part (see chapter 5 of @worldbank2018
+references therein). If household members have different needs, which
+could be the case if children, for example, require less consumption
+than adults, then comparing welfare per capita might be misleading. An
+alternative assumption, often used by countries themselves when
+measuring poverty, is to use an adult equivalence scale. Such a scale
+defines the consumption need of each household member, often based on
+gender, age, and the household size, in which each mbember's need is
+defined relative to a benchmark category. Total household welfare is
+then converted into the welfare per adult equivalent household member.
 
-In September 2019, the PovcalNet team and the Poverty GP put together
-the [Comparability Over
+Despite of its compelling features, the lack of agreement on which
+equivalence scale to use across countries, and the more difficult
+interpretation of the final welfare estimates, this has prevented the
+World Bank from using such numbers for global poverty monitoring thus
+far.
+
+## Comparability database {#comparability}
+
+Choices related to [questionnaire design](#questionnaire) mean that
+poverty estimates over time for a country are not always comparable to
+each other, making it difficult to study the developments of poverty in
+a country. As countries frequently improve household surveys and
+measurement methodology, strict comparability of poverty estimates over
+time is often limited.
+
+In order to guide users about when poverty can be compared over time
+across countries, a [Comparability Over
 Time](https://datacatalog.worldbank.org/dataset/comparability-over-time-country-level-international-poverty-measures)
-dataset, which provides metadata on the comparability of poverty
-estimates from
-[PovcalNet](http://iresearch.worldbank.org/PovcalNet "Opens in a new window")
-within countries over time. The complete documentation of this dataset
-is available in Atamanov et al [-@atamanov2019] (Section 4). The
-following excerpt from this document clearly explains the motivation of
-this dataset:
+dataset has been put together, which provides metadata on the
+comparability of poverty estimates within countries over time. Within a
+country, comparability of poverty estimates over time is assumed unless
+there is a known change to survey methodology, measurement or data
+structure. The assessment of comparability is country-dependent and
+relies on the accumulation of knowledge from past and current World Bank
+staff, as well as close dialogue with national data producers with
+knowledge of survey design and methodology. The complete documentation
+of this dataset is available in @atamanov2019 (Section 4).
 
-> As countries frequently improve household surveys and measurement
-> methodology, strict comparability of poverty estimates over time is
-> often limited. Within a country, we assume comparability of poverty
-> estimates over time unless there is a known change to survey
-> methodology, measurement or data structure. Thus, the assessment of
-> comparability is country-dependent and relies on the accumulation of
-> knowledge from past and current Bank staff in the countries, as well
-> as close dialogue with national data producers with knowledge of
-> survey design and methodology
-
-### Application {.unnumbered}
-
-The comparability dataset is practically useful in any estimation that
-compares welfare aggregates from household surveys over time. In the
-blog [*Apples to apples --- PovcalNet introduces a new comparability
-indicator*](https://blogs.worldbank.org/opendata/apples-apples-povcalnet-introduces-new-comparability-indicator)*,*
-the authors present two examples on how to merge the comparability
-dataset with the
-[PovcalNet](http://iresearch.worldbank.org/PovcalNet/home.aspx)
-estimates. Both charts in the blog could be replicated in R and/or Stata
-by running the scripts available in the
-[worldbank/Global_Poverty_Blogs](https://github.com/worldbank/Global_Poverty_Blogs/tree/master/bg_povcalnet_comparability)
-repository.
-
-### Access the data {.unnumbered}
-
-The dataset could be accessed in different ways. The official version is
+The dataset can be accessed in different ways. The official version is
 available in the [Development Data
 Hub](https://datacatalog.worldbank.org/dataset/comparability-over-time-country-level-international-poverty-measures)
-of the World Bank. However, it is possible to access it directly from R,
-Stata, or Python by calling this file,
+of the World Bank. It is possible to access it directly from R, Stata,
+or Python by calling this file,
 "<https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/506801/povcalnet_comparability.csv%22.>
 
-#### R {.unnumbered}
+### R {.unnumbered}
 
 ```{r, eval = FALSE}
 link <- "https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/506801/povcalnet_comparability.csv"
 df   <- readr::read_csv(link)
 ```
 
-#### Stata {.unnumbered}
+### Stata {.unnumbered}
 
 ```{stata, eval = FALSE}
 local dh "https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/506801/povcalnet_comparability.csv"
 import delimited using "`dh'", clear
 ```
 
-#### Python {.unnumbered}
+### Python {.unnumbered}
 
 ```{python, eval = FALSE}
 import pandas as pd
@@ -414,7 +446,7 @@ df   = pd.read_csv(path)
 
 Each observation of the comparability dataset represents a survey point
 which is the combination of ISO3 country code (`countrycode`), `year`,
-survey acronym (`survname`), Welfare type (i.e., income or consumption)
+survey acronym (`survname`), welfare type (i.e., income or consumption)
 (`datatype`), and survey coverage (`coveragetype`). Variable
 `comparabiliy` specified the comparability over time with the following
 logic. The oldest comparable series in each country starts with the
@@ -537,7 +569,36 @@ originally defined in original 2011 PPPs, but have later been updated
 using the revised 2011 PPPs with virtually no changes observed
 [@jolliffe2016; @atamanov2020; @worldbank2020].
 
-# Calculating poverty and inequality {#sec:title}
+## Treatment of grouped data {#sec:title}
+
+In addition to micro data, [grouped data](#grouped) are used as another
+source of data for estimating poverty and inequality when unit-record
+data are not available. Grouped data are consumption expenditure or
+income organized in graduated class intervals or bins (e.g. see [Table
+1](https://rpubs.com/tsamuel/709173)). To estimate poverty and
+inequality from grouped data, the data are used to derive a Lorenz
+function. Two main approaches in the literature---the general quadratic
+(GQ) Lorenz function and the Beta Lorenz function---tend to estimate
+poverty and inequality fairly accurately from grouped data [@datt1998].
+Due to its computational simplicity, the GQ Lorenz function is
+preferred. A parameterized GQ Lorenz function is estimated using the
+following specification:
+
+$$
+L(1-L) = a(p^2-L) + bL(p-1) + c(p-L),
+$$
+
+where $p$ is the cumulative proportion of population, $L$ is the
+cumulative proportion of consumption expenditure or income, and $a$,
+$b$, $c$ are parameter estimates [@datt1998].
+[Poverty](#povvertymeasures) and [inequality](#inequalitymeasures)
+measures are based on the parameter estimates.
+
+[ [Samuel]{style="color:red"}: Could you specify when the Beta Lorenz is
+used instead? Do you know if we have this listed in detail in some
+document that we can refer to? Perhaps one of the what's news?]
+
+## Poverty measures {#povertymeasures}
 
 Armed welfare aggregates expressed in 2011 PPPs and an international
 poverty line, poverty and inequality can be calculated and compared
@@ -549,8 +610,6 @@ measures estimated from grouped data are mainly based on formulae in
 @datt1998.
 
 [Some discussion of imputed estimates]
-
-## Poverty measures
 
 **Poverty headcount index**: The poverty headcount index ($P_0$) is a
 measure of the proportion of the population that is counted as poor. The
@@ -639,7 +698,7 @@ data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_pover
 and [grouped
 data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R)).
 
-## Inequality measures
+## Inequality measures {#inequalitymeasures}
 
 **Gini coefficient**: The Gini coefficient is derived from the Lorenz
 curve, which plots the cumulative welfare share (on the y-axis) against
@@ -721,7 +780,7 @@ to interpolate and extrapolate data points as well as how to treat
 countries without any poverty data. This section explains how these
 calculations are made.
 
-## Extrapolationshau {#extrapolations}
+## Extrapolations {#extrapolations}
 
 When estimating global poverty for a recent year, one is met by the
 challenge that most countries do not have recent data on poverty. For
@@ -745,6 +804,14 @@ used to extrapolate backwards, that is when the earliest survey estimate
 available is more recent than the desired reference year.
 
 [Fictive illustration of how extrapolations work]
+
+When household surveys span two calendar years, a decimal year is noted
+in the Poverty and Equity Platform is the . The Gambia, for example, has
+a survey listed at 2015.31. This means that 69% of the fieldwork fall in
+2015 while 31% of the fieldwork months fall in 2016. By convention, the
+year that is reported is the floor of the decimal year (e.g. 2015 in the
+case of the Gambia mentioned above). For EU-SILC/LIS countries, the
+reported year is the year before the survey year.
 
 Importantly, the extrapolation method assumes distribution-neutral
 growth, i.e. the consumption or income aggregate of the entire
