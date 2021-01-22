@@ -1,0 +1,51 @@
+---
+title: "Poverty and Inequality Platform Methodology Handbook"
+zotero: "PovcalNet Team"
+url: "https://povcalnet-team.github.io/Methodology"
+github-repo: PovcalNet-Team/Methodology
+site: "bookdown::bookdown_site"
+output:
+  bookdown::gitbook: default
+documentclass: book 
+editor_options: 
+  markdown: 
+    wrap: 72
+bibliography: references.bib
+link-citations: yes
+links-as-notes: true
+colorlinks: yes
+---
+
+```{=html}
+<style type="text/css">
+h1 { /* Header 1 */
+  font-size: 24px;
+}
+h2 { /* Header 2 */
+    font-size: 20px;
+}
+h3 { /* Header 3 */
+    font-size: 16px;
+}
+body {
+text-align: justify}
+
+</style>
+```
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE) 
+```
+
+# Welcome {-}
+
+This page describes the methods used to derive the country, regional,
+and global poverty and inequality estimates.
+
+Please cite this page as:
+
+World Bank. 2020. "Poverty and Inequality Platform Methodology
+Handbook." March 2020 version. Available at [link to follow].
+
+# Non-technical summary
+
+[To come]
