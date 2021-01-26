@@ -40,3 +40,8 @@ non-technical-summary
 references
 section
 comparability-database
+acquiring
+step-1-acquiring-household-survey-data
+step-2-constructing-welfare-aggregates
+step-3-generating-survey-estimates-of-poverty-and-inequality
+step-4-generating-global-and-regional-estimates-of-poverty

@@ -1,10 +1,4 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
-# Acquiring household survey data
+# Acquiring household survey data {#acquiring}
 
 This section describes the data sources used for measuring poverty and
 inequality as well as how the data are selected and obtained.

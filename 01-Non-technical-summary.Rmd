@@ -1,0 +1,26 @@
+# Non-technical summary
+
+This page describes in non-technical terms how global and regional poverty estimates are created. It follows four steps, as illustrated in Figure 1 and outlined below in more detail. Firstly, the necessary data are obtained from relevant sources. Secondly, the data sources are used to create an estimate of income or consumption. Thirdly, these welfare aggregates are converted to the same unit across time and cross country. Fourthly they are ...
+
+```{r, echo=FALSE}
+DiagrammeR::grViz("digraph {
+  graph [layout = dot, rankdir = TD]
+  
+  node [shape = box,style=filled, color=lightblue2]        
+  box1 [label = 'Step 1\nAcquiring household survey data']
+  box2 [label = 'Step 2\nConstructing welfare aggregates']
+  box3 [label = 'Step 3\nGenerating survey estimates of poverty and inequality']
+  box4 [label = 'Step 4\nGenerating global and regional estimates of poverty']
+  box1 -> box2 -> box3 -> box4
+  }", 
+                  height = 500)
+```
+
+## Step 1: Acquiring household survey data {-}
+
+## Step 2: Constructing welfare aggregates {-}
+
+## Step 3: Generating survey estimates of poverty and inequality {-}
+
+## Step 4: Generating global and regional estimates of poverty {-}
+Most countries do not conduct household surveys every year. Yet, to estimate regional and global poverty for a particular year, one needs an estimate of poverty for every country in the region for the year in question. To this end, the estimates of poverty from surveys are [extrapolated](#extrapolations) or [interpolated](#interpolations) to the year in question. The extrapolations assume that everyone's income or consumption grows in accordance with growth rates from [national accounts](#nationalaccounts) between the time of the survey and the year in question. For [countries without any data](#nodata) at all, it is assumed that their poverty rate is equal to the average poverty rate in their region. To avoid presenting regional and global numbers with insufficient recent survey data, [coverage rules](#coveragerule) are used to determine whether a particular reference year has sufficient data coverage. 
