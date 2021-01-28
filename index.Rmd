@@ -22,10 +22,10 @@ h1 { /* Header 1 */
   font-size: 24px;
 }
 h2 { /* Header 2 */
-    font-size: 20px;
+    font-size: 18px;
 }
 h3 { /* Header 3 */
-    font-size: 16px;
+    font-size: 14px;
 }
 body {
 text-align: justify}
@@ -45,7 +45,3 @@ Please cite this page as:
 
 World Bank. 2020. "Poverty and Inequality Platform Methodology
 Handbook." March 2020 version. Available at [link to follow].
-
-# Non-technical summary
-
-[To come]
