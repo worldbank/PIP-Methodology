@@ -1,260 +1,101 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 # Generating survey estimates of poverty and inequality
 
-Welfare aggregates from household surveys are expressed in national
-currency units in prices around the time of the fieldwork. To use a
-[welfare aggregate](#welfareaggregates) from a particular survey to
-estimate international poverty, the welfare aggregates need to be
-converted to a unit comparable across time and across countries. To this
-end, first [Consumer Price Indices (CPIs)](#CPIs) are used to to express
-the aggregates in the same prices within a country. Second, [Purchasing
-Power Parities (PPPs)](#PPPs) are used to express all welfare aggregates
-in the same currency.
+Welfare aggregates from household surveys are expressed in national currency units in prices around the time of the fieldwork. To use a [welfare aggregate](#welfareaggregates) from a particular survey to estimate international poverty, the welfare aggregates need to be converted to a unit comparable across time and across countries. To this end, first [Consumer Price Indices (CPIs)](#CPIs) are used to to express the aggregates in the same prices within a country. Second, [Purchasing Power Parities (PPPs)](#PPPs) are used to express all welfare aggregates in the same currency.
 
 ## Consumer Price Indices (CPIs) {#CPIs}
 
-Consumer price indices (CPIs) summarize the prices of a representative
-basket of goods and services consumed by households within an economy
-over a period of time. Inflation (deflation) occurs when there is a
-positive (negative) change in the CPI between two time periods. With
-inflation, the same amount of rupees is expected to buy more today than
-in one year from today. CPIs are used to deflate nominal income or
-consumption expenditure of households, so that the welfare of households
-can be evaluated and compared between two time periods at the same
-prices.
+Consumer price indices (CPIs) summarize the prices of a representative basket of goods and services consumed by households within an economy over a period of time. Inflation (deflation) occurs when there is a positive (negative) change in the CPI between two time periods. With inflation, the same amount of rupees is expected to buy more today than in one year from today. CPIs are used to deflate nominal income or consumption expenditure of households, so that the welfare of households can be evaluated and compared between two time periods at the same prices.
 
-The primary source of CPI data for the Poverty and Inequality Platform
-is [IMF's International Financial Statistics
-(IFS)](https://data.imf.org/?sk=4c514d48-b6ba-49ed-8ab9-52b0c1a0179b)
-monthly CPI series. The simple average of the monthly CPI series for
-each calender year is used as the annual CPI. When IFS data are missing,
-other sources of CPI data are obtained from [IMFs World Economic Outlook
-(WEO)](https://www.imf.org/en/Publications/SPROLLs/world-economic-outlook-databases#sort=%40imfdate%20descending)
-and National Statistical Offices (NSOs), among others. For more details
-on the different sources of CPI data used for global poverty
-measurement, see Figure 1 of @lakner2018 and "What's New" technical
-notes accompanying PIP updates (e.g. the latest [September 2020
-PovcalNet Update: What's
-New](https://blogs.worldbank.org/opendata/september-2020-global-poverty-update-world-bank-new-annual-poverty-estimates-using-revised)).
+The primary source of CPI data for the Poverty and Inequality Platform is [IMF's International Financial Statistics (IFS)](https://data.imf.org/?sk=4c514d48-b6ba-49ed-8ab9-52b0c1a0179b) monthly CPI series. The simple average of the monthly CPI series for each calender year is used as the annual CPI. When IFS data are missing, other sources of CPI data are obtained from [IMFs World Economic Outlook (WEO)](https://www.imf.org/en/Publications/SPROLLs/world-economic-outlook-databases#sort=%40imfdate%20descending) and National Statistical Offices (NSOs), among others. For more details on the different sources of CPI data used for global poverty measurement, see Figure 1 of @lakner2018 and "What's New" technical notes accompanying PIP updates (e.g. the latest [September 2020 PovcalNet Update: What's New](https://blogs.worldbank.org/opendata/september-2020-global-poverty-update-world-bank-new-annual-poverty-estimates-using-revised)).
 
-CPI series are expressed in the prices of the International Comparison
-Programme (ICP) reference year, currently 2011.
+CPI series are expressed in the prices of the International Comparison Programme (ICP) reference year, currently 2011.
 
 ## Purchasing Power Parities (PPPs) {#PPPs}
 
-Purchasing power parities (PPPs) are used in global poverty estimation
-to adjust for price differences across countries. PPPs are price indices
-published by the [International Comparison Program
-(ICP](https://www.worldbank.org/en/programs/icp)) that measure how much
-it costs to purchase a basket of goods and services in one country
-compared to how much it costs to purchase the same basket of goods and
-services in a reference country, typically the United States. PPP
-exchange rates are preferred to market exchange rates for the
-measurement of global poverty because the latter overestimates poverty
-in developing countries, where non-tradable services are relatively
-cheap (i.e., the Balassa-Samuelson-Penn effect). The revised 2011 PPPs
-are currently used to convert household welfare aggregates, originally
-expressed in local currency units, into a common internationally
-comparable currency unit.
+Purchasing power parities (PPPs) are used in global poverty estimation to adjust for price differences across countries. PPPs are price indices published by the [International Comparison Program (ICP](https://www.worldbank.org/en/programs/icp)) that measure how much it costs to purchase a basket of goods and services in one country compared to how much it costs to purchase the same basket of goods and services in a reference country, typically the United States. PPP exchange rates are preferred to market exchange rates for the measurement of global poverty because the latter overestimates poverty in developing countries, where non-tradable services are relatively cheap (i.e., the Balassa-Samuelson-Penn effect). The revised 2011 PPPs are currently used to convert household welfare aggregates, originally expressed in local currency units, into a common internationally comparable currency unit.
 
-The PPP estimates used for global poverty measurement are the
-consumption PPPs from the ICP with a few exceptions. PPPs are imputed
-for six countries, namely Egypt, Iraq, Jordan, Lao, Myanmar and Yemen,
-where there are concerns over the coverage and/or quality of the
-underlying ICP price collection [@atamanov2018; @atamanov2020].
+The PPP estimates used for global poverty measurement are the consumption PPPs from the ICP with a few exceptions. PPPs are imputed for six countries, namely Egypt, Iraq, Jordan, Lao, Myanmar and Yemen, where there are concerns over the coverage and/or quality of the underlying ICP price collection [@atamanov2018; @atamanov2020].
 
-Though PPPs are supposed to be nationally representative, to account for
-possible urban bias in ICP data collection, separate rural and urban
-PPPs are computed for China, India and Indonesia using official national
-PPPs, the ratio of urban to rural poverty line, and the urban share in
-ICP price data collection [@chen2008; @chen2010; @jolliffe2015;
-@ferreira2016].
+Though PPPs are supposed to be nationally representative, to account for possible urban bias in ICP data collection, separate rural and urban PPPs are computed for China, India and Indonesia using official national PPPs, the ratio of urban to rural poverty line, and the urban share in ICP price data collection [@chen2008; @chen2010; @jolliffe2015; @ferreira2016].
 
 ## Derivation of the international poverty line {#IPL}
 
-Most developing countries have a national poverty line which summarizes
-the value of consumption per person or per adult equivalent needed to
-not live in poverty. These national poverty lines are typically
-estimated by National Statistical Offices. For low and middle-income
-countries the lines usually reflect the cost of purchasing a bundle of
-food items necessary to obtain minimum daily calories to which a basic
-non-food component is added. For high-income countries the national
-poverty lines are often relative and are defined relative to the
-national mean or median income.
+Most developing countries have a national poverty line which summarizes the value of consumption per person or per adult equivalent needed to not live in poverty. These national poverty lines are typically estimated by National Statistical Offices. For low and middle-income countries the lines usually reflect the cost of purchasing a bundle of food items necessary to obtain minimum daily calories to which a basic non-food component is added. For high-income countries the national poverty lines are often relative and are defined relative to the national mean or median income.
 
-To compare poverty across countries one needs a common standard. Hence,
-national poverty lines, which differ from one country to the next,
-cannot be used. The international poverty line (IPL) is an attempt to
-summarize the national poverty lines of the poorest countries.
+To compare poverty across countries one needs a common standard. Hence, national poverty lines, which differ from one country to the next, cannot be used. The international poverty line (IPL) is an attempt to summarize the national poverty lines of the poorest countries.
 
-The current international poverty line of \$1.90/day in 2011 PPPs was
-derived as the mean national poverty line of the 15 poorest countries.
-That is, it represents a typical poverty line of the poorest countries
-in the world. The is derived by first converting the national poverty
-lines into PPP-adjusted dollars in the same manner as welfare
-distributions are converted. This was done by @ravallion2009 who
-selected the 15 poorest countries based on household final consumption
-expenditure per capita of countries around 2008 when the 2005 PPPs were
-released. The 15 poorest countries at the time were Ethiopia, Ghana, The
-Gambia, Guinea-Bissau, Mali, Mozambique, Malawi, Niger, Nepal, Rwanda,
-Sierra Leone, Chad, Tajikistan, Tanzania, and Uganda. An IPL of
-\$1.25/day per person, expressed in 2005 PPP dollars was determined as
-the mean of the national poverty lines of these countries. When the 2011
-PPPs were released in 2014, the same 15 national poverty lines were
-used, but now converted to 2011 PPPs yielding an IPL of \$1.88, which
-was rounded to \$1.90 [@ferreira2015; @ferreira2016]. When the 2011 PPPs
-got revised in 2020, the IPL was similarly updated but remains unchanged
-at \$1.90 [@atamanov2020; @worldbank2020]. [[Samuel]{style="color:red"}:
-What do you think about adding a table here with the 15 countries (+ a
-row with the mean), and columns reflecting the national poverty lines in
-2005 PPPs, 2011 PPPs and 2011 revised PPPs?]).
+The current international poverty line of \$1.90/day in 2011 PPPs was derived as the mean national poverty line of the 15 poorest countries. That is, it represents a typical poverty line of the poorest countries in the world. The is derived by first converting the national poverty lines into PPP-adjusted dollars in the same manner as welfare distributions are converted. This was done by @ravallion2009 who selected the 15 poorest countries based on household final consumption expenditure per capita of countries around 2008 when the 2005 PPPs were released. The 15 poorest countries at the time were Ethiopia, Ghana, The Gambia, Guinea-Bissau, Mali, Mozambique, Malawi, Niger, Nepal, Rwanda, Sierra Leone, Chad, Tajikistan, Tanzania, and Uganda. An IPL of \$1.25/day per person, expressed in 2005 PPP dollars was determined as the mean of the national poverty lines of these countries. When the 2011 PPPs were released in 2014, the same 15 national poverty lines were used, but now converted to 2011 PPPs yielding an IPL of \$1.88, which was rounded to \$1.90 [@ferreira2015; @ferreira2016]. When the 2011 PPPs got revised in 2020, the IPL was similarly updated but remains unchanged at \$1.90 [@atamanov2020; @worldbank2020]. [[Samuel]{style="color:red"}: What do you think about adding a table here with the 15 countries (+ a row with the mean), and columns reflecting the national poverty lines in 2005 PPPs, 2011 PPPs and 2011 revised PPPs?]).
 
 ## Derivation of other global poverty lines
 
-In addition to the [international poverty line](#IPL), the World Bank
-uses two higher poverty lines to measure and monitor poverty in
-countries with a low incidence of extreme poverty. These higher lines,
-namely \$3.20 and \$5.50 in revised 2011 PPPs, are derived in
-@jolliffe2016 as the median values of national poverty lines of lower-
-and upper-middle income countries, respectively. These lines were
-originally defined in original 2011 PPPs, but have later been updated
-using the revised 2011 PPPs with virtually no changes observed
-[@jolliffe2016; @atamanov2020; @worldbank2020].
+In addition to the [international poverty line](#IPL), the World Bank uses two higher poverty lines to measure and monitor poverty in countries with a low incidence of extreme poverty. These higher lines, namely \$3.20 and \$5.50 in revised 2011 PPPs, are derived in @jolliffe2016 as the median values of national poverty lines of lower- and upper-middle income countries, respectively. These lines were originally defined in original 2011 PPPs, but have later been updated using the revised 2011 PPPs with virtually no changes observed [@jolliffe2016; @atamanov2020; @worldbank2020].
 
 ## Poverty measures {#povertymeasures}
 
-Armed with welfare distributions expressed in 2011 PPPs and an
-international poverty line, poverty and inequality can be calculated and
-compared across countries and across time. The poverty and inequality
-measures used in PIP for micro data are mainly based on formulae in
-@haughton2009, while the poverty and inequality measures estimated from
-grouped data are mainly based on formulae in @datt1998.
+Armed with welfare distributions expressed in 2011 PPPs and an international poverty line, poverty and inequality can be calculated and compared across countries and across time. The poverty and inequality measures used in PIP for micro data are mainly based on formulae in @haughton2009, while the poverty and inequality measures estimated from grouped data are mainly based on formulae in @datt1998.
 
 [Some discussion of imputed estimates]
 
-**Poverty headcount index**: The poverty headcount index ($P_0$) is a
-measure of the proportion of the population that is counted as poor. The
-poverty headcount index is obtained from micro data with the following
-expression:$$ P_0 = \frac{1}{N} \sum_{i=1}^{N} I (y_i < z), $$
+**Poverty headcount index**: The poverty headcount index ($P_0$) is a measure of the proportion of the population that is counted as poor. The poverty headcount index is obtained from micro data with the following expression:$$ P_0 = \frac{1}{N} \sum_{i=1}^{N} I (y_i < z), $$
 
-where $N$ is the total population size, $y_i$ is welfare of individual
-$i$, $z$ is the poverty line, and $I(.)$ is an indicator function that
-takes on the value 1 if the bracketed expression is true or 0 otherwise.
-You can find the source code where this calculation is carried out
-[here](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R).
-[[Aleksander]{style="color:red"}: would it be possible to hyperlink
-'here' to the exact lines of the code? [akin to what Andres does in
-<https://povcalnet-team.github.io/Povcalnet_internal_guidelines/prepare.html>,
-search for "In particular, you can see these lines for GDP")]
+where $N$ is the total population size, $y_i$ is welfare of individual $i$, $z$ is the poverty line, and $I(.)$ is an indicator function that takes on the value 1 if the bracketed expression is true or 0 otherwise. You can find the source code where this calculation is carried out [here](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R). [[Aleksander]{style="color:red"}: would it be possible to hyperlink 'here' to the exact lines of the code? [akin to what Andres does in <https://povcalnet-team.github.io/Povcalnet_internal_guidelines/prepare.html>, search for "In particular, you can see these lines for GDP")]
 
-For grouped data, the poverty headcount is obtained using the following
-expression:
+For grouped data, the poverty headcount is obtained using the following expression:
 
 $$
 P_0 = - \frac{1}{2m}[n + r(b+2z/\mu)((b+2z/\mu)^2)-m)^{-1/2}],
 $$
 
-where $m$ = $b^2 - 4a$, $n = 2be - 4c$, $r = (n^2 - 4me^2)^{1/2}$,
-$e = -(a + b + c + 1)$, $z$ is the poverty line, $\mu$ is mean welfare,
-and $a, b, c$ are the parameter estimates of the GQ Lorenz function
-(source code).
+where $m$ = $b^2 - 4a$, $n = 2be - 4c$, $r = (n^2 - 4me^2)^{1/2}$, $e = -(a + b + c + 1)$, $z$ is the poverty line, $\mu$ is mean welfare, and $a, b, c$ are the parameter estimates of the GQ Lorenz function (source code).
 
-**Poverty gap index**: The poverty gap index ($P_1$) is a measure that
-adds up the extent to which individuals on average fall below the
-poverty line, and expresses it as a percentage of the poverty line. The
-poverty gap index is obtained from micro data with the following
-expression:
+**Poverty gap index**: The poverty gap index ($P_1$) is a measure that adds up the extent to which individuals on average fall below the poverty line, and expresses it as a percentage of the poverty line. The poverty gap index is obtained from micro data with the following expression:
 
-$$ P_1 = \frac{1}{N} \sum_{i=1}^{N} \frac{G_i}{z} $$ with
-$G_i = (z - y_i) × I (y_i < z)$, where $G_i$ is defined as the poverty
-gap (i.e. poverty line ($z$) less welfare ($y_i$)) of poor individuals;
-the gap is considered to be zero for everyone else. The poverty gap
-index shows the minimum cost per capita cost of eliminating poverty
-using targeted transfers, expressed as a percentage of the poverty line
-(source code: [micro
-data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R)).
+$$ P_1 = \frac{1}{N} \sum_{i=1}^{N} \frac{G_i}{z} $$ with $G_i = (z - y_i) × I (y_i < z)$, where $G_i$ is defined as the poverty gap (i.e. poverty line ($z$) less welfare ($y_i$)) of poor individuals; the gap is considered to be zero for everyone else. The poverty gap index shows the minimum cost per capita cost of eliminating poverty using targeted transfers, expressed as a percentage of the poverty line (source code: [micro data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R)).
 
-For grouped data, the poverty gap index is obtained using the following
-expression:
+For grouped data, the poverty gap index is obtained using the following expression:
 
 $$
 P_1 = P_0 - (\mu/z)L(P_0)
 $$
 
-with all variables defined as before (source code: [grouped
-data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R)).
+with all variables defined as before (source code: [grouped data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R)).
 
-**Poverty severity index**: The poverty severity index ($P_2$) is a
-measure of the weighted sum of poverty gaps (as a proportion of the
-poverty line), where the weights are the proportionate poverty gaps
-themselves. The poverty severity index is obtained from micro data with
-the following expression:
+**Poverty severity index**: The poverty severity index ($P_2$) is a measure of the weighted sum of poverty gaps (as a proportion of the poverty line), where the weights are the proportionate poverty gaps themselves. The poverty severity index is obtained from micro data with the following expression:
 
 $$ P_1 = \frac{1}{N} \sum_{i=1}^{N} \left(\frac{G_i}{z} \right)^2 $$
 
-with all variables defined as before. Also known as the poverty squared
-gap index, the poverty severity index accounts for inequality among the
-poor (source code: [micro
-data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R)).
+with all variables defined as before. Also known as the poverty squared gap index, the poverty severity index accounts for inequality among the poor (source code: [micro data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R)).
 
-For grouped data, the poverty severity index is obtained using the
-following expression:
+For grouped data, the poverty severity index is obtained using the following expression:
 
 $$
 P_2 = 2(P_1) - P_0 - \left(\frac{\mu}{z}\right)^2 \left[aP_0 + bL(P_0) - \left(\frac{r}{16}\right)ln \left(\frac{1 - P_0/s_1}{1 - P_0/s_2}\right)     \right],
 $$
 
-where $s_1 = (r- n)/(2m)$, $s_2 = -(r + n)/(2m)$, and all other
-variables are defined as before (source code: [grouped
-data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R)).
+where $s_1 = (r- n)/(2m)$, $s_2 = -(r + n)/(2m)$, and all other variables are defined as before (source code: [grouped data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R)).
 
-**The Watts index**: The Watts index ($W$) is also an
-inequality-sensitive poverty measure that is given as:
+**The Watts index**: The Watts index ($W$) is also an inequality-sensitive poverty measure that is given as:
 
 $$ W  = \frac{1}{N} \sum_{i=1}^{q} ln \left(\frac{z}{y_i} \right), $$
 
-where $N$ individuals in the population are indexed in ascending order
-of welfare, and the sum is taken over $q$ individuals whose welfare,
-$y_i$, falls below the poverty line $z$. This formula applies for both
-micro and grouped data (source code: [micro
-data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R)
-and [grouped
-data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R)).
+where $N$ individuals in the population are indexed in ascending order of welfare, and the sum is taken over $q$ individuals whose welfare, $y_i$, falls below the poverty line $z$. This formula applies for both micro and grouped data (source code: [micro data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R) and [grouped data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R)).
 
 ## Inequality measures {#inequalitymeasures}
 
-**Gini coefficient**: The Gini coefficient is derived from the Lorenz
-curve, which plots the cumulative welfare share (on the y-axis) against
-the cumulative population share (on the x-axis). A 45-degree line is
-defined over the Lorenz curve as a line of perfect equality. The Gini
-coefficient is the area between the line 45-degree line and the Lorenz
-curve. Let $A$ be the area between the 45-degree line and the Lorenz
-curve, and let $B$ be the area under the Lorenz curve. The Gini
-coefficient ($Gini$) is given as: $\frac{A}{A + B}= 2A$ (since
-$A + B = 0.5$).
+**Gini coefficient**: The Gini coefficient is derived from the Lorenz curve, which plots the cumulative welfare share (on the y-axis) against the cumulative population share (on the x-axis). A 45-degree line is defined over the Lorenz curve as a line of perfect equality. The Gini coefficient is the area between the line 45-degree line and the Lorenz curve. Let $A$ be the area between the 45-degree line and the Lorenz curve, and let $B$ be the area under the Lorenz curve. The Gini coefficient ($Gini$) is given as: $\frac{A}{A + B}= 2A$ (since $A + B = 0.5$).
 
-Formally, if $x_i$ is a point on the x-axis, and $y_i$ a point on the
-y-axis, then
+Formally, if $x_i$ is a point on the x-axis, and $y_i$ a point on the y-axis, then
 
 $$ Gini = 1 - \sum_{i=1}^{N} (x_i - x_{i-1})(y_i + y_{i-1}).
 $$
 
-When there are $N$ equal intervals on the x-axis, the equation above
-simplifies to:
+When there are $N$ equal intervals on the x-axis, the equation above simplifies to:
 
 $$ Gini = 1 - \frac{1}{N}\sum_{i=1}^{N} (y_i + y_{i-1}). $$
 
-The Gini coefficient ranges from 0 (perfect equality) to 1 (complete
-inequality) (source code: [micro
-data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_gini.R)).
+The Gini coefficient ranges from 0 (perfect equality) to 1 (complete inequality) (source code: [micro data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_gini.R)).
 
-For grouped data, the Gini coefficient is obtained using the following
-expression:
+For grouped data, the Gini coefficient is obtained using the following expression:
 
 $$
 Gini = \begin{cases}
@@ -263,37 +104,22 @@ Gini = \begin{cases}
  \end{cases} 
  $$
 
-with all parameters defined as before (source code: [grouped
-data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R)).
+with all parameters defined as before (source code: [grouped data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R)).
 
-**Mean log deviation**: The mean log deviation (MLD) belongs to the
-family of generalized entropy (GE) inequality measures. It is given as:
+**Mean log deviation**: The mean log deviation (MLD) belongs to the family of generalized entropy (GE) inequality measures. It is given as:
 
 $$ MLD  = \frac{1}{N} \sum_{i=1}^{N} ln \left(\frac{μ}{y_i} \right), $$
 
-where $N$ is the total population size, $μ$ is the mean welfare per
-person, and $y_i$ is welfare of individual $i$. The mean log deviation
-has a minimum value of 0 (perfect equality) and has no upper bound. This
-formula applies for both micro and grouped data (source code: [micro
-data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_mld.R)
-and [grouped
-data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R)).
+where $N$ is the total population size, $μ$ is the mean welfare per person, and $y_i$ is welfare of individual $i$. The mean log deviation has a minimum value of 0 (perfect equality) and has no upper bound. This formula applies for both micro and grouped data (source code: [micro data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_mld.R) and [grouped data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R)).
 
-**Polarization**: The polarization index ($P$) measures the extent to
-which the distribution of welfare is "spread out" and bi-modal. It is
-given as:
+**Polarization**: The polarization index ($P$) measures the extent to which the distribution of welfare is "spread out" and bi-modal. It is given as:
 
 $$
 P =  \frac{2(\mu^* - \mu^L)}{m},
 $$
 
-where $\mu^*$ is the distribution-correction mean (i.e.
-$\mu(1 - Gini)$), $\mu^L$ is the mean of the poorest half of the
-population, and $m$ is the median. Like the Gini coefficient, the
-polarization index ranges from 0 (no polarization) to 1 (complete
-polarization). The polarization index is based on @wolfson1994 and
-@ravallion1996. This formula applies for both micro and grouped data
-(source code: [micro
-data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_polarization.R)
-and [grouped
-data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R)).
+where $\mu^*$ is the distribution-correction mean (i.e. $\mu(1 - Gini)$), $\mu^L$ is the mean of the poorest half of the population, and $m$ is the median. Like the Gini coefficient, the polarization index ranges from 0 (no polarization) to 1 (complete polarization). The polarization index is based on @wolfson1994 and @ravallion1996. This formula applies for both micro and grouped data (source code: [micro data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_polarization.R) and [grouped data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R)).
+
+**Decile shares**: Imagine that we order all households according to their welfare per capita, such that the first decile contains the 10% of the population with the lowest welfare and so on. Decile shares measure the share of total welfare going to each decile. Formally, the decile share of decile $d$ is given by:
+
+$$ decileshare_d= \frac{\sum_{i \in d} {y_i}}{\sum_{i=1}^{N} {y_i}} ,  d \in \{1,2,..,10 \} $$
