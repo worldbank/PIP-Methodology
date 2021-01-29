@@ -1,4 +1,4 @@
-# Generating global and regional estimates
+# Generating global and regional estimates {#lineupestimates}
 
 Few countries have survey estimates of poverty available every year. To estimate poverty at the regional and global level, the survey estimates need to be aligned to a reference year and aggregated. Such alignment and aggregation requires assumptions about how to interpolate and extrapolate data as well as how to treat countries without any poverty data at all. This section explains how these calculations are made.
 
