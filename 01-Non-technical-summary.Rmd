@@ -1,6 +1,6 @@
 # Non-technical summary
 
-This page describes in non-technical terms how global and regional poverty estimates are created. It follows four steps, as illustrated in Figure 1 and outlined below in more detail. Firstly, the necessary data are obtained from relevant sources. Secondly, the data sources are used to create an estimate of income or consumption. Thirdly, these welfare aggregates are converted to the same unit across time and cross country. Fourthly they are ...
+This page describes in non-technical terms how global and regional poverty estimates are computed. The process to calculate global and regional poverty estimates follows four steps, as illustrated in Figure 1 and outlined below in more detail. First, household survey data are obtained from relevant sources. Second, the survey data are used to create an estimate of households' income or consumption, known as welfare aggregates. Third, welfare aggregates are converted to the same unit across time and cross country to foster international comparability and used to estimate poverty for a particular country for a particular year. Fourth, the estimates of poverty are extrapolated or interpolated to a common year and the average poverty rate is calculated.
 
 ```{r, echo=FALSE}
 DiagrammeR::grViz("digraph {
@@ -16,11 +16,14 @@ DiagrammeR::grViz("digraph {
                   height = 500)
 ```
 
-## Step 1: Acquiring household survey data {-}
+## Step 1: Acquiring household survey data {.unnumbered}
 
-## Step 2: Constructing welfare aggregates {-}
+## Step 2: Constructing welfare aggregates {.unnumbered}
 
-## Step 3: Generating survey estimates of poverty and inequality {-}
+## Step 3: Generating survey estimates of poverty and inequality {.unnumbered}
 
-## Step 4: Generating global and regional estimates of poverty {-}
-Most countries do not conduct household surveys every year. Yet, to estimate regional and global poverty for a particular year, one needs an estimate of poverty for every country in the region for the year in question. To this end, the estimates of poverty from surveys are [extrapolated](#extrapolations) or [interpolated](#interpolations) to the year in question. The extrapolations assume that everyone's income or consumption grows in accordance with growth rates from [national accounts](#nationalaccounts) between the time of the survey and the year in question. For [countries without any data](#nodata) at all, it is assumed that their poverty rate is equal to the average poverty rate in their region. To avoid presenting regional and global numbers with insufficient recent survey data, [coverage rules](#coveragerule) are used to determine whether a particular reference year has sufficient data coverage. 
+Welfare aggregates are expressed in local currencies in the prices prevailing at the time of the collection of the data. To compare compare the consumption of an Indian household in 2011 to the consumption of a Nigerian household in 2018, one needs to account for the fact that the welfareaggregate needs to be expressed in the same prices. To this end, [consumer price indices](#cpis) are used express all welfare aggregates in local 2011 prices, and [purchasing power parities](#ppps) are used to express. Once all welfare aggregates are expressed in the same units, they can be used to estimate extreme poverty. Extreme poverty is measured as the share of the population of a country whose welfare per day falls short of the international poverty line. [The international poverty line](#IPL) is the typical poverty line used by the poorest countries of the world.
+
+## Step 4: Generating global and regional estimates of poverty {.unnumbered}
+
+Most countries do not conduct household surveys every year. Yet, to estimate regional and global poverty for a particular year, one needs an estimate of poverty for every country in the region for the year in question. To this end, the estimates of poverty from surveys are [extrapolated](#extrapolations) or [interpolated](#interpolations) to the year in question. The extrapolations assume that everyone's income or consumption grows in accordance with growth rates from [national accounts](#nationalaccounts) between the time of the survey and the year in question. For [countries without any data](#nodata) at all, it is assumed that their poverty rate is equal to the average poverty rate in their region. To avoid presenting regional and global numbers with insufficient recent survey data, [coverage rules](#coveragerule) are used to determine whether a particular reference year has sufficient data coverage.
