@@ -9,7 +9,7 @@ editor_options:
 This section describes the data sources used for measuring poverty and
 inequality as well as how the data are selected and obtained.
 
-## Selection criteria and source of data
+## Selection criteria and source of data {#datasources}
 
 For developing countries, the Poverty and Inequality Platform relies on
 household surveys carried out by the countries' National Statistical
@@ -30,11 +30,11 @@ surveys carried out by NSOs or by academic institutions. Data from the
 LIS database are also used for high-income countries from the European
 Union for years predating EU-SILC.
 
-Occasionally, a survey filling the above criteria is not incorporated into
-the platform because the World Bank does not have access to the data,
-due to concerns with the survey design or welfare aggregate, or
+Occasionally, a survey filling the above criteria is not incorporated
+into the platform because the World Bank does not have access to the
+data, due to concerns with the survey design or welfare aggregate, or
 because the auxiliary data needed (such as [consumer price
-indices](#CPIs) and [purchasing power parities](#PPPs])) are
+indices](#CPIs) and [purchasing power parities](#PPPs%5D)) are
 unavailable. Whenever decisions are made to exclude a survey from the
 platform, they are done by the Global Poverty Working Group within the
 World Bank and the reason for the exclusion of a data point is
@@ -53,7 +53,8 @@ representative of the entire population:
     people and individuals residing in nursery homes, prisons, and
     displacement camps.
 2.  At times, conflicts and extreme weather events prevent the
-    enumerators from going to certain parts of the country. In these cases, some geographical areas may be excluded from the survey. The
+    enumerators from going to certain parts of the country. In these
+    cases, some geographical areas may be excluded from the survey. The
     2018-19 Nigeria Living Standards Survey, for example, is not
     representative of the Borno state, since parts of the state became
     inaccessible over the course of the survey.
@@ -61,9 +62,9 @@ representative of the entire population:
 For the purpose of calculating global or regional poverty, the poverty
 rates estimated in the surveys are assumed to be representative of the
 entire population despite of the two shortcomings above. This is largely
-because acquiring any alternative poverty estimate for the missing populations
-is challenging. In certain scenarios, the survey design allows the
-consumption or income of households not covered to be
+because acquiring any alternative poverty estimate for the missing
+populations is challenging. In certain scenarios, the survey design
+allows the consumption or income of households not covered to be
 [imputed](#imputed), in which case the second problem is addressed.
 
 The PIP also contains some surveys which explicitly only target the
@@ -103,16 +104,17 @@ Platform.
 In some cases, countries are unwilling to share unit-record data with
 the World Bank but they are willing to share grouped data. Grouped data
 are aggregated data, often to 5,10, 20 or 100 quantiles of the
-distribution. A country might have data on, for example, the mean income of
-each percentile or the income share of each percentile. For the purposes
-of estimating poverty and inequality, a Lorenz curve is estimated from
-these grouped data upon which inequality and poverty can be estimated
-(the method behind this is [described here](#treatmentgroups)). Grouped
-data are used for Algeria, China, Guyana, Suriname, Turkmenistan,
-Trinidad & Tobago, Venezuela, and the United Arab Emirates and more
-countries for earlier years. In PIP, grouped data are indicated with a
-[wait to see how it will be indicated] while unit-record data is
-indicated with a [wait to see how it will be indicated].
+distribution. A country might have data on, for example, the mean income
+of each percentile or the income share of each percentile. For the
+purposes of estimating poverty and inequality, a Lorenz curve is
+estimated from these grouped data upon which inequality and poverty can
+be estimated (the method behind this is [described
+here](#treatmentgroups)). Grouped data are used for Algeria, China,
+Guyana, Suriname, Turkmenistan, Trinidad & Tobago, Venezuela, and the
+United Arab Emirates and more countries for earlier years. In PIP,
+grouped data are indicated with a [wait to see how it will be indicated]
+while unit-record data is indicated with a [wait to see how it will be
+indicated].
 
 ## Multiply imputed micro data {#imputed}
 
@@ -130,4 +132,5 @@ papers], they often work by creating multiple imputed datasets,
 calculating statistics of interest in each of these dataset, and
 averaging over them to acquire a final estimate.
 
-Currently such data are used for South Sudan [insert year],  Somalia 2017 and Zimbabwe 2017.
+Currently such data are used for South Sudan [insert year], Somalia 2017
+and Zimbabwe 2017.
