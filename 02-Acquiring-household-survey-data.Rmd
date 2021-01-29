@@ -3,7 +3,7 @@
 This section describes the data sources used for measuring poverty and
 inequality as well as how the data are selected and obtained.
 
-## Selection criteria and source of data
+## Selection criteria and source of data {#selection}
 
 For developing countries, the Poverty and Inequality Platform relies on
 household surveys carried out by the countries' National Statistical

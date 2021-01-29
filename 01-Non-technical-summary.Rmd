@@ -1,6 +1,6 @@
 # Non-technical summary
 
-This page describes in non-technical terms how global and regional poverty estimates are computed. The process to calculate global and regional poverty estimates follows four steps, as illustrated in Figure 1 and outlined below in more detail. First, household survey data are obtained from relevant sources. Second, the survey data are used to create an estimate of households' income or consumption, known as welfare aggregates. Third, welfare aggregates are converted to the same unit across time and cross country to foster international comparability and used to estimate poverty for a particular country for a particular year. Fourth, the estimates of poverty are extrapolated or interpolated to a common year and the average poverty rate is calculated.
+This page describes in non-technical terms how global and regional poverty rates are calculated. The process follows four steps as illustrated in Figure 1 and outlined below in more detail. First, household survey data are obtained from relevant sources. Second, the survey data are used to create an estimate of households' income or consumption, known as welfare aggregates. Third, welfare aggregates are converted to the same unit across time and cross country to foster international comparability upon which poverty can be estimated for a particular country for a particular year. Fourth, the estimates of poverty are extrapolated or interpolated to a common year and the population-weighted poverty rate is calculated.
 
 ```{r, echo=FALSE}
 DiagrammeR::grViz("digraph {
@@ -16,14 +16,18 @@ DiagrammeR::grViz("digraph {
                   height = 500)
 ```
 
-## Step 1: Acquiring household survey data {.unnumbered}
+## Step 1: [Acquiring household survey data](\#acquiring) {.unnumbered}
 
-## Step 2: Constructing welfare aggregates {.unnumbered}
+Poverty rates are estimated from [selected](\#selection) household surveys. For the most part, these are surveys that ask a [representative](\#representativeness) subset of households in a country about their consumption behavior and/or income. Most household surveys from developing countries [are obtained](#selection) through collaboration with countries' National Statistical Offices, while most data for high-income countries are obtained from the [EU Statistics on Income and Living Conditions (EU-SILC)](%5Bhttps://ec.europa.eu/eurostat/web/microdata/european-union-statistics-on-income-and-living-conditions) or from the [Luxembourg Income Study (LIS) Database](https://www.lisdatacenter.org). For the most part, these surveys are representative of all households in a country. At times household-level data cannot be obtained in which cases data [aggregated](\#grouped) at a higher level are obtained.
 
-## Step 3: Generating survey estimates of poverty and inequality {.unnumbered}
+## Step 2: [Constructing welfare aggregates](#welfareaggregate) {.unnumbered}
+
+Several different concepts of poverty exist, building on different philosophical notions of what a good life -- or in the language of economists, welfare -- entails. Poverty, in short, is the absence of welfare, and individuals are considered poor when their welfare levels fall short of a certain threshold. The Poverty and Inequality Platform utilizes a monetary measure of poverty. Monetary poverty is estimated from an aggregation of household's income or from the monetary value of their consumption. We refer to such aggregates jointly as a welfare aggregate.
+
+## Step 3: [Generating survey estimates of poverty and inequality](#surveyestimates) {.unnumbered}
 
 Welfare aggregates are expressed in local currencies in the prices prevailing at the time of the collection of the data. To compare compare the consumption of an Indian household in 2011 to the consumption of a Nigerian household in 2018, one needs to account for the fact that the welfareaggregate needs to be expressed in the same prices. To this end, [consumer price indices](#cpis) are used express all welfare aggregates in local 2011 prices, and [purchasing power parities](#ppps) are used to express. Once all welfare aggregates are expressed in the same units, they can be used to estimate extreme poverty. Extreme poverty is measured as the share of the population of a country whose welfare per day falls short of the international poverty line. [The international poverty line](#IPL) is the typical poverty line used by the poorest countries of the world.
 
-## Step 4: Generating global and regional estimates of poverty {.unnumbered}
+## Step 4: [Generating global and regional estimates of poverty](\#lineupestimates) {.unnumbered}
 
 Most countries do not conduct household surveys every year. Yet, to estimate regional and global poverty for a particular year, one needs an estimate of poverty for every country in the region for the year in question. To this end, the estimates of poverty from surveys are [extrapolated](#extrapolations) or [interpolated](#interpolations) to the year in question. The extrapolations assume that everyone's income or consumption grows in accordance with growth rates from [national accounts](#nationalaccounts) between the time of the survey and the year in question. For [countries without any data](#nodata) at all, it is assumed that their poverty rate is equal to the average poverty rate in their region. To avoid presenting regional and global numbers with insufficient recent survey data, [coverage rules](#coveragerule) are used to determine whether a particular reference year has sufficient data coverage.

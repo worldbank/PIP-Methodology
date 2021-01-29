@@ -1,4 +1,4 @@
-# Generating survey estimates of poverty and inequality
+# Generating survey estimates of poverty and inequality {#surveyestimates}
 
 Welfare aggregates from household surveys are expressed in national currency units in prices around the time of the fieldwork. To use a [welfare aggregate](#welfareaggregates) from a particular survey to estimate international poverty, the welfare aggregates need to be converted to a unit comparable across time and across countries. To this end, first [Consumer Price Indices (CPIs)](#CPIs) are used to to express the aggregates in the same prices within a country. Second, [Purchasing Power Parities (PPPs)](#PPPs) are used to express all welfare aggregates in the same currency.
 
