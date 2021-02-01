@@ -4,15 +4,69 @@ Several different concepts of poverty exist, building on different philosophical
 
 ## Income or consumption {#incomeorconsumption}
 
-The welfare measure used for poverty measurement is based on either income or consumption. [[Marta]{style="color:red"}: Could you add some sentences here on what exactly an income aggregate and a consumption aggregate measure at a very basic level? Like what concept of income do we use? What are the main items a consumption aggregate contains? Perhaps also mention in a sentence or so what aspects of well-being they do not cover, like access to basic services, education, health etc and give a shout out to OPHI and the 2018 PSPR.]
+The welfare measure used for poverty measurement is based on either
+income or consumption. The main difference between the two measures is
+that consumption aggregates capture the living standards achieved by
+households, while income reflect the opportunity to reach a given
+welfare but may provide only an imperfect proxy of the achieved welfare
+level [@jolliffe2015]. Consumption measures typically capture household
+expenditure on a set of items over a given period of time. These usually
+include purchased, but also own-produced and exchanged or gifted, food
+and non-food items (for example: clothing, housing-[including imputed
+rent](#imputedrent)- and durable consumer goods). Income measures
+capture the value of monetary inflow a household receives over a given
+period of time. Household survey usually provide information on labor
+income (salaries, own-business and self-employment income), as well as
+non-labor income coming from pensions, subsidies, transfers, property
+income, scholarships, etc. Income aggregates in the Poverty and
+Inequality Platform typically measure disposable income defined as the
+sum of labor and non-labor income less taxes and contributions, although
+this technical definition would vary across different data sources ([see
+section on data sources](#datasources) ).
 
-Both approaches to measuring poverty have advantages and disadvantages. Countries typically choose the concept that can be more accurately measured and that is more relevant to their context, while balancing concerns about respondent burden in surveys.
+It should be noted that both income and consumption focus on the
+monetary aspect of household well-being, reflecting PIP's focus on
+monetary poverty. Yet such measures do not directly account for other
+important aspects of households' welfare (such as access to basic
+services, education, health-care and infrastructure), better captured by
+other indicators or by measures of multidimensional poverty (see
+[@alkire2015], [@worldbank2018], [@worldbank2020] for further details on
+multidimensional poverty).
 
-The consumption approach is arguably more directly connected to economic welfare. Yet, consumption-based measures of poverty require a wide range of questions, detailed price data, and often post-fieldwork adjustments. Also, the design of consumption questionnaires varies widely and, as shown by numerous experiments, can have significant effects on final poverty estimates (see [section on questionnaire design](#questionnaire) below).
+Both approaches to measuring poverty have advantages and disadvantages.
+Countries typically choose the concept that can be more accurately
+measured and that is more relevant to their context, while balancing
+concerns about respondent burden in surveys.
 
-Income measures, on the other hand, rely on no more than a handful of questions and can, at times, be verified from other sources. Yet they are difficult to obtain when a large fraction of the population works in the informal sector or is self-employed, which is frequently the case in poorer economies. Also, when households produce their own food with limited market interactions, it is harder to measure income than consumption. Income measures of poverty also suffer from the disadvantage that incomes might be very low---even negative---in a given period, whereas consumption is smoothed to safeguard against such shocks. Although it is plausible for households to have zero income in a given period, subsistence requires a minimum level of consumption, which is strictly above zero [@worldbank2018].
+The consumption approach is arguably more directly connected to economic
+welfare. Yet, consumption-based measures of poverty require a wide range
+of questions, detailed price data, and often post-fieldwork adjustments.
+Also, the design of consumption questionnaires varies widely and, as
+shown by numerous experiments, can have significant effects on final
+poverty estimates (see [section on questionnaire design](#questionnaire)
+below).
 
-The differences between income and consumption matter for comparing trends and levels of poverty. Given that incomes can be very low or negative, poverty rates are typically higher when income is used rather than consumption. For a given poverty rate, poor households also tend to be further below the poverty line when income is used, as explained by the earlier point about very low incomes. For this reason, PIP's current practice is to drop observations with negative welfare, while zeros are included.
+Income measures, on the other hand, rely on no more than a handful of
+questions and can, at times, be verified from other sources. Yet they
+are difficult to obtain when a large fraction of the population works in
+the informal sector or is self-employed, which is frequently the case in
+poorer economies. Also, when households produce their own food with
+limited market interactions, it is harder to measure income than
+consumption. Income measures of poverty also suffer from the
+disadvantage that incomes might be very low---even negative---in a given
+period, whereas consumption is smoothed to safeguard against such
+shocks. Although it is plausible for households to have zero income in a
+given period, subsistence requires a minimum level of consumption, which
+is strictly above zero [@worldbank2018].
+
+The differences between income and consumption matter for comparing
+trends and levels of poverty. Given that incomes can be very low or
+negative, poverty rates are typically higher when income is used rather
+than consumption. For a given poverty rate, poor households also tend to
+be further below the poverty line when income is used, as explained by
+the earlier point about very low incomes. For this reason, PIP's current
+practice is to drop observations with negative welfare, while zeros are
+included.
 
 ## Questionnaire design {#questionnaire}
 
@@ -24,7 +78,7 @@ India provides one important example of the relevance of the recall period for p
 
 Changes in questionnaire design imply that poverty estimates within countries become incomparable. Whenever such changes occur, they are marked in the [comparability database](#comparability).
 
-## Imputed rent
+## Imputed rent {#imputedrent}
 
 During the process of constructing a welfare aggregate, housing is arguably the most important and difficult components to include. From a conceptual point of view, housing could be understood as any other durable good: Its present value is not relevant for the analysis of current welfare because purchasing a house is such a large and relatively rare expenditure that it should not be included the in welfare aggregate [@deaton2002, p.35]. The objective is instead to measure the value of occupying the dwelling for a month, or another limited duration.
 
