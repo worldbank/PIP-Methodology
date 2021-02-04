@@ -1,0 +1,12 @@
+book_filename: "Methodology"
+repo: https://github.com/PovcalNet-Team/Methodology/
+output_dir: "docs"
+delete_merged_file: true
+
+language:
+  label:
+    fig: "Figure "
+    tab: "Table "
+  ui:
+    edit: "Edit"
+    chapter_name: "Chapter "
