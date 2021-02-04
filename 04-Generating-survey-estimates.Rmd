@@ -24,7 +24,45 @@ Most developing countries have a national poverty line which summarizes the valu
 
 To compare poverty across countries one needs a common standard. Hence, national poverty lines, which differ from one country to the next, cannot be used. The international poverty line (IPL) is an attempt to summarize the national poverty lines of the poorest countries.
 
-The current international poverty line of \$1.90/day in 2011 PPPs was derived as the mean national poverty line of the 15 poorest countries. That is, it represents a typical poverty line of the poorest countries in the world. The is derived by first converting the national poverty lines into PPP-adjusted dollars in the same manner as welfare distributions are converted. This was done by @ravallion2009 who selected the 15 poorest countries based on household final consumption expenditure per capita of countries around 2008 when the 2005 PPPs were released. The 15 poorest countries at the time were Ethiopia, Ghana, The Gambia, Guinea-Bissau, Mali, Mozambique, Malawi, Niger, Nepal, Rwanda, Sierra Leone, Chad, Tajikistan, Tanzania, and Uganda. An IPL of \$1.25/day per person, expressed in 2005 PPP dollars was determined as the mean of the national poverty lines of these countries. When the 2011 PPPs were released in 2014, the same 15 national poverty lines were used, but now converted to 2011 PPPs yielding an IPL of \$1.88, which was rounded to \$1.90 [@ferreira2015; @ferreira2016]. When the 2011 PPPs got revised in 2020, the IPL was similarly updated but remains unchanged at \$1.90 [@atamanov2020; @worldbank2020]. [[Samuel]{style="color:red"}: What do you think about adding a table here with the 15 countries (+ a row with the mean), and columns reflecting the national poverty lines in 2005 PPPs, 2011 PPPs and 2011 revised PPPs?]).
+The current international poverty line of \$1.90/day in 2011 PPPs was derived as the mean national poverty line of the 15 poorest countries. That is, it represents a typical poverty line of the poorest countries in the world. The is derived by first converting the national poverty lines into PPP-adjusted dollars in the same manner as welfare distributions are converted. This was done by @ravallion2009 who selected the 15 poorest countries based on household final consumption expenditure per capita of countries around 2008 when the 2005 PPPs were released. An IPL of \$1.25/day per person, expressed in 2005 PPP dollars was determined as the mean of the national poverty lines of these countries. When the 2011 PPPs were released in 2014, the same 15 national poverty lines were used, but now converted to 2011 PPPs yielding an IPL of \$1.88, which was rounded to \$1.90 [@ferreira2015; @ferreira2016]. When the 2011 PPPs got revised in 2020, the IPL was similarly updated but remains unchanged at \$1.90 [@atamanov2020; @worldbank2020]. Below is the list of the 15 poorest countries and their national poverty lines denominated in 2005, original 2011 and revised 2011 PPPs.
+
++---------------+-----------+---------------+-------------------+------------------+
+| Country       | Survey    | Poverty line, | Poverty line,     | Poverty line,    |
+|               |           |               |                   |                  |
+|               | year      | 2005 PPP      | original 2011 PPP | revised 2011 PPP |
++:==============+:==========+:==============+:==================+:=================+
+| Chad          | 1995-96   | 0.87          | 1.28              | 1.29             |
++---------------+-----------+---------------+-------------------+------------------+
+| Ethiopia      | 1999-2000 | 1.35          | 2.03              | 1.98             |
++---------------+-----------+---------------+-------------------+------------------+
+| Gambia, The   | 1998      | 1.48          | 1.82              | 1.81             |
++---------------+-----------+---------------+-------------------+------------------+
+| Ghana         | 1998-99   | 1.83          | 3.07              | 3.11             |
++---------------+-----------+---------------+-------------------+------------------+
+| Guinea-Bissau | 1991      | 1.51          | 2.16              | 2.08             |
++---------------+-----------+---------------+-------------------+------------------+
+| Malawi        | 2004-05   | 0.86          | 1.34              | 1.33             |
++---------------+-----------+---------------+-------------------+------------------+
+| Mali          | 1988-89   | 1.38          | 2.15              | 2.13             |
++---------------+-----------+---------------+-------------------+------------------+
+| Mozambique    | 2002-03   | 0.97          | 1.26              | 1.24             |
++---------------+-----------+---------------+-------------------+------------------+
+| Nepal         | 2003-04   | 0.87          | 1.47              | 1.47             |
++---------------+-----------+---------------+-------------------+------------------+
+| Niger         | 1993      | 1.10          | 1.49              | 1.48             |
++---------------+-----------+---------------+-------------------+------------------+
+| Rwanda        | 1999-2001 | 0.99          | 1.50              | 1.47             |
++---------------+-----------+---------------+-------------------+------------------+
+| Sierra Leone  | 2003-04   | 1.69          | 2.73              | 2.64             |
++---------------+-----------+---------------+-------------------+------------------+
+| Tajikistan    | 1999      | 1.93          | 3.18              | 3.35             |
++---------------+-----------+---------------+-------------------+------------------+
+| Tanzania      | 2000-01   | 0.63          | 0.88              | 0.88             |
++---------------+-----------+---------------+-------------------+------------------+
+| Uganda        | 1993-98   | 1.27          | 1.77              | 1.77             |
++---------------+-----------+---------------+-------------------+------------------+
+| **Mean**      |           | **1.25**      | **1.88**          | **1.87**         |
++---------------+-----------+---------------+-------------------+------------------+
 
 ## Derivation of other global poverty lines
 
