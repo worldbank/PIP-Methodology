@@ -62,7 +62,7 @@ Despite of its compelling features, the lack of agreement on which equivalence s
 
 ## Treatment of grouped data {#comparability}
 
-A welfare aggregate is also needed to estimate poverty and inequality from [grouped data](#grouped). Grouped data are consumption expenditure or income organized in graduated class intervals or bins. To this end, the grouped data is used to derive a Lorenz function, which together with information about mean welfare can be used to construct a full distribution. Two approaches are use to derive a Lorenz function, the general quadratic (GQ) Lorenz function and the Beta Lorenz function [@datt1998]. Due to its computational simplicity, the GQ Lorenz function is preferred in PIP. A parameterized GQ Lorenz function is estimated using the following specification:
+A welfare aggregate is also needed to estimate poverty and inequality from [grouped data](#grouped). Grouped data are consumption expenditure or income organized in graduated class intervals or bins. To this end, the grouped data is used to derive a Lorenz function, which together with information about mean welfare can be used to construct a full distribution. Two approaches are used to derive a Lorenz function, the general quadratic (GQ) Lorenz function and the Beta Lorenz function [@datt1998]. Both functions are parameterized and estimated. The function that provides the best fit based on normality and validity tests is selected for poverty and distributional statistics. However, due to its computational simplicity, the GQ Lorenz function is preferred in PIP when both functions could be used. The GQ Lorenz function is estimated using the following specification:
 
 $$
 L(1-L) = a(p^2-L) + bL(p-1) + c(p-L),
