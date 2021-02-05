@@ -3,5 +3,4 @@
 .RData
 .Ruserdata
 /.Rhistory
-*.html
 *.json

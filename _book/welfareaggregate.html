@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Constructing welfare aggregates | Poverty and Inequality Platform Methodology Handbook</title>
+  <meta name="description" content="2 Constructing welfare aggregates | Poverty and Inequality Platform Methodology Handbook" />
+  <meta name="generator" content="bookdown 0.21.6 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Constructing welfare aggregates | Poverty and Inequality Platform Methodology Handbook" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://povcalnet-team.github.io/Methodology" />
+  
+  
+  <meta name="github-repo" content="PovcalNet-Team/Methodology" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Constructing welfare aggregates | Poverty and Inequality Platform Methodology Handbook" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="acquiring.html"/>
+<link rel="next" href="surveyestimates.html"/>
+<script src="libs/header-attrs-2.6.6/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Non-technical summary</a>
+<ul>
+<li><a href="index.html#step-1-acquiring-household-survey-data">Step 1: <span>Acquiring household survey data</span></a></li>
+<li><a href="index.html#step-2-constructing-welfare-aggregates">Step 2: <span>Constructing welfare aggregates</span></a></li>
+<li><a href="index.html#step-3-generating-survey-estimates-of-poverty-and-inequality">Step 3: <span>Generating survey estimates of poverty and inequality</span></a></li>
+<li><a href="index.html#step-4-generating-global-and-regional-estimates-of-poverty">Step 4: <span>Generating global and regional estimates of poverty</span></a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="acquiring.html"><a href="acquiring.html"><i class="fa fa-check"></i><b>1</b> Acquiring household survey data</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="acquiring.html"><a href="acquiring.html#selection"><i class="fa fa-check"></i><b>1.1</b> Selection criteria and source of data</a></li>
+<li class="chapter" data-level="1.2" data-path="acquiring.html"><a href="acquiring.html#representativeness"><i class="fa fa-check"></i><b>1.2</b> Representativeness</a></li>
+<li class="chapter" data-level="1.3" data-path="acquiring.html"><a href="acquiring.html#how-data-are-obtained"><i class="fa fa-check"></i><b>1.3</b> How data are obtained</a></li>
+<li class="chapter" data-level="1.4" data-path="acquiring.html"><a href="acquiring.html#grouped"><i class="fa fa-check"></i><b>1.4</b> Grouped vs. unit record data</a></li>
+<li class="chapter" data-level="1.5" data-path="acquiring.html"><a href="acquiring.html#imputed"><i class="fa fa-check"></i><b>1.5</b> Multiply imputed micro data</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="welfareaggregate.html"><a href="welfareaggregate.html"><i class="fa fa-check"></i><b>2</b> Constructing welfare aggregates</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="welfareaggregate.html"><a href="welfareaggregate.html#incomeorconsumption"><i class="fa fa-check"></i><b>2.1</b> Income or consumption</a></li>
+<li class="chapter" data-level="2.2" data-path="welfareaggregate.html"><a href="welfareaggregate.html#questionnaire"><i class="fa fa-check"></i><b>2.2</b> Questionnaire design</a></li>
+<li class="chapter" data-level="2.3" data-path="welfareaggregate.html"><a href="welfareaggregate.html#imputedrent"><i class="fa fa-check"></i><b>2.3</b> Imputed rent</a></li>
+<li class="chapter" data-level="2.4" data-path="welfareaggregate.html"><a href="welfareaggregate.html#spatialtemporal"><i class="fa fa-check"></i><b>2.4</b> Within-survey spatial/temporal deflation</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="welfareaggregate.html"><a href="welfareaggregate.html#spatial-deflation"><i class="fa fa-check"></i><b>2.4.1</b> Spatial deflation</a></li>
+<li class="chapter" data-level="2.4.2" data-path="welfareaggregate.html"><a href="welfareaggregate.html#temporal-deflation"><i class="fa fa-check"></i><b>2.4.2</b> Temporal deflation</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="welfareaggregate.html"><a href="welfareaggregate.html#equivalence-scale"><i class="fa fa-check"></i><b>2.5</b> Equivalence scale</a></li>
+<li class="chapter" data-level="2.6" data-path="welfareaggregate.html"><a href="welfareaggregate.html#comparability"><i class="fa fa-check"></i><b>2.6</b> Treatment of grouped data</a></li>
+<li class="chapter" data-level="2.7" data-path="welfareaggregate.html"><a href="welfareaggregate.html#comparability"><i class="fa fa-check"></i><b>2.7</b> Comparability database</a>
+<ul>
+<li class="chapter" data-level="" data-path="welfareaggregate.html"><a href="welfareaggregate.html#r"><i class="fa fa-check"></i>R</a></li>
+<li class="chapter" data-level="" data-path="welfareaggregate.html"><a href="welfareaggregate.html#stata"><i class="fa fa-check"></i>Stata</a></li>
+<li class="chapter" data-level="" data-path="welfareaggregate.html"><a href="welfareaggregate.html#python"><i class="fa fa-check"></i>Python</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="surveyestimates.html"><a href="surveyestimates.html"><i class="fa fa-check"></i><b>3</b> Generating survey estimates of poverty and inequality</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="surveyestimates.html"><a href="surveyestimates.html#CPIs"><i class="fa fa-check"></i><b>3.1</b> Consumer Price Indices (CPIs)</a></li>
+<li class="chapter" data-level="3.2" data-path="surveyestimates.html"><a href="surveyestimates.html#PPPs"><i class="fa fa-check"></i><b>3.2</b> Purchasing Power Parities (PPPs)</a></li>
+<li class="chapter" data-level="3.3" data-path="surveyestimates.html"><a href="surveyestimates.html#IPL"><i class="fa fa-check"></i><b>3.3</b> Derivation of the international poverty line</a></li>
+<li class="chapter" data-level="3.4" data-path="surveyestimates.html"><a href="surveyestimates.html#derivation-of-other-global-poverty-lines"><i class="fa fa-check"></i><b>3.4</b> Derivation of other global poverty lines</a></li>
+<li class="chapter" data-level="3.5" data-path="surveyestimates.html"><a href="surveyestimates.html#povertymeasures"><i class="fa fa-check"></i><b>3.5</b> Poverty measures</a></li>
+<li class="chapter" data-level="3.6" data-path="surveyestimates.html"><a href="surveyestimates.html#inequalitymeasures"><i class="fa fa-check"></i><b>3.6</b> Inequality measures</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="lineupestimates.html"><a href="lineupestimates.html"><i class="fa fa-check"></i><b>4</b> Generating global and regional estimates</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="lineupestimates.html"><a href="lineupestimates.html#extrapolations"><i class="fa fa-check"></i><b>4.1</b> Extrapolations</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="lineupestimates.html"><a href="lineupestimates.html#pass-through-rate-for-india"><i class="fa fa-check"></i><b>4.1.1</b> Pass-through rate for India</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="lineupestimates.html"><a href="lineupestimates.html#interpolations"><i class="fa fa-check"></i><b>4.2</b> Interpolations</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="lineupestimates.html"><a href="lineupestimates.html#same-direction-interpolation"><i class="fa fa-check"></i><b>4.2.1</b> “Same direction” interpolation</a></li>
+<li class="chapter" data-level="4.2.2" data-path="lineupestimates.html"><a href="lineupestimates.html#diverging-directions-interpolation"><i class="fa fa-check"></i><b>4.2.2</b> “Diverging directions” interpolation</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="lineupestimates.html"><a href="lineupestimates.html#nationalaccounts"><i class="fa fa-check"></i><b>4.3</b> National accounts data</a></li>
+<li class="chapter" data-level="4.4" data-path="lineupestimates.html"><a href="lineupestimates.html#choosing-between-consumption-and-income-estimates"><i class="fa fa-check"></i><b>4.4</b> Choosing between consumption and income estimates</a></li>
+<li class="chapter" data-level="4.5" data-path="lineupestimates.html"><a href="lineupestimates.html#regionsandcountries"><i class="fa fa-check"></i><b>4.5</b> Regional classification</a></li>
+<li class="chapter" data-level="4.6" data-path="lineupestimates.html"><a href="lineupestimates.html#population"><i class="fa fa-check"></i><b>4.6</b> Population</a></li>
+<li class="chapter" data-level="4.7" data-path="lineupestimates.html"><a href="lineupestimates.html#nodata"><i class="fa fa-check"></i><b>4.7</b> Treatment of countries without any poverty data</a></li>
+<li class="chapter" data-level="4.8" data-path="lineupestimates.html"><a href="lineupestimates.html#coverage-rule"><i class="fa fa-check"></i><b>4.8</b> Coverage rule</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Poverty and Inequality Platform Methodology Handbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="welfareaggregate" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Constructing welfare aggregates</h1>
+<p>Several different concepts of poverty exist, building on different philosophical notions of what a good life – or in the language of economists, welfare – entails. Poverty, in short, is the absence of welfare, and individuals are considered poor when their welfare levels fall short of a certain threshold. The Poverty and Inequality Platform utilizes a monetary measure of poverty. Monetary poverty is estimated from an aggregation of household’s income or from the monetary value of their consumption. We refer to such aggregates jointly as a welfare aggregate. This section explains in detail how welfare aggregates are constructed.</p>
+<div id="incomeorconsumption" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Income or consumption</h2>
+<p>The welfare measure used for poverty measurement is based on either income or consumption. The main difference between the two measures is that consumption aggregates capture the living standards achieved by households, while income reflect the opportunity to reach a given welfare but may provide only an imperfect proxy of the achieved welfare level <span class="citation">(<a href="#ref-jolliffe2015" role="doc-biblioref">Jolliffe and Prydz 2015</a>)</span>. Consumption measures typically capture household expenditure on a set of items over a given period of time. These usually include purchased, but also own-produced and exchanged or gifted, food and non-food items (for example: clothing, housing-<a href="welfareaggregate.html#imputedrent">including imputed rent</a>- and durable consumer goods). Income measures capture the value of monetary inflow a household receives over a given period of time. Household survey usually provide information on labor income (salaries, own-business and self-employment income), as well as non-labor income coming from pensions, subsidies, transfers, property income, scholarships, etc. Income aggregates in the Poverty and Inequality Platform typically measure disposable income defined as the sum of labor and non-labor income less taxes and contributions, although this technical definition would vary across different data sources (<a href="#datasources">see section on data sources</a> ).</p>
+<p>It should be noted that both income and consumption focus on the monetary aspect of household well-being, reflecting PIP’s focus on monetary poverty. Yet such measures do not directly account for other important aspects of households’ welfare (such as access to basic services, education, health-care and infrastructure), better captured by other indicators or by measures of multidimensional poverty (see <span class="citation">(<a href="#ref-alkire2015" role="doc-biblioref">Alkire et al. 2015</a>)</span>, <span class="citation">(<a href="#ref-worldbank2018" role="doc-biblioref">World Bank 2018a</a>)</span>, <span class="citation">(<a href="#ref-worldbank2020" role="doc-biblioref">World Bank 2020</a>)</span> for further details on multidimensional poverty).</p>
+<p>Both approaches to measuring poverty have advantages and disadvantages. Countries typically choose the concept that can be more accurately measured and that is more relevant to their context, while balancing concerns about respondent burden in surveys.</p>
+<p>The consumption approach is arguably more directly connected to economic welfare. Yet, consumption-based measures of poverty require a wide range of questions, detailed price data, and often post-fieldwork adjustments. Also, the design of consumption questionnaires varies widely and, as shown by numerous experiments, can have significant effects on final poverty estimates (see <a href="welfareaggregate.html#questionnaire">section on questionnaire design</a> below).</p>
+<p>Income measures, on the other hand, rely on no more than a handful of questions and can, at times, be verified from other sources. Yet they are difficult to obtain when a large fraction of the population works in the informal sector or is self-employed, which is frequently the case in poorer economies. Also, when households produce their own food with limited market interactions, it is harder to measure income than consumption. Income measures of poverty also suffer from the disadvantage that incomes might be very low—even negative—in a given period, whereas consumption is smoothed to safeguard against such shocks. Although it is plausible for households to have zero income in a given period, subsistence requires a minimum level of consumption, which is strictly above zero <span class="citation">(<a href="#ref-worldbank2018" role="doc-biblioref">World Bank 2018a</a>)</span>.</p>
+<p>The differences between income and consumption matter for comparing trends and levels of poverty. Given that incomes can be very low or negative, poverty rates are typically higher when income is used rather than consumption. For a given poverty rate, poor households also tend to be further below the poverty line when income is used, as explained by the earlier point about very low incomes. For this reason, PIP’s current practice is to drop observations with negative welfare, while zeros are included.</p>
+</div>
+<div id="questionnaire" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Questionnaire design</h2>
+<p>Constructing a welfare aggregate, particularly a consumption aggregate, requires many specific questions to be asked in household surveys. There are many different ways to ask survey respondents about their consumption habits, and how one asks has a significant effect on how people respond. Consumption aggregates are sensitive to whether respondents recall consumption from memory or use consumption diaries, how many, and how detailed, consumption items are listed, and length of the time period interviewers ask respondents to recall.@deweerdt2020 provide a recent review of the impact these choices can have for the final poverty estimates.</p>
+<p>The recall period, for example, affects reported consumption through two main channels: memory decay and telescoping. A longer recall period is better at encompassing expenditure on infrequently purchased items, but it can lead to underreporting if respondents forget about the past purchases. Despite lower average consumption, measured poverty might be lower under the longer recall period because it captures the purchases of low frequency items of households in the lower parts of the distribution. Short recall periods can mitigate underreporting but can lead to telescoping, where respondents mistakenly report the consumption that took place outside of the reference period.</p>
+<p>India provides one important example of the relevance of the recall period for poverty estimation. The official 2004–05 poverty rate for India based on a uniform recall period of 30 days was 27.5 percent. Using a mixed recall period of 7 and 30 days on food, pan, and tobacco and a 365 day recall period for non-food items, the corresponding figure was 21.8 percent <span class="citation">(<a href="#ref-worldbank2018a" role="doc-biblioref">World Bank 2018b</a>)</span>.</p>
+<p>Changes in questionnaire design imply that poverty estimates within countries become incomparable. Whenever such changes occur, they are marked in the <a href="welfareaggregate.html#comparability">comparability database</a>.</p>
+</div>
+<div id="imputedrent" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Imputed rent</h2>
+<p>During the process of constructing a welfare aggregate, housing is arguably the most important and difficult components to include. From a conceptual point of view, housing could be understood as any other durable good: Its present value is not relevant for the analysis of current welfare because purchasing a house is such a large and relatively rare expenditure that it should not be included the in welfare aggregate <span class="citation">(<a href="#ref-deaton2002" role="doc-biblioref">Deaton and Zaidi 2002, 35</a>)</span>. The objective is instead to measure the value of occupying the dwelling for a month, or another limited duration.</p>
+<p>Whether the welfare aggregate is based on consumption or income, accounting for housing is important. When the welfare aggregate is based on consumption, household surveys usually record the value of rent paid by market tenants. Since rent is the market value of occupying a house for a given period of time, it is feasible and empirically viable to estimate the flow of housing services. Yet, the same information is not available for household owners, even though they also “consume” housing services. By not including the value of housing consumed by owners, it would look like two household with the very same consumption patterns have different welfare just because one pays rent and the other does not. In fact, the market tenant would look better off than the household owner because the consumption of the former is higher than the one of the latter.</p>
+<p>When the welfare aggregate is based on income the logic is similar. In this case, the welfare aggregate should be composed by the remuneration of all the assets of the household including labor, capital, and durable goods such as houses and cars <span class="citation">(<a href="#ref-gasparini2004" role="doc-biblioref">Gasparini and Sosa Escudero 2004</a>)</span>. Families that own their housing receive an implicit value that is equivalent to the amount of money they would have to pay in the market if they had to rent a dwelling similar to the one they are currently living in. Hence, to properly account for housing in welfare aggregates, one need to impute rent for owners.</p>
+<p>Several methods exist to impute rent (see <span class="citation"><a href="#ref-balcázar2017" role="doc-biblioref">Balcázar et al.</a> (<a href="#ref-balcázar2017" role="doc-biblioref">2017</a>)</span> for a review). Due to the data needs of these approaches, imputed rent is not always computed, leading housing to be excluded from the welfare aggregate. Across the surveys used in the Poverty and Inequality Platform, it varies between country and within countries over time whether imputed rent is included. Due to the value of housing services relative to total welfare, this can matter a great deal for poverty <a href="welfareaggregate.html#comparability">comparability over time</a>.</p>
+</div>
+<div id="spatialtemporal" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Within-survey spatial/temporal deflation</h2>
+<p>When constructing a welfare aggregate, one is met with the challenge that prices differ geographically within a country and develop over the time of the fieldwork. This means that the same level of income can have a different value for different households, and that households with the same consumption patterns can have very different consumption aggregates if the prices they face differ. To make the welfare aggregates comparable across time and space, spatial and temporal price deflation is needed. Whether or not such deflation is carried out depends on availability of price data and country-specific practices. Whenever a country switches from not spatially deflating to spatially deflating, this might lead to <a href="welfareaggregate.html#comparability">incomparable</a> poverty estimates over time.</p>
+<div id="spatial-deflation" class="section level3" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> Spatial deflation</h3>
+<p>Suppose a household pays $1 for a kilo of rice in an urban center, while a rural household in the same country only pays $0.5 for a similar quality and amount of rice. If one were to assess poverty based on the value of the goods and services consumed without accounting for these price differences, everything else equal, one would conclude that the rural household is poorer than the urban household. Yet, from a welfare perspective, it is certainly not obvious that the urban household is better off. To properly compare the welfare levels of the two households one would need to account for the differences in price levels that the two households face.</p>
+<p>There are several ways to account for spatial price differences. One way is to calculate the price of a representative basket of goods at the various locations and convert household consumption expenditure into the prices of a reference location, such as the capital city or the national average price level.</p>
+<p>Currently most surveys from East Asia and Pacific, Latin America and the Caribbean, and Europe and Central Asia are spatially deflated, while it is less common in Sub-Saharan Africa, South Asia and the Middle East and North Africa. China, India and Indonesia have rural/urban PPPs that are used to deflate household welfare aggregates to account for spatial price differences within these countries (more details in <a href="surveyestimates.html#PPPs">section on PPPs</a>).</p>
+</div>
+<div id="temporal-deflation" class="section level3" number="2.4.2">
+<h3><span class="header-section-number">2.4.2</span> Temporal deflation</h3>
+<p>Household surveys are often carried out over several months, leading to the possibility that prices evolve notably over this period. If unaccounted for, this means that two households at the same location that have the same consumption patterns but are interviewed at the beginning and the end of the fieldwork may have very different consumption aggregates. Accounting for such temporal deflation implies choosing a reference period and deflating all consumption aggregates to that period. This can be a specific year, quarter or month. The exact time chosen for each survey is listed in the appendix table of the most recent What’s New document. Temporal deflation is not carried out in all cases.</p>
+<p>Sometimes, a spatio-temporal price index is used to jointly adjust for both spatial and temporal price differences. The household welfare aggregate from the survey conducted in Ghana in 2016-17, for example, is evaluated at 2013 Greater Accra regional prices.</p>
+</div>
+</div>
+<div id="equivalence-scale" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> Equivalence scale</h2>
+<p>All welfare aggregates are converted into per capita terms by dividing the total household welfare with the number of household members. Behind this conversion lies an assumption that all household members have equal consumption levels or derive equal welfare from the total household income. This is a strong assumption and evidence has shown that females often get less than an equal part of household income and consumption (see chapter 5 of <span class="citation"><a href="#ref-worldbank2018" role="doc-biblioref">World Bank</a> (<a href="#ref-worldbank2018" role="doc-biblioref">2018a</a>)</span> references therein). In addition, if household members have different needs, which could be the case if children, for example, require less consumption than adults, then comparing welfare per capita might be misleading. An alternative assumption, often used by countries when measuring poverty, is to use an adult equivalence scale. Such a scale defines the consumption need of each household member – often based on gender, age, and the household size – relative to a benchmark category. Total household welfare is then converted into welfare per adult equivalent household member.</p>
+<p>Despite of its compelling features, the lack of agreement on which equivalence scale to use across countries and the more difficult interpretation of the final welfare estimates, has prevented the World Bank from using such numbers for global poverty monitoring thus far.</p>
+</div>
+<div id="comparability" class="section level2" number="2.6">
+<h2><span class="header-section-number">2.6</span> Treatment of grouped data</h2>
+<p>A welfare aggregate is also needed to estimate poverty and inequality from <a href="acquiring.html#grouped">grouped data</a>. Grouped data are consumption expenditure or income organized in graduated class intervals or bins. To this end, the grouped data is used to derive a Lorenz function, which together with information about mean welfare can be used to construct a full distribution. Two approaches are use to derive a Lorenz function, the general quadratic (GQ) Lorenz function and the Beta Lorenz function <span class="citation">(<a href="#ref-datt1998" role="doc-biblioref">Datt 1998</a>)</span>. Due to its computational simplicity, the GQ Lorenz function is preferred in PIP. A parameterized GQ Lorenz function is estimated using the following specification:</p>
+<p><span class="math display">\[
+L(1-L) = a(p^2-L) + bL(p-1) + c(p-L),
+\]</span></p>
+<p>where <span class="math inline">\(p\)</span> is the cumulative proportion of population, <span class="math inline">\(L\)</span> is the cumulative proportion of consumption expenditure or income, and <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, <span class="math inline">\(c\)</span> are parameter estimates <span class="citation">(<a href="#ref-datt1998" role="doc-biblioref">Datt 1998</a>)</span>. <a href="#povvertymeasures">Poverty</a> and <a href="surveyestimates.html#inequalitymeasures">inequality</a> measures are based on the parameter estimates.</p>
+<p>[ <span style="color:red">Samuel</span>: Could you specify when the Beta Lorenz is used instead? Do you know if we have this listed in detail in some document that we can refer to?]</p>
+</div>
+<div id="comparability" class="section level2" number="2.7">
+<h2><span class="header-section-number">2.7</span> Comparability database</h2>
+<p>[<span style="color:red">To be updated once we decide how PIP will utilize the comparability database</span>]</p>
+<p>As countries frequently improve the <a href="welfareaggregate.html#questionnaire">questionnaire design</a> of household surveys and the methodology for the construction of welfare aggregates, poverty estimates over time for a country are not always comparable to each other.</p>
+<p>In order to guide users about when poverty can be compared over time within a country, a “<a href="https://datacatalog.worldbank.org/dataset/comparability-over-time-country-level-international-poverty-measures">Comparability Over Time</a>” dataset has been put together. This dataset provides metadata on the comparability of poverty estimates within countries over time. Within a country, comparability of poverty estimates over time is assumed unless there is a known change to the survey methodology, measurement, or data structure. The assessment of comparability is country-dependent and relies on the accumulation of knowledge from past and current World Bank staff, as well as close dialogue with national data producers with knowledge of survey design and methodology. The complete documentation of this dataset is available in <span class="citation"><a href="#ref-atamanov2019" role="doc-biblioref">Atamanov et al.</a> (<a href="#ref-atamanov2019" role="doc-biblioref">2019</a>)</span> (Section 4).</p>
+<p>The dataset can be accessed in different ways. The official version is available in the <a href="https://datacatalog.worldbank.org/dataset/comparability-over-time-country-level-international-poverty-measures">Development Data Hub</a> of the World Bank. It is possible to access it directly from R, Stata, or Python by calling this file, "<a href="https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/506801/povcalnet_comparability.csv%22." class="uri">https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/506801/povcalnet_comparability.csv%22.</a></p>
+<div id="r" class="section level3 unnumbered">
+<h3>R</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="welfareaggregate.html#cb1-1" aria-hidden="true" tabindex="-1"></a>link <span class="ot">&lt;-</span> <span class="st">&quot;https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/506801/povcalnet_comparability.csv&quot;</span></span>
+<span id="cb1-2"><a href="welfareaggregate.html#cb1-2" aria-hidden="true" tabindex="-1"></a>df   <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(link)</span></code></pre></div>
+</div>
+<div id="stata" class="section level3 unnumbered">
+<h3>Stata</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode stata"><code class="sourceCode stata"><span id="cb2-1"><a href="welfareaggregate.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> dh <span class="st">&quot;https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/506801/povcalnet_comparability.csv&quot;</span></span>
+<span id="cb2-2"><a href="welfareaggregate.html#cb2-2" aria-hidden="true" tabindex="-1"></a>import delimited <span class="kw">using</span> <span class="st">&quot;`dh&#39;&quot;</span>, <span class="kw">clear</span></span></code></pre></div>
+</div>
+<div id="python" class="section level3 unnumbered">
+<h3>Python</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="welfareaggregate.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb3-2"><a href="welfareaggregate.html#cb3-2" aria-hidden="true" tabindex="-1"></a>link <span class="op">=</span> <span class="st">&quot;https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/506801/povcalnet_comparability.csv&quot;</span></span>
+<span id="cb3-3"><a href="welfareaggregate.html#cb3-3" aria-hidden="true" tabindex="-1"></a>df   <span class="op">=</span> pd.read_csv(path)</span></code></pre></div>
+<p>Each observation of the comparability dataset represents a survey point which is the combination of ISO3 country code (<code>countrycode</code>), <code>year</code>, survey acronym (<code>survname</code>), welfare type (i.e., income or consumption) (<code>datatype</code>), and survey coverage (<code>coveragetype</code>). The variable <code>comparabiliy</code> specifies the comparability over time with the following logic. The oldest comparable series in each country starts with the value zero (0) in the <code>comparability</code> variable. When comparability is broken, the value changes to one (1) for the year of the break and it goes on until the comparability is broken again in a subsequent year. The process repeats until the most recent surveys point available. Thus, to get the most recent comparable spell, you need the <code>max(comparability)</code> by <code>countrycode, survname, datatype, coveragetype</code>.</p>
+
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-alkire2015" class="csl-entry">
+Alkire, Sabina, José Manuel Roche, Paola Ballon, James Foster, Maria Emma Santos, and Suman Seth. 2015. <em>Multidimensional Poverty Measurement and Analysis</em>. Oxford University Press, USA.
+</div>
+<div id="ref-atamanov2019" class="csl-entry">
+Atamanov, Aziz, R. Andres Castaneda Aguilar, Carolina Diaz-Bonilla, Dean Jolliffe, Christoph Lakner, Daniel Gerszon Mahler, Jose Montes, et al. 2019. <span>“September 2019 PovcalNet Update.”</span> Washington, DC. <a href="https://openknowledge.worldbank.org/handle/10986/32478">https://openknowledge.worldbank.org/handle/10986/32478</a>.
+</div>
+<div id="ref-balcázar2017" class="csl-entry">
+Balcázar, Carlos Felipe, Lidia Ceriani, Sergio Olivieri, and Marco Ranzani. 2017. <span>“Rent-Imputation for Welfare Measurement: A Review of Methodologies and Empirical Findings.”</span> <em>Review of Income and Wealth</em> 63 (4): 881–98. https://doi.org/<a href="https://doi.org/10.1111/roiw.12312">https://doi.org/10.1111/roiw.12312</a>.
+</div>
+<div id="ref-datt1998" class="csl-entry">
+Datt, Gaurav. 1998. <span>“Computational Tools for Poverty Measurement and Analysis.”</span> <a href="http://ebrary.ifpri.org/utils/getfile/collection/p15738coll2/id/125673/filename/125704.pdf">http://ebrary.ifpri.org/utils/getfile/collection/p15738coll2/id/125673/filename/125704.pdf</a>.
+</div>
+<div id="ref-deaton2002" class="csl-entry">
+Deaton, Angus, and Salman Zaidi. 2002. <em>Guidelines for Constructing Consumption Aggregates for Welfare Analysis</em>. Washington, DC: World Bank Publications. <a href="http://ideas.repec.org/p/fth/priwds/192.html">http://ideas.repec.org/p/fth/priwds/192.html</a>.
+</div>
+<div id="ref-gasparini2004" class="csl-entry">
+Gasparini, Leonardo, and Walter Sosa Escudero. 2004. <span>“Implicit Rents from Own-Housing and Income Distribution: Econometric Estimates for Greater Buenos Aires.”</span> <em>Documentos de Trabajo Del CEDLAS</em> no. 14. <a href="http://hdl.handle.net/10915/3576">http://hdl.handle.net/10915/3576</a>.
+</div>
+<div id="ref-jolliffe2015" class="csl-entry">
+Jolliffe, Dean, and Espen Beer Prydz. 2015. <em>Global Poverty Goals and Prices: How Purchasing Power Parity Matters</em>. Policy Research Working Paper Series 7256. <a href="https://openknowledge.worldbank.org/bitstream/handle/10986/21988/Global0poverty0power0parity0matters.pdf?sequence=1&amp;isAllowed=y">https://openknowledge.worldbank.org/bitstream/handle/10986/21988/Global0poverty0power0parity0matters.pdf?sequence=1&amp;isAllowed=y</a>.
+</div>
+<div id="ref-worldbank2018" class="csl-entry">
+World Bank. 2018a. <em>Poverty and Shared Prosperity 2018</em>. Washington, DC: World Bank. <a href="https://doi.org/10.1596/978-1-4648-1330-6">https://doi.org/10.1596/978-1-4648-1330-6</a>.
+</div>
+<div id="ref-worldbank2018a" class="csl-entry">
+———. 2018b. <em>Poverty and Shared Prosperity 2018</em>. Washington, DC: World Bank. <a href="https://doi.org/10.1596/978-1-4648-1330-6">https://doi.org/10.1596/978-1-4648-1330-6</a>.
+</div>
+<div id="ref-worldbank2020" class="csl-entry">
+———. 2020. <em>Poverty and Shared Prosperity 2020</em>. Washington, DC: World Bank. <a href="https://doi.org/10.1596/978-1-4648-1602-4">https://doi.org/10.1596/978-1-4648-1602-4</a>.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="acquiring.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="surveyestimates.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

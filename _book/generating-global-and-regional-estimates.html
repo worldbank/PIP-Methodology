@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 Generating global and regional estimates | Poverty and Inequality Platform Methodology Handbook</title>
+  <meta name="description" content="5 Generating global and regional estimates | Poverty and Inequality Platform Methodology Handbook" />
+  <meta name="generator" content="bookdown 0.21.6 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 Generating global and regional estimates | Poverty and Inequality Platform Methodology Handbook" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://povcalnet-team.github.io/Methodology" />
+  
+  
+  <meta name="github-repo" content="PovcalNet-Team/Methodology" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 Generating global and regional estimates | Poverty and Inequality Platform Methodology Handbook" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="generating-survey-estimates-of-poverty-and-inequality.html"/>
+
+<script src="libs/header-attrs-2.6.6/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
+<li class="chapter" data-level="1" data-path="non-technical-summary.html"><a href="non-technical-summary.html"><i class="fa fa-check"></i><b>1</b> Non-technical summary</a>
+<ul>
+<li class="chapter" data-level="" data-path="non-technical-summary.html"><a href="non-technical-summary.html#step-1-acquiring-household-survey-data"><i class="fa fa-check"></i>Step 1: Acquiring household survey data</a></li>
+<li class="chapter" data-level="" data-path="non-technical-summary.html"><a href="non-technical-summary.html#step-2-constructing-welfare-aggregates"><i class="fa fa-check"></i>Step 2: Constructing welfare aggregates</a></li>
+<li class="chapter" data-level="" data-path="non-technical-summary.html"><a href="non-technical-summary.html#step-3-generating-survey-estimates-of-poverty-and-inequality"><i class="fa fa-check"></i>Step 3: Generating survey estimates of poverty and inequality</a></li>
+<li class="chapter" data-level="" data-path="non-technical-summary.html"><a href="non-technical-summary.html#step-4-generating-global-and-regional-estimates-of-poverty"><i class="fa fa-check"></i>Step 4: Generating global and regional estimates of poverty</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="acquiring.html"><a href="acquiring.html"><i class="fa fa-check"></i><b>2</b> Acquiring household survey data</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="acquiring.html"><a href="acquiring.html#selection-criteria-and-source-of-data"><i class="fa fa-check"></i><b>2.1</b> Selection criteria and source of data</a></li>
+<li class="chapter" data-level="2.2" data-path="acquiring.html"><a href="acquiring.html#representativeness"><i class="fa fa-check"></i><b>2.2</b> Representativeness</a></li>
+<li class="chapter" data-level="2.3" data-path="acquiring.html"><a href="acquiring.html#how-data-are-obtained"><i class="fa fa-check"></i><b>2.3</b> How data are obtained</a></li>
+<li class="chapter" data-level="2.4" data-path="acquiring.html"><a href="acquiring.html#grouped"><i class="fa fa-check"></i><b>2.4</b> Grouped vs. unit record data</a></li>
+<li class="chapter" data-level="2.5" data-path="acquiring.html"><a href="acquiring.html#imputed"><i class="fa fa-check"></i><b>2.5</b> Multiply imputed micro data</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="welfareaggregate.html"><a href="welfareaggregate.html"><i class="fa fa-check"></i><b>3</b> Constructing welfare aggregates</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="welfareaggregate.html"><a href="welfareaggregate.html#incomeorconsumption"><i class="fa fa-check"></i><b>3.1</b> Income or consumption</a></li>
+<li class="chapter" data-level="3.2" data-path="welfareaggregate.html"><a href="welfareaggregate.html#questionnaire"><i class="fa fa-check"></i><b>3.2</b> Questionnaire design</a></li>
+<li class="chapter" data-level="3.3" data-path="welfareaggregate.html"><a href="welfareaggregate.html#imputed-rent"><i class="fa fa-check"></i><b>3.3</b> Imputed rent</a></li>
+<li class="chapter" data-level="3.4" data-path="welfareaggregate.html"><a href="welfareaggregate.html#within-survey-spatialtemporal-deflation"><i class="fa fa-check"></i><b>3.4</b> Within-survey spatial/temporal deflation</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="welfareaggregate.html"><a href="welfareaggregate.html#spatial-deflation"><i class="fa fa-check"></i><b>3.4.1</b> Spatial deflation</a></li>
+<li class="chapter" data-level="3.4.2" data-path="welfareaggregate.html"><a href="welfareaggregate.html#temporal-deflation"><i class="fa fa-check"></i><b>3.4.2</b> Temporal deflation</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="welfareaggregate.html"><a href="welfareaggregate.html#equivalence-scale"><i class="fa fa-check"></i><b>3.5</b> Equivalence scale</a></li>
+<li class="chapter" data-level="3.6" data-path="welfareaggregate.html"><a href="welfareaggregate.html#comparability"><i class="fa fa-check"></i><b>3.6</b> Treatment of grouped data</a></li>
+<li class="chapter" data-level="3.7" data-path="welfareaggregate.html"><a href="welfareaggregate.html#comparability-database"><i class="fa fa-check"></i><b>3.7</b> Comparability database</a>
+<ul>
+<li class="chapter" data-level="" data-path="welfareaggregate.html"><a href="welfareaggregate.html#r"><i class="fa fa-check"></i>R</a></li>
+<li class="chapter" data-level="" data-path="welfareaggregate.html"><a href="welfareaggregate.html#stata"><i class="fa fa-check"></i>Stata</a></li>
+<li class="chapter" data-level="" data-path="welfareaggregate.html"><a href="welfareaggregate.html#python"><i class="fa fa-check"></i>Python</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="generating-survey-estimates-of-poverty-and-inequality.html"><a href="generating-survey-estimates-of-poverty-and-inequality.html"><i class="fa fa-check"></i><b>4</b> Generating survey estimates of poverty and inequality</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="generating-survey-estimates-of-poverty-and-inequality.html"><a href="generating-survey-estimates-of-poverty-and-inequality.html#CPIs"><i class="fa fa-check"></i><b>4.1</b> Consumer Price Indices (CPIs)</a></li>
+<li class="chapter" data-level="4.2" data-path="generating-survey-estimates-of-poverty-and-inequality.html"><a href="generating-survey-estimates-of-poverty-and-inequality.html#PPPs"><i class="fa fa-check"></i><b>4.2</b> Purchasing Power Parities (PPPs)</a></li>
+<li class="chapter" data-level="4.3" data-path="generating-survey-estimates-of-poverty-and-inequality.html"><a href="generating-survey-estimates-of-poverty-and-inequality.html#IPL"><i class="fa fa-check"></i><b>4.3</b> Derivation of the international poverty line</a></li>
+<li class="chapter" data-level="4.4" data-path="generating-survey-estimates-of-poverty-and-inequality.html"><a href="generating-survey-estimates-of-poverty-and-inequality.html#derivation-of-other-global-poverty-lines"><i class="fa fa-check"></i><b>4.4</b> Derivation of other global poverty lines</a></li>
+<li class="chapter" data-level="4.5" data-path="generating-survey-estimates-of-poverty-and-inequality.html"><a href="generating-survey-estimates-of-poverty-and-inequality.html#povertymeasures"><i class="fa fa-check"></i><b>4.5</b> Poverty measures</a></li>
+<li class="chapter" data-level="4.6" data-path="generating-survey-estimates-of-poverty-and-inequality.html"><a href="generating-survey-estimates-of-poverty-and-inequality.html#inequalitymeasures"><i class="fa fa-check"></i><b>4.6</b> Inequality measures</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="generating-global-and-regional-estimates.html"><a href="generating-global-and-regional-estimates.html"><i class="fa fa-check"></i><b>5</b> Generating global and regional estimates</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="generating-global-and-regional-estimates.html"><a href="generating-global-and-regional-estimates.html#extrapolations"><i class="fa fa-check"></i><b>5.1</b> Extrapolations</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="generating-global-and-regional-estimates.html"><a href="generating-global-and-regional-estimates.html#pass-through-rate-for-india"><i class="fa fa-check"></i><b>5.1.1</b> Pass-through rate for India</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="generating-global-and-regional-estimates.html"><a href="generating-global-and-regional-estimates.html#interpolations"><i class="fa fa-check"></i><b>5.2</b> Interpolations</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="generating-global-and-regional-estimates.html"><a href="generating-global-and-regional-estimates.html#same-direction-interpolation"><i class="fa fa-check"></i><b>5.2.1</b> “Same direction” interpolation</a></li>
+<li class="chapter" data-level="5.2.2" data-path="generating-global-and-regional-estimates.html"><a href="generating-global-and-regional-estimates.html#diverging-directions-interpolation"><i class="fa fa-check"></i><b>5.2.2</b> “Diverging directions” interpolation</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="generating-global-and-regional-estimates.html"><a href="generating-global-and-regional-estimates.html#nationalaccounts"><i class="fa fa-check"></i><b>5.3</b> National accounts data</a></li>
+<li class="chapter" data-level="5.4" data-path="generating-global-and-regional-estimates.html"><a href="generating-global-and-regional-estimates.html#choosing-between-consumption-and-income-estimates"><i class="fa fa-check"></i><b>5.4</b> Choosing between consumption and income estimates</a></li>
+<li class="chapter" data-level="5.5" data-path="generating-global-and-regional-estimates.html"><a href="generating-global-and-regional-estimates.html#regionsandcountries"><i class="fa fa-check"></i><b>5.5</b> Regional classification</a></li>
+<li class="chapter" data-level="5.6" data-path="generating-global-and-regional-estimates.html"><a href="generating-global-and-regional-estimates.html#population"><i class="fa fa-check"></i><b>5.6</b> Population</a></li>
+<li class="chapter" data-level="5.7" data-path="generating-global-and-regional-estimates.html"><a href="generating-global-and-regional-estimates.html#nodata"><i class="fa fa-check"></i><b>5.7</b> Treatment of countries without any poverty data</a></li>
+<li class="chapter" data-level="5.8" data-path="generating-global-and-regional-estimates.html"><a href="generating-global-and-regional-estimates.html#coverage-rule"><i class="fa fa-check"></i><b>5.8</b> Coverage rule</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Poverty and Inequality Platform Methodology Handbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="generating-global-and-regional-estimates" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Generating global and regional estimates</h1>
+<p>Few countries have survey estimates of poverty available every year. To estimate poverty at the regional and global level, the survey estimates need to be aligned to a reference year and aggregated. Such alignment and aggregation requires assumptions about how to interpolate and extrapolate data as well as how to treat countries without any poverty data at all. This section explains how these calculations are made.</p>
+<div id="extrapolations" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Extrapolations</h2>
+<p>When estimating global poverty for a recent year, one is met by the challenge that most countries do not have recent data on poverty. Countries that do not have welfare aggregates at or since a specific reference year, but which do have earlier welfare aggregates available, their most recent aggregate is extrapolated forward using growth rates from national accounts. This is done by first finding the growth in national accounts that occurred between the time of the survey and the time of the reference year and scaling the survey welfare distribution, <span class="math inline">\(f(y_{survey})\)</span>, by this growth factor. This yields an estimate of the welfare distribution at the reference year, <span class="math inline">\(f(y_{reference})\)</span> as summarized below:</p>
+<p><span class="math display">\[f(y_{reference}) = \dfrac{NA_{reference}}{NA_{survey}} \times f(y_{survey})\]</span></p>
+<p>where <span class="math inline">\(NA_{t}\)</span> is real GDP per capita or real HFCE per capita at time <span class="math inline">\(t\)</span>, as explained in the <a href="generating-global-and-regional-estimates.html#nationalaccounts">National accounts data section</a>. Poverty for the reference year is then estimated using this extrapolated distribution. A similar approach is used to extrapolate backwards, that is when the earliest survey estimate available is more recent than the desired reference year. The extrapolation method assumes distribution-neutral growth, i.e. that everyone’s welfare grows at the same rate. This implies that inequality is assumed to stay constant.</p>
+<p>The below example charts the consumption aggregate from the 2015.5 Ethiopian survey expressed in 2011 PPP0-adjusted dollars, and the 2018 Ethiopian distribution one would get from extrapolating this welfare vector to 2018 using the method described above. The 2015.5 consumption mean is 3.12 and the growth rate in national accounts between 2015.5 and 2018 is 14.5%. Note that the positive growth pushes the distribution to the right. This changes the share of extreme poor (that is those living below the $1.90 poverty line) from 30.8% in 2015.5 to 22.3% in 2018. </p>
+<p><img src="figures/ETHdist_example.png" /></p>
+<p>When household surveys span two calendar years, a decimal year is noted in the Poverty and Equity Platform. The Gambia, for example, has a survey listed at 2015.31. This means that 69% of the fieldwork fall in 2015 while 31% of the fieldwork months fall in 2016. The national accounts data used for extrapolating this survey forward is the weighted average of the 2015 and 2016 data.</p>
+<div id="pass-through-rate-for-india" class="section level3" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Pass-through rate for India</h3>
+<p>The extrapolation method assumes that all growth in national accounts is passed through to the growth in welfare observed in surveys. Evidence exists that there are differences in growth rates between welfare aggregates and national accounts data. The growth in welfare aggregates has historically been lower than the growth in national accounts (for example see <span class="citation"><a href="#ref-ravallion2003" role="doc-biblioref">Ravallion</a> (<a href="#ref-ravallion2003" role="doc-biblioref">2003</a>)</span>; <span class="citation"><a href="#ref-deaton2005" role="doc-biblioref">Deaton</a> (<a href="#ref-deaton2005" role="doc-biblioref">2005</a>)</span>; <span class="citation"><a href="#ref-pinkovskiy2016" role="doc-biblioref">Pinkovskiy and Sala-i-Martin</a> (<a href="#ref-pinkovskiy2016" role="doc-biblioref">2016</a>)</span>; <span class="citation"><a href="#ref-lakner2020" role="doc-biblioref">Lakner et al.</a> (<a href="#ref-lakner2020" role="doc-biblioref">2020</a>)</span>). To circumvent this, a pass-through rate, i.e. the fraction of growth in national accounts captured in household surveys, can be used to adjust the scaling factor used when extrapolating.</p>
+<p>India is the only case where the pass-through methodology is applied. The latest available survey for India is from 2011/12. Poverty for India after 2011/12 is calculated using the extrapolation method defined above with a national accounts growth rate adjusted for a pass-through rate. Up to 2015, an implied pass-through rate is calculated using the poverty estimates for 2014/15 reported in <span class="citation"><a href="#ref-newhouse2018" role="doc-biblioref">Newhouse and Vyas</a> (<a href="#ref-newhouse2018" role="doc-biblioref">2018</a>)</span>. The national pass-through rate in India for the period 2011/12-2014/15 is estimated to be 0.65. The 0.65 national pass-through rate is calculated as the population-weighted average of the rural pass-through rate (0.70) and urban pass-through rate (0.55), which are calibrated using the poverty estimates from <span class="citation"><a href="#ref-newhouse2018" role="doc-biblioref">Newhouse and Vyas</a> (<a href="#ref-newhouse2018" role="doc-biblioref">2018</a>)</span> for 2014/15 (for more details, see <span class="citation"><a href="#ref-chen2018" role="doc-biblioref">Chen et al.</a> (<a href="#ref-chen2018" role="doc-biblioref">2018</a>)</span>).</p>
+<p>Poverty for years 2015-2018 is estimated using a pass-through rate calculated using a global sample of surveys (for more detail, see <span class="citation"><a href="#ref-lakner2020" role="doc-biblioref">Lakner et al.</a> (<a href="#ref-lakner2020" role="doc-biblioref">2020</a>)</span>; Ifeyani et al., 2020). This estimated pass-through rate of 0.67 is used to extrapolate poverty in India for this period (for more detail, see Ifeyani et al, 2020).</p>
+</div>
+</div>
+<div id="interpolations" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Interpolations</h2>
+<p>In cases where the reference year falls between two surveys, poverty is estimated for the reference year using the nearest survey on each side of the reference year. One of two approaches are used, depending on the correspondence in growth between national accounts and survey data.</p>
+<p>“Same direction” interpolation is used when growth in the survey mean between the two surveys is of the same sign as the growth in national accounts from the survey before the reference year to the reference year and from the reference year to the survey after the reference year. Denoting <span class="math inline">\(survey1\)</span> the survey predating the reference year and <span class="math inline">\(survey2\)</span> the survey after the reference year, this means that same direction interpolation is used when</p>
+<p><span class="math display">\[sign \bigg(\dfrac{μ_{presurvey2}}{μ_{survey1}}-1\bigg) = 
+  sign \bigg(\dfrac{NA_{survey2}}{NA_{reference}}-1\bigg) = 
+  sign \bigg(\dfrac{NA_{reference}}{NA_{survey1}}-1\bigg)\]</span></p>
+<p>“Diverging directions” interpolation is used when the equation above does not hold. The main difference between the two is that “same direction” interpolation tries to estimate how much of the growth in national accounts that had accrued at the reference year, and uses this to back out a predicted survey mean at the reference year. When survey mean and national accounts grow in opposite directions this is not meaningful, and an alternative approach is used.</p>
+<div id="same-direction-interpolation" class="section level3" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> “Same direction” interpolation</h3>
+<p>“Same direction” interpolation works in three steps.</p>
+<p>First, the survey mean at the reference year, <span class="math inline">\(μ_{reference}\)</span>, is estimated using the following interpolation formula:</p>
+<p><span class="math display">\[μ_{reference} = (μ_{survey2} - μ_{survey1}) \times \dfrac{NA_{reference} - NA_{survey1}}{NA_{survey2} - NA_{survey1}} + μ_{survey1}\]</span></p>
+<p>Second, the welfare distributions at the two surveys are scaled to reflect this mean:</p>
+<p><span class="math display">\[f(y_{reference,i}) = \dfrac{μ_{reference}}{μ_{survey,i}} \times f(y_{survey,i}), \]</span>where <span class="math inline">\(i={1,2}\)</span> . After this alignment, there will be two distributions with the same mean for the reference year but with different distributional shapes</p>
+<p>At the third step, poverty is estimate from each of these distributions, and the final poverty estimate at the reference year is the weighted average poverty rate from both distributions whereby each poverty estimate is weighted by the inverse of the relative distance between the survey year and the reference year:</p>
+<p><span class="math display">\[P_{0,reference} = \dfrac{P_{0,reference,1}*(t_{survey,2}-t_{reference})+P_{0,reference,1}*(t_{reference}-t_{survey,2})}{t_{survey,2}-t_{survey,1}} \]</span>For example, if a reference year falls two years after the first survey and one year after the second survey, the poverty estimate from the first survey is given a weight of 1/3 and the estimate from the second survey a weight of 2/3.</p>
+</div>
+<div id="diverging-directions-interpolation" class="section level3" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> “Diverging directions” interpolation</h3>
+<p>If the growth rates in surveys and national accounts diverge, an approach similar to the extrapolation is applied to the two closest surveys; poverty is extrapolated forward by the national account growth rate using the early survey and backwards using the later survey. Poverty for the reference year is estimated using both distributions and the estimates are averaged using formula. The mechanics of the extrapolation and interpolation are described in <span class="citation"><a href="#ref-ravallion2003" role="doc-biblioref">Ravallion</a> (<a href="#ref-ravallion2003" role="doc-biblioref">2003</a>)</span>, <span class="citation"><a href="#ref-chen2004" role="doc-biblioref">Chen and Ravallion</a> (<a href="#ref-chen2004" role="doc-biblioref">2004</a>)</span>, box 6.4 in <span class="citation"><a href="#ref-jolliffe2015" role="doc-biblioref">Jolliffe and Prydz</a> (<a href="#ref-jolliffe2015" role="doc-biblioref">2015</a>)</span>, and in Appendix A of <span class="citation"><a href="#ref-worldbank2018" role="doc-biblioref">World Bank</a> (<a href="#ref-worldbank2018" role="doc-biblioref">2018</a>)</span>.</p>
+</div>
+</div>
+<div id="nationalaccounts" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> National accounts data</h2>
+<p>All of the interpolation and extrapolation methods described above rely on national accounts data. Two national accounts variables are used: Household Final Consumption Expenditure (HFCE) and Gross Domestic Product (GDP) – both in real per capita terms. Due to its close conceptual relation with the welfare aggregate, when available, HFCE is used as the preferred national accounts data for extrapolation and interpolation methods. In Sub-Saharan Africa however, HFCE estimates at constant prices are both sparse and the empirical correlation between growth in HFCE and growth in survey mean is not as strong <span class="citation">(<a href="#ref-ravallion2003" role="doc-biblioref">Ravallion 2003</a>)</span>. Hence, GDP is preferred for this region. The <a href="https://databank.worldbank.org/source/world-development-indicators">World Development Indicators</a> (WDI) database is the primary source for the HFCE data (in particular we use the <a href="https://data.worldbank.org/indicator/NE.CON.PRVT.PC.KD">Households Final Consumption Expenditure per capita (constant 2010 US$)</a> series with the series code NE.CON.PRVT.PC.KD) and the GDP data (where we use the <a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.KD">GDP per capita (constant 2010 US$)</a> series with the series code NY.GDP.PCAP.KD). Where WDI data are not available, we use data from the <a href="https://www.imf.org/en/Publications/WEO">World Economic Outlook</a> and the <a href="https://www.rug.nl/ggdc/historicaldevelopment/maddison/?lang=en">Maddison Project Database</a>. For a detailed discussion on the sources of national accounts data see <span class="citation"><a href="#ref-prydz2019" role="doc-biblioref">Prydz et al.</a> (<a href="#ref-prydz2019" role="doc-biblioref">2019</a>)</span>.</p>
+</div>
+<div id="choosing-between-consumption-and-income-estimates" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> Choosing between consumption and income estimates</h2>
+<p>The discussion on interpolation and extrapolation for simplicity assumed that only one survey was available for a given country at a given year. Yet, a number of countries have poverty estimates available from both consumption and income aggregates. Due to its closer connection to welfare, whenever both income and consumption estimates are available for a given reference year, consumption estimates are preferred (see <a href="welfareaggregate.html#incomeorconsumption">section on differences between estimating welfare from income and consumption aggregates</a>). Likewise, when both kinds of poverty estimates are available for the same years (but not for a particular reference year), interpolations and extrapolation are made using the consumption estimates.<br />
+When consumption and income estimates are available at different years, the choice is a bit more complicated. The precise rules are outlined in the following decision tree:</p>
+<p><img src="figures/Income%20consumption%20decision%20tree.svg" title="Income consumption decision tree" /></p>
+</div>
+<div id="regionsandcountries" class="section level2" number="5.5">
+<h2><span class="header-section-number">5.5</span> Regional classification</h2>
+<p>In total, 218 economies are included in the global poverty estimates. The entire universe of economies considered corresponds to the universe of economies in the <a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups">World Bank’s Country and Lending Groups</a>. The regions employed in PIP, however, differs differs from the regional classifications used by the World Bank. Some economies, mostly high-income economies, are excluded from the geographical regions and are included as a separate group referred to as “other high income” (or “industrialized economies” or “rest of the world” in earlier publications). The list of economies included in each region is as follows:</p>
+<ul>
+<li><p><strong>East Asia and Pacific:</strong> American Samoa, Cambodia, China, Fiji, Indonesia, Kiribati, Korea (Democratic People’s Republic of), Lao People’s Democratic Republic, Malaysia, Marshall Islands, Micronesia Federated States of, Mongolia, Myanmar, Northern Mariana Islands, Palau, Papua New Guinea, Philippines, Samoa, Solomon Islands, Thailand, Timor-Leste, Tonga, Tuvalu, Vanuatu, Vietnam.</p></li>
+<li><p><strong>Europe and Central Asia:</strong> Albania, Armenia, Azerbaijan, Belarus, Bosnia and Herzegovina, Bulgaria, Croatia, Czech Republic, Estonia, Georgia, Hungary, Kazakhstan, Kosovo, Kyrgyz Republic, Latvia, Lithuania, Moldova, Montenegro, North Macedonia, Poland, Romania, Russian Federation, Serbia, Slovak Republic, Slovenia, Tajikistan, Ukraine, Uzbekistan.</p></li>
+<li><p><strong>Latin America and the Caribbean:</strong> Argentina, Barbados, Belize, Bolivia, Brazil, Chile, Colombia, Costa Rica, Cuba, Dominica, Dominican Republic, Ecuador, El Salvador, Grenada, Guatemala, Guyana, Haiti, Honduras, Jamaica, Mexico, Nicaragua, Panama, Paraguay, Peru, St. Kitts and Nevis, St. Lucia, St. Vincent and the Grenadines, Suriname, Trinidad and Tobago, Uruguay, Venezuela, Republica Bolivariana de.</p></li>
+<li><p><strong>Middle East and North Africa:</strong> Algeria, Djibouti, Egypt, Arab Republic of, Iran, Islamic Republic of, Iraq, Jordan, Lebanon, Libya, Morocco, Oman, Syrian Arab Republic, Tunisia, West Bank and Gaza, Yemen, Republic of.</p></li>
+<li><p><strong>Other High Income:</strong> Andorra, Antigua and Barbuda, Aruba, Australia, Austria, Bahamas, the, Bahrain, Belgium, Bermuda, British Virgin Islands, Brunei Darussalam, Canada, Cayman Islands, Channel Islands, Curacao, Cyprus, Denmark, Faroe Islands, Finland, France, French Polynesia, Germany, Gibraltar, Greece, Greenland, Guam, Hong Kong SAR, China, Iceland, Ireland, Isle of Man, Israel, Italy, Japan, Korea, Republic of, Kuwait, Liechtenstein, Macao SAR, China, Malta, Monaco, Nauru, Netherlands, New Caledonia, New Zealand, Norway, Portugal, Puerto Rico, Qatar, San Marino, Saudi Arabia, Singapore, Sint Maarten, Spain, St. Martin, Sweden, Switzerland, Taiwan, China, Turks and Caicos Islands, United Arab Emirates, United Kingdom, United States, Virgin Islands, US.</p></li>
+<li><p><strong>South Asia:</strong> Afghanistan, Bangladesh, Bhutan, India, Maldives, Nepal, Pakistan, Sri Lanka</p></li>
+<li><p><strong>Sub-Saharan Africa:</strong> Angola, Benin, Botswana, Burkina Faso, Burundi, Cabo Verde, Cameroon, Central African Republic, Chad, Comoros, Congo, Democratic Republic of, Congo, Republic of, Cote d’Ivoire, Equatorial Guinea, Eritrea, Eswatini, Ethiopia, Gabon, Gambia, the, Ghana, Guinea, Guinea-Bissau, Kenya, Lesotho, Liberia, Madagascar, Malawi, Mali, Mauritania, Mauritius, Mozambique, Namibia, Niger, Nigeria, Rwanda, Sao Tome and Principe, Senegal, Seychelles, Sierra Leone, Somalia, South Africa, South Sudan, Sudan, Tanzania, Togo, Uganda, Zambia, Zimbabwe.</p></li>
+</ul>
+</div>
+<div id="population" class="section level2" number="5.6">
+<h2><span class="header-section-number">5.6</span> Population</h2>
+<p>To derive regional and global poverty rates, each country’s poverty rate is weighted using its population share. Population data are taken from the World Bank’s <a href="http://datatopics.worldbank.org/world-development-indicators/">World Development Indicators</a> (WDI). In addition, for Kuwait, Sint Maarten (Dutch part) and West Bank and Gaza, population data is missing in the WDI for some years. In those cases, alternative sources are used as outlined here [link to forthcoming What’s New].</p>
+<p>The regional and global population may differ from the aggregates given in the World Development Indicators, because PIP uses different regional compositions of economies (See <a href="generating-global-and-regional-estimates.html#regionsandcountries">Regions and universe of countries section</a>).</p>
+</div>
+<div id="nodata" class="section level2" number="5.7">
+<h2><span class="header-section-number">5.7</span> Treatment of countries without any poverty data</h2>
+<p>With the <a href="generating-global-and-regional-estimates.html#interpolations">interpolation</a> and <a href="generating-global-and-regional-estimates.html#extrapolations">extrapolation</a> rules, all economies with at least one data point will have poverty estimates available for all years (conditional on <a href="generating-global-and-regional-estimates.html#nationalaccounts">national accounts data</a> being present). Yet some economies have no household survey data that can be used to monitor poverty (or they lack credible <a href="generating-survey-estimates-of-poverty-and-inequality.html#PPPs">PPPs</a> or <a href="generating-survey-estimates-of-poverty-and-inequality.html#CPIs">CPIs</a> necessary to compute international poverty). In order to include these economies in the regional and global poverty estimates, it is assumed that they have a poverty headcount equal to their <a href="generating-global-and-regional-estimates.html#regionsandcountries">region’s</a> population-weighted average. A similar approach is made if a country with poverty data is lacking national accounts data for a particular reference year (provided it does not have a survey at that particular year).</p>
+</div>
+<div id="coverage-rule" class="section level2" number="5.8">
+<h2><span class="header-section-number">5.8</span> Coverage rule</h2>
+<p>Though the <a href="generating-global-and-regional-estimates.html#interpolations">interpolation</a> rules, <a href="generating-global-and-regional-estimates.html#extrapolations">extrapolation</a> rule, and <a href="generating-global-and-regional-estimates.html#nodata">treatment of countries without any data</a> assures that <em>some</em> poverty estimate is available for all regions and the world as a whole since 1981, the confidence one can have in these estimates depends on the how often and how long one has to extrapolate or interpolate the data, as well as the share of the population without any data at all.</p>
+<p>To avoid presenting regional and global numbers with insufficient recent data, coverage rules are used to determine whether a particular reference year has sufficient data coverage. A country is considered to have sufficiently recent data if it has a survey based poverty estimate at most three years from the reference year. Regional estimates are displayed if data cover 50 percent of the population in the region. For regions in which the surveys within three years either side of the lineup year account for less than half of the regional population, the regional poverty estimate is not reported.</p>
+<p>An additional coverage requirement is applied to govern when global poverty estimates are reported for a given reference year. This requirement addresses the goal of focusing the measurement of global poverty on economies where most of the poor live. Specifically, it tries to avoid a situation in which the global population threshold is met by having recent data in the high-income countries, East Asia and Pacific, and Latin America and the Caribbean, which together account for a very small share of the global extreme poor. Under this requirement, global poverty estimates are reported only if data are representative of at least 50 percent of the population in low-income and lower-middle-income countries, because most of the poor live in these groups of countries. The World Bank classification of economies according to income groups in the reference year is used (see <a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups">here</a>). This requirement is only applied to the global poverty estimate, not at the regional level (for more details see <span class="citation"><a href="#ref-castanedaaguilar2020" role="doc-biblioref">Castaneda Aguilar et al.</a> (<a href="#ref-castanedaaguilar2020" role="doc-biblioref">2020</a>)</span>).</p>
+
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div class="csl-entry">
+Castaneda Aguilar, R. Andres, Tony Fujs, Dean Jolliffe, Christoph Lakner, Daniel Gerszon Mahler, Minh C. Nguyen, Marta Schoch, David L. Vargas Mogollon, Martha C. Viveros Mendoza, and Samuel Kofi Tetteh Baah. 2020. <span>“September 2020 PovcalNet Update: What<span>’</span>s New.”</span>
+</div>
+<div class="csl-entry">
+Chen, Shaohua, Dean M. Jolliffe, Christoph Lakner, Kihoon Lee, Daniel Gerszon Mahler, Rose Mungai, Minh C. Nguyen, Espen Beer Prydz, Prem Sangraula, and Dhiraj Sharma. 2018. <span>“September 2018 PovcalNet Update: What<span>’</span>s New.”</span>
+</div>
+<div class="csl-entry">
+Chen, Shaohua, and Martin Ravallion. 2004. <span>“How Have the World’s Poorest Fared Since the Early 1980s?”</span> <em>The World Bank Research Observer</em> 19 (2): 141–69. <a href="https://doi.org/10.1093/wbro/lkh020">https://doi.org/10.1093/wbro/lkh020</a>.
+</div>
+<div class="csl-entry">
+Deaton, Angus. 2005. <span>“Measuring Poverty in a Growing World (or Measuring Growth in a Poor World).”</span> <em>The Review of Economics and Statistics</em> 87 (1): 1–19. <a href="https://doi.org/10.1162/0034653053327612">https://doi.org/10.1162/0034653053327612</a>.
+</div>
+<div class="csl-entry">
+Jolliffe, Dean, and Espen Beer Prydz. 2015. <em>Global Poverty Goals and Prices: How Purchasing Power Parity Matters</em>. Policy Research Working Paper Series 7256. <a href="https://openknowledge.worldbank.org/bitstream/handle/10986/21988/Global0poverty0power0parity0matters.pdf?sequence=1&amp;isAllowed=y">https://openknowledge.worldbank.org/bitstream/handle/10986/21988/Global0poverty0power0parity0matters.pdf?sequence=1&amp;isAllowed=y</a>.
+</div>
+<div class="csl-entry">
+Lakner, Christoph, Nishant Yonzan, Daniel Gerszon Mahler, R. Andres Castaneda Aguilar, Haoyu Wu, and Melina Fleury. 2020. <span>“Updated Estimates of the Impact of COVID-19 on Global Poverty: The Effect of New Data.”</span> <a href="https://blogs.worldbank.org/opendata">https://blogs.worldbank.org/opendata</a>.
+</div>
+<div class="csl-entry">
+Newhouse, David Locke, and Pallavi Vyas. 2018. <span>“Nowcasting Poverty in India for 2014-15: A Survey to Survey Imputation Approach.”</span>
+</div>
+<div class="csl-entry">
+Pinkovskiy, Maxim, and Xavier Sala-i-Martin. 2016. <span>“Lights, Camera <span>…</span> Income! Illuminating the National Accounts-Household Surveys Debate *.”</span> <em>The Quarterly Journal of Economics</em> 131 (2): 579–631. <a href="https://doi.org/10.1093/qje/qjw003">https://doi.org/10.1093/qje/qjw003</a>.
+</div>
+<div class="csl-entry">
+Prydz, Espen Beer, Dean Mitchell Jolliffe, Christoph Lakner, Daniel Gerszon Mahler, and Prem Sangraula. 2019. <span>“National Accounts Data Used in Global Poverty Measurement.”</span> Washington, DC.
+</div>
+<div class="csl-entry">
+Ravallion, Martin. 2003. <span>“Measuring Aggregate Welfare in Developing Countries: How Well Do National Accounts and Surveys Agree?”</span> <em>The Review of Economics and Statistics</em> 85 (3): 645–52. <a href="https://www.jstor.org/stable/3211703">https://www.jstor.org/stable/3211703</a>.
+</div>
+<div class="csl-entry">
+World Bank. 2018. <em>Poverty and Shared Prosperity 2018</em>. Washington, DC: World Bank. <a href="https://doi.org/10.1596/978-1-4648-1330-6">https://doi.org/10.1596/978-1-4648-1330-6</a>.
+</div>
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-castanedaaguilar2020" class="csl-entry">
+Castaneda Aguilar, R. Andres, Tony Fujs, Dean Jolliffe, Christoph Lakner, Daniel Gerszon Mahler, Minh C. Nguyen, Marta Schoch, David L. Vargas Mogollon, Martha C. Viveros Mendoza, and Samuel Kofi Tetteh Baah. 2020. <span>“September 2020 PovcalNet Update: What<span>’</span>s New.”</span>
+</div>
+<div id="ref-chen2018" class="csl-entry">
+Chen, Shaohua, Dean M. Jolliffe, Christoph Lakner, Kihoon Lee, Daniel Gerszon Mahler, Rose Mungai, Minh C. Nguyen, Espen Beer Prydz, Prem Sangraula, and Dhiraj Sharma. 2018. <span>“September 2018 PovcalNet Update: What<span>’</span>s New.”</span>
+</div>
+<div id="ref-chen2004" class="csl-entry">
+Chen, Shaohua, and Martin Ravallion. 2004. <span>“How Have the World’s Poorest Fared Since the Early 1980s?”</span> <em>The World Bank Research Observer</em> 19 (2): 141–69. <a href="https://doi.org/10.1093/wbro/lkh020">https://doi.org/10.1093/wbro/lkh020</a>.
+</div>
+<div id="ref-deaton2005" class="csl-entry">
+Deaton, Angus. 2005. <span>“Measuring Poverty in a Growing World (or Measuring Growth in a Poor World).”</span> <em>The Review of Economics and Statistics</em> 87 (1): 1–19. <a href="https://doi.org/10.1162/0034653053327612">https://doi.org/10.1162/0034653053327612</a>.
+</div>
+<div id="ref-jolliffe2015" class="csl-entry">
+Jolliffe, Dean, and Espen Beer Prydz. 2015. <em>Global Poverty Goals and Prices: How Purchasing Power Parity Matters</em>. Policy Research Working Paper Series 7256. <a href="https://openknowledge.worldbank.org/bitstream/handle/10986/21988/Global0poverty0power0parity0matters.pdf?sequence=1&amp;isAllowed=y">https://openknowledge.worldbank.org/bitstream/handle/10986/21988/Global0poverty0power0parity0matters.pdf?sequence=1&amp;isAllowed=y</a>.
+</div>
+<div id="ref-lakner2020" class="csl-entry">
+Lakner, Christoph, Nishant Yonzan, Daniel Gerszon Mahler, R. Andres Castaneda Aguilar, Haoyu Wu, and Melina Fleury. 2020. <span>“Updated Estimates of the Impact of COVID-19 on Global Poverty: The Effect of New Data.”</span> <a href="https://blogs.worldbank.org/opendata">https://blogs.worldbank.org/opendata</a>.
+</div>
+<div id="ref-newhouse2018" class="csl-entry">
+Newhouse, David Locke, and Pallavi Vyas. 2018. <span>“Nowcasting Poverty in India for 2014-15: A Survey to Survey Imputation Approach.”</span>
+</div>
+<div id="ref-pinkovskiy2016" class="csl-entry">
+Pinkovskiy, Maxim, and Xavier Sala-i-Martin. 2016. <span>“Lights, Camera <span>…</span> Income! Illuminating the National Accounts-Household Surveys Debate *.”</span> <em>The Quarterly Journal of Economics</em> 131 (2): 579–631. <a href="https://doi.org/10.1093/qje/qjw003">https://doi.org/10.1093/qje/qjw003</a>.
+</div>
+<div id="ref-prydz2019" class="csl-entry">
+Prydz, Espen Beer, Dean Mitchell Jolliffe, Christoph Lakner, Daniel Gerszon Mahler, and Prem Sangraula. 2019. <span>“National Accounts Data Used in Global Poverty Measurement.”</span> Washington, DC.
+</div>
+<div id="ref-ravallion2003" class="csl-entry">
+Ravallion, Martin. 2003. <span>“Measuring Aggregate Welfare in Developing Countries: How Well Do National Accounts and Surveys Agree?”</span> <em>The Review of Economics and Statistics</em> 85 (3): 645–52. <a href="https://www.jstor.org/stable/3211703">https://www.jstor.org/stable/3211703</a>.
+</div>
+<div id="ref-worldbank2018" class="csl-entry">
+World Bank. 2018. <em>Poverty and Shared Prosperity 2018</em>. Washington, DC: World Bank. <a href="https://doi.org/10.1596/978-1-4648-1330-6">https://doi.org/10.1596/978-1-4648-1330-6</a>.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="generating-survey-estimates-of-poverty-and-inequality.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

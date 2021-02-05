@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Generating survey estimates of poverty and inequality | Poverty and Inequality Platform Methodology Handbook</title>
+  <meta name="description" content="4 Generating survey estimates of poverty and inequality | Poverty and Inequality Platform Methodology Handbook" />
+  <meta name="generator" content="bookdown 0.21.6 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 Generating survey estimates of poverty and inequality | Poverty and Inequality Platform Methodology Handbook" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://povcalnet-team.github.io/Methodology" />
+  
+  
+  <meta name="github-repo" content="PovcalNet-Team/Methodology" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 Generating survey estimates of poverty and inequality | Poverty and Inequality Platform Methodology Handbook" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="welfareaggregate.html"/>
+<link rel="next" href="generating-global-and-regional-estimates.html"/>
+<script src="libs/header-attrs-2.6.6/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
+<li class="chapter" data-level="1" data-path="non-technical-summary.html"><a href="non-technical-summary.html"><i class="fa fa-check"></i><b>1</b> Non-technical summary</a>
+<ul>
+<li class="chapter" data-level="" data-path="non-technical-summary.html"><a href="non-technical-summary.html#step-1-acquiring-household-survey-data"><i class="fa fa-check"></i>Step 1: Acquiring household survey data</a></li>
+<li class="chapter" data-level="" data-path="non-technical-summary.html"><a href="non-technical-summary.html#step-2-constructing-welfare-aggregates"><i class="fa fa-check"></i>Step 2: Constructing welfare aggregates</a></li>
+<li class="chapter" data-level="" data-path="non-technical-summary.html"><a href="non-technical-summary.html#step-3-generating-survey-estimates-of-poverty-and-inequality"><i class="fa fa-check"></i>Step 3: Generating survey estimates of poverty and inequality</a></li>
+<li class="chapter" data-level="" data-path="non-technical-summary.html"><a href="non-technical-summary.html#step-4-generating-global-and-regional-estimates-of-poverty"><i class="fa fa-check"></i>Step 4: Generating global and regional estimates of poverty</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="acquiring.html"><a href="acquiring.html"><i class="fa fa-check"></i><b>2</b> Acquiring household survey data</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="acquiring.html"><a href="acquiring.html#selection-criteria-and-source-of-data"><i class="fa fa-check"></i><b>2.1</b> Selection criteria and source of data</a></li>
+<li class="chapter" data-level="2.2" data-path="acquiring.html"><a href="acquiring.html#representativeness"><i class="fa fa-check"></i><b>2.2</b> Representativeness</a></li>
+<li class="chapter" data-level="2.3" data-path="acquiring.html"><a href="acquiring.html#how-data-are-obtained"><i class="fa fa-check"></i><b>2.3</b> How data are obtained</a></li>
+<li class="chapter" data-level="2.4" data-path="acquiring.html"><a href="acquiring.html#grouped"><i class="fa fa-check"></i><b>2.4</b> Grouped vs. unit record data</a></li>
+<li class="chapter" data-level="2.5" data-path="acquiring.html"><a href="acquiring.html#imputed"><i class="fa fa-check"></i><b>2.5</b> Multiply imputed micro data</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="welfareaggregate.html"><a href="welfareaggregate.html"><i class="fa fa-check"></i><b>3</b> Constructing welfare aggregates</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="welfareaggregate.html"><a href="welfareaggregate.html#incomeorconsumption"><i class="fa fa-check"></i><b>3.1</b> Income or consumption</a></li>
+<li class="chapter" data-level="3.2" data-path="welfareaggregate.html"><a href="welfareaggregate.html#questionnaire"><i class="fa fa-check"></i><b>3.2</b> Questionnaire design</a></li>
+<li class="chapter" data-level="3.3" data-path="welfareaggregate.html"><a href="welfareaggregate.html#imputed-rent"><i class="fa fa-check"></i><b>3.3</b> Imputed rent</a></li>
+<li class="chapter" data-level="3.4" data-path="welfareaggregate.html"><a href="welfareaggregate.html#within-survey-spatialtemporal-deflation"><i class="fa fa-check"></i><b>3.4</b> Within-survey spatial/temporal deflation</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="welfareaggregate.html"><a href="welfareaggregate.html#spatial-deflation"><i class="fa fa-check"></i><b>3.4.1</b> Spatial deflation</a></li>
+<li class="chapter" data-level="3.4.2" data-path="welfareaggregate.html"><a href="welfareaggregate.html#temporal-deflation"><i class="fa fa-check"></i><b>3.4.2</b> Temporal deflation</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="welfareaggregate.html"><a href="welfareaggregate.html#equivalence-scale"><i class="fa fa-check"></i><b>3.5</b> Equivalence scale</a></li>
+<li class="chapter" data-level="3.6" data-path="welfareaggregate.html"><a href="welfareaggregate.html#comparability"><i class="fa fa-check"></i><b>3.6</b> Treatment of grouped data</a></li>
+<li class="chapter" data-level="3.7" data-path="welfareaggregate.html"><a href="welfareaggregate.html#comparability-database"><i class="fa fa-check"></i><b>3.7</b> Comparability database</a>
+<ul>
+<li class="chapter" data-level="" data-path="welfareaggregate.html"><a href="welfareaggregate.html#r"><i class="fa fa-check"></i>R</a></li>
+<li class="chapter" data-level="" data-path="welfareaggregate.html"><a href="welfareaggregate.html#stata"><i class="fa fa-check"></i>Stata</a></li>
+<li class="chapter" data-level="" data-path="welfareaggregate.html"><a href="welfareaggregate.html#python"><i class="fa fa-check"></i>Python</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="generating-survey-estimates-of-poverty-and-inequality.html"><a href="generating-survey-estimates-of-poverty-and-inequality.html"><i class="fa fa-check"></i><b>4</b> Generating survey estimates of poverty and inequality</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="generating-survey-estimates-of-poverty-and-inequality.html"><a href="generating-survey-estimates-of-poverty-and-inequality.html#CPIs"><i class="fa fa-check"></i><b>4.1</b> Consumer Price Indices (CPIs)</a></li>
+<li class="chapter" data-level="4.2" data-path="generating-survey-estimates-of-poverty-and-inequality.html"><a href="generating-survey-estimates-of-poverty-and-inequality.html#PPPs"><i class="fa fa-check"></i><b>4.2</b> Purchasing Power Parities (PPPs)</a></li>
+<li class="chapter" data-level="4.3" data-path="generating-survey-estimates-of-poverty-and-inequality.html"><a href="generating-survey-estimates-of-poverty-and-inequality.html#IPL"><i class="fa fa-check"></i><b>4.3</b> Derivation of the international poverty line</a></li>
+<li class="chapter" data-level="4.4" data-path="generating-survey-estimates-of-poverty-and-inequality.html"><a href="generating-survey-estimates-of-poverty-and-inequality.html#derivation-of-other-global-poverty-lines"><i class="fa fa-check"></i><b>4.4</b> Derivation of other global poverty lines</a></li>
+<li class="chapter" data-level="4.5" data-path="generating-survey-estimates-of-poverty-and-inequality.html"><a href="generating-survey-estimates-of-poverty-and-inequality.html#povertymeasures"><i class="fa fa-check"></i><b>4.5</b> Poverty measures</a></li>
+<li class="chapter" data-level="4.6" data-path="generating-survey-estimates-of-poverty-and-inequality.html"><a href="generating-survey-estimates-of-poverty-and-inequality.html#inequalitymeasures"><i class="fa fa-check"></i><b>4.6</b> Inequality measures</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="generating-global-and-regional-estimates.html"><a href="generating-global-and-regional-estimates.html"><i class="fa fa-check"></i><b>5</b> Generating global and regional estimates</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="generating-global-and-regional-estimates.html"><a href="generating-global-and-regional-estimates.html#extrapolations"><i class="fa fa-check"></i><b>5.1</b> Extrapolations</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="generating-global-and-regional-estimates.html"><a href="generating-global-and-regional-estimates.html#pass-through-rate-for-india"><i class="fa fa-check"></i><b>5.1.1</b> Pass-through rate for India</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="generating-global-and-regional-estimates.html"><a href="generating-global-and-regional-estimates.html#interpolations"><i class="fa fa-check"></i><b>5.2</b> Interpolations</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="generating-global-and-regional-estimates.html"><a href="generating-global-and-regional-estimates.html#same-direction-interpolation"><i class="fa fa-check"></i><b>5.2.1</b> “Same direction” interpolation</a></li>
+<li class="chapter" data-level="5.2.2" data-path="generating-global-and-regional-estimates.html"><a href="generating-global-and-regional-estimates.html#diverging-directions-interpolation"><i class="fa fa-check"></i><b>5.2.2</b> “Diverging directions” interpolation</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="generating-global-and-regional-estimates.html"><a href="generating-global-and-regional-estimates.html#nationalaccounts"><i class="fa fa-check"></i><b>5.3</b> National accounts data</a></li>
+<li class="chapter" data-level="5.4" data-path="generating-global-and-regional-estimates.html"><a href="generating-global-and-regional-estimates.html#choosing-between-consumption-and-income-estimates"><i class="fa fa-check"></i><b>5.4</b> Choosing between consumption and income estimates</a></li>
+<li class="chapter" data-level="5.5" data-path="generating-global-and-regional-estimates.html"><a href="generating-global-and-regional-estimates.html#regionsandcountries"><i class="fa fa-check"></i><b>5.5</b> Regional classification</a></li>
+<li class="chapter" data-level="5.6" data-path="generating-global-and-regional-estimates.html"><a href="generating-global-and-regional-estimates.html#population"><i class="fa fa-check"></i><b>5.6</b> Population</a></li>
+<li class="chapter" data-level="5.7" data-path="generating-global-and-regional-estimates.html"><a href="generating-global-and-regional-estimates.html#nodata"><i class="fa fa-check"></i><b>5.7</b> Treatment of countries without any poverty data</a></li>
+<li class="chapter" data-level="5.8" data-path="generating-global-and-regional-estimates.html"><a href="generating-global-and-regional-estimates.html#coverage-rule"><i class="fa fa-check"></i><b>5.8</b> Coverage rule</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Poverty and Inequality Platform Methodology Handbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="generating-survey-estimates-of-poverty-and-inequality" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Generating survey estimates of poverty and inequality</h1>
+<p>Welfare aggregates from household surveys are expressed in national currency units in prices around the time of the fieldwork. To use a <a href="#welfareaggregates">welfare aggregate</a> from a particular survey to estimate international poverty, the welfare aggregates need to be converted to a unit comparable across time and across countries. To this end, first <a href="generating-survey-estimates-of-poverty-and-inequality.html#CPIs">Consumer Price Indices (CPIs)</a> are used to to express the aggregates in the same prices within a country. Second, <a href="generating-survey-estimates-of-poverty-and-inequality.html#PPPs">Purchasing Power Parities (PPPs)</a> are used to express all welfare aggregates in the same currency.</p>
+<div id="CPIs" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Consumer Price Indices (CPIs)</h2>
+<p>Consumer price indices (CPIs) summarize the prices of a representative basket of goods and services consumed by households within an economy over a period of time. Inflation (deflation) occurs when there is a positive (negative) change in the CPI between two time periods. With inflation, the same amount of rupees is expected to buy more today than in one year from today. CPIs are used to deflate nominal income or consumption expenditure of households, so that the welfare of households can be evaluated and compared between two time periods at the same prices.</p>
+<p>The primary source of CPI data for the Poverty and Inequality Platform is <a href="https://data.imf.org/?sk=4c514d48-b6ba-49ed-8ab9-52b0c1a0179b">IMF’s International Financial Statistics (IFS)</a> monthly CPI series. The simple average of the monthly CPI series for each calender year is used as the annual CPI. When IFS data are missing, other sources of CPI data are obtained from <a href="https://www.imf.org/en/Publications/SPROLLs/world-economic-outlook-databases#sort=%40imfdate%20descending">IMFs World Economic Outlook (WEO)</a> and National Statistical Offices (NSOs), among others. For more details on the different sources of CPI data used for global poverty measurement, see Figure 1 of <span class="citation"><a href="#ref-lakner2018" role="doc-biblioref">Lakner et al.</a> (<a href="#ref-lakner2018" role="doc-biblioref">2018</a>)</span> and “What’s New” technical notes accompanying PIP updates (e.g. the latest <a href="https://blogs.worldbank.org/opendata/september-2020-global-poverty-update-world-bank-new-annual-poverty-estimates-using-revised">September 2020 PovcalNet Update: What’s New</a>).</p>
+<p>CPI series are expressed in the prices of the International Comparison Programme (ICP) reference year, currently 2011.</p>
+</div>
+<div id="PPPs" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Purchasing Power Parities (PPPs)</h2>
+<p>Purchasing power parities (PPPs) are used in global poverty estimation to adjust for price differences across countries. PPPs are price indices published by the <a href="https://www.worldbank.org/en/programs/icp">International Comparison Program (ICP</a>) that measure how much it costs to purchase a basket of goods and services in one country compared to how much it costs to purchase the same basket of goods and services in a reference country, typically the United States. PPP exchange rates are preferred to market exchange rates for the measurement of global poverty because the latter overestimates poverty in developing countries, where non-tradable services are relatively cheap (i.e., the Balassa-Samuelson-Penn effect). The revised 2011 PPPs are currently used to convert household welfare aggregates, originally expressed in local currency units, into a common internationally comparable currency unit.</p>
+<p>The PPP estimates used for global poverty measurement are the consumption PPPs from the ICP with a few exceptions. PPPs are imputed for six countries, namely Egypt, Iraq, Jordan, Lao, Myanmar and Yemen, where there are concerns over the coverage and/or quality of the underlying ICP price collection <span class="citation">(<a href="#ref-atamanov2018" role="doc-biblioref">Atamanov et al. 2018</a>, <a href="#ref-atamanov2020" role="doc-biblioref">2020</a>)</span>.</p>
+<p>Though PPPs are supposed to be nationally representative, to account for possible urban bias in ICP data collection, separate rural and urban PPPs are computed for China, India and Indonesia using official national PPPs, the ratio of urban to rural poverty line, and the urban share in ICP price data collection <span class="citation">(<a href="#ref-chen2008" role="doc-biblioref">Chen and Ravallion 2008</a>, <a href="#ref-chen2010" role="doc-biblioref">2010</a>; <a href="#ref-jolliffe2015" role="doc-biblioref">Jolliffe and Prydz 2015</a>; <a href="#ref-ferreira2016" role="doc-biblioref">Ferreira et al. 2016</a>)</span>.</p>
+</div>
+<div id="IPL" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Derivation of the international poverty line</h2>
+<p>Most developing countries have a national poverty line which summarizes the value of consumption per person or per adult equivalent needed to not live in poverty. These national poverty lines are typically estimated by National Statistical Offices. For low and middle-income countries the lines usually reflect the cost of purchasing a bundle of food items necessary to obtain minimum daily calories to which a basic non-food component is added. For high-income countries the national poverty lines are often relative and are defined relative to the national mean or median income.</p>
+<p>To compare poverty across countries one needs a common standard. Hence, national poverty lines, which differ from one country to the next, cannot be used. The international poverty line (IPL) is an attempt to summarize the national poverty lines of the poorest countries.</p>
+<p>The current international poverty line of $1.90/day in 2011 PPPs was derived as the mean national poverty line of the 15 poorest countries. That is, it represents a typical poverty line of the poorest countries in the world. The is derived by first converting the national poverty lines into PPP-adjusted dollars in the same manner as welfare distributions are converted. This was done by <span class="citation"><a href="#ref-ravallion2009" role="doc-biblioref">Ravallion, Chen, and Sangraula</a> (<a href="#ref-ravallion2009" role="doc-biblioref">2009</a>)</span> who selected the 15 poorest countries based on household final consumption expenditure per capita of countries around 2008 when the 2005 PPPs were released. The 15 poorest countries at the time were Ethiopia, Ghana, The Gambia, Guinea-Bissau, Mali, Mozambique, Malawi, Niger, Nepal, Rwanda, Sierra Leone, Chad, Tajikistan, Tanzania, and Uganda. An IPL of $1.25/day per person, expressed in 2005 PPP dollars was determined as the mean of the national poverty lines of these countries. When the 2011 PPPs were released in 2014, the same 15 national poverty lines were used, but now converted to 2011 PPPs yielding an IPL of $1.88, which was rounded to $1.90 <span class="citation">(<a href="#ref-ferreira2015" role="doc-biblioref">Ferreira, Jolliffe, and Prydz 2015</a>; <a href="#ref-ferreira2016" role="doc-biblioref">Ferreira et al. 2016</a>)</span>. When the 2011 PPPs got revised in 2020, the IPL was similarly updated but remains unchanged at $1.90 <span class="citation">(<a href="#ref-atamanov2020" role="doc-biblioref">Atamanov et al. 2020</a>; <a href="#ref-worldbank2020" role="doc-biblioref">World Bank 2020</a>)</span>. [<span style="color:red">Samuel</span>: What do you think about adding a table here with the 15 countries (+ a row with the mean), and columns reflecting the national poverty lines in 2005 PPPs, 2011 PPPs and 2011 revised PPPs?]).</p>
+</div>
+<div id="derivation-of-other-global-poverty-lines" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> Derivation of other global poverty lines</h2>
+<p>In addition to the <a href="generating-survey-estimates-of-poverty-and-inequality.html#IPL">international poverty line</a>, the World Bank uses two higher poverty lines to measure and monitor poverty in countries with a low incidence of extreme poverty. These higher lines, namely $3.20 and $5.50 in revised 2011 PPPs, are derived in <span class="citation"><a href="#ref-jolliffe2016" role="doc-biblioref">Jolliffe and Prydz</a> (<a href="#ref-jolliffe2016" role="doc-biblioref">2016</a>)</span> as the median values of national poverty lines of lower- and upper-middle income countries, respectively. These lines were originally defined in original 2011 PPPs, but have later been updated using the revised 2011 PPPs with virtually no changes observed <span class="citation">(<a href="#ref-jolliffe2016" role="doc-biblioref">Jolliffe and Prydz 2016</a>; <a href="#ref-atamanov2020" role="doc-biblioref">Atamanov et al. 2020</a>; <a href="#ref-worldbank2020" role="doc-biblioref">World Bank 2020</a>)</span>.</p>
+</div>
+<div id="povertymeasures" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> Poverty measures</h2>
+<p>Armed with welfare distributions expressed in 2011 PPPs and an international poverty line, poverty and inequality can be calculated and compared across countries and across time. The poverty and inequality measures used in PIP for micro data are mainly based on formulae in <span class="citation"><a href="#ref-haughton2009" role="doc-biblioref">Haughton and Khandker</a> (<a href="#ref-haughton2009" role="doc-biblioref">2009</a>)</span>, while the poverty and inequality measures estimated from grouped data are mainly based on formulae in <span class="citation"><a href="#ref-datt1998" role="doc-biblioref">Datt</a> (<a href="#ref-datt1998" role="doc-biblioref">1998</a>)</span>.</p>
+<p>[Some discussion of imputed estimates]</p>
+<p><strong>Poverty headcount index</strong>: The poverty headcount index (<span class="math inline">\(P_0\)</span>) is a measure of the proportion of the population that is counted as poor. The poverty headcount index is obtained from micro data with the following expression:<span class="math display">\[ P_0 = \frac{1}{N} \sum_{i=1}^{N} I (y_i &lt; z), \]</span></p>
+<p>where <span class="math inline">\(N\)</span> is the total population size, <span class="math inline">\(y_i\)</span> is welfare of individual <span class="math inline">\(i\)</span>, <span class="math inline">\(z\)</span> is the poverty line, and <span class="math inline">\(I(.)\)</span> is an indicator function that takes on the value 1 if the bracketed expression is true or 0 otherwise. You can find the source code where this calculation is carried out <a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R">here</a>. [<span style="color:red">Aleksander</span>: would it be possible to hyperlink ‘here’ to the exact lines of the code? [akin to what Andres does in <a href="https://povcalnet-team.github.io/Povcalnet_internal_guidelines/prepare.html" class="uri">https://povcalnet-team.github.io/Povcalnet_internal_guidelines/prepare.html</a>, search for “In particular, you can see these lines for GDP”)]</p>
+<p>For grouped data, the poverty headcount is obtained using the following expression:</p>
+<p><span class="math display">\[
+P_0 = - \frac{1}{2m}[n + r(b+2z/\mu)((b+2z/\mu)^2)-m)^{-1/2}],
+\]</span></p>
+<p>where <span class="math inline">\(m\)</span> = <span class="math inline">\(b^2 - 4a\)</span>, <span class="math inline">\(n = 2be - 4c\)</span>, <span class="math inline">\(r = (n^2 - 4me^2)^{1/2}\)</span>, <span class="math inline">\(e = -(a + b + c + 1)\)</span>, <span class="math inline">\(z\)</span> is the poverty line, <span class="math inline">\(\mu\)</span> is mean welfare, and <span class="math inline">\(a, b, c\)</span> are the parameter estimates of the GQ Lorenz function (source code).</p>
+<p><strong>Poverty gap index</strong>: The poverty gap index (<span class="math inline">\(P_1\)</span>) is a measure that adds up the extent to which individuals on average fall below the poverty line, and expresses it as a percentage of the poverty line. The poverty gap index is obtained from micro data with the following expression:</p>
+<p><span class="math display">\[ P_1 = \frac{1}{N} \sum_{i=1}^{N} \frac{G_i}{z} \]</span> with <span class="math inline">\(G_i = (z - y_i) × I (y_i &lt; z)\)</span>, where <span class="math inline">\(G_i\)</span> is defined as the poverty gap (i.e. poverty line (<span class="math inline">\(z\)</span>) less welfare (<span class="math inline">\(y_i\)</span>)) of poor individuals; the gap is considered to be zero for everyone else. The poverty gap index shows the minimum cost per capita cost of eliminating poverty using targeted transfers, expressed as a percentage of the poverty line (source code: <a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R">micro data</a>).</p>
+<p>For grouped data, the poverty gap index is obtained using the following expression:</p>
+<p><span class="math display">\[
+P_1 = P_0 - (\mu/z)L(P_0)
+\]</span></p>
+<p>with all variables defined as before (source code: <a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R">grouped data</a>).</p>
+<p><strong>Poverty severity index</strong>: The poverty severity index (<span class="math inline">\(P_2\)</span>) is a measure of the weighted sum of poverty gaps (as a proportion of the poverty line), where the weights are the proportionate poverty gaps themselves. The poverty severity index is obtained from micro data with the following expression:</p>
+<p><span class="math display">\[ P_1 = \frac{1}{N} \sum_{i=1}^{N} \left(\frac{G_i}{z} \right)^2 \]</span></p>
+<p>with all variables defined as before. Also known as the poverty squared gap index, the poverty severity index accounts for inequality among the poor (source code: <a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R">micro data</a>).</p>
+<p>For grouped data, the poverty severity index is obtained using the following expression:</p>
+<p><span class="math display">\[
+P_2 = 2(P_1) - P_0 - \left(\frac{\mu}{z}\right)^2 \left[aP_0 + bL(P_0) - \left(\frac{r}{16}\right)ln \left(\frac{1 - P_0/s_1}{1 - P_0/s_2}\right)     \right],
+\]</span></p>
+<p>where <span class="math inline">\(s_1 = (r- n)/(2m)\)</span>, <span class="math inline">\(s_2 = -(r + n)/(2m)\)</span>, and all other variables are defined as before (source code: <a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R">grouped data</a>).</p>
+<p><strong>The Watts index</strong>: The Watts index (<span class="math inline">\(W\)</span>) is also an inequality-sensitive poverty measure that is given as:</p>
+<p><span class="math display">\[ W  = \frac{1}{N} \sum_{i=1}^{q} ln \left(\frac{z}{y_i} \right), \]</span></p>
+<p>where <span class="math inline">\(N\)</span> individuals in the population are indexed in ascending order of welfare, and the sum is taken over <span class="math inline">\(q\)</span> individuals whose welfare, <span class="math inline">\(y_i\)</span>, falls below the poverty line <span class="math inline">\(z\)</span>. This formula applies for both micro and grouped data (source code: <a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R">micro data</a> and <a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R">grouped data</a>).</p>
+</div>
+<div id="inequalitymeasures" class="section level2" number="4.6">
+<h2><span class="header-section-number">4.6</span> Inequality measures</h2>
+<p><strong>Gini coefficient</strong>: The Gini coefficient is derived from the Lorenz curve, which plots the cumulative welfare share (on the y-axis) against the cumulative population share (on the x-axis). A 45-degree line is defined over the Lorenz curve as a line of perfect equality. The Gini coefficient is the area between the line 45-degree line and the Lorenz curve. Let <span class="math inline">\(A\)</span> be the area between the 45-degree line and the Lorenz curve, and let <span class="math inline">\(B\)</span> be the area under the Lorenz curve. The Gini coefficient (<span class="math inline">\(Gini\)</span>) is given as: <span class="math inline">\(\frac{A}{A + B}= 2A\)</span> (since <span class="math inline">\(A + B = 0.5\)</span>).</p>
+<p>Formally, if <span class="math inline">\(x_i\)</span> is a point on the x-axis, and <span class="math inline">\(y_i\)</span> a point on the y-axis, then</p>
+<p><span class="math display">\[ Gini = 1 - \sum_{i=1}^{N} (x_i - x_{i-1})(y_i + y_{i-1}).
+\]</span></p>
+<p>When there are <span class="math inline">\(N\)</span> equal intervals on the x-axis, the equation above simplifies to:</p>
+<p><span class="math display">\[ Gini = 1 - \frac{1}{N}\sum_{i=1}^{N} (y_i + y_{i-1}). \]</span></p>
+<p>The Gini coefficient ranges from 0 (perfect equality) to 1 (complete inequality) (source code: <a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_gini.R">micro data</a>).</p>
+<p>For grouped data, the Gini coefficient is obtained using the following expression:</p>
+<p><span class="math display">\[
+Gini = \begin{cases}
+ \frac{e}{2} - \frac{n(b + 2)}{4m} + \frac{r^2}{8m\sqrt{-m}} \left[\sin^{-1} \frac{(2m + n)}{r} - \sin^{-1}\frac{n}{r} \right] &amp; \text{if $m&lt;0$} \\ 
+ \frac{e}{2} - \frac{n(b + 2)}{4m} + \frac{r^2}{8m\sqrt{m}} ln\left[\text{abs}\left( \frac{2m + n + 2\sqrt{m}(a + c - 1)}{n - 2e\sqrt{m}}\right) \right]  &amp; \text{if $m&gt;0$}
+ \end{cases} 
+ \]</span></p>
+<p>with all parameters defined as before (source code: <a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R">grouped data</a>).</p>
+<p><strong>Mean log deviation</strong>: The mean log deviation (MLD) belongs to the family of generalized entropy (GE) inequality measures. It is given as:</p>
+<p><span class="math display">\[ MLD  = \frac{1}{N} \sum_{i=1}^{N} ln \left(\frac{μ}{y_i} \right), \]</span></p>
+<p>where <span class="math inline">\(N\)</span> is the total population size, <span class="math inline">\(μ\)</span> is the mean welfare per person, and <span class="math inline">\(y_i\)</span> is welfare of individual <span class="math inline">\(i\)</span>. The mean log deviation has a minimum value of 0 (perfect equality) and has no upper bound. This formula applies for both micro and grouped data (source code: <a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_mld.R">micro data</a> and <a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R">grouped data</a>).</p>
+<p><strong>Polarization</strong>: The polarization index (<span class="math inline">\(P\)</span>) measures the extent to which the distribution of welfare is “spread out” and bi-modal. It is given as:</p>
+<p><span class="math display">\[
+P =  \frac{2(\mu^* - \mu^L)}{m},
+\]</span></p>
+<p>where <span class="math inline">\(\mu^*\)</span> is the distribution-correction mean (i.e. <span class="math inline">\(\mu(1 - Gini)\)</span>), <span class="math inline">\(\mu^L\)</span> is the mean of the poorest half of the population, and <span class="math inline">\(m\)</span> is the median. Like the Gini coefficient, the polarization index ranges from 0 (no polarization) to 1 (complete polarization). The polarization index is based on <span class="citation"><a href="#ref-wolfson1994" role="doc-biblioref">Wolfson</a> (<a href="#ref-wolfson1994" role="doc-biblioref">1994</a>)</span> and <span class="citation"><a href="#ref-ravallion1996" role="doc-biblioref">Ravallion and Chen</a> (<a href="#ref-ravallion1996" role="doc-biblioref">1996</a>)</span>. This formula applies for both micro and grouped data (source code: <a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_polarization.R">micro data</a> and <a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R">grouped data</a>).</p>
+<p><strong>Decile shares</strong>: Imagine that we order all households according to their welfare per capita, such that the first decile contains the 10% of the population with the lowest welfare and so on. Decile shares measure the share of total welfare going to each decile. Formally, the decile share of decile <span class="math inline">\(d\)</span> is given by:</p>
+<p><span class="math display">\[ decileshare_d= \frac{\sum_{i \in d} {y_i}}{\sum_{i=1}^{N} {y_i}} ,  d \in \{1,2,..,10 \} \]</span></p>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-atamanov2018" class="csl-entry">
+Atamanov, Aziz, Dean Jolliffe, Christoph Lakner, and Espen Beer Prydz. 2018. <span>“Purchasing Power Parities Used in Global Poverty Measurement.”</span> Washington, DC.
+</div>
+<div id="ref-atamanov2020" class="csl-entry">
+Atamanov, Aziz, Christoph Lakner, Daniel Gerszon Mahler, Samuel Kofi Tetteh Baah, and Judy Yang. 2020. <span>“The Effect of New PPP Estimates on Global Poverty: A First Look.”</span> Washington, DC.
+</div>
+<div id="ref-chen2008" class="csl-entry">
+Chen, Shaohua, and Martin Ravallion. 2008. <em>China Is Poorer Than We Thought, but No Less Successful in the Fight Against Poverty</em>. Policy Research Working Paper Series 4621. Washington, DC: The World Bank. <a href="https://openknowledge.worldbank.org/bitstream/handle/10986/6674/wps4621.pdf?sequence=1&amp;isAllowed=y">https://openknowledge.worldbank.org/bitstream/handle/10986/6674/wps4621.pdf?sequence=1&amp;isAllowed=y</a>.
+</div>
+<div id="ref-chen2010" class="csl-entry">
+———. 2010. <span>“The Developing World Is Poorer Than We Thought, but No Less Successful in the Fight Against Poverty.”</span> <em>The Quarterly Journal of Economics</em> 125 (4): 15771625.
+</div>
+<div id="ref-datt1998" class="csl-entry">
+Datt, Gaurav. 1998. <span>“Computational Tools for Poverty Measurement and Analysis.”</span> <a href="http://ebrary.ifpri.org/utils/getfile/collection/p15738coll2/id/125673/filename/125704.pdf">http://ebrary.ifpri.org/utils/getfile/collection/p15738coll2/id/125673/filename/125704.pdf</a>.
+</div>
+<div id="ref-ferreira2016" class="csl-entry">
+Ferreira, Francisco HG, Shaohua Chen, Andrew Dabalen, Yuri Dikhanov, Nada Hamadeh, Dean Jolliffe, Ambar Narayan, Espen Beer Prydz, Ana Revenga, and Prem Sangraula. 2016. <span>“A Global Count of the Extreme Poor in 2012: Data Issues, Methodology and Initial Results.”</span> <em>The Journal of Economic Inequality</em> 14 (2): 141–72. <a href="https://link.springer.com/article/10.1007/s10888-016-9326-6">https://link.springer.com/article/10.1007/s10888-016-9326-6</a>.
+</div>
+<div id="ref-ferreira2015" class="csl-entry">
+Ferreira, Francisco HG, Dean Mitchell Jolliffe, and Espen Beer Prydz. 2015. <span>“The International Poverty Line Has Just Been Raised to <span>$</span>1.90 a Day, but Global Poverty Is Basically Unchanged. How Is That Possible?”</span> <em>Let<span>’</span>s Talk Development, April</em> 4. <a href="https://blogs.worldbank.org/developmenttalk/international-poverty-line-has-just-been-raised-190-day-global-poverty-basically-unchanged-how-even">https://blogs.worldbank.org/developmenttalk/international-poverty-line-has-just-been-raised-190-day-global-poverty-basically-unchanged-how-even</a>.
+</div>
+<div id="ref-haughton2009" class="csl-entry">
+Haughton, Jonathan, and Shahidur R Khandker. 2009. <em>Handbook on Poverty+ Inequality</em>. World Bank Publications. <a href="https://openknowledge.worldbank.org/handle/10986/11985">https://openknowledge.worldbank.org/handle/10986/11985</a>.
+</div>
+<div id="ref-jolliffe2015" class="csl-entry">
+Jolliffe, Dean, and Espen Beer Prydz. 2015. <em>Global Poverty Goals and Prices: How Purchasing Power Parity Matters</em>. Policy Research Working Paper Series 7256. <a href="https://openknowledge.worldbank.org/bitstream/handle/10986/21988/Global0poverty0power0parity0matters.pdf?sequence=1&amp;isAllowed=y">https://openknowledge.worldbank.org/bitstream/handle/10986/21988/Global0poverty0power0parity0matters.pdf?sequence=1&amp;isAllowed=y</a>.
+</div>
+<div id="ref-jolliffe2016" class="csl-entry">
+———. 2016. <span>“Estimating International Poverty Lines from Comparable National Thresholds.”</span> Washington, DC.
+</div>
+<div id="ref-lakner2018" class="csl-entry">
+Lakner, Christoph, Daniel Gerszon Mahler, Minh C. Nguyen, Joao Pedro Azevedo, Shaohua Chen, Dean M. Jolliffe, Espen Beer Prydz, and Prem Sangraula. 2018. <span>“Consumer Price Indices Used in Global Poverty Measurement.”</span> Washington, DC.
+</div>
+<div id="ref-ravallion1996" class="csl-entry">
+Ravallion, Martin, and Shaohua Chen. 1996. <span>“What Can New Survey Data Tell Us about Recent Changes in Distribution and Poverty?”</span> <em>World Bank Publications: Washington, DC</em>, Policy research working paper,. <a href="http://documents1.worldbank.org/curated/en/202781468739531561/pdf/multi-page.pdf">http://documents1.worldbank.org/curated/en/202781468739531561/pdf/multi-page.pdf</a>.
+</div>
+<div id="ref-ravallion2009" class="csl-entry">
+Ravallion, Martin, Shaohua Chen, and Prem Sangraula. 2009. <span>“Dollar a Day Revisited.”</span> <em>The World Bank Economic Review</em> 23 (2): 163184.
+</div>
+<div id="ref-wolfson1994" class="csl-entry">
+Wolfson, Michael C. 1994. <span>“When Inequalities Diverge.”</span> <em>The American Economic Review</em> 84 (2): 353–58.
+</div>
+<div id="ref-worldbank2020" class="csl-entry">
+World Bank. 2020. <em>Poverty and Shared Prosperity 2020</em>. Washington, DC: World Bank. <a href="https://doi.org/10.1596/978-1-4648-1602-4">https://doi.org/10.1596/978-1-4648-1602-4</a>.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="welfareaggregate.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="generating-global-and-regional-estimates.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
