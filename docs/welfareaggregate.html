@@ -278,12 +278,16 @@ div.csl-indent {
 </div>
 <div id="comparability" class="section level2" number="2.6">
 <h2><span class="header-section-number">2.6</span> Treatment of grouped data</h2>
-<p>A welfare aggregate is also needed to estimate poverty and inequality from <a href="acquiring.html#grouped">grouped data</a>. Grouped data are consumption expenditure or income organized in graduated class intervals or bins. To this end, the grouped data is used to derive a Lorenz function, which together with information about mean welfare can be used to construct a full distribution. Two approaches are used to derive a Lorenz function, the general quadratic (GQ) Lorenz function and the Beta Lorenz function <span class="citation">(<a href="#ref-datt1998" role="doc-biblioref">Datt 1998</a>)</span>. Both functions are parameterized and estimated. The function that provides the best fit based on normality and validity tests is selected for poverty and distributional statistics. However, due to its computational simplicity, the GQ Lorenz function is preferred in PIP when both functions could be used. The GQ Lorenz function is estimated using the following specification:</p>
+<p>A welfare aggregate is also needed to estimate poverty and inequality from <a href="acquiring.html#grouped">grouped data</a>. Grouped data are consumption expenditure or income organized in graduated class intervals or bins. To this end, the grouped data is used to derive a Lorenz function, which together with information about mean welfare can be used to construct a full distribution. Two approaches are used to derive a Lorenz function, the general quadratic (GQ) Lorenz function and the Beta Lorenz function <span class="citation">(<a href="#ref-datt1998" role="doc-biblioref">Datt 1998</a>)</span>. Both functions are parameterized and estimated. The function that provides the best fit based on normality and validity tests is selected for poverty and distributional statistics. The tests vary for poverty and distributional statistics (see here for the poverty tests and here for the distributional tests). The GQ Lorenz function is estimated using the following specification:</p>
 <p><span class="math display">\[
 L(1-L) = a(p^2-L) + bL(p-1) + c(p-L),
 \]</span></p>
 <p>where <span class="math inline">\(p\)</span> is the cumulative proportion of population, <span class="math inline">\(L\)</span> is the cumulative proportion of consumption expenditure or income, and <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, <span class="math inline">\(c\)</span> are parameter estimates <span class="citation">(<a href="#ref-datt1998" role="doc-biblioref">Datt 1998</a>)</span>. <a href="#povvertymeasures">Poverty</a> and <a href="surveyestimates.html#inequalitymeasures">inequality</a> measures are based on the parameter estimates.</p>
-<p>[ <span style="color:red">Samuel</span>: Could you specify when the Beta Lorenz is used instead? Do you know if we have this listed in detail in some document that we can refer to?]</p>
+<p>The Beta Lorenz function is estimated using the following specification:</p>
+<p><span class="math display">\[
+L(p) = p - \theta p^\gamma (1-p)^\delta,
+\]</span>
+where <span class="math inline">\(\theta\)</span>, <span class="math inline">\(\gamma\)</span>, <span class="math inline">\(\delta\)</span> are parameter estimates <span class="citation">(<a href="#ref-datt1998" role="doc-biblioref">Datt 1998</a>)</span>.</p>
 </div>
 <div id="comparability" class="section level2" number="2.7">
 <h2><span class="header-section-number">2.7</span> Comparability database</h2>

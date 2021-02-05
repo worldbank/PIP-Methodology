@@ -73,8 +73,9 @@ where $p$ is the cumulative proportion of population, $L$ is the cumulative prop
 The Beta Lorenz function is estimated using the following specification:
 
 $$
-specification here
+L(p) = p - \theta p^\gamma (1-p)^\delta,
 $$
+where $\theta$, $\gamma$, and $\delta$ are parameter estimates [@datt1998].
 
 ## Comparability database {#comparability}
 
