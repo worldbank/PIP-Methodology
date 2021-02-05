@@ -4,13 +4,13 @@ Few countries have survey estimates of poverty available every year. To estimate
 
 ## Extrapolations {#extrapolations}
 
-When estimating global poverty for a recent year, one is met by the challenge that most countries do not have recent data on poverty. Countries that do not have welfare aggregates at or since a specific reference year, but which do have earlier welfare aggregates available, their most recent aggregate is extrapolated forward using growth rates from national accounts. This is done by first finding the growth in national accounts that occurred between the time of the survey and the time of the reference year and scaling the survey welfare distribution, $f(y_{survey})$, by this growth factor. This yields an estimate of the welfare distribution at the reference year, $f(y_{reference})$ as summarized below:
+When estimating global poverty for a recent year, one is met by the challenge that most countries do not have recent data on poverty. For countries that do not have welfare aggregates at or since a specific reference year, but which do have earlier welfare aggregates available, their most recent aggregate is extrapolated forward using growth rates from national accounts. This is done by first finding the growth in national accounts that occurred between the time of the survey and the time of the reference year and scaling the survey welfare distribution, $f(y_{survey})$, by this growth factor. This yields an estimate of the welfare distribution at the reference year, $f(y_{reference})$ as summarized below:
 
 $$f(y_{reference}) = \dfrac{NA_{reference}}{NA_{survey}} \times f(y_{survey})$$
 
 where $NA_{t}$ is real GDP per capita or real HFCE per capita at time $t$, as explained in the [National accounts data section](#nationalaccounts). Poverty for the reference year is then estimated using this extrapolated distribution. A similar approach is used to extrapolate backwards, that is when the earliest survey estimate available is more recent than the desired reference year. The extrapolation method assumes distribution-neutral growth, i.e. that everyone's welfare grows at the same rate. This implies that inequality is assumed to stay constant.
 
-The below example charts the consumption aggregate from the 2015.5 Ethiopian survey expressed in 2011 PPP0-adjusted dollars, and the 2018 Ethiopian distribution one would get from extrapolating this welfare vector to 2018 using the method described above. The 2015.5 consumption mean is 3.12 and the growth rate in national accounts between 2015.5 and 2018 is 14.5%. Note that the positive growth pushes the distribution to the right. This changes the share of extreme poor (that is those living below the \$1.90 poverty line) from 30.8% in 2015.5 to 22.3% in 2018. 
+The below example charts the consumption aggregate from the 2015.5 Ethiopian survey expressed in 2011 PPP-adjusted dollars, and the 2018 Ethiopian distribution one would get from extrapolating this welfare vector to 2018 using the method described above. The 2015.5 daily consumption mean is 3.12 and the growth rate in national accounts between 2015.5 and 2018 is 14.5%. Note that the positive growth pushes the distribution to the right. This changes the share of extreme poor (that is those living below the \$1.90 poverty line) from 30.8% in 2015.5 to 22.3% in 2018. 
 
 ![](figures/ETHdist_example.png)
 
@@ -26,11 +26,11 @@ Poverty for years 2015-2018 is estimated using a pass-through rate calculated us
 
 ## Interpolations {#interpolations}
 
-In cases where the reference year falls between two surveys, poverty is estimated for the reference year using the nearest survey on each side of the reference year. One of two approaches are used, depending on the correspondence in growth between national accounts and survey data.
+In cases where the reference year falls between two surveys, poverty is interpolated for the reference year using the nearest survey on each side of the reference year. One of two approaches are used, depending on the correspondence in growth between national accounts and survey data.
 
-"Same direction" interpolation is used when growth in the survey mean between the two surveys is of the same sign as the growth in national accounts from the survey before the reference year to the reference year and from the reference year to the survey after the reference year. Denoting $survey1$ the survey predating the reference year and $survey2$ the survey after the reference year, this means that same direction interpolation is used when
+"Same direction" interpolation is used when growth in the survey mean between the two surveys is of the same sign as (1) the growth in national accounts from the first survey to the reference year, and (2) from the reference year to the second survey. Denoting $survey1$ the survey predating the reference year and $survey2$ the survey after the reference year, this means that same direction interpolation is used when
 
-$$sign \bigg(\dfrac{μ_{presurvey2}}{μ_{survey1}}-1\bigg) = 
+$$sign \bigg(\dfrac{μ_{survey2}}{μ_{survey1}}-1\bigg) = 
   sign \bigg(\dfrac{NA_{survey2}}{NA_{reference}}-1\bigg) = 
   sign \bigg(\dfrac{NA_{reference}}{NA_{survey1}}-1\bigg)$$
 
@@ -46,15 +46,17 @@ $$μ_{reference} = (μ_{survey2} - μ_{survey1}) \times \dfrac{NA_{reference} - 
 
 Second, the welfare distributions at the two surveys are scaled to reflect this mean:
 
-$$f(y_{reference,i}) = \dfrac{μ_{reference}}{μ_{survey,i}} \times f(y_{survey,i}), $$where $i={1,2}$ . After this alignment, there will be two distributions with the same mean for the reference year but with different distributional shapes
+$$f(y_{reference,i}) = \dfrac{μ_{reference}}{μ_{survey,i}} \times f(y_{survey,i}), $$where $i={1,2}$ . After this alignment, there will be two distributions with the same mean for the reference year but with different distributional shapes.
 
-At the third step, poverty is estimate from each of these distributions, and the final poverty estimate at the reference year is the weighted average poverty rate from both distributions whereby each poverty estimate is weighted by the inverse of the relative distance between the survey year and the reference year:
+At the third step, poverty is estimated from each of these distributions, and the final poverty estimate at the reference year is the weighted average poverty rate from both distributions where each poverty estimate is weighted by the inverse of the relative distance between the survey year and the reference year:
 
-$$P_{0,reference} = \dfrac{P_{0,reference,1}*(t_{survey,2}-t_{reference})+P_{0,reference,1}*(t_{reference}-t_{survey,2})}{t_{survey,2}-t_{survey,1}} $$For example, if a reference year falls two years after the first survey and one year after the second survey, the poverty estimate from the first survey is given a weight of 1/3 and the estimate from the second survey a weight of 2/3.
+$$P_{0,reference} = \dfrac{P_{0,reference,1}*(t_{survey,2}-t_{reference})+P_{0,reference,2}*(t_{reference}-t_{survey,1})}{t_{survey,2}-t_{survey,1}} $$For example, if a reference year falls two years after the first survey and one year before the second survey, the poverty estimate from the first survey is given a weight of 1/3 and the estimate from the second survey a weight of 2/3.
 
 ### "Diverging directions" interpolation
 
-If the growth rates in surveys and national accounts diverge, an approach similar to the extrapolation is applied to the two closest surveys; poverty is extrapolated forward by the national account growth rate using the early survey and backwards using the later survey. Poverty for the reference year is estimated using both distributions and the estimates are averaged using formula. The mechanics of the extrapolation and interpolation are described in @ravallion2003, @chen2004, box 6.4 in @jolliffe2015, and in Appendix A of @worldbank2018.
+If the growth rates in surveys and national accounts diverge, an approach similar to the extrapolation is applied to the two closest surveys; poverty is extrapolated forward by the national account growth rate using the early survey and backwards using the later survey. Poverty for the reference year is estimated using both distributions and the estimates are averaged using the formula above. 
+
+The mechanics of the extrapolation and interpolation are described in @ravallion2003, @chen2004, box 6.4 in @jolliffe2015, and in Appendix A of @worldbank2018.
 
 ## National accounts data {#nationalaccounts}
 
@@ -87,13 +89,13 @@ In total, 218 economies are included in the global poverty estimates. The entire
 
 ## Population {#population}
 
-To derive regional and global poverty rates, each country's poverty rate is weighted using its population share. Population data are taken from the World Bank's [World Development Indicators](http://datatopics.worldbank.org/world-development-indicators/) (WDI). In addition, for Kuwait, Sint Maarten (Dutch part) and West Bank and Gaza, population data is missing in the WDI for some years. In those cases, alternative sources are used as outlined here [link to forthcoming What's New].
+To derive regional and global poverty rates, each country's poverty rate is weighted using its population share. Population data are taken from the World Bank's [World Development Indicators](http://datatopics.worldbank.org/world-development-indicators/) (WDI). For Kuwait, Sint Maarten (Dutch part) and West Bank and Gaza, population data is missing in the WDI for some years. In those cases, alternative sources are used as outlined here [link to forthcoming What's New].
 
 The regional and global population may differ from the aggregates given in the World Development Indicators, because PIP uses different regional compositions of economies (See [Regions and universe of countries section](#regionsandcountries)).
 
 ## Treatment of countries without any poverty data {#nodata}
 
-With the [interpolation](#interpolations) and [extrapolation](#extrapolations) rules, all economies with at least one data point will have poverty estimates available for all years (conditional on [national accounts data](#nationalaccounts) being present). Yet some economies have no household survey data that can be used to monitor poverty (or they lack credible [PPPs](#PPPs) or [CPIs](#CPIs) necessary to compute international poverty). In order to include these economies in the regional and global poverty estimates, it is assumed that they have a poverty headcount equal to their [region's](#regionsandcountries) population-weighted average. A similar approach is made if a country with poverty data is lacking national accounts data for a particular reference year (provided it does not have a survey at that particular year).
+With the [interpolation](#interpolations) and [extrapolation](#extrapolations) rules, all economies with at least one data point will have poverty estimates available for all years (conditional on [national accounts data](#nationalaccounts) being present). Yet some economies have no household survey data that can be used to monitor poverty (or they lack credible [PPPs](#PPPs) or [CPIs](#CPIs) necessary to compute international poverty). In order to include these economies in the regional and global poverty estimates, it is assumed that they have a poverty headcount equal to their [region's](#regionsandcountries) population-weighted average.
 
 ## Coverage rule
 
