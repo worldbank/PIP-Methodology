@@ -32,3 +32,4 @@ regionsandcountries
 population
 nodata
 coverage-rule
+comparability-database
