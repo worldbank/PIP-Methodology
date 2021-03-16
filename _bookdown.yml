@@ -10,3 +10,17 @@ language:
   ui:
     edit: "Edit"
     chapter_name: "Chapter "
+
+
+
+rmd_files: [
+  
+  "index.Rmd",
+  "01-Acquiring-household-survey-data.Rmd",
+  "02-Constructing-welfare-aggregates.Rmd",
+  "03-Generating-survey-estimates.Rmd",
+  "04-Generating-regional-and-global-estimates.Rmd",
+  "references.Rmd",
+  
+]
+

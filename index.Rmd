@@ -11,6 +11,7 @@ editor_options:
   markdown: 
     wrap: 72
 bibliography: references.bib
+biblio-style: "apalike"
 link-citations: yes
 links-as-notes: true
 colorlinks: yes
