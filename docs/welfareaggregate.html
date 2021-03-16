@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Constructing welfare aggregates | Poverty and Inequality Platform Methodology Handbook</title>
   <meta name="description" content="Chapter 2 Constructing welfare aggregates | Poverty and Inequality Platform Methodology Handbook" />
-  <meta name="generator" content="bookdown 0.21.4 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21.6 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Constructing welfare aggregates | Poverty and Inequality Platform Methodology Handbook" />
   <meta property="og:type" content="book" />
@@ -30,8 +30,8 @@
   
   
 <link rel="prev" href="acquiring.html"/>
-<link rel="next" href="surveyestimates.html"/>
-<script src="libs/header-attrs-2.7/header-attrs.js"></script>
+<link rel="next" href="convert.html"/>
+<script src="libs/header-attrs-2.6.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -49,17 +49,14 @@
 
 
 
-<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
-<script src="libs/viz-1.8.2/viz.js"></script>
-<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -120,6 +117,29 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
 </head>
 
 <body>
@@ -136,15 +156,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li><a href="index.html#step-1-acquiring-household-survey-data">Step 1: <span>Acquiring household survey data</span></a></li>
 <li><a href="index.html#step-2-constructing-welfare-aggregates">Step 2: <span>Constructing welfare aggregates</span></a></li>
-<li><a href="index.html#step-3-generating-survey-estimates-of-poverty-and-inequality">Step 3: <span>Generating survey estimates of poverty and inequality</span></a></li>
-<li><a href="index.html#step-4-generating-global-and-regional-estimates-of-poverty">Step 4: <span>Generating global and regional estimates of poverty</span></a></li>
+<li><a href="index.html#step-3-converting-welfare-aggregates-to-same-prices">Step 3: <span>Converting welfare aggregates to same prices</span></a></li>
+<li><a href="index.html#step-4-calculating-survey-estimates-of-poverty-and-inequality">Step 4: <span>Calculating survey estimates of poverty and inequality</span></a></li>
+<li><a href="index.html#step-5-calculating-global-and-regional-poverty">Step 5: <span>Calculating global and regional poverty</span></a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="acquiring.html"><a href="acquiring.html"><i class="fa fa-check"></i><b>1</b> Acquiring household survey data</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="acquiring.html"><a href="acquiring.html#selection"><i class="fa fa-check"></i><b>1.1</b> Selection criteria and source of data</a></li>
-<li class="chapter" data-level="1.2" data-path="acquiring.html"><a href="acquiring.html#how-data-are-obtained"><i class="fa fa-check"></i><b>1.2</b> How data are obtained</a></li>
-<li class="chapter" data-level="1.3" data-path="acquiring.html"><a href="acquiring.html#grouped"><i class="fa fa-check"></i><b>1.3</b> Grouped vs. unit record data</a></li>
-<li class="chapter" data-level="1.4" data-path="acquiring.html"><a href="acquiring.html#imputed"><i class="fa fa-check"></i><b>1.4</b> Multiply imputed micro data</a></li>
+<li class="chapter" data-level="1.2" data-path="acquiring.html"><a href="acquiring.html#representativeness"><i class="fa fa-check"></i><b>1.2</b> Representativeness</a></li>
+<li class="chapter" data-level="1.3" data-path="acquiring.html"><a href="acquiring.html#how-data-are-obtained"><i class="fa fa-check"></i><b>1.3</b> How data are obtained</a></li>
+<li class="chapter" data-level="1.4" data-path="acquiring.html"><a href="acquiring.html#grouped"><i class="fa fa-check"></i><b>1.4</b> Grouped vs. unit record data</a></li>
+<li class="chapter" data-level="1.5" data-path="acquiring.html"><a href="acquiring.html#imputed"><i class="fa fa-check"></i><b>1.5</b> Multiply imputed micro data</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="welfareaggregate.html"><a href="welfareaggregate.html"><i class="fa fa-check"></i><b>2</b> Constructing welfare aggregates</a>
 <ul>
@@ -165,32 +187,37 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="welfareaggregate.html"><a href="welfareaggregate.html#python"><i class="fa fa-check"></i>Python</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="surveyestimates.html"><a href="surveyestimates.html"><i class="fa fa-check"></i><b>3</b> Generating survey estimates of poverty and inequality</a>
+<li class="chapter" data-level="3" data-path="convert.html"><a href="convert.html"><i class="fa fa-check"></i><b>3</b> Converting welfare aggregates to same prices</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="surveyestimates.html"><a href="surveyestimates.html#CPIs"><i class="fa fa-check"></i><b>3.1</b> Consumer Price Indices (CPIs)</a></li>
-<li class="chapter" data-level="3.2" data-path="surveyestimates.html"><a href="surveyestimates.html#PPPs"><i class="fa fa-check"></i><b>3.2</b> Purchasing Power Parities (PPPs)</a></li>
-<li class="chapter" data-level="3.3" data-path="surveyestimates.html"><a href="surveyestimates.html#IPL"><i class="fa fa-check"></i><b>3.3</b> Derivation of the international poverty line</a></li>
-<li class="chapter" data-level="3.4" data-path="surveyestimates.html"><a href="surveyestimates.html#derivation-of-other-global-poverty-lines"><i class="fa fa-check"></i><b>3.4</b> Derivation of other global poverty lines</a></li>
-<li class="chapter" data-level="3.5" data-path="surveyestimates.html"><a href="surveyestimates.html#povertymeasures"><i class="fa fa-check"></i><b>3.5</b> Poverty measures</a></li>
-<li class="chapter" data-level="3.6" data-path="surveyestimates.html"><a href="surveyestimates.html#inequalitymeasures"><i class="fa fa-check"></i><b>3.6</b> Inequality measures</a></li>
+<li class="chapter" data-level="3.1" data-path="convert.html"><a href="convert.html#CPIs"><i class="fa fa-check"></i><b>3.1</b> Consumer Price Indices (CPIs)</a></li>
+<li class="chapter" data-level="3.2" data-path="convert.html"><a href="convert.html#PPPs"><i class="fa fa-check"></i><b>3.2</b> Purchasing Power Parities (PPPs)</a></li>
+<li class="chapter" data-level="3.3" data-path="convert.html"><a href="convert.html#IPL"><i class="fa fa-check"></i><b>3.3</b> Derivation of the international poverty line</a></li>
+<li class="chapter" data-level="3.4" data-path="convert.html"><a href="convert.html#derivation-of-other-global-poverty-lines"><i class="fa fa-check"></i><b>3.4</b> Derivation of other global poverty lines</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="lineupestimates.html"><a href="lineupestimates.html"><i class="fa fa-check"></i><b>4</b> Generating global and regional estimates</a>
+<li class="chapter" data-level="4" data-path="surveyestimates.html"><a href="surveyestimates.html"><i class="fa fa-check"></i><b>4</b> Calculating survey estimates of poverty and inequality</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="lineupestimates.html"><a href="lineupestimates.html#extrapolations"><i class="fa fa-check"></i><b>4.1</b> Extrapolations</a>
-<ul>
-<li class="chapter" data-level="4.1.1" data-path="lineupestimates.html"><a href="lineupestimates.html#pass-through-rate-for-india"><i class="fa fa-check"></i><b>4.1.1</b> Pass-through rate for India</a></li>
+<li class="chapter" data-level="4.1" data-path="surveyestimates.html"><a href="surveyestimates.html#povertymeasures"><i class="fa fa-check"></i><b>4.1</b> Monetary poverty measures</a></li>
+<li class="chapter" data-level="4.2" data-path="surveyestimates.html"><a href="surveyestimates.html#mpm"><i class="fa fa-check"></i><b>4.2</b> Multidimensional Poverty Measure</a></li>
+<li class="chapter" data-level="4.3" data-path="surveyestimates.html"><a href="surveyestimates.html#inequalitymeasures"><i class="fa fa-check"></i><b>4.3</b> Inequality measures</a></li>
+<li class="chapter" data-level="4.4" data-path="surveyestimates.html"><a href="surveyestimates.html#dist"><i class="fa fa-check"></i><b>4.4</b> Other distributional statistics</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="lineupestimates.html"><a href="lineupestimates.html#interpolations"><i class="fa fa-check"></i><b>4.2</b> Interpolations</a>
+<li class="chapter" data-level="5" data-path="lineupestimates.html"><a href="lineupestimates.html"><i class="fa fa-check"></i><b>5</b> Generating global and regional estimates</a>
 <ul>
-<li class="chapter" data-level="4.2.1" data-path="lineupestimates.html"><a href="lineupestimates.html#same-direction-interpolation"><i class="fa fa-check"></i><b>4.2.1</b> “Same direction” interpolation</a></li>
-<li class="chapter" data-level="4.2.2" data-path="lineupestimates.html"><a href="lineupestimates.html#diverging-directions-interpolation"><i class="fa fa-check"></i><b>4.2.2</b> “Diverging directions” interpolation</a></li>
+<li class="chapter" data-level="5.1" data-path="lineupestimates.html"><a href="lineupestimates.html#extrapolations"><i class="fa fa-check"></i><b>5.1</b> Extrapolations</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="lineupestimates.html"><a href="lineupestimates.html#pass-through-rate-for-india"><i class="fa fa-check"></i><b>5.1.1</b> Pass-through rate for India</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="lineupestimates.html"><a href="lineupestimates.html#nationalaccounts"><i class="fa fa-check"></i><b>4.3</b> National accounts data</a></li>
-<li class="chapter" data-level="4.4" data-path="lineupestimates.html"><a href="lineupestimates.html#choosing-between-consumption-and-income-estimates"><i class="fa fa-check"></i><b>4.4</b> Choosing between consumption and income estimates</a></li>
-<li class="chapter" data-level="4.5" data-path="lineupestimates.html"><a href="lineupestimates.html#regionsandcountries"><i class="fa fa-check"></i><b>4.5</b> Regional classification</a></li>
-<li class="chapter" data-level="4.6" data-path="lineupestimates.html"><a href="lineupestimates.html#population"><i class="fa fa-check"></i><b>4.6</b> Population</a></li>
-<li class="chapter" data-level="4.7" data-path="lineupestimates.html"><a href="lineupestimates.html#nodata"><i class="fa fa-check"></i><b>4.7</b> Treatment of countries without any poverty data</a></li>
-<li class="chapter" data-level="4.8" data-path="lineupestimates.html"><a href="lineupestimates.html#coverage-rule"><i class="fa fa-check"></i><b>4.8</b> Coverage rule</a></li>
+<li class="chapter" data-level="5.2" data-path="lineupestimates.html"><a href="lineupestimates.html#interpolations"><i class="fa fa-check"></i><b>5.2</b> Interpolations</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="lineupestimates.html"><a href="lineupestimates.html#same-direction-interpolation"><i class="fa fa-check"></i><b>5.2.1</b> “Same direction” interpolation</a></li>
+<li class="chapter" data-level="5.2.2" data-path="lineupestimates.html"><a href="lineupestimates.html#diverging-directions-interpolation"><i class="fa fa-check"></i><b>5.2.2</b> “Diverging directions” interpolation</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="lineupestimates.html"><a href="lineupestimates.html#nationalaccounts"><i class="fa fa-check"></i><b>5.3</b> National accounts data</a></li>
+<li class="chapter" data-level="5.4" data-path="lineupestimates.html"><a href="lineupestimates.html#choosing-between-consumption-and-income-estimates"><i class="fa fa-check"></i><b>5.4</b> Choosing between consumption and income estimates</a></li>
+<li class="chapter" data-level="5.5" data-path="lineupestimates.html"><a href="lineupestimates.html#regionsandcountries"><i class="fa fa-check"></i><b>5.5</b> Regional classification</a></li>
+<li class="chapter" data-level="5.6" data-path="lineupestimates.html"><a href="lineupestimates.html#population"><i class="fa fa-check"></i><b>5.6</b> Population</a></li>
+<li class="chapter" data-level="5.7" data-path="lineupestimates.html"><a href="lineupestimates.html#nodata"><i class="fa fa-check"></i><b>5.7</b> Treatment of countries without any poverty data</a></li>
+<li class="chapter" data-level="5.8" data-path="lineupestimates.html"><a href="lineupestimates.html#coverage-rule"><i class="fa fa-check"></i><b>5.8</b> Coverage rule</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 </ul>
@@ -243,7 +270,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">2.4.1</span> Spatial deflation</h3>
 <p>Suppose a household pays $1 for a kilo of rice in an urban center, while a rural household in the same country only pays $0.5 for a similar quality and amount of rice. If one were to assess poverty based on the value of the goods and services consumed without accounting for these price differences, everything else equal, one would conclude that the rural household is poorer than the urban household. Yet, from a welfare perspective, they are equally well off. To properly compare the welfare levels of the two households one would need to account for the differences in price levels that the two households face.</p>
 <p>There are several ways to account for spatial price differences. One way is to compare the price of a representative basket of goods across locations and convert household consumption expenditure into the prices of a reference location, such as the capital city or the national average price level.</p>
-<p>Currently most surveys from East Asia and Pacific, Latin America and the Caribbean, and Europe and Central Asia are spatially deflated, while it is less common in Sub-Saharan Africa, South Asia and the Middle East and North Africa. China, India and Indonesia have rural/urban <a href="surveyestimates.html#PPPs">purchasing power parities (PPPs)</a> that are used to deflate household welfare aggregates to account for spatial price differences within these countries.</p>
+<p>Currently most surveys from East Asia and Pacific, Latin America and the Caribbean, and Europe and Central Asia are spatially deflated, while it is less common in Sub-Saharan Africa, South Asia and the Middle East and North Africa. China, India and Indonesia have rural/urban <a href="convert.html#PPPs">purchasing power parities (PPPs)</a> that are used to deflate household welfare aggregates to account for spatial price differences within these countries.</p>
 </div>
 <div id="temporal-deflation" class="section level3" number="2.4.2">
 <h3><span class="header-section-number">2.4.2</span> Temporal deflation</h3>
@@ -339,7 +366,7 @@ World Bank. 2018a. <em>Poverty and Shared Prosperity 2018</em>. Washington, DC: 
         </div>
       </div>
 <a href="acquiring.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="surveyestimates.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="convert.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
