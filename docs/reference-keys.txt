@@ -33,3 +33,12 @@ population
 nodata
 coverage-rule
 comparability-database
+tgd
+step-1-acquiring-household-survey-data
+step-2-constructing-welfare-aggregates
+step-3-converting-welfare-aggregates-to-same-prices
+step-4-calculating-survey-estimates-of-poverty-and-inequality
+step-5-calculating-global-and-regional-poverty
+convert
+mpm
+dist
