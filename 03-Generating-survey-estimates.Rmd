@@ -84,7 +84,13 @@ $$
 P_0 = - \frac{1}{2m}[n + r(b+2z/\mu)((b+2z/\mu)^2)-m)^{-1/2}],
 $$
 
-where $m$ = $b^2 - 4a$, $n = 2be - 4c$, $r = (n^2 - 4me^2)^{1/2}$, $e = -(a + b + c + 1)$, $z$ is the poverty line, $\mu$ is mean welfare, and $a, b, c$ are the parameter estimates of the GQ Lorenz function (source code).
+where $m$ = $b^2 - 4a$, $n = 2be - 4c$, $r = (n^2 - 4me^2)^{1/2}$, $e = -(a + b + c + 1)$, $z$ is the poverty line, $\mu$ is mean welfare, and $a, b, c$ are the parameter estimates of the GQ Lorenz function (source code). If the Beta Lorenz function is used, the poverty headcount is estimated using the expression below:
+
+$$
+\theta {P_0}^\gamma (1 - {P_0})^\delta \left[\frac{\gamma}{P_0} - \frac{\delta}{(1 - {P_0})}\right] = 1 - \frac{z}{\mu}
+$$
+
+where where $\theta$, $\delta$, and $\gamma$ are parameter estimates (see [section on treatment of grouped data](#tgd) the GQ and Beta Lorenz functions).
 
 **Poverty gap index**: The poverty gap index ($P_1$) is a measure that adds up the extent to which individuals on average fall below the poverty line (i.e. the depth of poverty), and expresses it as a percentage of the poverty line. The poverty gap index is obtained from micro data with the following expression:
 
@@ -96,7 +102,7 @@ $$
 P_1 = P_0 - (\mu/z)L(P_0)
 $$
 
-with all variables defined as before (source code: [grouped data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R)).
+with all variables defined as before (source code: [grouped data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R)). The expression holds for both GQ and Beta Lorenz functions.
 
 **Poverty severity index**: The poverty severity index ($P_2$) is a measure of the weighted sum of poverty gaps (as a proportion of the poverty line), where the weights are the proportionate poverty gaps themselves. The poverty severity index is obtained from micro data with the following expression:
 
@@ -104,19 +110,31 @@ $$ P_1 = \frac{1}{N} \sum_{i=1}^{N} \left(\frac{G_i}{z} \right)^2 $$
 
 with all variables defined as before. Also known as the squared poverty gap index, the poverty severity index accounts for inequality among the poor (source code: [micro data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R)).
 
-For grouped data, the poverty severity index is obtained using the following expression:
+With the GQ Lorenz function, the poverty severity index is obtained from grouped data using the following expression:
 
 $$
 P_2 = 2(P_1) - P_0 - \left(\frac{\mu}{z}\right)^2 \left[aP_0 + bL(P_0) - \left(\frac{r}{16}\right)ln \left(\frac{1 - P_0/s_1}{1 - P_0/s_2}\right)     \right],
 $$
 
-where $s_1 = (r- n)/(2m)$, $s_2 = -(r + n)/(2m)$, and all other variables are defined as before (source code: [grouped data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R)).
+where $s_1 = (r- n)/(2m)$, $s_2 = -(r + n)/(2m)$, and all other variables are defined as before (source code: [grouped data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R)). With the the Beta Lorenz function, the poverty severity index is given as:
+
+$$
+P_2 = (1 -\mu/z)  \left[ 2P_1 - (1- \mu/z) P_0) \right] \\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ + \theta^2 \left(\frac{\mu}{z}\right)^2\left[\gamma^2B(P_0,2\gamma-1,2\delta+1) \\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ - 2\gamma\delta B(P_0,2\gamma,2\delta) + \delta^2 B(P_0,2\gamma + 1,2\delta-1) \right]
+$$
+
+with
+
+$$
+B(k,r,s) = \int_0^k p^{r-1}(1 - p)^{s - 1} ~dp
+$$
+
+where $k$, $r$, $s$ are parameters and all other notations here are defined as before for the Beta Lorenz function.
 
 **The Watts index**: The Watts index ($W$) is also an inequality-sensitive poverty measure that is given as:
 
 $$ W  = \frac{1}{N} \sum_{i=1}^{q} ln \left(\frac{z}{y_i} \right), $$
 
-where $N$ individuals in the population are indexed in ascending order of welfare, and the sum is taken over $q$ individuals whose welfare, $y_i$, falls below the poverty line $z$. This formula applies for both micro and grouped data (source code: [micro data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R) and [grouped data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R)).
+where $N$ individuals in the population are indexed in ascending order of welfare, and the sum is taken over $q$ individuals whose welfare, $y_i$, falls below the poverty line $z$. This formula applies for both micro and grouped data (source code: [micro data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R) and [grouped data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R)). It also holds for both the GQ and Beta Lorenz functions, which are evaluated at the poverty line $z$ and other percentiles $y_i$. A percentile is given as the product of the mean and the first derivative of the GQ or Beta Lorenz function at the respective rank in the distribution. (The first derivatives of the GQ and Beta Lorenz functions are defined below.)
 
 ## Inequality measures {#inequalitymeasures}
 
@@ -132,7 +150,7 @@ When there are $N$ equal intervals on the x-axis.
 
 The Gini index ranges from 0 (perfect equality) to 100 (complete inequality) (source code: [micro data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_gini.R)).
 
-For grouped data, the Gini index is obtained using the following expression:
+With the GQ Lorenz function, the Gini index is obtained from grouped data using the following expression:
 
 $$
 Gini = 100*\begin{cases}
@@ -143,11 +161,19 @@ Gini = 100*\begin{cases}
 
 with all parameters defined as before (source code: [grouped data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R)).
 
+With the Beta Lorenz function, the Gini index is given as:
+
+$$
+Gini = 100 * 2\theta B(1 + \gamma, 1 + \delta)
+$$
+
+Note that $B(1 + \gamma, 1 + \delta)$ is the Beta function $\int_0^1 p^\gamma (1 - p)^\delta ~dp$.
+
 **Mean log deviation**: The mean log deviation (MLD) belongs to the family of generalized entropy (GE) inequality measures. It is given as:
 
 $$ MLD  = \frac{1}{N} \sum_{i=1}^{N} ln \left(\frac{μ}{y_i} \right)*100, $$
 
-where $N$ is the total population size, $μ$ is the mean welfare per person, and $y_i$ is welfare of individual $i$. The mean log deviation has a minimum value of 0 (perfect equality) and has no upper bound. This formula applies for both micro and grouped data (source code: [micro data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_mld.R) and [grouped data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R)).
+where $N$ is the total population size, $μ$ is the mean welfare per person, and $y_i$ is welfare of individual $i$. The mean log deviation has a minimum value of 0 (perfect equality) and has no upper bound. This formula applies for both micro and grouped data (source code: [micro data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_mld.R) and [grouped data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R)). It also holds for both the GQ and Beta Lorenz functions, which are evaluated at the poverty line $z$ and other percentiles $y_i$. A percentile is given as the product of the mean and the first derivative of the GQ or Beta Lorenz function at the respective rank in the distribution. (The first derivatives of the GQ and Beta Lorenz functions are defined below.)
 
 **Polarization**: The polarization index ($P$) measures the extent to which the distribution of welfare is "spread out" and bi-modal. It is given as:
 
@@ -157,6 +183,44 @@ $$
 
 where $\mu^*$ is the distribution-correction mean (i.e. $\mu(1 - Gini/100)$), $\mu^L$ is the mean of the poorest half of the population, and $m$ is the median. Like the Gini coefficient, the polarization index ranges from 0 (no polarization) to 1 (complete polarization). The polarization index is based on @wolfson1994 and @ravallion1996. This formula applies for both micro and grouped data (source code: [micro data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_polarization.R) and [grouped data](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lq.R)).
 
+**Median**: The median is the amount of welfare per capita that divides the distribution into two equal halves. For micro data, the median is estimated as:
+
+$$
+Med = \begin{cases}
+ Y \left[\frac{n}{2}\right] & \text{if $n$ is even} \\ 
+   \left(Y\left[\frac{n - 1}{2} \right] + Y \left[\frac{n + 1}{2} \right]\right) &  \text{if $n$ is odd}
+ \end{cases} 
+ $$
+
+where $Y$ is the ordered list of welfare per capita in the sample, and $n$ is the sample size.
+
+For grouped data, the median is estimated as:
+
+$$
+Med = \mu L^{'}(0.5)
+$$
+
+where $\mu$ is the mean and $L^{'}(0.5)$ is the first derivative of the GQ or Beta Lorenz function at the 50th percentile.
+
+The first derivative of the GQ Lorenz function is given as:
+
+$$
+L^{'}(p) = -\frac{b}{2} - \frac{(2mp + n)(mp^2 + np + e^2)^
+{-1/2}}{4}
+$$
+
+with all variables and parameter estimates as previously defined.
+
+The first derivative of the Beta Lorenz function is given as:
+
+$$
+L^{'}(p) = 1 - \theta p^\gamma (1 - p)^\delta \left[\frac{\gamma}{p} - \frac{\delta}{1 - p}\right]
+$$
+
+with all variables and parameter estimates as previously defined.
+
 **Decile shares**: Imagine that we order all households according to their welfare per capita, such that the first decile contains the 10% of the population with the lowest welfare and so on. Decile shares measure the share of total welfare going to each decile. Formally, the decile share of decile $d$ is given by:
 
 $$ decileshare_d= \frac{\sum_{i \in d} {y_i}}{\sum_{i=1}^{N} {y_i}} ,  d \in \{1,2,..,10 \} $$
+
+This formula holds for both micro and grouped data. For grouped data, welfare per capita $y_i$ is the product of the mean and the first derivative of the GQ or Beta Lorenz function at the respective rank in the distribution.
