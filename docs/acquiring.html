@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 1 Acquiring household survey data | Poverty and Inequality Platform Methodology Handbook</title>
   <meta name="description" content="Chapter 1 Acquiring household survey data | Poverty and Inequality Platform Methodology Handbook" />
-  <meta name="generator" content="bookdown 0.21.6 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21.4 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 1 Acquiring household survey data | Poverty and Inequality Platform Methodology Handbook" />
   <meta property="og:type" content="book" />
@@ -31,7 +31,7 @@
   
 <link rel="prev" href="index.html"/>
 <link rel="next" href="welfareaggregate.html"/>
-<script src="libs/header-attrs-2.6.6/header-attrs.js"></script>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -49,11 +49,76 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
 
 
-
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 </head>
 
@@ -77,10 +142,9 @@
 <li class="chapter" data-level="1" data-path="acquiring.html"><a href="acquiring.html"><i class="fa fa-check"></i><b>1</b> Acquiring household survey data</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="acquiring.html"><a href="acquiring.html#selection"><i class="fa fa-check"></i><b>1.1</b> Selection criteria and source of data</a></li>
-<li class="chapter" data-level="1.2" data-path="acquiring.html"><a href="acquiring.html#representativeness"><i class="fa fa-check"></i><b>1.2</b> Representativeness</a></li>
-<li class="chapter" data-level="1.3" data-path="acquiring.html"><a href="acquiring.html#how-data-are-obtained"><i class="fa fa-check"></i><b>1.3</b> How data are obtained</a></li>
-<li class="chapter" data-level="1.4" data-path="acquiring.html"><a href="acquiring.html#grouped"><i class="fa fa-check"></i><b>1.4</b> Grouped vs. unit record data</a></li>
-<li class="chapter" data-level="1.5" data-path="acquiring.html"><a href="acquiring.html#imputed"><i class="fa fa-check"></i><b>1.5</b> Multiply imputed micro data</a></li>
+<li class="chapter" data-level="1.2" data-path="acquiring.html"><a href="acquiring.html#how-data-are-obtained"><i class="fa fa-check"></i><b>1.2</b> How data are obtained</a></li>
+<li class="chapter" data-level="1.3" data-path="acquiring.html"><a href="acquiring.html#grouped"><i class="fa fa-check"></i><b>1.3</b> Grouped vs. unit record data</a></li>
+<li class="chapter" data-level="1.4" data-path="acquiring.html"><a href="acquiring.html#imputed"><i class="fa fa-check"></i><b>1.4</b> Multiply imputed micro data</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="welfareaggregate.html"><a href="welfareaggregate.html"><i class="fa fa-check"></i><b>2</b> Constructing welfare aggregates</a>
 <ul>
@@ -93,7 +157,7 @@
 <li class="chapter" data-level="2.4.2" data-path="welfareaggregate.html"><a href="welfareaggregate.html#temporal-deflation"><i class="fa fa-check"></i><b>2.4.2</b> Temporal deflation</a></li>
 </ul></li>
 <li class="chapter" data-level="2.5" data-path="welfareaggregate.html"><a href="welfareaggregate.html#equivalence-scale"><i class="fa fa-check"></i><b>2.5</b> Equivalence scale</a></li>
-<li class="chapter" data-level="2.6" data-path="welfareaggregate.html"><a href="welfareaggregate.html#comparability"><i class="fa fa-check"></i><b>2.6</b> Treatment of grouped data</a></li>
+<li class="chapter" data-level="2.6" data-path="welfareaggregate.html"><a href="welfareaggregate.html#tgd"><i class="fa fa-check"></i><b>2.6</b> Treatment of grouped data</a></li>
 <li class="chapter" data-level="2.7" data-path="welfareaggregate.html"><a href="welfareaggregate.html#comparability"><i class="fa fa-check"></i><b>2.7</b> Comparability database</a>
 <ul>
 <li class="chapter" data-level="" data-path="welfareaggregate.html"><a href="welfareaggregate.html#r"><i class="fa fa-check"></i>R</a></li>
@@ -128,6 +192,7 @@
 <li class="chapter" data-level="4.7" data-path="lineupestimates.html"><a href="lineupestimates.html#nodata"><i class="fa fa-check"></i><b>4.7</b> Treatment of countries without any poverty data</a></li>
 <li class="chapter" data-level="4.8" data-path="lineupestimates.html"><a href="lineupestimates.html#coverage-rule"><i class="fa fa-check"></i><b>4.8</b> Coverage rule</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 </ul>
 
       </nav>
@@ -150,34 +215,33 @@
 <p>This section describes the data sources used for measuring poverty and inequality as well as how the data are selected and obtained.</p>
 <div id="selection" class="section level2" number="1.1">
 <h2><span class="header-section-number">1.1</span> Selection criteria and source of data</h2>
-<p>For developing countries, the Poverty and Inequality Platform relies on household surveys carried out by countries’ National Statistical Offices (NSO). Typically household budget surveys or household income expenditure surveys are used. These surveys ask households in the country about their income or consumption patterns and much more.</p>
+<p>For most countries, the Poverty and Inequality Platform relies on household surveys carried out by countries’ National Statistical Offices (NSO). Typically household budget surveys or household income and expenditure surveys are used. These surveys ask households in the country about their income or consumption patterns and much more.</p>
 <p>For high-income countries in the European Union (with the exception of Germany), the data are obtained from the <a href="https://ec.europa.eu/eurostat/web/microdata/european-union-statistics-on-income-and-living-conditions">EU Statistics on Income and Living Conditions (EU-SILC)</a>. EU-SILC data are partly obtained from surveys and partly obtained from administrative records. For other high-income economies (Australia; Canada; Germany; Israel; Japan; South Korea; Taiwan, China; and the United States) data from the <a href="https://www.lisdatacenter.org">Luxembourg Income Study (LIS) Database</a> are used. These data rely on surveys carried out by NSOs or by academic institutions. Data from the LIS database are also used for high-income countries from the European Union for years predating EU-SILC.</p>
-<p>Occasionally, a survey fulfilling the above criteria is not incorporated into the platform because the World Bank does not have access to the data, due to concerns with the survey design or welfare aggregate, or because the auxiliary data needed (such as <a href="surveyestimates.html#CPIs">consumer price indices</a> and <a href="#PPPs%5D">purchasing power parities</a>) are unavailable. Whenever decisions are made to exclude a survey from the platform, they are done by the Global Poverty Working Group within the World Bank and the reason for the exclusion of a data point is summarized in the “What’s New” documents[hyperlink to come].</p>
-</div>
-<div id="representativeness" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Representativeness</h2>
-<p>In the majority of cases, the surveys used are representative of all households in a country. This means that they are based on a random selection of all households in the country, typically defined from the most recent census. Two factors prevent these surveys from being representative of the entire population:</p>
+<p>Occasionally, a survey fulfilling the above criteria is not incorporated into the platform because the World Bank does not have access to the data, due to concerns with the survey design or welfare aggregate, or because the auxiliary data needed (such as <a href="surveyestimates.html#CPIs">consumer price indices</a> and <a href="surveyestimates.html#PPPs">purchasing power parities</a>) are unavailable. Decisions to exclude survey from the platform that have previously been published are discussed carefully in the Global Poverty Working Group within the World Bank and the reason for the exclusion of a data point is summarized in the “What’s New” documents[hyperlink to come].
+## Representativeness {#representativeness}</p>
+<p>In the majority of cases, the surveys used are representative of all households in a country. This means that they are based on a random selection of all households in the country, typically defined from the most recent census. Three factors prevent these surveys from being representative of the entire population:</p>
 <ol style="list-style-type: decimal">
+<li>Some households are less likely to agree to participate in national surveys on income and consumption, or, if they participate, less likely to answer the questions used for calculating poverty. This is particularly a concern for wealthy households, which means that the distributions captured here might have too thin a tail at the top.</li>
 <li>Some individuals do not reside in households and hence are not captured by the above sampling frame. This particularly concerns homeless people and individuals residing in nursery homes, prisons, and displacement camps.</li>
 <li>At times, conflicts and extreme weather events prevent the enumerators from going to certain parts of the country. In these cases, some geographical areas may be excluded from the survey. The 2018-19 Nigeria Living Standards Survey, for example, is not representative of the Borno state, since parts of the state became inaccessible over the course of the survey.</li>
 </ol>
-<p>For the purpose of calculating global or regional poverty, the poverty rates estimated in the surveys are assumed to be representative of the entire population despite of the two shortcomings above. This is largely because acquiring any alternative poverty estimate for the missing populations is challenging. In certain scenarios, the survey design allows the consumption or income of households not covered to be <a href="acquiring.html#imputed">imputed</a>, in which case the second problem is addressed.</p>
-<p>The PIP also contains some surveys which explicitly only target the urban or rural part of the population. These surveys are indicated as [waiting to see how they will appear in PIP]. These surveys are not used for the purposes of calculating regional or global poverty, with only one exception. This exception concerns Argentina which has no nationally representative surveys, but only surveys representative of its urban population. For the urban population of Argentina, these surveys are used for the regional and global poverty counts, while the rural population of Argentina gets the same treatment as <a href="lineupestimates.html#nodata">countries for which we have no data</a>.</p>
+<p>For the purpose of calculating global or regional poverty, the poverty rates estimated in the surveys are assumed to be representative of the entire population despite of the two shortcomings above. This is largely because acquiring any alternative poverty estimate for the missing populations is challenging.</p>
+<p>The PIP also contains some surveys which explicitly only target the urban or rural part of the population. These surveys are indicated as [waiting to see how they will appear in PIP]. These surveys are not used for the purposes of calculating regional or global poverty, with one exception. This exception concerns Argentina which has no nationally representative surveys, but only surveys representative of its urban population. For the urban population of Argentina, these surveys are used for the regional and global poverty counts, while the rural population of Argentina gets the same treatment as <a href="lineupestimates.html#nodata">countries for which we have no data</a>.</p>
 </div>
-<div id="how-data-are-obtained" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> How data are obtained</h2>
+<div id="how-data-are-obtained" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> How data are obtained</h2>
 <p>Most of the data for East Asia &amp; Pacific, the Middle East &amp; North Africa, South Asia, and Sub-Saharan Africa are obtained from countries’ National Statistical Offices. In many low-income countries, the Poverty and Equity Global Practice of the World Bank is cooperating with the National Statistical Offices and supporting their efforts to conduct household surveys and measure poverty. Data are obtained through these partnerships.</p>
-<p>For Latin America and the Caribbean, most of the data are obtained from CEDLAS’s Socio-Economic Database for Latin America and the Caribbean (SEDLAC).</p>
+<p>For Latin America and the Caribbean, most of the data are obtained from the CEDLAS’s Socio-Economic Database for Latin America and the Caribbean (SEDLAC), which is a partnership between the Center for Distributive, Labor and Social Studies (CEDLAS), at the National University of La Plata in Argentina, and the World Bank’s Poverty and Equity Global Practice for Latin America and the Caribbean.</p>
 <p>For most high-income countries data are obtained through the Luxembourg Income Study or EU-SILC.</p>
 <p>All of the data are harmonized by the Poverty and Equity Global Practice of the World Bank and then passed on to the Poverty and Inequality Platform.</p>
 </div>
-<div id="grouped" class="section level2" number="1.4">
-<h2><span class="header-section-number">1.4</span> Grouped vs. unit record data</h2>
-<p>In some cases, countries are unwilling to share unit-record data with the World Bank but they are willing to share grouped data. Grouped data are aggregated data, often to 5,10, 20 or 100 quantiles of the distribution. Such data could reflect, for example, the mean income of each percentile or the income share of each percentile. For the purposes of estimating poverty and inequality, a Lorenz curve is estimated from these grouped data upon which inequality and poverty can be estimated ( <a href="#treatmentgroups">described here</a>). Grouped data are used for Algeria, China, Guyana, Suriname, Turkmenistan, Trinidad &amp; Tobago, Venezuela, and the United Arab Emirates and more countries for earlier years. In PIP, grouped data are indicated with a [wait to see how it will be indicated] while unit-record data is indicated with a [wait to see how it will be indicated].</p>
+<div id="grouped" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> Grouped vs. unit record data</h2>
+<p>In some cases, countries are unwilling to share unit-record data with the World Bank but are willing to share grouped data. Grouped data are aggregated data, often to 5,10, 20 or 100 quantiles of the distribution. Such data could reflect, for example, the mean income of each percentile or the income share of each percentile. For the purposes of estimating poverty and inequality, a Lorenz curve is estimated from these grouped data upon which inequality and poverty can be estimated ( <a href="#treatmentgroups">described here</a>). Grouped data are used for Algeria, China, Guyana, Suriname, Turkmenistan, Trinidad &amp; Tobago, Venezuela, and the United Arab Emirates and more countries for earlier years. In PIP, grouped data are indicated with a [wait to see how it will be indicated] while unit-record data is indicated with a [wait to see how it will be indicated].</p>
 </div>
-<div id="imputed" class="section level2" number="1.5">
-<h2><span class="header-section-number">1.5</span> Multiply imputed micro data</h2>
-<p>At times, unit record data from household surveys are not representative of all households since conflict or other safety concerns prohibit enumerators from getting to all areas of a country (see discussion <a href="acquiring.html#representativeness">here</a>). In exceptional cases, some household information was collected, either because part of the interviews were finished before a crisis unfolded, or because shorter interviews without a full welfare aggregate were conducted in an attempt to minimize safety risks. In these situations, a full welfare aggregate can be imputed using statistical models. In an attempt to minimize the uncertainty of such methods, described in greater detail in [South Sudan and Somalia papers], they often work by creating multiple imputed datasets, calculating statistics of interest in each of these dataset, and averaging over them to acquire a final estimate.</p>
+<div id="imputed" class="section level2" number="1.4">
+<h2><span class="header-section-number">1.4</span> Multiply imputed micro data</h2>
+<p>In some countries, a full household survey with a comprehensive consumption measure cannot be collected due to concerns over the safety of enumerators and respondents, often in fragile and conflict-affected countries. However, shorter interviews without a full welfare aggregate which minimize safety risks can be conducted. In these cases, a full welfare aggregate can be imputed using statistical models. These methods, described in greater detail in [South Sudan and Somalia papers], typically use multiple imputations, resulting in a dataset with 100 consumption values for each household. These multiple consumption values reflect the uncertainty that arises from the statistical modelling. Statistics of interest, such as poverty or inequality are computed separately on each of these consumption vectors and averaged to get to the final estimate.</p>
 <p>Currently such data are used for South Sudan 2016, Somalia 2017, and Zimbabwe 2017.</p>
 
 </div>
@@ -238,6 +302,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

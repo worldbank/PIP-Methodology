@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Constructing welfare aggregates | Poverty and Inequality Platform Methodology Handbook</title>
   <meta name="description" content="Chapter 2 Constructing welfare aggregates | Poverty and Inequality Platform Methodology Handbook" />
-  <meta name="generator" content="bookdown 0.21.6 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21.4 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Constructing welfare aggregates | Poverty and Inequality Platform Methodology Handbook" />
   <meta property="og:type" content="book" />
@@ -31,7 +31,7 @@
   
 <link rel="prev" href="acquiring.html"/>
 <link rel="next" href="surveyestimates.html"/>
-<script src="libs/header-attrs-2.6.6/header-attrs.js"></script>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -49,14 +49,17 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
 
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -117,29 +120,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
-
 </head>
 
 <body>
@@ -162,10 +142,9 @@ div.csl-indent {
 <li class="chapter" data-level="1" data-path="acquiring.html"><a href="acquiring.html"><i class="fa fa-check"></i><b>1</b> Acquiring household survey data</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="acquiring.html"><a href="acquiring.html#selection"><i class="fa fa-check"></i><b>1.1</b> Selection criteria and source of data</a></li>
-<li class="chapter" data-level="1.2" data-path="acquiring.html"><a href="acquiring.html#representativeness"><i class="fa fa-check"></i><b>1.2</b> Representativeness</a></li>
-<li class="chapter" data-level="1.3" data-path="acquiring.html"><a href="acquiring.html#how-data-are-obtained"><i class="fa fa-check"></i><b>1.3</b> How data are obtained</a></li>
-<li class="chapter" data-level="1.4" data-path="acquiring.html"><a href="acquiring.html#grouped"><i class="fa fa-check"></i><b>1.4</b> Grouped vs. unit record data</a></li>
-<li class="chapter" data-level="1.5" data-path="acquiring.html"><a href="acquiring.html#imputed"><i class="fa fa-check"></i><b>1.5</b> Multiply imputed micro data</a></li>
+<li class="chapter" data-level="1.2" data-path="acquiring.html"><a href="acquiring.html#how-data-are-obtained"><i class="fa fa-check"></i><b>1.2</b> How data are obtained</a></li>
+<li class="chapter" data-level="1.3" data-path="acquiring.html"><a href="acquiring.html#grouped"><i class="fa fa-check"></i><b>1.3</b> Grouped vs. unit record data</a></li>
+<li class="chapter" data-level="1.4" data-path="acquiring.html"><a href="acquiring.html#imputed"><i class="fa fa-check"></i><b>1.4</b> Multiply imputed micro data</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="welfareaggregate.html"><a href="welfareaggregate.html"><i class="fa fa-check"></i><b>2</b> Constructing welfare aggregates</a>
 <ul>
@@ -178,8 +157,8 @@ div.csl-indent {
 <li class="chapter" data-level="2.4.2" data-path="welfareaggregate.html"><a href="welfareaggregate.html#temporal-deflation"><i class="fa fa-check"></i><b>2.4.2</b> Temporal deflation</a></li>
 </ul></li>
 <li class="chapter" data-level="2.5" data-path="welfareaggregate.html"><a href="welfareaggregate.html#equivalence-scale"><i class="fa fa-check"></i><b>2.5</b> Equivalence scale</a></li>
-<li class="chapter" data-level="2.6" data-path="welfareaggregate.html"><a href="welfareaggregate.html#comparability"><i class="fa fa-check"></i><b>2.6</b> Treatment of grouped data</a></li>
-<li class="chapter" data-level="2.7" data-path="welfareaggregate.html"><a href="welfareaggregate.html#comparability-database"><i class="fa fa-check"></i><b>2.7</b> Comparability database</a>
+<li class="chapter" data-level="2.6" data-path="welfareaggregate.html"><a href="welfareaggregate.html#tgd"><i class="fa fa-check"></i><b>2.6</b> Treatment of grouped data</a></li>
+<li class="chapter" data-level="2.7" data-path="welfareaggregate.html"><a href="welfareaggregate.html#comparability"><i class="fa fa-check"></i><b>2.7</b> Comparability database</a>
 <ul>
 <li class="chapter" data-level="" data-path="welfareaggregate.html"><a href="welfareaggregate.html#r"><i class="fa fa-check"></i>R</a></li>
 <li class="chapter" data-level="" data-path="welfareaggregate.html"><a href="welfareaggregate.html#stata"><i class="fa fa-check"></i>Stata</a></li>
@@ -213,6 +192,7 @@ div.csl-indent {
 <li class="chapter" data-level="4.7" data-path="lineupestimates.html"><a href="lineupestimates.html#nodata"><i class="fa fa-check"></i><b>4.7</b> Treatment of countries without any poverty data</a></li>
 <li class="chapter" data-level="4.8" data-path="lineupestimates.html"><a href="lineupestimates.html#coverage-rule"><i class="fa fa-check"></i><b>4.8</b> Coverage rule</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 </ul>
 
       </nav>
@@ -281,7 +261,7 @@ countries. Behind the per capita conversion lies an assumption that all househol
 <p>Despite of its compelling features, the lack of agreement on which equivalence scale to use across countries and the more difficult interpretation of the final poverty rates has prevented the World Bank from using such numbers for global poverty monitoring thus far.</p>
 <p>Though equivalence scales aren’t used, it is important to note that each household is weighted by the product of its sampling weight and the household size. The latter implies that the poverty rate shows the share of the <em>population</em> living in poverty, not the share of <em>households</em> living in poverty.</p>
 </div>
-<div id="comparability" class="section level2" number="2.6">
+<div id="tgd" class="section level2" number="2.6">
 <h2><span class="header-section-number">2.6</span> Treatment of grouped data</h2>
 <p>A welfare aggregate is also needed to estimate poverty and inequality from <a href="acquiring.html#grouped">grouped data</a>. Grouped data are consumption expenditure or income organized in graduated class intervals or bins, such as deciles or percentiles. These bins are used to derive a continuous Lorenz curve, which plots the cumulative welfare share (on the y-axis) against the cumulative population share (on the x-axis). Together with information about mean welfare, the Lorenz curve can be used to construct a full distribution. Two approaches are used to derive a Lorenz function, the general quadratic (GQ) Lorenz function and the Beta Lorenz function <span class="citation">(<a href="#ref-datt1998" role="doc-biblioref">Datt 1998</a>)</span>. Both functions are parameterized and estimated. The function that provides the best fit fit is selected for poverty and distributional statistics, conditional on passing normality and validity tests. The tests vary for poverty and distributional statistics (see here for the poverty tests and here for the distributional tests). The GQ Lorenz function is estimated using the following specification:</p>
 <p><span class="math display">\[
@@ -293,7 +273,7 @@ L(1-L) = a(p^2-L) + bL(p-1) + c(p-L),
 L(p) = p - \theta p^\gamma (1-p)^\delta,
 \]</span> where <span class="math inline">\(\theta\)</span>, <span class="math inline">\(\gamma\)</span>, and <span class="math inline">\(\delta\)</span> are parameter estimates <span class="citation">(<a href="#ref-datt1998" role="doc-biblioref">Datt 1998</a>)</span>.</p>
 </div>
-<div id="comparability-database" class="section level2" number="2.7">
+<div id="comparability" class="section level2" number="2.7">
 <h2><span class="header-section-number">2.7</span> Comparability database</h2>
 <p>[<span style="color:red">To be updated once we decide how PIP will utilize the comparability database</span>]</p>
 <p>As countries frequently improve the <a href="welfareaggregate.html#questionnaire">questionnaire design</a> of household surveys and the methodology for the construction of welfare aggregates, poverty estimates over time for a country are not always comparable to each other.</p>

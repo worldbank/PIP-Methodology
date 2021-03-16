@@ -12,6 +12,7 @@ spatialtemporal
 spatial-deflation
 temporal-deflation
 equivalence-scale
+tgd
 comparability
 surveyestimates
 CPIs
