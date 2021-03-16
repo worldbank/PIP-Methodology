@@ -1,6 +1,5 @@
 acquiring
 selection
-representativeness
 how-data-are-obtained
 grouped
 imputed
@@ -12,6 +11,7 @@ spatialtemporal
 spatial-deflation
 temporal-deflation
 equivalence-scale
+tgd
 comparability
 surveyestimates
 CPIs
@@ -32,4 +32,3 @@ regionsandcountries
 population
 nodata
 coverage-rule
-comparability-database
