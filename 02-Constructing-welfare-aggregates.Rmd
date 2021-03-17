@@ -56,9 +56,7 @@ Sometimes, a spatio-temporal price index is used to jointly adjust for both spat
 
 ## Equivalence scale
 
-All welfare aggregates are converted into per capita terms by dividing the total household welfare with the number of household members. The
-use of a per capita normalization is standard in the literature on developing
-countries. Behind the per capita conversion lies an assumption that all household members have equal consumption levels or derive equal welfare from the total household income. This stems from the general assumption that there is rather little scope for economies of size in consumption for poor people.
+All welfare aggregates are converted into per capita terms by dividing the total household welfare with the number of household members. The use of a per capita normalization is standard in the literature on developing countries. Behind the per capita conversion lies an assumption that all household members have equal consumption levels or derive equal welfare from the total household income. This stems from the general assumption that there is rather little scope for economies of size in consumption for poor people.
 
 However, that assumption can be questioned [@lanjouw1995]. If household members have different needs, which could be the case if children, for example, require less consumption than adults, then using per capita welfare might be misleading. An alternative assumption often used by countries when measuring poverty, is to use an adult equivalence scale. Such a scale defines the consumption need of each household member---often based on age and the household size---relative to a benchmark category. Total household welfare is then converted into welfare per adult equivalent household member.
 

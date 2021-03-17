@@ -42,3 +42,4 @@ step-5-calculating-global-and-regional-poverty
 convert
 mpm
 dist
+inequality-measures-inequalitymeasures
