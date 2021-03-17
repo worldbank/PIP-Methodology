@@ -222,6 +222,63 @@ B(k,r,s) = \int_0^k p^{r-1}(1 - p)^{s - 1} ~dp
 </div>
 <div id="mpm" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> Multidimensional Poverty Measure</h2>
+<p>In many settings, important aspects of well-being, such as access to quality education or core services, are not captured by standard monetary measures. To address this concern, an established tradition of multidimensional poverty measurement measures these nonmonetary dimensions directly and aggregates them into an index. The <a href="http://hdr.undp.org/en/2020-MPI">United Nations Development Programme’s Multidimensional Poverty Index (Global MPI)</a>, produced in conjunction with the <a href="https://ophi.org.uk/multidimensional-poverty-index/">Oxford Poverty and Human Development Initiative</a>, is a foremost example of such a multidimensional poverty measure. In 2018, the World Bank launched its own multidimensional poverty measure, building heavily on these prior efforts <span class="citation"><a href="#ref-worldbank2018" role="doc-biblioref">World Bank</a> (<a href="#ref-worldbank2018" role="doc-biblioref">2018</a>)</span>.</p>
+<p>The dimension, indicators and weights of the World Bank’s multidimensional poverty measure are given as follows:</p>
+<table>
+<colgroup>
+<col width="25%" />
+<col width="65%" />
+<col width="6%" />
+<col width="3%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dimension</th>
+<th>Indicator</th>
+<th>Weight</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Monetary poverty</td>
+<td>Daily consumption or income is less than US$1.90 per person</td>
+<td>1/3</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Education</td>
+<td>At least one school-age child up to the age of grade 8 is not enrolled in school</td>
+<td>1/6</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Education</td>
+<td>No adult in the household (age of grade 9 or above) has completed primary education</td>
+<td>1/6</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Access to basic infrastructure</td>
+<td>The household lacks access to limited-standard drinking water</td>
+<td>1/9</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Access to basic infrastructure</td>
+<td>The household lacks access to limited-standard sanitation</td>
+<td>1/9</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Access to basic infrastructure</td>
+<td>The household has no access to electricity</td>
+<td>1/9</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>An individual is considered poor if she/he lives in a household that is deprived at at least 1/3 of the weighted indicators.</p>
 </div>
 <div id="inequalitymeasures" class="section level2" number="4.3">
 <h2><span class="header-section-number">4.3</span> Inequality measures</h2>
@@ -257,7 +314,8 @@ P =  \frac{2(\mu^* - \mu^L)}{m},
 </div>
 <div id="dist" class="section level2" number="4.4">
 <h2><span class="header-section-number">4.4</span> Other distributional statistics</h2>
-<p><strong>Median</strong>: The median is the amount of welfare per capita that divides the distribution into two equal halves. For micro data, the median is estimated as:</p>
+<p><strong>Median</strong>:</p>
+<p>The median is the amount of welfare per capita that divides the distribution into two equal halves. For micro data, the median is estimated as:</p>
 <p><span class="math display">\[
 Med = \begin{cases}
  Y \left[\frac{n}{2}\right] &amp; \text{if $n$ is even} \\ 
@@ -281,24 +339,25 @@ L^{&#39;}(p) = -\frac{b}{2} - \frac{(2mp + n)(mp^2 + np + e^2)^
 L^{&#39;}(p) = 1 - \theta p^\gamma (1 - p)^\delta \left[\frac{\gamma}{p} - \frac{\delta}{1 - p}\right]
 \]</span></p>
 <p>with all variables and parameter estimates as previously defined.</p>
-<p><strong>Shared prosperity</strong></p>
-<p>Shared prosperity measures the extent to which economic growth is inclusive by focusing on household income or consumption growth among the population at the bottom of the income distribution rather than on the average or on those at the top. It is defined as the annualized growth rate of the mean household per capita income or consumption of the bottom 40%. Promoting shared prosperity is one of the twin goals of the World Bank Group (together with eradicating extreme poverty).</p>
-<p>Why does shared prosperity focus on the bottom 40? Basu (2001, 2006) argues for a focus on the bottom quintile income. However, there is typically more data error at the bottom of the distribution, and the chosen bottom segment should not be too small. The selection of the bottom 40 as a group for monitoring is a compromise between competing considerations; the bottom 40 still focuses on the bottom of the distribution but is not too small or at risk of introducing measurement errors.</p>
-<p>Estimates of shared prosperity requires</p>
-<p>In countries in Europe and Central Asia using household per capita income as the welfare aggregate, households with negative incomes are included when estimating shared prosperity.</p>
-<p>In order for shared prosperity to be calculated, it must be the case that</p>
-<ul>
-<li><p>Two <a href="welfareaggregate.html#comparability">comparable</a> household surveys are available</p></li>
-<li><p>Among comparable surveys, one must be conducted within two years of 2012, and the other within two years of 2017.</p></li>
-<li><p>The period between the selected initial and end years should range between three and seven years. For example, a shared prosperity period of 2012–13 meets the second selection criterion but would not be allowed because it does not meet this third requirement.</p></li>
-<li><p>In cases where multiple surveys can fulfill
-these criteria, the most recent survey years
-are typically chosen</p></li>
-</ul>
-<p><strong>Shared prosperity premium</strong></p>
-<p><strong>Decile shares</strong>: Imagine that we order all households according to their welfare per capita, such that the first decile contains the 10% of the population with the lowest welfare and so on. Decile shares measure the share of total welfare going to each decile. Formally, the decile share of decile <span class="math inline">\(d\)</span> is given by:</p>
+<p><strong>Decile shares</strong>:</p>
+<p>Imagine that we order all households according to their welfare per capita, such that the first decile contains the 10% of the population with the lowest welfare and so on. Decile shares measure the share of total welfare going to each decile. Formally, the decile share of decile <span class="math inline">\(d\)</span> is given by:</p>
 <p><span class="math display">\[ decileshare_d= \frac{\sum_{i \in d} {y_i}}{\sum_{i=1}^{N} {y_i}} ,  d \in \{1,2,..,10 \} \]</span></p>
 <p>This formula holds for both micro and grouped data. For grouped data, welfare per capita <span class="math inline">\(y_i\)</span> is the product of the mean and the first derivative of the GQ or Beta Lorenz function at the respective rank in the distribution.</p>
+<p><strong>Shared prosperity</strong></p>
+<p>Shared prosperity measures the extent to which economic growth is inclusive by focusing on household income or consumption growth among the population at the bottom of the income distribution. It is defined as the annualized growth rate of the mean household per capita income or consumption of the bottom 40%. Promoting shared prosperity is one of the twin goals of the World Bank Group together with eradicating extreme poverty. The selection of the bottom 40 as a group for monitoring is a compromise between competing considerations; the bottom 40 still focuses on the bottom of the distribution but is not too small that it risks introducing measurement errors.</p>
+<p>Formally, shared prosperity, <span class="math inline">\(sp\)</span>, is calculated as</p>
+<p><span class="math display">\[ sp = \left(\frac{\sum_{i\in d}{y_{i,t_2}}}{\sum_{j \in d}{y_{j,t_1}}}-1 \right)^{(t_2-t_1)},     d =\{1,2,3,4\}.
+\]</span></p>
+<p>Shared prosperity is anonymized, meaning that it does not track the same individuals in both time periods (hence the different subscripts, <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>,.</p>
+<p>In order for shared prosperity to be calculated for a country the following three criteria must be met:</p>
+<p>1 Two <a href="welfareaggregate.html#comparability">comparable</a> household surveys are available</p>
+<p>2 Among comparable surveys, one must be conducted within two years of latest reference year (currently 2017) and the other within two years of five years prior to the reference year (currently 2012).</p>
+<p>3 The period between the selected initial and end years should range between three and seven years. For example, a shared prosperity period of 2014–15 meets the second selection criterion but would not be allowed because it does not meet this third requirement.</p>
+<p>In cases where multiple surveys can fulfill these criteria, the most recent survey years are typically chosen. In countries in Europe and Central Asia using household per capita income as the welfare aggregate, households with negative incomes are included when estimating shared prosperity.</p>
+<p>More information on shared prosperity can be found at the <a href="https://www.worldbank.org/en/topic/poverty/brief/global-database-of-shared-prosperity">Global Database of Shared Prosperity</a>.</p>
+<p><strong>Shared prosperity premium</strong></p>
+<p>The shared prosperity premium, <span class="math inline">\(spp\)</span>, measures the difference in annualized growth of the bottom 40%, shared prosperity, <span class="math inline">\(sp\)</span>, and the annualized growth of the mean:</p>
+<p><span class="math display">\[ spp = sp - \left(\frac{\mu_{t_2}}{\mu_{t_1}}-1 \right)^{(t_2-t_1)},     d =\{1,2,3,4\}. \]</span></p>
 
 </div>
 </div>
@@ -315,6 +374,9 @@ Ravallion, Martin, and Shaohua Chen. 1996. <span>“What Can New Survey Data Tel
 </div>
 <div id="ref-wolfson1994" class="csl-entry">
 Wolfson, Michael C. 1994. <span>“When Inequalities Diverge.”</span> <em>The American Economic Review</em> 84 (2): 353–58.
+</div>
+<div id="ref-worldbank2018" class="csl-entry">
+World Bank. 2018. <em>Poverty and Shared Prosperity 2018</em>. Washington, DC: World Bank. <a href="https://doi.org/10.1596/978-1-4648-1330-6">https://doi.org/10.1596/978-1-4648-1330-6</a>.
 </div>
 </div>
             </section>
