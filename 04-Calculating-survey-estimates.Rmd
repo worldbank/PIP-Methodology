@@ -125,8 +125,9 @@ where $\mu^*$ is the distribution-correction mean (i.e. $\mu(1 - Gini/100)$), $\
 
 ## Other distributional statistics {#dist}
 
+**Median**:
 
-**Median**: The median is the amount of welfare per capita that divides the distribution into two equal halves. For micro data, the median is estimated as:
+The median is the amount of welfare per capita that divides the distribution into two equal halves. For micro data, the median is estimated as:
 
 $$
 Med = \begin{cases}
@@ -162,12 +163,39 @@ $$
 
 with all variables and parameter estimates as previously defined.
 
-**Shared prosperity**
+**Decile shares**:
 
-**Shared prosperity premium**
-
-**Decile shares**: Imagine that we order all households according to their welfare per capita, such that the first decile contains the 10% of the population with the lowest welfare and so on. Decile shares measure the share of total welfare going to each decile. Formally, the decile share of decile $d$ is given by:
+Imagine that we order all households according to their welfare per capita, such that the first decile contains the 10% of the population with the lowest welfare and so on. Decile shares measure the share of total welfare going to each decile. Formally, the decile share of decile $d$ is given by:
 
 $$ decileshare_d= \frac{\sum_{i \in d} {y_i}}{\sum_{i=1}^{N} {y_i}} ,  d \in \{1,2,..,10 \} $$
 
 This formula holds for both micro and grouped data. For grouped data, welfare per capita $y_i$ is the product of the mean and the first derivative of the GQ or Beta Lorenz function at the respective rank in the distribution.
+
+**Shared prosperity**
+
+Shared prosperity measures the extent to which economic growth is inclusive by focusing on household income or consumption growth among the population at the bottom of the income distribution. It is defined as the annualized growth rate of the mean household per capita income or consumption of the bottom 40%. Promoting shared prosperity is one of the twin goals of the World Bank Group together with eradicating extreme poverty. The selection of the bottom 40 as a group for monitoring is a compromise between competing considerations; the bottom 40 still focuses on the bottom of the distribution but is not too small that it risks introducing measurement errors.
+
+Formally, shared prosperity, $sp$, is calculated as
+
+$$ sp = \left(\frac{\sum_{i\in d}{y_{i,t_2}}}{\sum_{j \in d}{y_{j,t_1}}}-1 \right)^{(t_2-t_1)},     d =\{1,2,3,4\}.
+$$
+
+Shared prosperity is anonymized, meaning that it does not track the same individuals in both time periods (hence the different subscripts, $i$ and $j$,.
+
+In order for shared prosperity to be calculated for a country the following three criteria must be met:
+
+1 Two [comparable](#comparability) household surveys are available
+
+2 Among comparable surveys, one must be conducted within two years of latest reference year (currently 2017) and the other within two years of five years prior to the reference year (currently 2012).
+
+3 The period between the selected initial and end years should range between three and seven years. For example, a shared prosperity period of 2014--15 meets the second selection criterion but would not be allowed because it does not meet this third requirement.
+
+In cases where multiple surveys can fulfill these criteria, the most recent survey years are typically chosen. In countries in Europe and Central Asia using household per capita income as the welfare aggregate, households with negative incomes are included when estimating shared prosperity.
+
+More information on shared prosperity can be found at the [Global Database of Shared Prosperity](https://www.worldbank.org/en/topic/poverty/brief/global-database-of-shared-prosperity).
+
+**Shared prosperity premium**
+
+The shared prosperity premium, $spp$, measures the difference in annualized growth of the bottom 40%, shared prosperity, $sp$, and the annualized growth of the mean:
+
+$$ spp = sp - \left(\frac{\mu_{t_2}}{\mu_{t_1}}-1 \right)^{(t_2-t_1)},     d =\{1,2,3,4\}. $$
