@@ -1,6 +1,6 @@
 # Calculating survey estimates of poverty and inequality {#surveyestimates}
 
-## Monetary poverty measures {#povertymeasures}
+## Monetary poverty measures {#monetarypoverty}
 
 Armed with welfare distributions expressed in 2011 PPPs and an international poverty line, poverty and inequality can be calculated and compared across countries and over time. The poverty and inequality measures used in PIP for micro data are mainly based on formulae in @haughton2009, while the poverty and inequality measures estimated from grouped data are mainly based on formulae in @datt1998.
 
@@ -96,7 +96,7 @@ The dimension, indicators and weights of the World Bank's multidimensional pover
 
 An individual is considered poor if she/he lives in a household that is deprived at at least 1/3 of the weighted indicators.
 
-## Inequality measures {#inequalitymeasures}
+## Inequality measures {#inequality}
 
 **Gini index**: The Gini index is derived from the Lorenz curve, which plots the cumulative welfare share (on the y-axis) against the cumulative population share (on the x-axis). A 45-degree line is defined over the Lorenz curve as a line of perfect equality. The Gini index is the area between the line 45-degree line and the Lorenz curve (multiplied by 100). Let $A$ be the area between the 45-degree line and the Lorenz curve, and let $B$ be the area under the Lorenz curve. The Gini coefficient is given as: $\frac{A}{A + B}= 2A$ (since $A + B = 0.5$).
 

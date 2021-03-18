@@ -43,3 +43,6 @@ convert
 mpm
 dist
 inequality-measures-inequalitymeasures
+monetarypoverty
+inequality
+coverage
