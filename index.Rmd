@@ -5,7 +5,9 @@ url: "https://povcalnet-team.github.io/Methodology"
 github-repo: PovcalNet-Team/Methodology
 site: "bookdown::bookdown_site"
 output:
-  bookdown::gitbook: default
+  bookdown::gitbook:
+    config:
+      search: yes
 documentclass: book 
 editor_options: 
   markdown: 

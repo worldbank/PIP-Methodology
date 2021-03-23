@@ -74,6 +74,8 @@ An item for discussion regarding the **Watts index** and the Mean Log Deviation 
 
 ## Multidimensional Poverty Measure {#mpm}
 
+ADD ALKIRE REFERENCE @alkire2015
+
 In many settings, important aspects of well-being, such as access to quality education or core services, are not captured by standard monetary measures. To address this concern, an established tradition of multidimensional poverty measurement measures these nonmonetary dimensions directly and aggregates them into an index. The [United Nations Development Programme's Multidimensional Poverty Index (Global MPI)](http://hdr.undp.org/en/2020-MPI), produced in conjunction with the [Oxford Poverty and Human Development Initiative](https://ophi.org.uk/multidimensional-poverty-index/), is a foremost example of such a multidimensional poverty measure. In 2018, the World Bank launched its own multidimensional poverty measure, building heavily on these prior efforts @worldbank2018.
 
 The dimension, indicators and weights of the World Bank's multidimensional poverty measure are given as follows:
