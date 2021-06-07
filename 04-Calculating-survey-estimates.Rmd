@@ -9,10 +9,10 @@ Armed with welfare distributions expressed in 2011 PPPs and an international pov
 where $N$ is the total population size, $y_i$ is welfare of individual $i$, $z$ is the poverty line, and $I(.)$ is an indicator function that takes on the value 1 if the bracketed expression is true or 0 otherwise. You can find the source code where this calculation is carried out [here]{style="color:red"}. For grouped data that rely on the GQ Lorenz function, the poverty headcount rate is obtained using the following expression ([source code]{style="color:red"}):
 
 $$
-P_0 = - \frac{1}{2m}[n + r(b+2z/\mu)((b+2z/\mu)^2)-m)^{-1/2}],
+P_0 = - \frac{1}{2m}[n + r(b+2z/\mu)((b+2z/\mu)^2-m)^{-1/2}],
 $$
 
-where $m$ = $b^2 - 4a$, $n = 2be - 4c$, $r = (n^2 - 4me^2)^{1/2}$, $e = -(a + b + c + 1)$, $z$ is the poverty line, $\mu$ is mean welfare, and $a, b, c$ are the parameter estimates of the GQ Lorenz function.
+where $a, b, c$ are the parameter estimates of the GQ Lorenz function, $\mu$ is mean welfare, $z$ is the poverty line, $e = -(a + b + c + 1)$, $m$ = $b^2 - 4a$, $n = 2be - 4c$, and $r = (n^2 - 4me^2)^{1/2}$.
 
 If the Beta Lorenz function is used, the poverty headcount ratio is estimated using the expression below ([source code]{style="color:red"}):
 
@@ -76,14 +76,21 @@ In many settings, important aspects of well-being, such as access to quality edu
 
 The dimensions, indicators, and weights of the World Bank's multidimensional poverty measure are given as follows:
 
-| Dimension                      | Indicator                                                                           | Weight |     |
-|--------------------------------|-------------------------------------------------------------------------------------|--------|-----|
-| Monetary poverty               | Daily consumption or income is less than US\$1.90 per person                        | 1/3    |     |
-| Education                      | At least one school-age child up to the age of grade 8 is not enrolled in school    | 1/6    |     |
-| Education                      | No adult in the household (age of grade 9 or above) has completed primary education | 1/6    |     |
-| Access to basic infrastructure | The household lacks access to limited-standard drinking water                       | 1/9    |     |
-| Access to basic infrastructure | The household lacks access to limited-standard sanitation                           | 1/9    |     |
-| Access to basic infrastructure | The household has no access to electricity                                          | 1/9    |     |
++--------------------------------+-------------------------------------------------------------------------------------+--------+---+
+| Dimension                      | Indicator                                                                           | Weight |   |
++================================+=====================================================================================+========+===+
+| Monetary poverty               | Daily consumption or income is less than US\$1.90 per person                        | 1/3    |   |
++--------------------------------+-------------------------------------------------------------------------------------+--------+---+
+| Education                      | At least one school-age child up to the age of grade 8 is not enrolled in school    | 1/6    |   |
++--------------------------------+-------------------------------------------------------------------------------------+--------+---+
+| Education                      | No adult in the household (age of grade 9 or above) has completed primary education | 1/6    |   |
++--------------------------------+-------------------------------------------------------------------------------------+--------+---+
+| Access to basic infrastructure | The household lacks access to limited-standard drinking water                       | 1/9    |   |
++--------------------------------+-------------------------------------------------------------------------------------+--------+---+
+| Access to basic infrastructure | The household lacks access to limited-standard sanitation                           | 1/9    |   |
++--------------------------------+-------------------------------------------------------------------------------------+--------+---+
+| Access to basic infrastructure | The household has no access to electricity                                          | 1/9    |   |
++--------------------------------+-------------------------------------------------------------------------------------+--------+---+
 
 An individual is considered poor if she/he lives in a household that is deprived inat least 1/3 of the weighted indicators.\
 \
