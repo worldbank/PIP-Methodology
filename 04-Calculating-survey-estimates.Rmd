@@ -2,7 +2,7 @@
 
 ## Monetary poverty measures {#monetarypoverty}
 
-Armed with welfare distributions expressed in 2011 PPPs and an international poverty line, poverty and inequality can be calculated and compared across countries and over time. The poverty and inequality measures used in the Poverty and Equity Platform for micro data are mainly based on formulae in @haughton2009, while the poverty and inequality measures estimated from grouped data are mainly based on formulae in @datt1998.
+Armed with welfare distributions expressed in 2011 PPPs and an international poverty line, poverty and inequality can be calculated and compared across countries and over time. The poverty and inequality measures used in the Poverty and Equity Platform for micro data are mainly based on formulae in @haughton2009, while the poverty and inequality measures estimated from grouped data are mainly based on formulae in @datt1998. In the formulas below we abstract from household weights.
 
 **Poverty headcount ratio**: The poverty headcount ratio ($P_0$) is a measure of the proportion of the population that is counted as poor. When using micro data, the poverty headcount ratio is obtained using the following expression:$$ P_0 = \frac{1}{N} \sum_{i=1}^{N} I (y_i < z), $$
 
@@ -197,7 +197,7 @@ Shared prosperity measures the extent to which economic growth is inclusive by f
 
 Formally, shared prosperity, $sp$, is calculated as
 
-$$ sp = \left(\frac{\mu_{b40,t_2}}{\mu_{b40,t_1}}\right)^{\frac{1}{t_2-t_1}}-1,    .
+\$\$ sp = \left(\frac{\mu_{b40,t_2}}{\mu_{b40,t_1}}\right)\^{\frac{1}{t_2-t_1}}-1, .
 
 where $\mu_{b40,t_2}$ and $\mu_{b40,t_1}$ is the mean welfare of the bottom 40% at time $t_2$ and \$t_1\$. Shared prosperity is anonymized, meaning that it does not track the same individuals in both time periods.
 

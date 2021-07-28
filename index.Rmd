@@ -69,7 +69,7 @@ DiagrammeR::grViz("digraph {
   node [shape = box,style=filled, color=lightblue2]        
   box1 [label = 'Step 1\nAcquiring household survey data']
   box2 [label = 'Step 2\nConstructing welfare aggregates']
-  box3 [label = 'Step 3\nConverting welfare aggregates to same prices']
+  box3 [label = 'Step 3\nConverting welfare aggregates']
   box4 [label = 'Step 4\nCalculating survey estimates of poverty and inequality']
   box5 [label = 'Step 5\nCalculating global and regional poverty']
   box1 -> box2 -> box3 -> box4 -> box5
@@ -80,9 +80,9 @@ DiagrammeR::grViz("digraph {
 ## Step 1: [Acquiring household survey data](#acquiring) {.unnumbered}
 
 Poverty rates are estimated from [selected](#selection) household
-surveys. In general, these surveys ask a
+surveys. In general, these surveys are used  ask a
 [representative](#representativeness) subset of households in a country
-about their consumption or income. Most household surveys from
+about their consumption or income. These surveys are often the official surveys used by countries to monitor and report on poverty. Most household surveys from
 developing countries [are obtained](#selection) through collaboration
 with countries' National Statistical Offices, while most data for
 high-income countries are obtained from the [EU Statistics on Income and
@@ -90,8 +90,7 @@ Living Conditions
 (EU-SILC)](https://ec.europa.eu/eurostat/web/microdata/european-union-statistics-on-income-and-living-conditions)
 or from the [Luxembourg Income Study (LIS)
 Database](https://www.lisdatacenter.org). At times, household-level data
-cannot be obtained in which case [aggregated](#grouped) data are used,
-such as population deciles.
+cannot be obtained in which case, as a second best, [aggregated](#grouped) data are used, such as population deciles.
 
 ## Step 2: [Constructing welfare aggregates](#welfareaggregate) {.unnumbered}
 
@@ -106,11 +105,11 @@ used](#incomeorconsumption), [the design of the
 questionnaire](#questionnaire) of the household survey, what [components
 that are included](#imputedrent) in the welfare aggregate, and whether
 [price differences within a country](#spatialtemporal) are accounted
-for, means that full comparability is not feasible.
+for, meaning that full comparability is not feasible.
 
-## Step 3: [Converting welfare aggregates to same prices](#convert) {.unnumbered}
+## Step 3: [Converting welfare aggregates](#convert) {.unnumbered}
 
-Welfare aggregates are expressed in local currencies in the prices
+Welfare aggregates are often expressed in local currencies in the prices
 prevailing at the time of the collection of the data. To compare the
 consumption of an Indian household in 2011 to the consumption of a
 Nigerian household in 2018, the welfare aggregates need to be expressed
@@ -120,7 +119,7 @@ used to express all welfare aggregates in local 2011 prices, and
 differences between countries. Once all welfare aggregates are expressed
 in the same units, a common poverty line is needed to estimate poverty.
 [The international poverty line](#IPL) used in PIP is constructed from
-the typical poverty lines used by the poorest countries of the world.
+the  poverty lines used by the poorest countries of the world.
 
 ## Step 4: [Calculating survey estimates of poverty and inequality](#surveyestimates) {.unnumbered}
 
@@ -136,14 +135,9 @@ statistics](#dist).
 
 Most countries do not conduct household surveys every year. Yet, to
 estimate regional and global poverty for a particular year, one needs an
-estimate of poverty for every country for the year in question. To this
-end, the estimates of poverty from surveys are
-[extrapolated](#extrapolations) or [interpolated](#interpolations). The
-extrapolations assume that everyone's income or consumption grows in
-accordance with growth rates from [national accounts](#nationalaccounts)
+estimate of poverty for every country for the year in question. When a poverty estimate is not available for a given year, the estimates are
+[extrapolated](#extrapolations) or [interpolated](#interpolations) from other years. The extrapolations assume that everyone's income or consumption grows in accordance with per capita growth rates from [national accounts](#nationalaccounts)
 between the time of the survey and the year in question. For [countries
-without any data](#nodata) at all, it is assumed that their poverty rate
-is equal to the average poverty rate in their region. To avoid
-presenting regional and global numbers with insufficient recent survey
-data, [coverage rules](#coverage) are used to determine whether a
-particular reference year has sufficient survey data close to the year.
+without any household data](#nodata) at all, it is assumed that their poverty rate
+is equal to the population-weighted average poverty rate in their region. To ensure the quality of the regional and global numbers, [coverage rules](#coverage) are used to determine whether a
+particular reference year has sufficient nearby survey data for global and regional numbers to be presented.
