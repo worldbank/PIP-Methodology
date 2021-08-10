@@ -1,4 +1,8 @@
-# Generating global and regional estimates {#lineupestimates}
+---
+bibliography: references.bib
+---
+
+# Calculating global and regional estimates {#lineupestimates}
 
 Few countries have survey estimates of poverty available every year. To estimate poverty at the regional and global level, the survey estimates need to be aligned to a reference year and aggregated. Such alignment and aggregation require assumptions about how to interpolate and extrapolate data as well as how to treat countries without any household survey data at all. This section explains how these calculations are made.
 
@@ -14,11 +18,11 @@ The below example charts the consumption aggregate from the 2015.5 Ethiopian sur
 
 ![](figures/ETHdist_example.png)
 
-When household surveys span two calendar years, the national accounts data used for extrapolating this survey forward is the weighted average of the two years, with the weights determined by the share of the fieldwork that took place in each year (see the end of the section \@ref(selection) for details).
+When household surveys span two calendar years, as the example above, the national accounts data used for extrapolating this survey forward is the weighted average of the two years, with the weights determined by the share of the fieldwork that took place in each year (see the end of the section \@ref(selection) for details).
 
 ### Pass-through rate for India
 
-The extrapolation method assumes that all growth in national accounts is passed through to the growth in welfare observed in surveys. Evidence exists that there are differences in growth rates between welfare aggregates and national accounts data. The growth in welfare aggregates has historically been lower than the growth in national accounts (@ravallion2003; @deaton2005; @pinkovskiy2016; @lakner2020). To circumvent this, a pass-through rate, i.e. the fraction of growth in national accounts captured in household surveys, can be used to adjust the scaling factor used when extrapolating.
+The extrapolation method assumes that all growth in national accounts is passed through to the growth in welfare observed in surveys. Evidence exists that there are differences in growth rates between welfare aggregates and national accounts data. The growth in welfare aggregates has historically been lower than the growth in national accounts (@ravallion2003; @deaton2005; @pinkovskiy2016; @lakner2020). To circumvent this, a pass-through rate, i.e. afraction of growth in national accounts captured in household surveys, can be used to adjust the scaling factor used when extrapolating.
 
 India is the only case where the pass-through methodology is applied. The latest available survey for India is from 2011/12. Poverty for India after 2011/12 is calculated using the extrapolation method defined above with a national accounts growth rate adjusted for a pass-through rate. Up to 2015, urban/rural pass-through rates are calculated to match the poverty estimates for 2014/15 reported in @newhouse2018. The pass-through rate in India for the period 2011/12-2014/15 is estimated to be 0.70 for rural areas and 0.55 for urban areas (for more details see @chen2018).
 
@@ -66,8 +70,7 @@ It is important to note that the extrapolations and interpolations use only the 
 
 ## Choosing between consumption and income estimates
 
-The discussion on interpolation and extrapolation for simplicity assumed that only one survey was available for a given country at a given year. Yet, a number of countries have poverty estimates available from both [consumption and income aggregates](#incomeorconsumption). Due to its closer connection to welfare, whenever both income and consumption estimates are available for a given reference year, consumption estimates are preferred. Likewise, when both kinds of poverty estimates are available for the same years (but not for a particular reference year), interpolations and extrapolation are made using the consumption estimates.\
-When consumption and income estimates are available at different years, the choice is a bit more complicated. The precise rules are outlined in the following decision tree:
+The discussion on interpolation and extrapolation for simplicity assumed that only one welfare aggregate was available for a given country at a given year. Yet, a number of countries have poverty estimates available from both [consumption and income aggregates](#incomeorconsumption). Due to its closer connection to welfare, whenever both income and consumption estimates are available for a given reference year, consumption estimates are preferred. Likewise, when both kinds of poverty estimates are available for the same years (but not for a particular reference year), interpolations and extrapolation are made using the consumption estimates. When consumption and income estimates are available at different years, the choice is a bit more complicated. The precise rules are outlined in the following decision tree:
 
 ![](figures/Income%20consumption%20decision%20tree.svg "Income consumption decision tree")
 
@@ -91,7 +94,7 @@ In total, 218 economies are included in the global poverty estimates. The entire
 
 ## Population {#population}
 
-To derive regional and global poverty rates, each country's poverty rate is weighted using its population share. Population data are taken from the World Bank's [World Development Indicators](http://datatopics.worldbank.org/world-development-indicators/) (WDI). For Kuwait, Sint Maarten, and West Bank and Gaza, population data is missing in the WDI for some years. In those cases, alternative sources are used as outlined here [link to forthcoming What's New].
+To derive regional and global poverty rates, each country's poverty rate is weighted using its population share. Population data are taken from the World Bank's [World Development Indicators](http://datatopics.worldbank.org/world-development-indicators/) (WDI). For Kuwait, Sint Maarten, and West Bank and Gaza, population data is missing in the WDI for some years. In those cases, alternative sources are used as outlined in @arayavechkit2021.
 
 The regional and global population may differ from the aggregates given in the World Development Indicators, because PIP uses different regional compositions of economies (See [Regional classification section](#regionsandcountries)).
 
@@ -103,6 +106,6 @@ With the [interpolation](#interpolations) and [extrapolation](#extrapolations) r
 
 Though the [interpolation](#interpolations) rules, [extrapolation](#extrapolations) rule, and [treatment of countries without any data](#nodata) assures that *some* poverty estimate is available for all regions and the world as a whole since 1981, the confidence one can have in these estimates depends on the how often and how long one has to extrapolate or interpolate the data, as well as the share of the population without any data at all.
 
-To avoid presenting regional and global numbers with based on old data, coverage rules are used to determine whether a particular reference year has sufficient data coverage. A country is considered to have sufficiently recent data if it has a survey-based poverty estimate at most three years from the reference year. Regional estimates are displayed for a given year if data cover 50 percent of the population in the region. For regions in which the surveys within three years either side of the lineup year account for less than half of the regional population, the regional poverty estimate is not reported.
+To avoid presenting regional and global numbers based on outdated or no data, coverage rules are used to determine whether a particular reference year has sufficient data coverage. A country is considered to have sufficiently recent data if it has a survey-based poverty estimate at most three years from the reference year. Regional estimates are displayed for a given year if data cover 50 percent of the population in the region. For regions in which the surveys within three years either side of the reference year account for less than half of the regional population, the regional poverty estimate is not reported.
 
-An additional coverage requirement is applied to govern when global poverty estimates are reported for a given reference year. This requirement addresses the goal of focusing the measurement of global poverty on economies where most of the poor live. Specifically, it tries to avoid a situation in which the global population threshold is met by having recent data in high-income countries, East Asia and Pacific, and Latin America and the Caribbean, which together account for a small share of the global extreme poor. Under this requirement, global poverty estimates are reported only if data are representative of at least 50 percent of the population in low-income and lower-middle-income countries, because most of the poor live in these groups of countries. [The World Bank classification of economies according to income groups](https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups) in the reference year is used. This requirement is only applied to the global poverty estimate, not at the regional level (for more details see @castanedaaguilar2020).
+An additional coverage requirement is applied to govern when global poverty estimates are reported for a given reference year. This requirement addresses the goal of focusing the measurement of global poverty on economies where most of the poor live. Specifically, it tries to avoid a situation in which the global population threshold is met by having recent data in high-income countries, East Asia & Pacific, and Latin America & the Caribbean, which together account for a small share of the global extreme poor. Under this requirement, global poverty estimates are reported only if data are representative of at least 50 percent of the population in low-income and lower-middle-income countries, because most of the poor live in these groups of countries. [The World Bank classification of economies according to income groups](https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups) in the reference year is used. This requirement is only applied to the global poverty estimate, not to regional estimates (for more details see @castanedaaguilar2020).

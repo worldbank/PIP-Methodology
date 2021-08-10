@@ -2,11 +2,11 @@
 
 ## Monetary poverty measures {#monetarypoverty}
 
-Armed with welfare distributions expressed in 2011 PPPs and an international poverty line, poverty and inequality can be calculated and compared across countries and over time. The poverty and inequality measures used in the Poverty and Equity Platform for micro data are mainly based on formulae in @haughton2009, while the poverty and inequality measures estimated from grouped data are mainly based on formulae in @datt1998. In the formulas below we abstract from household weights.
+Armed with welfare distributions expressed in 2011 PPPs and an international poverty line, poverty and inequality can be calculated and compared across countries and over time. The poverty and inequality measures used in the Poverty and Equity Platform (PIP) for micro data are mainly based on formulae in @haughton2009, while the poverty and inequality measures estimated from grouped data are mainly based on formulae in @datt1998. In the formulas below we abstract from household weights for simplicity.
 
-**Poverty headcount ratio**: The poverty headcount ratio ($P_0$) is a measure of the proportion of the population that is counted as poor. When using micro data, the poverty headcount ratio is obtained using the following expression:$$ P_0 = \frac{1}{N} \sum_{i=1}^{N} I (y_i < z), $$
+**Poverty headcount ratio**: The poverty headcount ratio ($P_0$) measures the proportion of the population that is counted as poor. When using micro data, the poverty headcount ratio is obtained using the following expression:$$ P_0 = \frac{1}{N} \sum_{i=1}^{N} I (y_i < z), $$
 
-where $N$ is the total population size, $y_i$ is welfare of individual $i$, $z$ is the poverty line, and $I(.)$ is an indicator function that takes on the value 1 if the bracketed expression is true or 0 otherwise. You can find the source code where this calculation is carried out [here]{style="color:red"}. For grouped data that rely on the GQ Lorenz function, the poverty headcount rate is obtained using the following expression ([source code]{style="color:red"}):
+where $N$ is the total population size, $y_i$ is the welfare of individual $i$, $z$ is the poverty line, and $I(.)$ is an indicator function that takes on the value 1 if the bracketed expression is true or 0 otherwise. You can find the source code where this calculation is carried out [here]{style="color:red"}. For grouped data that rely on the GQ Lorenz function, the poverty headcount rate is obtained using the following expression ([source code]{style="color:red"}):
 
 $$
 P_0 = - \frac{1}{2m}[n + r(b+2z/\mu)((b+2z/\mu)^2-m)^{-1/2}],
@@ -20,11 +20,11 @@ $$
 \theta {P_0}^\gamma (1 - {P_0})^\delta \left[\frac{\gamma}{P_0} - \frac{\delta}{(1 - {P_0})}\right] = 1 - \frac{z}{\mu}
 $$
 
-where where $\theta$, $\delta$, and $\gamma$ are parameter estimates. See the [section on treatment of grouped data](#tgd) for details on the GQ and Beta Lorenz functions.
+where $\theta$, $\delta$, and $\gamma$ are parameter estimates. See the [section on treatment of grouped data](#tgd) for details on the GQ and Beta Lorenz functions.
 
 **Poverty gap index**: The poverty gap index ($P_1$) is a measure that adds up the extent to which individuals on average fall below the poverty line (i.e. the depth of poverty), and expresses it as a percentage of the poverty line. The poverty gap index is obtained from micro data with the following expression ([source code]{style="color:red"}):
 
-$$ P_1 = \frac{1}{N} \sum_{i=1}^{N} \frac{G_i}{z} $$with $G_i = (z - y_i) × I (y_i < z)$, where $G_i$ is defined as the poverty gap (i.e. poverty line ($z$) less welfare ($y_i$)) of poor individuals; the gap is considered to be zero for everyone else. The poverty gap index shows the minimum cost per capita of eliminating poverty using targeted transfers, expressed as a percentage of the poverty line.
+$$ P_1 = \frac{1}{N} \sum_{i=1}^{N} \frac{G_i}{z} $$with $G_i = (z - y_i) × I (y_i < z)$, where $G_i$ is defined as the poverty gap (i.e. poverty line ($z$) less welfare ($y_i$)) of poor individuals; the gap is considered to be zero for everyone else.
 
 For grouped data, the poverty gap index is obtained using the following expression ([source code]{style="color:red"}):
 
@@ -32,7 +32,7 @@ $$
 P_1 = P_0 - (\mu/z)L(P_0)
 $$
 
-with all variables defined as before . The expression holds for both GQ and Beta Lorenz functions.
+with all variables defined as before. The expression holds for both GQ and Beta Lorenz functions.
 
 **Poverty severity index**: The poverty severity index ($P_2$) is a measure of the weighted sum of poverty gaps (as a proportion of the poverty line), where the weights are the proportionate poverty gaps themselves. The poverty severity index is obtained from micro data with the following expression ([source code]{style="color:red"}):
 
@@ -66,35 +66,39 @@ where $k$, $r$, $s$ are parameters and all other notations are defined as before
 
 $$ W  = \frac{1}{N} \sum_{i=1}^{q} ln \left(\frac{z}{y_i} \right), $$
 
-where $N$ individuals in the population are indexed in ascending order of welfare, and the sum is taken over $q$ individuals whose welfare, $y_i$, falls below the poverty line $z$. This formula applies to both micro and grouped data. It also holds for both the GQ and Beta Lorenz functions, which are evaluated at the poverty line $z$ and other percentiles $y_i$. A percentile is given as the product of the mean and the first derivative of the GQ or Beta Lorenz function at the respective rank in the distribution. (The first derivatives of the GQ and Beta Lorenz functions are defined below.)
+where the $N$ individuals of the population are indexed in ascending order of welfare, and the sum is taken over $q$ individuals whose welfare, $y_i$, falls below the poverty line $z$. This formula applies to both micro and grouped data. It also holds for both the GQ and Beta Lorenz functions, which are evaluated at the poverty line $z$ and other percentiles $y_i$. A percentile is given as the product of the mean and the first derivative of the GQ or Beta Lorenz function at the respective rank in the distribution. The first derivative of the GQ Lorenz function is given as:
 
-An item for discussion regarding the Watts index and the Mean Log Deviation, defined below, is the treatment of zeros in the welfare distribution given that the logarithm of zero is not defined. As explained in section \@ref(incomeorconsumption), the Poverty and Equity Platform's current practice is to drop observations with negative welfare, while zeros are included when the welfare distribution is based on income. One approach is to transform the zeros by either maintaining the same mean of the distribution or by adjusting it. Another solution is to exclude the zeros from the sample, but that would create inconsistencies with other poverty and inequalities measures that use the whole sample. Currently the Poverty and Equity Platform excludes zeros from the sample when calculating the Watts index and the Mean Log Deviation.
+$$
+L^{'}(p) = -\frac{b}{2} - \frac{(2mp + n)(mp^2 + np + e^2)^
+{-1/2}}{4}
+$$
+
+with all variables and parameter estimates as previously defined. The first derivative of the Beta Lorenz function is given as:
+
+$$
+L^{'}(p) = 1 - \theta p^\gamma (1 - p)^\delta \left[\frac{\gamma}{p} - \frac{\delta}{1 - p}\right]
+$$
+
+with all variables and parameter estimates as previously defined.
+
+An item for discussion regarding the Watts index and the Mean Log Deviation, defined below, is the treatment of zeros in the welfare distribution given that the logarithm of zero is not defined. As explained in section \@ref(incomeorconsumption), PIP's current practice is to drop observations with negative welfare, while zeros are included when the welfare distribution is based on income. One approach is to transform the zeros by either maintaining the same mean of the distribution or by adjusting it. Another solution is to exclude the zeros from the sample, but that would create inconsistencies with other poverty and inequalities measures that use the whole sample. Currently PIP excludes zeros from the sample when calculating the Watts index and the Mean Log Deviation.
 
 ## Multidimensional Poverty Measure {#mpm}
 
-In many settings, important aspects of well-being, such as access to quality education or core services, are not captured by monetary measures of poverty. To address this issue, an established tradition of multidimensional poverty measures these nonmonetary and aggregates them into an index [@alkire2015]. The [United Nations Development Programme's Multidimensional Poverty Index (Global MPI)](http://hdr.undp.org/en/2020-MPI), produced in conjunction with the [Oxford Poverty and Human Development Initiative](https://ophi.org.uk/multidimensional-poverty-index/), is a foremost example of such a multidimensional poverty measure. In 2018, the World Bank launched its own multidimensional poverty measure, building heavily on these prior efforts [@worldbank2018].
+In many settings, important aspects of well-being, such as access to quality education or core services, are not captured by monetary measures of poverty. To address this issue, an established tradition of multidimensional poverty measures these nonmonetary dimensions and aggregates them into an index [@alkire2015]. The [United Nations Development Programme's Multidimensional Poverty Index (Global MPI)](http://hdr.undp.org/en/2020-MPI), produced in conjunction with the [Oxford Poverty and Human Development Initiative](https://ophi.org.uk/multidimensional-poverty-index/), is a foremost example of such a multidimensional poverty measure. In 2018, the World Bank launched its own multidimensional poverty measure, building heavily on these prior efforts [@worldbank2018].
 
 The dimensions, indicators, and weights of the World Bank's multidimensional poverty measure are given as follows:
 
-+--------------------------------+-------------------------------------------------------------------------------------+--------+---+
-| Dimension                      | Indicator                                                                           | Weight |   |
-+================================+=====================================================================================+========+===+
-| Monetary poverty               | Daily consumption or income is less than US\$1.90 per person                        | 1/3    |   |
-+--------------------------------+-------------------------------------------------------------------------------------+--------+---+
-| Education                      | At least one school-age child up to the age of grade 8 is not enrolled in school    | 1/6    |   |
-+--------------------------------+-------------------------------------------------------------------------------------+--------+---+
-| Education                      | No adult in the household (age of grade 9 or above) has completed primary education | 1/6    |   |
-+--------------------------------+-------------------------------------------------------------------------------------+--------+---+
-| Access to basic infrastructure | The household lacks access to limited-standard drinking water                       | 1/9    |   |
-+--------------------------------+-------------------------------------------------------------------------------------+--------+---+
-| Access to basic infrastructure | The household lacks access to limited-standard sanitation                           | 1/9    |   |
-+--------------------------------+-------------------------------------------------------------------------------------+--------+---+
-| Access to basic infrastructure | The household has no access to electricity                                          | 1/9    |   |
-+--------------------------------+-------------------------------------------------------------------------------------+--------+---+
+| Dimension                      | Indicator                                                                           | Weight |
+|--------------------------------|-------------------------------------------------------------------------------------|--------|
+| Monetary poverty               | Daily consumption or income is less than US\$1.90 per person                        | 1/3    |
+| Education                      | At least one school-age child up to the age of grade 8 is not enrolled in school    | 1/6    |
+| Education                      | No adult in the household (age of grade 9 or above) has completed primary education | 1/6    |
+| Access to basic infrastructure | The household lacks access to limited-standard drinking water                       | 1/9    |
+| Access to basic infrastructure | The household lacks access to limited-standard sanitation                           | 1/9    |
+| Access to basic infrastructure | The household has no access to electricity                                          | 1/9    |
 
-An individual is considered poor if she/he lives in a household that is deprived in at least 1/3 of the weighted indicators.\
-\
-The share of individuals that are poor is reported in the Poverty and Equity Platform.
+An individual is considered poor if she/he lives in a household that is deprived in at least 1/3 of the weighted indicators. PIP reports the share of individuals that are poor.
 
 ## Inequality measures {#inequality}
 
@@ -106,9 +110,7 @@ $$ Gini= 100*(1 - \sum_{i=1}^{N} (x_i - x_{i-1})(y_i + y_{i-1}))
 ,
 $$
 
-where there are $N$ equal intervals on the x-axis.
-
-The Gini index ranges from 0 (perfect equality) to 100 (complete inequality) ([source code]{style="color:red"}).
+where there are $N$ equal intervals on the x-axis ([source code]{style="color:red"}). The Gini index ranges from 0 (perfect equality) to 100 (complete inequality) .
 
 With the GQ Lorenz function, the Gini index is obtained from grouped data using the following expression ([source code]{style="color:red"}):
 
@@ -127,13 +129,13 @@ $$
 
 Note that $B(1 + \gamma, 1 + \delta)$ is the Beta function $\int_0^1 p^\gamma (1 - p)^\delta ~dp$.
 
-**Mean log deviation**: The mean log deviation (MLD) belongs to the family of generalized entropy (GE) inequality measures. It is given as:
+**Mean log deviation**: The mean log deviation (MLD) belongs to the family of generalized entropy inequality measures. It is given as:
 
 $$ MLD  = \frac{1}{N} \sum_{i=1}^{N} ln \left(\frac{μ}{y_i} \right)*100, $$
 
-where $N$ is the total population size, $μ$ is the mean welfare per person, and $y_i$ is welfare of individual $i$. The mean log deviation has a minimum value of 0 (perfect equality) and has no upper bound. This formula applies for both micro and grouped data ([source code]{style="color:red"}). It also holds for both the GQ and Beta Lorenz functions, which are evaluated at the poverty line $z$ and other percentiles $y_i$. A percentile is given as the product of the mean and the first derivative of the GQ or Beta Lorenz function at the respective rank in the distribution. (The first derivatives of the GQ and Beta Lorenz functions are defined below.)
+where $N$ is the total population size, $μ$ is the mean welfare per person, and $y_i$ is welfare of individual $i$. The MLD has a minimum value of 0 (perfect equality) and has no upper bound. This formula applies for both micro and grouped data ([source code]{style="color:red"}). For both the GQ and Beta Lorenz functions, the MLD is evaluated at the poverty line $z$ and percentiles $y_i$. A percentile is given as the product of the mean and the first derivative of the GQ or Beta Lorenz function at the respective rank in the distribution (see section on the Watts Index for the derivation of the first derivatives).
 
-In the same vein of the Watts Index, the MLD suffers from being undefined when there are zero values in the distribution. Currently the Poverty and Equity Platform replaces zeros with ones when in order to use the same sample as with the other inequality measures.
+In the same vein of the Watts Index, the MLD suffers from being undefined when there are zero values in the distribution. Currently PIP replaces zeros with ones when in order to use the same sample as with the other inequality measures.
 
 **Polarization**: The polarization index ($P$), also known as the Wolfson polarization index, measures the extent to which the distribution of welfare is "spread out" and bi-modal. It is given as ([source code]{style="color:red"}):
 
@@ -141,7 +143,7 @@ $$
 P =  \frac{2(\mu^* - \mu^L)}{m},
 $$
 
-where $\mu^*$ is the distribution-correction mean (i.e. $\mu(1 - Gini/100)$), $\mu^L$ is the mean of the poorest half of the population, and $m$ is the median. Like the Gini coefficient, the polarization index ranges from 0 (no polarization) to 1 (complete polarization). The polarization index is based on @wolfson1994 and @ravallion1996.
+where $\mu^*$ is the distribution-corrected mean (i.e. $\mu(1 - Gini/100)$), $\mu^L$ is the mean of the poorest half of the population, and $m$ is the median. Like the Gini coefficient, the polarization index ranges from 0 (no polarization) to 1 (complete polarization). The polarization index is based on @wolfson1994 and @ravallion1996.
 
 ## Other distributional statistics {#dist}
 
@@ -164,24 +166,7 @@ $$
 Med = \mu L^{'}(0.5)
 $$
 
-where $\mu$ is the mean and $L^{'}(0.5)$ is the first derivative of the GQ or Beta Lorenz function at the 50th percentile.
-
-The first derivative of the GQ Lorenz function is given as:
-
-$$
-L^{'}(p) = -\frac{b}{2} - \frac{(2mp + n)(mp^2 + np + e^2)^
-{-1/2}}{4}
-$$
-
-with all variables and parameter estimates as previously defined.
-
-The first derivative of the Beta Lorenz function is given as:
-
-$$
-L^{'}(p) = 1 - \theta p^\gamma (1 - p)^\delta \left[\frac{\gamma}{p} - \frac{\delta}{1 - p}\right]
-$$
-
-with all variables and parameter estimates as previously defined.
+where $\mu$ is the mean and $L^{'}(0.5)$ is the first derivative of the GQ or Beta Lorenz function at the 50th percentile. See section on the Watts Index for the derivation of the first derivatives.
 
 **Decile shares**:
 
@@ -193,13 +178,13 @@ This formula holds for both micro and grouped data. For grouped data, ordered we
 
 **Shared prosperity**
 
-Shared prosperity measures the extent to which economic growth is inclusive by focusing on welfare growth for the population at the bottom of the distribution. It is defined as the annualized growth rate of mean household per capita welfare of the bottom 40%. Promoting shared prosperity is one of the twin goals of the World Bank Group together with eradicating extreme poverty. The selection of the bottom 40% is a compromise between competing considerations; the bottom 40% still focuses on the bottom of the distribution but is not too small that it risks introducing measurement errors.
+Shared prosperity measures the extent to which welfare growth is inclusive by focusing on growth of the population at the bottom of the distribution. It is defined as the annualized growth rate of mean household per capita welfare of the bottom 40%. Promoting shared prosperity is one of the twin goals of the World Bank Group together with eradicating extreme poverty. The selection of the bottom 40% is a compromise between competing considerations; the bottom 40% still focuses on the bottom of the distribution but is not too small that it risks introducing measurement errors.
 
 Formally, shared prosperity, $sp$, is calculated as
 
 \$\$ sp = \left(\frac{\mu_{b40,t_2}}{\mu_{b40,t_1}}\right)\^{\frac{1}{t_2-t_1}}-1, .
 
-where $\mu_{b40,t_2}$ and $\mu_{b40,t_1}$ is the mean welfare of the bottom 40% at time $t_2$ and \$t_1\$. Shared prosperity is anonymized, meaning that it does not track the same individuals in both time periods.
+where $\mu_{b40,t_2}$ and $\mu_{b40,t_1}$ are the mean welfare of the bottom 40% at time $t_2$ and \$t_1\$. Shared prosperity is anonymized, meaning that it does not track the same individuals in both time periods.
 
 In order for shared prosperity to be calculated for a country the following three criteria must be met:
 
