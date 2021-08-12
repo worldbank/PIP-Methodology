@@ -51,10 +51,6 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
-<script src="libs/viz-1.8.2/viz.js"></script>
-<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
 
 
 <style type="text/css">
@@ -292,7 +288,7 @@ div.csl-indent {
 </div>
 <div id="tgd" class="section level2" number="2.6">
 <h2><span class="header-section-number">2.6</span> Treatment of grouped data</h2>
-<p>A welfare aggregate is also needed to estimate poverty and inequality from <a href="acquiring.html#grouped">grouped data</a>. Grouped data are consumption expenditure or income organized in intervals or bins, such as deciles or percentiles. These bins are used to derive a continuous Lorenz curve, which plots the cumulative welfare share (on the y-axis) against the cumulative population share (on the x-axis). Together with information about mean welfare, the Lorenz curve can be used to construct a full distribution. Two approaches are used to derive a Lorenz function, the general quadratic (GQ) Lorenz function and the Beta Lorenz function <span class="citation">(<a href="#ref-datt1998" role="doc-biblioref">Datt 1998</a>)</span>. Both functions are parameterized and estimated. The function that provides the best fit is selected for poverty and distributional statistics, conditional on passing normality and validity tests. The tests vary for poverty and distributional statistics (see [<span style="color:red">here</span>] for the poverty tests and [<span style="color:red">here</span>] for the distributional tests).</p>
+<p>A welfare aggregate is also needed to estimate poverty and inequality from <a href="acquiring.html#grouped">grouped data</a>. Grouped data are consumption expenditure or income organized in intervals or bins, such as deciles or percentiles. These bins are used to derive a continuous Lorenz curve, which plots the cumulative welfare share (on the y-axis) against the cumulative population share (on the x-axis). Together with information about mean welfare, the Lorenz curve can be used to construct a full distribution. Two approaches are used to derive a Lorenz function, the general quadratic (GQ) Lorenz function and the Beta Lorenz function <span class="citation">(<a href="#ref-datt1998" role="doc-biblioref">Datt 1998</a>)</span>. Both functions are parameterized and estimated. The function that provides the best fit is selected for poverty and distributional statistics, conditional on passing normality and validity tests. The tests vary for poverty and distributional statistics (see [<a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_select_lorenz.R#L80-L132">here</a> for the poverty tests and [<a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_select_lorenz.R#L143-L175">here</a> for the distributional tests).</p>
 <p>The GQ Lorenz function is estimated using the following specification:</p>
 <p><span class="math display">\[
 L(1-L) = a(p^2-L) + bL(p-1) + c(p-L),
