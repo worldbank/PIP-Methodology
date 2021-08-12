@@ -4,7 +4,7 @@ bibliography: references.bib
 
 # Calculating global and regional estimates {#lineupestimates}
 
-Few countries have survey estimates of poverty available every year. To estimate poverty at the regional and global level, the survey estimates need to be aligned to a reference year and aggregated. Such alignment and aggregation require assumptions about how to interpolate and extrapolate data as well as how to treat countries without any household survey data at all. This section explains how these calculations are made.
+Few countries have survey estimates of poverty available every year. To estimate poverty at the regional and global level, the survey estimates need to be aligned to a reference year and aggregated. Such alignment and aggregation require assumptions about how to interpolate and extrapolate data as well as how to treat countries without any household survey data at all. This section explains how these calculations are made. Source code can be found [here](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/predict_request_year_mean.R) and [here](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/fill_gaps.R). 
 
 ## Extrapolations {#extrapolations}
 
