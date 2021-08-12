@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>References | Poverty and Inequality Platform Methodology Handbook</title>
   <meta name="description" content="References | Poverty and Inequality Platform Methodology Handbook" />
-  <meta name="generator" content="bookdown 0.21.4 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
   <meta property="og:title" content="References | Poverty and Inequality Platform Methodology Handbook" />
   <meta property="og:type" content="book" />
@@ -31,7 +31,7 @@
   
 <link rel="prev" href="lineupestimates.html"/>
 
-<script src="libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -49,6 +49,8 @@
 
 
 
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
 <script src="libs/viz-1.8.2/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
@@ -120,6 +122,29 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
 </head>
 
 <body>
@@ -136,15 +161,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li><a href="index.html#step-1-acquiring-household-survey-data">Step 1: <span>Acquiring household survey data</span></a></li>
 <li><a href="index.html#step-2-constructing-welfare-aggregates">Step 2: <span>Constructing welfare aggregates</span></a></li>
-<li><a href="index.html#step-3-generating-survey-estimates-of-poverty-and-inequality">Step 3: <span>Generating survey estimates of poverty and inequality</span></a></li>
-<li><a href="index.html#step-4-generating-global-and-regional-estimates-of-poverty">Step 4: <span>Generating global and regional estimates of poverty</span></a></li>
+<li><a href="index.html#step-3-converting-welfare-aggregates">Step 3: <span>Converting welfare aggregates</span></a></li>
+<li><a href="index.html#step-4-calculating-survey-estimates-of-poverty-and-inequality">Step 4: <span>Calculating survey estimates of poverty and inequality</span></a></li>
+<li><a href="index.html#step-5-calculating-global-and-regional-poverty">Step 5: <span>Calculating global and regional poverty</span></a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="acquiring.html"><a href="acquiring.html"><i class="fa fa-check"></i><b>1</b> Acquiring household survey data</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="acquiring.html"><a href="acquiring.html#selection"><i class="fa fa-check"></i><b>1.1</b> Selection criteria and source of data</a></li>
 <li class="chapter" data-level="1.2" data-path="acquiring.html"><a href="acquiring.html#how-data-are-obtained"><i class="fa fa-check"></i><b>1.2</b> How data are obtained</a></li>
-<li class="chapter" data-level="1.3" data-path="acquiring.html"><a href="acquiring.html#grouped"><i class="fa fa-check"></i><b>1.3</b> Grouped vs. unit record data</a></li>
-<li class="chapter" data-level="1.4" data-path="acquiring.html"><a href="acquiring.html#imputed"><i class="fa fa-check"></i><b>1.4</b> Multiply imputed micro data</a></li>
+<li class="chapter" data-level="1.3" data-path="acquiring.html"><a href="acquiring.html#representativeness"><i class="fa fa-check"></i><b>1.3</b> Representativeness</a></li>
+<li class="chapter" data-level="1.4" data-path="acquiring.html"><a href="acquiring.html#grouped"><i class="fa fa-check"></i><b>1.4</b> Grouped vs. unit record data</a></li>
+<li class="chapter" data-level="1.5" data-path="acquiring.html"><a href="acquiring.html#imputed"><i class="fa fa-check"></i><b>1.5</b> Multiple imputed micro data</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="welfareaggregate.html"><a href="welfareaggregate.html"><i class="fa fa-check"></i><b>2</b> Constructing welfare aggregates</a>
 <ul>
@@ -165,32 +192,37 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="welfareaggregate.html"><a href="welfareaggregate.html#python"><i class="fa fa-check"></i>Python</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="surveyestimates.html"><a href="surveyestimates.html"><i class="fa fa-check"></i><b>3</b> Generating survey estimates of poverty and inequality</a>
+<li class="chapter" data-level="3" data-path="convert.html"><a href="convert.html"><i class="fa fa-check"></i><b>3</b> Converting welfare aggregates</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="surveyestimates.html"><a href="surveyestimates.html#CPIs"><i class="fa fa-check"></i><b>3.1</b> Consumer Price Indices (CPIs)</a></li>
-<li class="chapter" data-level="3.2" data-path="surveyestimates.html"><a href="surveyestimates.html#PPPs"><i class="fa fa-check"></i><b>3.2</b> Purchasing Power Parities (PPPs)</a></li>
-<li class="chapter" data-level="3.3" data-path="surveyestimates.html"><a href="surveyestimates.html#IPL"><i class="fa fa-check"></i><b>3.3</b> Derivation of the international poverty line</a></li>
-<li class="chapter" data-level="3.4" data-path="surveyestimates.html"><a href="surveyestimates.html#derivation-of-other-global-poverty-lines"><i class="fa fa-check"></i><b>3.4</b> Derivation of other global poverty lines</a></li>
-<li class="chapter" data-level="3.5" data-path="surveyestimates.html"><a href="surveyestimates.html#povertymeasures"><i class="fa fa-check"></i><b>3.5</b> Poverty measures</a></li>
-<li class="chapter" data-level="3.6" data-path="surveyestimates.html"><a href="surveyestimates.html#inequalitymeasures"><i class="fa fa-check"></i><b>3.6</b> Inequality measures</a></li>
+<li class="chapter" data-level="3.1" data-path="convert.html"><a href="convert.html#CPIs"><i class="fa fa-check"></i><b>3.1</b> Consumer Price Indices (CPIs)</a></li>
+<li class="chapter" data-level="3.2" data-path="convert.html"><a href="convert.html#PPPs"><i class="fa fa-check"></i><b>3.2</b> Purchasing Power Parities (PPPs)</a></li>
+<li class="chapter" data-level="3.3" data-path="convert.html"><a href="convert.html#IPL"><i class="fa fa-check"></i><b>3.3</b> Derivation of the international poverty line</a></li>
+<li class="chapter" data-level="3.4" data-path="convert.html"><a href="convert.html#derivation-of-other-global-poverty-lines"><i class="fa fa-check"></i><b>3.4</b> Derivation of other global poverty lines</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="lineupestimates.html"><a href="lineupestimates.html"><i class="fa fa-check"></i><b>4</b> Generating global and regional estimates</a>
+<li class="chapter" data-level="4" data-path="surveyestimates.html"><a href="surveyestimates.html"><i class="fa fa-check"></i><b>4</b> Calculating survey estimates of poverty and inequality</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="lineupestimates.html"><a href="lineupestimates.html#extrapolations"><i class="fa fa-check"></i><b>4.1</b> Extrapolations</a>
-<ul>
-<li class="chapter" data-level="4.1.1" data-path="lineupestimates.html"><a href="lineupestimates.html#pass-through-rate-for-india"><i class="fa fa-check"></i><b>4.1.1</b> Pass-through rate for India</a></li>
+<li class="chapter" data-level="4.1" data-path="surveyestimates.html"><a href="surveyestimates.html#monetarypoverty"><i class="fa fa-check"></i><b>4.1</b> Monetary poverty measures</a></li>
+<li class="chapter" data-level="4.2" data-path="surveyestimates.html"><a href="surveyestimates.html#mpm"><i class="fa fa-check"></i><b>4.2</b> Multidimensional Poverty Measure</a></li>
+<li class="chapter" data-level="4.3" data-path="surveyestimates.html"><a href="surveyestimates.html#inequality"><i class="fa fa-check"></i><b>4.3</b> Inequality measures</a></li>
+<li class="chapter" data-level="4.4" data-path="surveyestimates.html"><a href="surveyestimates.html#dist"><i class="fa fa-check"></i><b>4.4</b> Other distributional statistics</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="lineupestimates.html"><a href="lineupestimates.html#interpolations"><i class="fa fa-check"></i><b>4.2</b> Interpolations</a>
+<li class="chapter" data-level="5" data-path="lineupestimates.html"><a href="lineupestimates.html"><i class="fa fa-check"></i><b>5</b> Calculating global and regional estimates</a>
 <ul>
-<li class="chapter" data-level="4.2.1" data-path="lineupestimates.html"><a href="lineupestimates.html#same-direction-interpolation"><i class="fa fa-check"></i><b>4.2.1</b> “Same direction” interpolation</a></li>
-<li class="chapter" data-level="4.2.2" data-path="lineupestimates.html"><a href="lineupestimates.html#diverging-directions-interpolation"><i class="fa fa-check"></i><b>4.2.2</b> “Diverging directions” interpolation</a></li>
+<li class="chapter" data-level="5.1" data-path="lineupestimates.html"><a href="lineupestimates.html#extrapolations"><i class="fa fa-check"></i><b>5.1</b> Extrapolations</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="lineupestimates.html"><a href="lineupestimates.html#pass-through-rate-for-india"><i class="fa fa-check"></i><b>5.1.1</b> Pass-through rate for India</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="lineupestimates.html"><a href="lineupestimates.html#nationalaccounts"><i class="fa fa-check"></i><b>4.3</b> National accounts data</a></li>
-<li class="chapter" data-level="4.4" data-path="lineupestimates.html"><a href="lineupestimates.html#choosing-between-consumption-and-income-estimates"><i class="fa fa-check"></i><b>4.4</b> Choosing between consumption and income estimates</a></li>
-<li class="chapter" data-level="4.5" data-path="lineupestimates.html"><a href="lineupestimates.html#regionsandcountries"><i class="fa fa-check"></i><b>4.5</b> Regional classification</a></li>
-<li class="chapter" data-level="4.6" data-path="lineupestimates.html"><a href="lineupestimates.html#population"><i class="fa fa-check"></i><b>4.6</b> Population</a></li>
-<li class="chapter" data-level="4.7" data-path="lineupestimates.html"><a href="lineupestimates.html#nodata"><i class="fa fa-check"></i><b>4.7</b> Treatment of countries without any poverty data</a></li>
-<li class="chapter" data-level="4.8" data-path="lineupestimates.html"><a href="lineupestimates.html#coverage-rule"><i class="fa fa-check"></i><b>4.8</b> Coverage rule</a></li>
+<li class="chapter" data-level="5.2" data-path="lineupestimates.html"><a href="lineupestimates.html#interpolations"><i class="fa fa-check"></i><b>5.2</b> Interpolations</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="lineupestimates.html"><a href="lineupestimates.html#same-direction-interpolation"><i class="fa fa-check"></i><b>5.2.1</b> “Same direction” interpolation</a></li>
+<li class="chapter" data-level="5.2.2" data-path="lineupestimates.html"><a href="lineupestimates.html#diverging-directions-interpolation"><i class="fa fa-check"></i><b>5.2.2</b> “Diverging directions” interpolation</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="lineupestimates.html"><a href="lineupestimates.html#nationalaccounts"><i class="fa fa-check"></i><b>5.3</b> National accounts data</a></li>
+<li class="chapter" data-level="5.4" data-path="lineupestimates.html"><a href="lineupestimates.html#choosing-between-consumption-and-income-estimates"><i class="fa fa-check"></i><b>5.4</b> Choosing between consumption and income estimates</a></li>
+<li class="chapter" data-level="5.5" data-path="lineupestimates.html"><a href="lineupestimates.html#regionsandcountries"><i class="fa fa-check"></i><b>5.5</b> Regional classification</a></li>
+<li class="chapter" data-level="5.6" data-path="lineupestimates.html"><a href="lineupestimates.html#population"><i class="fa fa-check"></i><b>5.6</b> Population</a></li>
+<li class="chapter" data-level="5.7" data-path="lineupestimates.html"><a href="lineupestimates.html#nodata"><i class="fa fa-check"></i><b>5.7</b> Treatment of countries without any poverty data</a></li>
+<li class="chapter" data-level="5.8" data-path="lineupestimates.html"><a href="lineupestimates.html#coverage"><i class="fa fa-check"></i><b>5.8</b> Coverage rule</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 </ul>
@@ -218,10 +250,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 Alkire, Sabina, José Manuel Roche, Paola Ballon, James Foster, Maria Emma Santos, and Suman Seth. 2015. <em>Multidimensional Poverty Measurement and Analysis</em>. Oxford University Press, USA.
 </div>
 <div class="csl-entry">
-Atamanov, Aziz, R. Andres Castaneda Aguilar, Carolina Diaz-Bonilla, Dean Jolliffe, Christoph Lakner, Daniel Gerszon Mahler, Jose Montes, et al. 2019. <span>“September 2019 PovcalNet Update.”</span> Washington, DC. <a href="https://openknowledge.worldbank.org/handle/10986/32478">https://openknowledge.worldbank.org/handle/10986/32478</a>.
+Arayavechkit, Tanida, Aziz Atamanov, Karen Barreto Herrera, Nadia Belhaj Hassine Belghith, R. Andres Castaneda Aguilar, Tony Fujs, Reno Dewina, et al. 2021. <span>“March 2021 PovcalNet Update: What’s New.”</span>
 </div>
 <div class="csl-entry">
-Atamanov, Aziz, Dean Jolliffe, Christoph Lakner, and Espen Beer Prydz. 2018. <span>“Purchasing Power Parities Used in Global Poverty Measurement.”</span> Washington, DC.
+Atamanov, Aziz, R. Andres Castaneda Aguilar, Carolina Diaz-Bonilla, Dean Jolliffe, Christoph Lakner, Daniel Gerszon Mahler, Jose Montes, et al. 2019. <span>“September 2019 PovcalNet Update.”</span> Washington, DC. <a href="https://openknowledge.worldbank.org/handle/10986/32478">https://openknowledge.worldbank.org/handle/10986/32478</a>.
 </div>
 <div class="csl-entry">
 Atamanov, Aziz, Christoph Lakner, Daniel Gerszon Mahler, Samuel Kofi Tetteh Baah, and Judy Yang. 2020. <span>“The Effect of New PPP Estimates on Global Poverty: A First Look.”</span> Washington, DC.
@@ -246,6 +278,9 @@ Chen, Shaohua, and Martin Ravallion. 2004. <span>“How Have the World’s Poore
 </div>
 <div class="csl-entry">
 Datt, Gaurav. 1998. <span>“Computational Tools for Poverty Measurement and Analysis.”</span> <a href="http://ebrary.ifpri.org/utils/getfile/collection/p15738coll2/id/125673/filename/125704.pdf">http://ebrary.ifpri.org/utils/getfile/collection/p15738coll2/id/125673/filename/125704.pdf</a>.
+</div>
+<div class="csl-entry">
+De Weerdt, Joachim, John Gibson, and Kathleen Beegle. 2020. <span>“What Can We Learn from Experimenting with Survey Methods?”</span> <em>Annual Review of Resource Economics</em> 12 (1): 431–47. <a href="https://doi.org/10.1146/annurev-resource-103019-105958">https://doi.org/10.1146/annurev-resource-103019-105958</a>.
 </div>
 <div class="csl-entry">
 Deaton, Angus. 2005. <span>“Measuring Poverty in a Growing World (or Measuring Growth in a Poor World).”</span> <em>The Review of Economics and Statistics</em> 87 (1): 1–19. <a href="https://doi.org/10.1162/0034653053327612">https://doi.org/10.1162/0034653053327612</a>.
@@ -302,10 +337,7 @@ Ravallion, Martin, Shaohua Chen, and Prem Sangraula. 2009. <span>“Dollar a Day
 Wolfson, Michael C. 1994. <span>“When Inequalities Diverge.”</span> <em>The American Economic Review</em> 84 (2): 353–58.
 </div>
 <div class="csl-entry">
-World Bank. 2018a. <em>Poverty and Shared Prosperity 2018</em>. Washington, DC: World Bank. <a href="https://doi.org/10.1596/978-1-4648-1330-6">https://doi.org/10.1596/978-1-4648-1330-6</a>.
-</div>
-<div class="csl-entry">
-———. 2018b. <em>Poverty and Shared Prosperity 2018</em>. Washington, DC: World Bank. <a href="https://doi.org/10.1596/978-1-4648-1330-6">https://doi.org/10.1596/978-1-4648-1330-6</a>.
+World Bank. 2018. <em>Poverty and Shared Prosperity 2018</em>. Washington, DC: World Bank. <a href="https://doi.org/10.1596/978-1-4648-1330-6">https://doi.org/10.1596/978-1-4648-1330-6</a>.
 </div>
 <div class="csl-entry">
 ———. 2020. <em>Poverty and Shared Prosperity 2020</em>. Washington, DC: World Bank. <a href="https://doi.org/10.1596/978-1-4648-1602-4">https://doi.org/10.1596/978-1-4648-1602-4</a>.
@@ -341,6 +373,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -363,7 +396,8 @@ gitbook.start({
 "download": null,
 "toc": {
 "collapse": "subsection"
-}
+},
+"search": true
 });
 });
 </script>
