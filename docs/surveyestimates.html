@@ -31,7 +31,7 @@
   
 <link rel="prev" href="convert.html"/>
 <link rel="next" href="lineupestimates.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -51,8 +51,75 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
@@ -192,7 +259,7 @@ P_0 = - \frac{1}{2m}[n + r(b+2z/\mu)((b+2z/\mu)^2-m)^{-1/2}],
 <p>where <span class="math inline">\(\theta\)</span>, <span class="math inline">\(\delta\)</span>, and <span class="math inline">\(\gamma\)</span> are parameter estimates. See the <a href="welfareaggregate.html#tgd">section on treatment of grouped data</a> for details on the GQ and Beta Lorenz functions.</p>
 <p><strong>Poverty gap index</strong>: The poverty gap index (<span class="math inline">\(P_1\)</span>) is a measure that adds up the extent to which individuals on average fall below the poverty line (i.e. the depth of poverty), and expresses it as a percentage of the poverty line. The poverty gap index is obtained from micro data with the following expression (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R">source code</a>):</p>
 <p><span class="math display">\[ P_1 = \frac{1}{N} \sum_{i=1}^{N} \frac{G_i}{z} \]</span>with <span class="math inline">\(G_i = (z - y_i) × I (y_i &lt; z)\)</span>, where <span class="math inline">\(G_i\)</span> is defined as the poverty gap (i.e. poverty line (<span class="math inline">\(z\)</span>) less welfare (<span class="math inline">\(y_i\)</span>)) of poor individuals; the gap is considered to be zero for everyone else.</p>
-<p>For grouped data, the poverty gap index is obtained using the following expression (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lb.R#L806-L815">Beta source code</a>, <a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lq.R#L568">GQ source code</a>).</p>
+<p>For grouped data, the poverty gap index is obtained using the following expression (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lb.R#L806-L815">Beta Lorenz source code</a>, <a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lq.R#L568">GQ source code</a>).</p>
 <p><span class="math display">\[
 P_1 = P_0 - (\mu/z)L(P_0)
 \]</span></p>
@@ -214,7 +281,7 @@ P_2 = (1 -\mu/z)  \left[ 2P_1 - (1- \mu/z) P_0) \right] \\ \ \ \ \ \ \ \ \ \ \ \
 B(k,r,s) = \int_0^k p^{r-1}(1 - p)^{s - 1} ~dp
 \]</span></p>
 <p>where <span class="math inline">\(k\)</span>, <span class="math inline">\(r\)</span>, <span class="math inline">\(s\)</span> are parameters and all other notations are defined as before for the Beta Lorenz function.</p>
-<p><strong>The Watts index</strong>: The Watts index (<span class="math inline">\(W\)</span>) is also an inequality-sensitive poverty measure that is given as (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R">Mircodata source code</a>, <a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lq.R#L402-L450">GQ source code</a>, <a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lb.R#L328-L376">Beta source code</a>):</p>
+<p><strong>The Watts index</strong>: The Watts index (<span class="math inline">\(W\)</span>) is also an inequality-sensitive poverty measure that is given as (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R">mirco data source code</a>, <a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lq.R#L402-L450">GQ source code</a>, <a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lb.R#L328-L376">Beta Lorenz source code</a>):</p>
 <p><span class="math display">\[ W  = \frac{1}{N} \sum_{i=1}^{q} ln \left(\frac{z}{y_i} \right), \]</span></p>
 <p>where the <span class="math inline">\(N\)</span> individuals of the population are indexed in ascending order of welfare, and the sum is taken over <span class="math inline">\(q\)</span> individuals whose welfare, <span class="math inline">\(y_i\)</span>, falls below the poverty line <span class="math inline">\(z\)</span>. This formula applies to both micro and grouped data. It also holds for both the GQ and Beta Lorenz functions, which are evaluated at the poverty line <span class="math inline">\(z\)</span> and other percentiles <span class="math inline">\(y_i\)</span>. A percentile is given as the product of the mean and the first derivative of the GQ or Beta Lorenz function at the respective rank in the distribution. The first derivative of the GQ Lorenz function is given as:</p>
 <p><span class="math display">\[
@@ -295,16 +362,16 @@ Gini = 100*\begin{cases}
  \frac{e}{2} - \frac{n(b + 2)}{4m} + \frac{r^2}{8m\sqrt{m}} ln\left[\text{abs}\left( \frac{2m + n + 2\sqrt{m}(a + c - 1)}{n - 2e\sqrt{m}}\right) \right]  &amp; \text{if $m&gt;0$}
  \end{cases} 
  \]</span></p>
-<p>with all parameters defined as before. With the Beta Lorenz function, the Gini index is given as (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lb.R#L208-L221">source code</a>:</p>
+<p>with all parameters defined as before. With the Beta Lorenz function, the Gini index is given as (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lb.R#L208-L221">source code</a>):</p>
 <p><span class="math display">\[
 Gini = 100 * 2\theta B(1 + \gamma, 1 + \delta)
 \]</span></p>
 <p>Note that <span class="math inline">\(B(1 + \gamma, 1 + \delta)\)</span> is the Beta function <span class="math inline">\(\int_0^1 p^\gamma (1 - p)^\delta ~dp\)</span>.</p>
 <p><strong>Mean log deviation</strong>: The mean log deviation (MLD) belongs to the family of generalized entropy inequality measures. It is given as:</p>
 <p><span class="math display">\[ MLD  = \frac{1}{N} \sum_{i=1}^{N} ln \left(\frac{μ}{y_i} \right)*100, \]</span></p>
-<p>where <span class="math inline">\(N\)</span> is the total population size, <span class="math inline">\(μ\)</span> is the mean welfare per person, and <span class="math inline">\(y_i\)</span> is welfare of individual <span class="math inline">\(i\)</span>. The MLD has a minimum value of 0 (perfect equality) and has no upper bound. This formula applies for both micro and grouped data (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_mld.R">Microdata source code</a>, <a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lq.R#L327-L353">GQ source code</a>, <a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lb.R#L253-L279">Beta source code</a>). For both the GQ and Beta Lorenz functions, the MLD is evaluated at the poverty line <span class="math inline">\(z\)</span> and percentiles <span class="math inline">\(y_i\)</span>. A percentile is given as the product of the mean and the first derivative of the GQ or Beta Lorenz function at the respective rank in the distribution (see section on the Watts Index for the derivation of the first derivatives).</p>
+<p>where <span class="math inline">\(N\)</span> is the total population size, <span class="math inline">\(μ\)</span> is the mean welfare per person, and <span class="math inline">\(y_i\)</span> is welfare of individual <span class="math inline">\(i\)</span>. The MLD has a minimum value of 0 (perfect equality) and has no upper bound. This formula applies for both micro and grouped data (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_mld.R">miicro data source code</a>, <a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lq.R#L327-L353">GQ source code</a>, <a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lb.R#L253-L279">Beta Lorenz source code</a>). For both the GQ and Beta Lorenz functions, the MLD is evaluated at the poverty line <span class="math inline">\(z\)</span> and percentiles <span class="math inline">\(y_i\)</span>. A percentile is given as the product of the mean and the first derivative of the GQ or Beta Lorenz function at the respective rank in the distribution (see section on the Watts Index for the derivation of the first derivatives).</p>
 <p>In the same vein of the Watts Index, the MLD suffers from being undefined when there are zero values in the distribution. Currently PIP replaces zeros with ones when in order to use the same sample as with the other inequality measures.</p>
-<p><strong>Polarization</strong>: The polarization index (<span class="math inline">\(P\)</span>), also known as the Wolfson polarization index, measures the extent to which the distribution of welfare is “spread out” and bi-modal. It is given as (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_polarization.R">Microdata source code</a>, <a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lq.R#L465-L475">GQ source code</a>, <a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lb.R#L424-L435">Beta source code</a>):</p>
+<p><strong>Polarization</strong>: The polarization index (<span class="math inline">\(P\)</span>), also known as the Wolfson polarization index, measures the extent to which the distribution of welfare is “spread out” and bi-modal. It is given as (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_polarization.R">micro data source code</a>, <a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lq.R#L465-L475">GQ source code</a>, <a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lb.R#L424-L435">Beta Lorenz source code</a>):</p>
 <p><span class="math display">\[
 P =  \frac{2(\mu^* - \mu^L)}{m},
 \]</span></p>
