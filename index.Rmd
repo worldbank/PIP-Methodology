@@ -46,7 +46,7 @@ calculated. This particular page summarizes the methodology in
 non-technical terms using five steps. The summary is followed by five
 chapters that dig into these steps in detail.
 
-The five steps are illustrated in Figure 1 and summarized below. First,
+The five steps are illustrated in the figure below and summarized after the figure. First,
 household survey data are obtained from relevant sources. Second, the
 survey data are used to create an estimate of households' income or
 consumption, known as welfare aggregates. Third, the welfare aggregates
