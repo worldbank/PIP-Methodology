@@ -180,6 +180,10 @@ pre code {
 <h2>Working with the book</h2>
 <p>To update the text, just open whichever of the “.Rmd” files which needs updating.</p>
 </div>
+<div id="updating-references" class="section level2">
+<h2>Updating references</h2>
+<p>To update a reference, the easiest is just to open references.bib in notepad and manually make changes. You can also work with it through Zotero but I find that to be less reliable. Once you’ve updated some references, you need to knit the relevant files where they appear and then render the book (see below on that).</p>
+</div>
 <div id="rendering-the-book" class="section level2">
 <h2>Rendering the book</h2>
 <p>To render the book, make sure you have opened the file “Methodology.Rproj” in the main folder. You can check you have this file open if the very top-left of the RStudio reads “Methodology - RStudio”. The buttons in RStudio, “Knit” and “Build Book” do not work. Rather you will need to type the following line directly in the console: bookdown::render_book()</p>
