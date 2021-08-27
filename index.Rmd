@@ -46,15 +46,16 @@ calculated. This particular page summarizes the methodology in
 non-technical terms using five steps. The summary is followed by five
 chapters that dig into these steps in detail.
 
-The five steps are illustrated in the figure below and summarized after the figure. First,
-household survey data are obtained from relevant sources. Second, the
-survey data are used to create an estimate of households' income or
-consumption, known as welfare aggregates. Third, the welfare aggregates
-are adjusted for differences in price levels across countries and over
-time to foster international comparability. Fourth, poverty and
-inequality are estimated for a particular country for a particular year.
-Fifth, the estimates of poverty are extrapolated or interpolated to a
-common year and the population-weighted poverty rate is calculated.
+The five steps are illustrated in the figure below and summarized after
+the figure. First, household survey data are obtained from relevant
+sources. Second, the survey data are used to create an estimate of
+households' income or consumption, known as welfare aggregates. Third,
+the welfare aggregates are adjusted for differences in price levels
+across countries and over time to foster international comparability.
+Fourth, poverty and inequality are estimated for a particular country
+for a particular year. Fifth, the estimates of poverty are extrapolated
+or interpolated to a common year and the population-weighted poverty
+rate is calculated.
 
 All decisions, assumptions, and protocols involved in these steps and in
 the chapters that follow are governed by the World Bank's Global Poverty
