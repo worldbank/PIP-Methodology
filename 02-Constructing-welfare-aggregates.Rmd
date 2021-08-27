@@ -34,7 +34,7 @@ Whether the welfare aggregate is based on [consumption or income](#incomeorconsu
 
 When the welfare aggregate is based on income the logic is similar. In this case, the welfare aggregate should be composed of the remuneration of all the assets of the household including labor, capital, and durable goods such as houses [@gasparini2004]. Families that own their housing receive an implicit value that is equivalent to the amount of money they would have to pay in the market if they had to rent a dwelling similar to the one they are currently living in. Hence, to properly account for housing in welfare aggregates, one needs to impute rent for owners.
 
-Several methods exist to impute rent (see @balcázar2017 for a review). Due to the data needs of these approaches, imputed rent is not always computed, leading housing to be excluded from the welfare aggregate. Across the surveys used in PIP, it varies between country and within countries over time whether imputed rent is included. Due to the value of housing services relative to total welfare, this can matter a great deal for poverty [comparability over time](#comparability).
+Several methods exist to impute rent (see @balcazar2017 for a review). Due to the data needs of these approaches, imputed rent is not always computed, leading housing to be excluded from the welfare aggregate. Across the surveys used in PIP, it varies between country and within countries over time whether imputed rent is included. Due to the value of housing services relative to total welfare, this can matter a great deal for poverty [comparability over time](#comparability).
 
 ## Within-survey spatial/temporal deflation {#spatialtemporal}
 
