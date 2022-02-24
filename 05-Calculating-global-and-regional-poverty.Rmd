@@ -40,7 +40,7 @@ $$sign \bigg(\dfrac{μ_{survey2}}{μ_{survey1}}-1\bigg) =
 
 "Diverging directions" interpolation is used when the equation above does not hold. The main difference between the two is that "same direction" interpolation tries to estimate how much of the growth in national accounts that had accrued at the reference year, and uses this to back out a predicted survey mean at the reference year. When the survey mean and national accounts grow in opposite directions this is not meaningful, and an alternative approach is used.
 
-Interpolations are never done between consumption and income aggregates Whenever both are available, [specific rules are used to determine which aggregate to use](#inccon).
+Interpolations are never done between consumption and income aggregates. Whenever both are available, [specific rules are used to determine which aggregate to use](#inccon).
 
 ### "Same direction" interpolation
 
