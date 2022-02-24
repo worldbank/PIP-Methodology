@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 5 Calculating global and regional estimates | Poverty and Inequality Platform Methodology Handbook</title>
   <meta name="description" content="Chapter 5 Calculating global and regional estimates | Poverty and Inequality Platform Methodology Handbook" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 5 Calculating global and regional estimates | Poverty and Inequality Platform Methodology Handbook" />
   <meta property="og:type" content="book" />
@@ -31,8 +31,9 @@
   
 <link rel="prev" href="surveyestimates.html"/>
 <link rel="next" href="references.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -48,13 +49,12 @@
 
 
 
-
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
 <script src="libs/viz-1.8.2/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
+<script src="libs/grViz-binding-1.0.8/grViz.js"></script>
 
 
 <style type="text/css">
@@ -217,7 +217,7 @@ div.csl-indent {
 <li class="chapter" data-level="5.2.2" data-path="lineupestimates.html"><a href="lineupestimates.html#diverging-directions-interpolation"><i class="fa fa-check"></i><b>5.2.2</b> “Diverging directions” interpolation</a></li>
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="lineupestimates.html"><a href="lineupestimates.html#nationalaccounts"><i class="fa fa-check"></i><b>5.3</b> National accounts data</a></li>
-<li class="chapter" data-level="5.4" data-path="lineupestimates.html"><a href="lineupestimates.html#choosing-between-consumption-and-income-estimates"><i class="fa fa-check"></i><b>5.4</b> Choosing between consumption and income estimates</a></li>
+<li class="chapter" data-level="5.4" data-path="lineupestimates.html"><a href="lineupestimates.html#inccon"><i class="fa fa-check"></i><b>5.4</b> Choosing between consumption and income estimates</a></li>
 <li class="chapter" data-level="5.5" data-path="lineupestimates.html"><a href="lineupestimates.html#regionsandcountries"><i class="fa fa-check"></i><b>5.5</b> Regional classification</a></li>
 <li class="chapter" data-level="5.6" data-path="lineupestimates.html"><a href="lineupestimates.html#population"><i class="fa fa-check"></i><b>5.6</b> Population</a></li>
 <li class="chapter" data-level="5.7" data-path="lineupestimates.html"><a href="lineupestimates.html#nodata"><i class="fa fa-check"></i><b>5.7</b> Treatment of countries without any poverty data</a></li>
@@ -267,6 +267,7 @@ div.csl-indent {
   sign \bigg(\dfrac{NA_{survey2}}{NA_{reference}}-1\bigg) = 
   sign \bigg(\dfrac{NA_{reference}}{NA_{survey1}}-1\bigg)\]</span></p>
 <p>“Diverging directions” interpolation is used when the equation above does not hold. The main difference between the two is that “same direction” interpolation tries to estimate how much of the growth in national accounts that had accrued at the reference year, and uses this to back out a predicted survey mean at the reference year. When the survey mean and national accounts grow in opposite directions this is not meaningful, and an alternative approach is used.</p>
+<p>Interpolations are never done between consumption and income aggregates Whenever both are available, <a href="lineupestimates.html#inccon">specific rules are used to determine which aggregate to use</a>.</p>
 <div id="same-direction-interpolation" class="section level3" number="5.2.1">
 <h3><span class="header-section-number">5.2.1</span> “Same direction” interpolation</h3>
 <p>“Same direction” interpolation works in three steps.</p>
@@ -288,7 +289,7 @@ div.csl-indent {
 <p>All of the interpolation and extrapolation methods described above rely on national accounts data. Two national accounts variables are used: Household Final Consumption Expenditure (HFCE) and Gross Domestic Product (GDP) – both in real per capita terms. Due to its close conceptual relation with the welfare aggregate, when available, HFCE is used as the preferred national accounts data for extrapolation and interpolation methods. In Sub-Saharan Africa, however, HFCE estimates at constant prices are both sparse and the empirical correlation between growth in HFCE and growth in the survey mean is not as strong <span class="citation">(<a href="#ref-ravallion2003" role="doc-biblioref">Ravallion 2003</a>)</span>. Hence, GDP is preferred for this region. The <a href="https://databank.worldbank.org/source/world-development-indicators">World Development Indicators</a> (WDI) database is the primary source for the HFCE data (we use the <a href="https://data.worldbank.org/indicator/NE.CON.PRVT.PC.KD">Households Final Consumption Expenditure per capita (constant 2010 US$)</a> series with the series code NE.CON.PRVT.PC.KD) and the GDP data (where we use the <a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.KD">GDP per capita (constant 2010 US$)</a> series with the series code NY.GDP.PCAP.KD). When WDI data are not available, we use data from the <a href="https://www.imf.org/en/Publications/WEO">World Economic Outlook</a> and the <a href="https://www.rug.nl/ggdc/historicaldevelopment/maddison/?lang=en">Maddison Project Database</a>. For a detailed discussion on the sources of national accounts data see <span class="citation">(<a href="#ref-prydz2019" role="doc-biblioref">Prydz et al. 2019</a>)</span>.</p>
 <p>It is important to note that the extrapolations and interpolations use only the growth rate from national accounts. In many countries, important differences in income levels between surveys and national accounts also exist <span class="citation">(<a href="#ref-jolliffe" role="doc-biblioref">Jolliffe, Prydz, and Serajuddin 2019</a>)</span>. Since the growth rate is the same whether PPPs or USD are used, it is immaterial that the constant USD series is used in the extrapolations and interpolations, while the survey welfare aggregate is expressed in PPPs.</p>
 </div>
-<div id="choosing-between-consumption-and-income-estimates" class="section level2" number="5.4">
+<div id="inccon" class="section level2" number="5.4">
 <h2><span class="header-section-number">5.4</span> Choosing between consumption and income estimates</h2>
 <p>The discussion on interpolation and extrapolation for simplicity assumed that only one welfare aggregate was available for a given country at a given year. Yet, a number of countries have poverty estimates available from both <a href="welfareaggregate.html#incomeorconsumption">consumption and income aggregates</a>. Due to its closer connection to welfare, whenever both income and consumption estimates are available for a given reference year, consumption estimates are preferred. Likewise, when both kinds of poverty estimates are available for the same years (but not for a particular reference year), interpolations and extrapolation are made using the consumption estimates. When consumption and income estimates are available at different years, the choice is a bit more complicated. The precise rules are outlined in the following decision tree:</p>
 <p><img src="figures/Income%20consumption%20decision%20tree.svg" title="Income consumption decision tree" /></p>
@@ -375,7 +376,6 @@ World Bank. 2018. <em>Poverty and Shared Prosperity 2018: Piecing Together the P
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -415,10 +415,13 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
-},
-"search": true
+}
 });
 });
 </script>

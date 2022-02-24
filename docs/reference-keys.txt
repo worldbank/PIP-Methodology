@@ -31,7 +31,7 @@ interpolations
 same-direction-interpolation
 diverging-directions-interpolation
 nationalaccounts
-choosing-between-consumption-and-income-estimates
+inccon
 regionsandcountries
 population
 nodata

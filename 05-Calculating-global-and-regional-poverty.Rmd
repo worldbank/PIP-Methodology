@@ -40,6 +40,8 @@ $$sign \bigg(\dfrac{μ_{survey2}}{μ_{survey1}}-1\bigg) =
 
 "Diverging directions" interpolation is used when the equation above does not hold. The main difference between the two is that "same direction" interpolation tries to estimate how much of the growth in national accounts that had accrued at the reference year, and uses this to back out a predicted survey mean at the reference year. When the survey mean and national accounts grow in opposite directions this is not meaningful, and an alternative approach is used.
 
+Interpolations are never done between consumption and income aggregates Whenever both are available, [specific rules are used to determine which aggregate to use](#inccon).
+
 ### "Same direction" interpolation
 
 "Same direction" interpolation works in three steps.
@@ -68,7 +70,7 @@ All of the interpolation and extrapolation methods described above rely on natio
 
 It is important to note that the extrapolations and interpolations use only the growth rate from national accounts. In many countries, important differences in income levels between surveys and national accounts also exist [@jolliffe]. Since the growth rate is the same whether PPPs or USD are used, it is immaterial that the constant USD series is used in the extrapolations and interpolations, while the survey welfare aggregate is expressed in PPPs.
 
-## Choosing between consumption and income estimates
+## Choosing between consumption and income estimates {#inccon}
 
 The discussion on interpolation and extrapolation for simplicity assumed that only one welfare aggregate was available for a given country at a given year. Yet, a number of countries have poverty estimates available from both [consumption and income aggregates](#incomeorconsumption). Due to its closer connection to welfare, whenever both income and consumption estimates are available for a given reference year, consumption estimates are preferred. Likewise, when both kinds of poverty estimates are available for the same years (but not for a particular reference year), interpolations and extrapolation are made using the consumption estimates. When consumption and income estimates are available at different years, the choice is a bit more complicated. The precise rules are outlined in the following decision tree:
 
