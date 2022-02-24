@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Poverty and Inequality Platform Methodology Handbook</title>
   <meta name="description" content="Poverty and Inequality Platform Methodology Handbook" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Poverty and Inequality Platform Methodology Handbook" />
   <meta property="og:type" content="book" />
@@ -31,8 +31,9 @@
   
 
 <link rel="next" href="acquiring.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -48,13 +49,12 @@
 
 
 
-
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
 <script src="libs/viz-1.8.2/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
+<script src="libs/grViz-binding-1.0.8/grViz.js"></script>
 
 
 <style type="text/css">
@@ -217,7 +217,7 @@ div.csl-indent {
 <li class="chapter" data-level="5.2.2" data-path="lineupestimates.html"><a href="lineupestimates.html#diverging-directions-interpolation"><i class="fa fa-check"></i><b>5.2.2</b> “Diverging directions” interpolation</a></li>
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="lineupestimates.html"><a href="lineupestimates.html#nationalaccounts"><i class="fa fa-check"></i><b>5.3</b> National accounts data</a></li>
-<li class="chapter" data-level="5.4" data-path="lineupestimates.html"><a href="lineupestimates.html#choosing-between-consumption-and-income-estimates"><i class="fa fa-check"></i><b>5.4</b> Choosing between consumption and income estimates</a></li>
+<li class="chapter" data-level="5.4" data-path="lineupestimates.html"><a href="lineupestimates.html#inccon"><i class="fa fa-check"></i><b>5.4</b> Choosing between consumption and income estimates</a></li>
 <li class="chapter" data-level="5.5" data-path="lineupestimates.html"><a href="lineupestimates.html#regionsandcountries"><i class="fa fa-check"></i><b>5.5</b> Regional classification</a></li>
 <li class="chapter" data-level="5.6" data-path="lineupestimates.html"><a href="lineupestimates.html#population"><i class="fa fa-check"></i><b>5.6</b> Population</a></li>
 <li class="chapter" data-level="5.7" data-path="lineupestimates.html"><a href="lineupestimates.html#nodata"><i class="fa fa-check"></i><b>5.7</b> Treatment of countries without any poverty data</a></li>
@@ -265,8 +265,8 @@ the chapters that follow are governed by the World Bank’s Global Poverty
 Working Group, which is composed of staff from the Poverty and Equity
 Global Practice, the Development Data Group, and the Development
 Research Group.</p>
-<div id="htmlwidget-b0d79dc96f7f84a3f350" style="width:672px;height:500px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-b0d79dc96f7f84a3f350">{"x":{"diagram":"digraph {\n  graph [layout = dot, rankdir = TD]\n  \n  node [shape = box,style=filled, color=lightblue2]        \n  box1 [label = \"Step 1\nAcquiring household survey data\"]\n  box2 [label = \"Step 2\nConstructing welfare aggregates\"]\n  box3 [label = \"Step 3\nConverting welfare aggregates\"]\n  box4 [label = \"Step 4\nCalculating survey estimates of poverty and inequality\"]\n  box5 [label = \"Step 5\nCalculating global and regional poverty\"]\n  box1 -> box2 -> box3 -> box4 -> box5\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-8fc701ed72c7ea3bc1a0" style="width:672px;height:500px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8fc701ed72c7ea3bc1a0">{"x":{"diagram":"digraph {\n  graph [layout = dot, rankdir = TD]\n  \n  node [shape = box,style=filled, color=lightblue2]        \n  box1 [label = \"Step 1\nAcquiring household survey data\"]\n  box2 [label = \"Step 2\nConstructing welfare aggregates\"]\n  box3 [label = \"Step 3\nConverting welfare aggregates\"]\n  box4 [label = \"Step 4\nCalculating survey estimates of poverty and inequality\"]\n  box5 [label = \"Step 5\nCalculating global and regional poverty\"]\n  box1 -> box2 -> box3 -> box4 -> box5\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <div id="step-1-acquiring-household-survey-data" class="section level2 unnumbered">
 <h2>Step 1: <a href="acquiring.html#acquiring">Acquiring household survey data</a></h2>
 <p>Poverty rates are estimated from <a href="acquiring.html#selection">selected</a> household
@@ -353,7 +353,6 @@ for global and regional numbers to be presented.</p>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -393,10 +392,13 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
-},
-"search": true
+}
 });
 });
 </script>
