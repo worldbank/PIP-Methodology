@@ -39,6 +39,10 @@ text-align: justify}
 knitr::opts_chunk$set(echo = TRUE) 
 ```
 
+*Suggested citation: World Bank. 2022. "Poverty and Inequality Platform
+Methodology Handbook." Edition 2022-04. Available at
+[<https://worldbank.github.io/PIP-Methodology-2022-04>](https://worldbank.github.io/PIP-Methodology/index.html).*
+
 # Non-technical summary {.unnumbered}
 
 This site describes how global and regional poverty rates are
