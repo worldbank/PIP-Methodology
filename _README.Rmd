@@ -24,3 +24,25 @@ To update a reference, the easiest is just to open references.bib in notepad and
 
 To render the book, make sure you have opened the file "Methodology.Rproj" in the main folder. You can check you have this file open if the very top-left of the RStudio reads "Methodology - RStudio". The buttons in RStudio, "Knit" and "Build Book" do not work. Rather you will need to type the following line directly in the console: bookdown::render_book()
 
+## Archieving the book
+
+Once a global poverty update has taken place, the new version of the handbook needs to be archived. For that, complete the following steps.
+
+
+1. The version of the handbook just prior to the update should already exist in PIP-Methodology-YYYY-MM.You need to add a disclaimer box on this version to make it clear that it is no longer the most recent. Do that by going to the latest archived version and copy the "css" and "files" folder. In addition change "index.Rmd" by adding the following right after "bookdown::gitbook:"
+    includes:
+      before_body: files/open_review_block.html
+    css: [css/style.css]
+The number of spaces/indents matter so don't change that!
+
+2. Render that book following the guidelines above
+
+
+3. Make all the updates to the handbook necessary and render that book following the guideliens above. 
+
+
+4. Create a new repository called PIP-Methodology-YYYY-MM where YYYY-MM is the year and month of the present update, i.e. most likely the year and month you are currently in. You need to have the rights to create a new repo on behalf of the Bank. 
+
+5. Copy everything from the live repo except for the ".git" folder and "docs" folder. 
+
+6. Render the book using the guidelines above. 
