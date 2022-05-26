@@ -36,3 +36,6 @@ regionsandcountries
 population
 nodata
 coverage
+revisions
+april
+may

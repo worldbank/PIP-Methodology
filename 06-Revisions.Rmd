@@ -1,0 +1,12 @@
+# Revisions made to this handbook {#revisions}
+
+As the methodology underlying the global poverty counts is updated, revisions are made to this handbook. Below is a description of the revisions that have taken place. 
+
+## 2022 April
+This was the first version published of the handbook. It is available [here](https://worldbank.github.io/PIP-Methodology-2022-04).
+
+## 2022 May
+The subsection on national accounts data was updated. National accounts data for Syria were made available through the World Development Indicators, so extrapolations for the country were no longer based on a special series drawn from academic papers. The May 2022 version of the handbook is the latest version.
+
+
+
