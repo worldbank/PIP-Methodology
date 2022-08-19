@@ -2,7 +2,7 @@
 
 ## Monetary poverty measures {#monetarypoverty}
 
-Armed with welfare distributions expressed in 2011 PPPs and an international poverty line, poverty and inequality can be calculated and compared across countries and over time. The poverty and inequality measures used in the Poverty and Equity Platform (PIP) for micro data are mainly based on formula in @haughton2009, while the poverty and inequality measures estimated from grouped data are mainly based on formula in @datt1998. In the formulas below we abstract from household weights for simplicity.
+Armed with welfare distributions expressed in 2017 PPPs and an international poverty line, poverty and inequality can be calculated and compared across countries and over time. The poverty and inequality measures used in the Poverty and Equity Platform (PIP) for micro data are mainly based on formula in @haughton2009, while the poverty and inequality measures estimated from grouped data are mainly based on formula in @datt1998. In the formulas below we abstract from household weights for simplicity.
 
 **Poverty headcount ratio**: The poverty headcount ratio ($P_0$) measures the proportion of the population that is counted as poor. When using micro data, the poverty headcount ratio is obtained using the following expression:$$ P_0 = \frac{1}{N} \sum_{i=1}^{N} I (y_i < z), $$
 
@@ -92,7 +92,7 @@ The dimensions, indicators, and weights of the World Bank's multidimensional pov
 +--------------------------------+-------------------------------------------------------------------------------------+--------+
 | Dimension                      | Indicator                                                                           | Weight |
 +================================+=====================================================================================+========+
-| Monetary poverty               | Daily consumption or income is less than US\$1.90 per person                        | 1/3    |
+| Monetary poverty               | Daily consumption or income is less than US\$2.15 per person                        | 1/3    |
 +--------------------------------+-------------------------------------------------------------------------------------+--------+
 | Education                      | At least one school-age child up to the age of grade 8 is not enrolled in school    | 1/6    |
 +--------------------------------+-------------------------------------------------------------------------------------+--------+

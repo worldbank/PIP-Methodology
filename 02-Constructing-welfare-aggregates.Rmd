@@ -88,19 +88,19 @@ As countries frequently improve the [questionnaire design](#questionnaire) of ho
 
 In order to guide users about when poverty can be compared over time within a country, PIP's line charts only connect poverty estimates when these are comparable. In addition, a "[Comparability Over Time](https://datacatalog.worldbank.org/dataset/comparability-over-time-country-level-international-poverty-measures)" dataset has been put together. This dataset provides metadata on the comparability of poverty estimates within countries over time. Within a country, comparability of poverty estimates over time is assumed unless there is a known change to the survey instrument, survey methodology, measurement, or data structure. The assessment of comparability is country-dependent and relies on the accumulation of knowledge from past and current World Bank staff, as well as close dialogue with national data producers with knowledge of survey design and methodology. The complete documentation of this dataset is available in @atamanov2019.
 
-The dataset can be accessed in different ways. It is available in the [Development Data Hub](https://datacatalog.worldbank.org/dataset/comparability-over-time-country-level-international-poverty-measures) of the World Bank and it is possible to access it directly from R, Stata, or Python by calling this file, "<https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/506801/povcalnet_comparability.csv%22.>
+The dataset can be accessed in different ways. It is available in the [Development Data Hub](https://datacatalog.worldbank.org/dataset/comparability-over-time-country-level-international-poverty-measures) of the World Bank and it is possible to access it directly from R, Stata, or Python by calling this file, "<https://datacatalogfiles.worldbank.org/ddh-published/0037799/DR0045725/pip_comparability.csv.>
 
 ### R {.unnumbered}
 
 ```{r, eval = FALSE}
-link <- "https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/506801/povcalnet_comparability.csv"
+link <- "https://datacatalogfiles.worldbank.org/ddh-published/0037799/DR0045725/pip_comparability.csv"
 df   <- readr::read_csv(link)
 ```
 
 ### Stata {.unnumbered}
 
 ```{stata, eval = FALSE}
-local dh "https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/506801/povcalnet_comparability.csv"
+local dh "https://datacatalogfiles.worldbank.org/ddh-published/0037799/DR0045725/pip_comparability.csv"
 import delimited using "`dh'", clear
 ```
 
@@ -108,7 +108,7 @@ import delimited using "`dh'", clear
 
 ```{python, eval = FALSE}
 import pandas as pd
-link = "https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/506801/povcalnet_comparability.csv"
+link = "https://datacatalogfiles.worldbank.org/ddh-published/0037799/DR0045725/pip_comparability.csv"
 df   = pd.read_csv(path)
 ```
 
