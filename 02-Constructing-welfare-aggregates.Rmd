@@ -82,34 +82,11 @@ $$
 L(p) = p - \theta p^\gamma (1-p)^\delta,
 $$ where $\theta$, $\gamma$, and $\delta$ are parameter estimates [@datt1998].
 
-## Comparability database {#comparability}
+## Comparability of estimates {#comparability}
 
-As countries frequently improve the [questionnaire design](#questionnaire) of household surveys and the methodology for the construction of welfare aggregates, poverty estimates over time for a country are not always comparable to each other.
+As countries frequently improve the [questionnaire design](#questionnaire) of household surveys and the methodology for the construction of welfare aggregates, poverty estimates over time for a country are not always comparable. In order to guide users about when poverty can be compared over time within a country, PIP's line charts for countries only connect poverty estimates when these are comparable. In addition, PIP contains metadata on the comparability of poverty estimates within countries over time. 
 
-In order to guide users about when poverty can be compared over time within a country, PIP's line charts only connect poverty estimates when these are comparable. In addition, a "[Comparability Over Time](https://datacatalog.worldbank.org/dataset/comparability-over-time-country-level-international-poverty-measures)" dataset has been put together. This dataset provides metadata on the comparability of poverty estimates within countries over time. Within a country, comparability of poverty estimates over time is assumed unless there is a known change to the survey instrument, survey methodology, measurement, or data structure. The assessment of comparability is country-dependent and relies on the accumulation of knowledge from past and current World Bank staff, as well as close dialogue with national data producers with knowledge of survey design and methodology. The complete documentation of this dataset is available in @atamanov2019.
+The metadata can be accessed through the [PIP API](https://pip.worldbank.org/api) or the [PIP Stata module](https://github.com/worldbank/pip). The variable `survey_comparability` contains the information with the following logic. The oldest comparable series in each country starts with the value zero (0). When comparability is broken, the value changes to one (1) for the year of the break and it goes on until the comparability is broken again in a subsequent year. The process repeats until the most recent survey data point available.
 
-The dataset can be accessed in different ways. It is available in the [Development Data Hub](https://datacatalog.worldbank.org/dataset/comparability-over-time-country-level-international-poverty-measures) of the World Bank and it is possible to access it directly from R, Stata, or Python by calling this file, "<https://datacatalogfiles.worldbank.org/ddh-published/0037799/DR0045725/pip_comparability.csv.>
+Within a country, comparability of poverty estimates over time is assumed unless there is a known change to the survey instrument, survey methodology, measurement, or data structure. The assessment of comparability is country-dependent and relies on the accumulation of knowledge from past and current World Bank staff, as well as close dialogue with national data producers with knowledge of survey design and methodology. More  documentation of the comparability assessment is available in @atamanov2019. 
 
-### R {.unnumbered}
-
-```{r, eval = FALSE}
-link <- "https://datacatalogfiles.worldbank.org/ddh-published/0037799/DR0045725/pip_comparability.csv"
-df   <- readr::read_csv(link)
-```
-
-### Stata {.unnumbered}
-
-```{stata, eval = FALSE}
-local dh "https://datacatalogfiles.worldbank.org/ddh-published/0037799/DR0045725/pip_comparability.csv"
-import delimited using "`dh'", clear
-```
-
-### Python {.unnumbered}
-
-```{python, eval = FALSE}
-import pandas as pd
-link = "https://datacatalogfiles.worldbank.org/ddh-published/0037799/DR0045725/pip_comparability.csv"
-df   = pd.read_csv(path)
-```
-
-Each observation of the comparability dataset represents a survey datapoint which is the combination of ISO3 country code (`countrycode`), `year`, survey acronym (`survname`), welfare type (i.e., income or consumption) (`datatype`), and survey coverage (`coveragetype`). The variable `comparabiliy` specifies the comparability over time with the following logic. The oldest comparable series in each country starts with the value zero (0) in the `comparability` variable. When comparability is broken, the value changes to one (1) for the year of the break and it goes on until the comparability is broken again in a subsequent year. The process repeats until the most recent survey datapoint available. Thus, to get the most recent comparable spell, you need the `max(comparability)` by `countrycode, survname, datatype, coveragetype`.

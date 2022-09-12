@@ -54,6 +54,28 @@
 
 
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 </head>
 
@@ -95,12 +117,7 @@
 </ul></li>
 <li class="chapter" data-level="2.5" data-path="welfareaggregate.html"><a href="welfareaggregate.html#equivalence-scale"><i class="fa fa-check"></i><b>2.5</b> Equivalence scale</a></li>
 <li class="chapter" data-level="2.6" data-path="welfareaggregate.html"><a href="welfareaggregate.html#tgd"><i class="fa fa-check"></i><b>2.6</b> Treatment of grouped data</a></li>
-<li class="chapter" data-level="2.7" data-path="welfareaggregate.html"><a href="welfareaggregate.html#comparability"><i class="fa fa-check"></i><b>2.7</b> Comparability database</a>
-<ul>
-<li class="chapter" data-level="" data-path="welfareaggregate.html"><a href="welfareaggregate.html#r"><i class="fa fa-check"></i>R</a></li>
-<li class="chapter" data-level="" data-path="welfareaggregate.html"><a href="welfareaggregate.html#stata"><i class="fa fa-check"></i>Stata</a></li>
-<li class="chapter" data-level="" data-path="welfareaggregate.html"><a href="welfareaggregate.html#python"><i class="fa fa-check"></i>Python</a></li>
-</ul></li>
+<li class="chapter" data-level="2.7" data-path="welfareaggregate.html"><a href="welfareaggregate.html#comparability"><i class="fa fa-check"></i><b>2.7</b> Comparability database</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="convert.html"><a href="convert.html"><i class="fa fa-check"></i><b>3</b> Converting welfare aggregates</a>
 <ul>
@@ -221,6 +238,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
