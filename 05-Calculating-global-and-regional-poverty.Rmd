@@ -14,19 +14,11 @@ $$f(y_{reference}) = \dfrac{NA_{reference}}{NA_{survey}} \times f(y_{survey})$$
 
 where $NA_{t}$ is real GDP per capita or real HFCE per capita at time $t$, as explained in the [national accounts data section](#nationalaccounts). Poverty for the reference year is then estimated using this extrapolated distribution. A similar approach is used to extrapolate backwards, when the earliest survey estimate available is more recent than the desired reference year. The extrapolation method assumes distribution-neutral growth, i.e. that everyone's welfare grows at the same rate. This implies that inequality is assumed to stay constant.
 
-The below example charts the consumption aggregate from the 2015.5 Ethiopian survey expressed in 2011 PPP-adjusted dollars, and the 2018 Ethiopian distribution one would get from extrapolating this welfare vector to 2018 using the method described above. The 2015.5 daily consumption mean is 3.12 and the growth rate in national accounts between 2015.5 and 2018 is 14.5%. Note that the positive growth pushes the distribution to the right. This changes the share of extreme poor -- those living below the \$1.90 poverty line -- from 30.8% in 2015.5 to 22.3% in 2018.
+The below example charts the consumption aggregate from the 2015.5 Ethiopian survey expressed in 2017 PPP-adjusted dollars, and the 2018 Ethiopian distribution one would get from extrapolating this welfare vector to 2018 using the method described above. The 2015.5 daily consumption mean is 3.12 and the growth rate in national accounts between 2015.5 and 2018 is 14.5%. Note that the positive growth pushes the distribution to the right. This changes the share of extreme poor -- those living below the \$2.15 poverty line -- from 30.8% in 2015.5 to 22.3% in 2018.
 
 ![](figures/ETHdist_example.png)
 
 When household surveys span two calendar years, as the example above, the national accounts data used for extrapolating this survey forward is the weighted average of the two years, with the weights determined by the share of the fieldwork that took place in each year (see the end of the section \@ref(selection) for details).
-
-### Pass-through rate for India
-
-The extrapolation method assumes that all growth in national accounts is passed through to the growth in welfare observed in surveys. Evidence exists that there are differences in growth rates between welfare aggregates and national accounts data. The growth in welfare aggregates has historically been lower than the growth in national accounts (@ravallion2003; @deaton2005; @pinkovskiy2016; @lakner2020). To circumvent this, a pass-through rate, i.e. afraction of growth in national accounts captured in household surveys, can be used to adjust the scaling factor used when extrapolating.
-
-India is the only case where the pass-through methodology is applied. The latest available survey for India is from 2011/12. Poverty for India after 2011/12 is calculated using the extrapolation method defined above with a national accounts growth rate adjusted for a pass-through rate. Up to 2015, urban/rural pass-through rates are calculated to match the poverty estimates for 2014/15 reported in @newhouse2018. The pass-through rate in India for the period 2011/12-2014/15 is estimated to be 0.70 for rural areas and 0.55 for urban areas (for more details see @chen2018).
-
-Poverty for years 2015-2018 is estimated using a pass-through rate of 0.67 calculated using a global sample of surveys (for more details, see @lakner2020; Ifeyani et al., 2020).
 
 ## Interpolations {#interpolations}
 
