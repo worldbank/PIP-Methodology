@@ -22,7 +22,7 @@ To update a reference, the easiest is just to open references.bib in notepad and
 
 ## Rendering the book
 
-To render the book, make sure you have opened the file "Methodology.Rproj" in the main folder. You can check you have this file open if the very top-left of the RStudio reads "Methodology - RStudio". The buttons in RStudio, "Knit" and "Build Book" do not work. Rather you will need to type the following line directly in the console: bookdown::render_book()
+To render the book, make sure you have opened the file "Methodology.Rproj" in the main folder. You can check you have this file open if the very top-left of the RStudio reads "Methodology - RStudio". The buttons in RStudio, "Knit" and "Build Book" do not work. Rather you will need to type the following line directly in the console: bookdown::render_book(). Once you have rendered the book, stage and commit in git and merge with the master branch. Then you should see the updated version on the main hyperlink.
 
 ## Archieving the book
 

@@ -51,6 +51,10 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.8/grViz.js"></script>
 
 
 
@@ -117,7 +121,7 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="2.5" data-path="welfareaggregate.html"><a href="welfareaggregate.html#equivalence-scale"><i class="fa fa-check"></i><b>2.5</b> Equivalence scale</a></li>
 <li class="chapter" data-level="2.6" data-path="welfareaggregate.html"><a href="welfareaggregate.html#tgd"><i class="fa fa-check"></i><b>2.6</b> Treatment of grouped data</a></li>
-<li class="chapter" data-level="2.7" data-path="welfareaggregate.html"><a href="welfareaggregate.html#comparability"><i class="fa fa-check"></i><b>2.7</b> Comparability database</a></li>
+<li class="chapter" data-level="2.7" data-path="welfareaggregate.html"><a href="welfareaggregate.html#comparability"><i class="fa fa-check"></i><b>2.7</b> Comparability of estimates</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="convert.html"><a href="convert.html"><i class="fa fa-check"></i><b>3</b> Converting welfare aggregates</a>
 <ul>
@@ -234,7 +238,7 @@ L(p) = p - \theta p^\gamma (1-p)^\delta,
 \]</span> where <span class="math inline">\(\theta\)</span>, <span class="math inline">\(\gamma\)</span>, and <span class="math inline">\(\delta\)</span> are parameter estimates <span class="citation">(<a href="#ref-datt1998" role="doc-biblioref">Datt 1998</a>)</span>.</p>
 </div>
 <div id="comparability" class="section level2" number="2.7">
-<h2><span class="header-section-number">2.7</span> Comparability database</h2>
+<h2><span class="header-section-number">2.7</span> Comparability of estimates</h2>
 <p>As countries frequently improve the <a href="welfareaggregate.html#questionnaire">questionnaire design</a> of household surveys and the methodology for the construction of welfare aggregates, poverty estimates over time for a country are not always comparable. In order to guide users about when poverty can be compared over time within a country, PIP’s line charts for countries only connect poverty estimates when these are comparable. In addition, PIP contains metadata on the comparability of poverty estimates within countries over time.</p>
 <p>The metadata can be accessed through the <a href="https://pip.worldbank.org/api">PIP API</a> or the <a href="https://github.com/worldbank/pip">PIP Stata module</a>. The variable <code>survey_comparability</code> contains the information with the following logic. The oldest comparable series in each country starts with the value zero (0). When comparability is broken, the value changes to one (1) for the year of the break and it goes on until the comparability is broken again in a subsequent year. The process repeats until the most recent survey data point available.</p>
 <p>Within a country, comparability of poverty estimates over time is assumed unless there is a known change to the survey instrument, survey methodology, measurement, or data structure. The assessment of comparability is country-dependent and relies on the accumulation of knowledge from past and current World Bank staff, as well as close dialogue with national data producers with knowledge of survey design and methodology. More documentation of the comparability assessment is available in <span class="citation"><a href="#ref-atamanov2019" role="doc-biblioref">Atamanov et al.</a> (<a href="#ref-atamanov2019" role="doc-biblioref">2019</a>)</span>.</p>

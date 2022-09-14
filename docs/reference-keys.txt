@@ -26,7 +26,6 @@ inequality
 dist
 lineupestimates
 extrapolations
-pass-through-rate-for-india
 interpolations
 same-direction-interpolation
 diverging-directions-interpolation
