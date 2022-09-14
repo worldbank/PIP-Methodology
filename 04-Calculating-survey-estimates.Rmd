@@ -197,9 +197,9 @@ In order for shared prosperity to be calculated for a country the following thre
 
 1.  Two [comparable](#comparability) household surveys must be available.
 
-2.  Among comparable surveys, one must be conducted within two years of the latest reference year (currently 2018) and the other within two years of five years prior to the reference year (currently 2013).
+2.  Among comparable surveys, one must be conducted within two years of the latest reference year (currently 2019) and the other within two years of five years prior to the reference year (currently 2014).
 
-3.  The period between the initial and end years should range between three and seven years. For example, a shared prosperity period of 2014--15 meets the second selection criterion but would not be allowed because it does not meet this third requirement.
+3.  The period between the initial and end years should range between three and seven years. For example, a shared prosperity period of 2015--16 meets the second selection criterion but would not be allowed because it does not meet this third requirement.
 
 In cases where multiple surveys fulfill these criteria, the most recent survey years are typically chosen. In countries in Europe and Central Asia using incomes as the welfare aggregate, households with negative incomes are included when estimating shared prosperity.
 
