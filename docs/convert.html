@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 3 Converting welfare aggregates | Poverty and Inequality Platform Methodology Handbook</title>
   <meta name="description" content="Chapter 3 Converting welfare aggregates | Poverty and Inequality Platform Methodology Handbook" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 3 Converting welfare aggregates | Poverty and Inequality Platform Methodology Handbook" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="https://povcalnet-team.github.io/Methodology" />
   
   
   <meta name="github-repo" content="PovcalNet-Team/Methodology" />
@@ -31,7 +30,6 @@
   
 <link rel="prev" href="welfareaggregate.html"/>
 <link rel="next" href="surveyestimates.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,12 +47,13 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <script src="libs/viz-1.8.2/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-<script src="libs/grViz-binding-1.0.8/grViz.js"></script>
+<script src="libs/grViz-binding-1.0.9/grViz.js"></script>
 
 
 
@@ -95,11 +94,11 @@ div.csl-indent {
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Non-technical summary</a>
 <ul>
-<li><a href="index.html#step-1-acquiring-household-survey-data">Step 1: <span>Acquiring household survey data</span></a></li>
-<li><a href="index.html#step-2-constructing-welfare-aggregates">Step 2: <span>Constructing welfare aggregates</span></a></li>
-<li><a href="index.html#step-3-converting-welfare-aggregates">Step 3: <span>Converting welfare aggregates</span></a></li>
-<li><a href="index.html#step-4-calculating-survey-estimates-of-poverty-and-inequality">Step 4: <span>Calculating survey estimates of poverty and inequality</span></a></li>
-<li><a href="index.html#step-5-calculating-global-and-regional-poverty">Step 5: <span>Calculating global and regional poverty</span></a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#step-1-acquiring-household-survey-data"><i class="fa fa-check"></i>Step 1: <span>Acquiring household survey data</span></a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#step-2-constructing-welfare-aggregates"><i class="fa fa-check"></i>Step 2: <span>Constructing welfare aggregates</span></a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#step-3-converting-welfare-aggregates"><i class="fa fa-check"></i>Step 3: <span>Converting welfare aggregates</span></a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#step-4-calculating-survey-estimates-of-poverty-and-inequality"><i class="fa fa-check"></i>Step 4: <span>Calculating survey estimates of poverty and inequality</span></a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#step-5-calculating-global-and-regional-poverty"><i class="fa fa-check"></i>Step 5: <span>Calculating global and regional poverty</span></a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="acquiring.html"><a href="acquiring.html"><i class="fa fa-check"></i><b>1</b> Acquiring household survey data</a>
 <ul>
@@ -176,36 +175,36 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="convert" class="section level1" number="3">
-<h1><span class="header-section-number">Chapter 3</span> Converting welfare aggregates</h1>
+<div id="convert" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Converting welfare aggregates<a href="convert.html#convert" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Welfare aggregates from household surveys are often expressed in national currency units in prices around the time of the fieldwork. To use a <a href="welfareaggregate.html#welfareaggregate">welfare aggregate</a> from a particular survey to estimate extrme poverty at the <a href="convert.html#IPL">international poverty line</a>, the welfare aggregates need to be converted to a unit comparable across time and across countries. To this end, first <a href="convert.html#CPIs">Consumer Price Indices (CPIs)</a> are used to express the aggregates in the same prices within a country. Second, <a href="convert.html#PPPs">Purchasing Power Parities (PPPs)</a> are used to express all welfare aggregates in the same currency by adjusting for price differences across countries.</p>
-<div id="CPIs" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> Consumer Price Indices (CPIs)</h2>
+<div id="CPIs" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Consumer Price Indices (CPIs)<a href="convert.html#CPIs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Consumer price indices (CPIs) summarize the prices of a representative basket of goods and services consumed by households within an economy over a period of time. Inflation (deflation) occurs when there is a positive (negative) change in the CPI between two time periods. With inflation, the same amount of rupees is expected to buy more today than one year from today. CPIs are used to deflate nominal income or consumption expenditure of households so that the welfare of households can be evaluated and compared between two time periods at the same prices.</p>
-<p>The primary source of CPI data for the Poverty and Inequality Platform is <a href="https://data.imf.org/?sk=4c514d48-b6ba-49ed-8ab9-52b0c1a0179b">IMF’s International Financial Statistics (IFS)</a> monthly CPI series. The simple average of the monthly CPI series for each calendar year is used as the annual CPI. When IFS data are missing, other sources of CPI data are obtained from <a href="https://www.imf.org/en/Publications/SPROLLs/world-economic-outlook-databases#sort=%40imfdate%20descending">IMFs World Economic Outlook (WEO)</a> and National Statistical Offices (NSOs), among others. For more details on the different sources of CPI data used for global poverty measurement, see Figure 1 of <span class="citation"><a href="#ref-lakner2018" role="doc-biblioref">Lakner et al.</a> (<a href="#ref-lakner2018" role="doc-biblioref">2018</a>)</span> and the “What’s New” technical notes accompanying PIP updates.</p>
+<p>The primary source of CPI data for the Poverty and Inequality Platform is <a href="https://data.imf.org/?sk=4c514d48-b6ba-49ed-8ab9-52b0c1a0179b">IMF’s International Financial Statistics (IFS)</a> monthly CPI series. The simple average of the monthly CPI series for each calendar year is used as the annual CPI. When IFS data are missing, other sources of CPI data are obtained from <a href="https://www.imf.org/en/Publications/SPROLLs/world-economic-outlook-databases#sort=%40imfdate%20descending">IMFs World Economic Outlook (WEO)</a> and National Statistical Offices (NSOs), among others. For more details on the different sources of CPI data used for global poverty measurement, see Figure 1 of <span class="citation">Lakner et al. (<a href="#ref-lakner2018" role="doc-biblioref">2018</a>)</span> and the “What’s New” technical notes accompanying PIP updates.</p>
 <p>CPI series are rebased to the International Comparison Programme (ICP) reference year, currently 2017.</p>
 </div>
-<div id="PPPs" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> Purchasing Power Parities (PPPs)</h2>
+<div id="PPPs" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Purchasing Power Parities (PPPs)<a href="convert.html#PPPs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Purchasing power parities (PPPs) are used in global poverty estimation to adjust for price differences across countries. PPPs are price indices published by the <a href="https://www.worldbank.org/en/programs/icp">International Comparison Program (ICP</a>) that measure how much it costs to purchase a basket of goods and services in one country compared to how much it costs to purchase the same basket of goods and services in a reference country, typically the United States. PPP conversion factors are preferred to market exchange rates for the measurement of global poverty because the latter overestimate poverty in developing countries, where non-tradable services are relatively cheap (a phenomenon known as the Balassa-Samuelson-Penn effect).</p>
 <p>The ICP updates PPP data periodically. For example, in the last three ICP rounds, PPPs were released for the 2005, 2011 and 2017 reference years. The 2017 PPPs are currently used to convert household welfare aggregates, expressed in local currency units in 2017 prices, into a common internationally comparable currency unit. The PPP conversion only affects the cross-country comparison of levels of welfare; the growth in the survey mean for a particular country over time is the same whether it is expressed in constant local currency or in USD PPP.</p>
 <p>The PPP estimates used for measuring global poverty are the consumption PPPs from the ICP with a few exceptions. For eight countries, the PPPs used are derived as the geometric average of the PPPs published by the ICP and imputed PPPs derived from using a regression model the ICP team uses for countries that did not collect price data. This concerns Belize, Egypt, Guinea, Iraq, Nigeria, São Tomé and Príncipe, Sudan, and Trinidad and Tobago. These are countries where PPPs and CPIs move quite differently between 2011 and 2017 and additional evidence suggests that the official PPPs may be less appropriate for monitoring global poverty <span class="citation">(<a href="#ref-jolliffe2022" role="doc-biblioref">Jolliffe et al. 2022</a>)</span>. If official and imputed PPPs do not exist, PPPs are extrapolated from the revised 2011 PPPs using the ratio of domestic to US inflation between 2011 and 2017. This applies to six countries, namely Kiribati, Nauru, the Syrian Arab Republic, Tuvalu, the República Bolivariana de Venezuela, and the Republic of Yemen <span class="citation">(<a href="#ref-jolliffe2022" role="doc-biblioref">Jolliffe et al. 2022</a>)</span>. Somalia has an imputed 2017 PPP estimate, which yields an extreme poverty estimate that is atypically low for a low-income, fragile, and conflict-affected country. More work is being done to understand what is driving this result. Until that work is completed, an extrapolated 2011 PPP is used for Somalia (Castenda et al. 2022).</p>
 <p>Though PPPs are supposed to be nationally representative, to account for possible urban bias in ICP data collection, separate rural and urban PPPs are computed for China, India, and Indonesia using official national PPPs, the ratio of urban to rural poverty lines, and the urban share in ICP price data collection <span class="citation">(<a href="#ref-chen2008" role="doc-biblioref">Chen and Ravallion 2008</a>, <a href="#ref-chen2010" role="doc-biblioref">2010</a>; <a href="#ref-jolliffe2015" role="doc-biblioref">Jolliffe and Prydz 2015</a>; <a href="#ref-ferreira2016" role="doc-biblioref">Ferreira et al. 2016</a>; <a href="#ref-atamanov2020" role="doc-biblioref">Atamanov et al. 2020</a>; <a href="#ref-jolliffe2022" role="doc-biblioref">Jolliffe et al. 2022</a>)</span>.</p>
 </div>
-<div id="IPL" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> Derivation of the international poverty line</h2>
+<div id="IPL" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Derivation of the international poverty line<a href="convert.html#IPL" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Most countries have a national poverty line which summarizes the value of consumption or income per person or per adult equivalent needed to be non-poor. These national poverty lines are typically estimated by National Statistical Offices and reflect country-specific definitions of what it means to be poor. For low and middle-income countries, the lines usually reflect the cost of purchasing a bundle of food items necessary to obtain minimum daily calories to which a basic non-food component is added. For high-income countries the national poverty lines are often relative and are defined relative to the national mean or median income.</p>
 <p>To compare poverty across countries one needs a common standard. Hence, national poverty lines, which differ from one country to the next, cannot be used. The international poverty line is an attempt to summarize the national poverty lines of the poorest countries.</p>
 <p>Since 1990, the World Bank has derived international poverty lines from the national poverty lines of the poorest countries of the world <span class="citation">(<a href="#ref-ferreira2016" role="doc-biblioref">Ferreira et al. 2016</a>)</span>. In 1990, this resulted in a the “dollar-a-day” poverty line. Whenever new rounds of PPPs have been released, the nominal value of the international poverty line has been updated. The real value of the international poverty line is usually unchanged.</p>
 <p>The current international poverty line of $2.15/day in 2017 PPPs has been derived as the median of harmonized national poverty lines of low-income countries <span class="citation">(<a href="#ref-jolliffe2022" role="doc-biblioref">Jolliffe et al. 2022</a>)</span>. This preserves the principle of using the national poverty lines of the poorest countries in the world as the basis of the international poverty line. In addition, it involves methodological improvements in the derivation of the international poverty line. For example, the new line is based on a larger sample of 28 low-income countries, compared to 15 countries from the previous lines. The previous lines were $1.25 in 2005 PPPs <span class="citation">(<a href="#ref-ravallion2009" role="doc-biblioref">Ravallion, Chen, and Sangraula 2009</a>)</span> and $1.90 in 2011 PPPs <span class="citation">(<a href="#ref-ferreira2016" role="doc-biblioref">Ferreira et al. 2016</a>)</span>. Unlike the previous 15 national poverty lines, the new 28 national poverty lines have been harmonized across countries and are thus expressed in the same per-capita PPP units. The $2.15 line is robust to several measurement assumptions and methods and keeps the real value of the old $1.90 line virtually unchanged <span class="citation">(<a href="#ref-jolliffe2022" role="doc-biblioref">Jolliffe et al. 2022</a>)</span>.</p>
 </div>
-<div id="derivation-of-other-global-poverty-lines" class="section level2" number="3.4">
-<h2><span class="header-section-number">3.4</span> Derivation of other global poverty lines</h2>
+<div id="derivation-of-other-global-poverty-lines" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Derivation of other global poverty lines<a href="convert.html#derivation-of-other-global-poverty-lines" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In addition to the <a href="convert.html#IPL">international poverty line</a>, the World Bank uses two higher poverty lines to measure and monitor poverty in countries with a low incidence of extreme poverty. These higher lines, namely $3.65 and $6.85 in 2017 PPPs, are derived as the median values of national poverty lines of lower- and upper-middle income countries, respectively. These lines have been derived along with the international poverty line, using the same methodology <span class="citation">(<a href="#ref-jolliffe2022" role="doc-biblioref">Jolliffe et al. 2022</a>)</span>.</p>
 
 </div>
 </div>
-<h3>References</h3>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-atamanov2020" class="csl-entry">
 Atamanov, Aziz, Christoph Lakner, Daniel Gerszon Mahler, Samuel Kofi Tetteh Baah, and Judy Yang. 2020. <span>“The Effect of New PPP Estimates on Global Poverty: A First Look”</span> 12. <a href="https://openknowledge.worldbank.org/handle/10986/33816">https://openknowledge.worldbank.org/handle/10986/33816</a>.
@@ -298,7 +297,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
