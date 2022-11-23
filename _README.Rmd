@@ -43,6 +43,8 @@ The number of spaces/indents matter so don't change that!
 
 4. Create a new repository called PIP-Methodology-YYYY-MM where YYYY-MM is the year and month of the present update, i.e. most likely the year and month you are currently in. You need to have the rights to create a new repo on behalf of the Bank. You need to ask Andres for help on this. 
 
-5. Copy everything from the live repo except for the ".git" folder and "docs" folder. The ".git" folder may not be visible, but you can find the content by typing it in directly, i.e. "...\PIP-Methodology-YYYY-MM\.git\"
+5. Once it is created, go to github.com/worldbank/PIP-Methodology-YYYY-MM/settings/pages, in "Build and development", select "Deploy from a branch", chose "main", and "/docs", and click save. This is what allows the website to publish the content.
 
-6. Render the book using the guidelines above. 
+6. Copy everything from the live repo except for the ".git" folder and "docs" folder. The ".git" folder may not be visible, but you can find the content by typing it in directly, i.e. "...\PIP-Methodology-YYYY-MM\.git\"
+
+7. Render the book using the guidelines above. 
