@@ -24,8 +24,7 @@ bookdown::bs4_book:
     #   position: fixed
     # edit: null
       # link: https://github.com/worldbank/PIP-Methodology/master/%s
-    search:
-      engine: fuse
+    search: no
       # options: null
     sharing:
       facebook: true
@@ -58,9 +57,7 @@ bookdown::gitbook:
       position: fixed
     edit: null
       # link: https://github.com/worldbank/PIP-Methodology/master/%s
-    search:
-      engine: lunr
-      options: null
+    search: null
     sharing:
       facebook: true
       github: true
