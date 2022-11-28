@@ -1,8 +1,8 @@
 ---
 title: "Poverty and Inequality Platform Methodology Handbook"
 zotero: "PovcalNet Team"
-url: "https://povcalnet-team.github.io/Methodology"
-github-repo: PovcalNet-Team/Methodology
+url: "https://worldbank.github.io/PIP-Methodology/"
+github-repo: worldbank/PIP-Methodology
 site: "bookdown::bookdown_site"
 output:
   bookdown::gitbook: default
