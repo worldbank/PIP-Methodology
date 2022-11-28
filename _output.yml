@@ -1,0 +1,23 @@
+bookdown::gitbook:
+  highlight: tango
+  # includes:
+    # in_header: files/hypothesis.html
+    # before_body: files/open_review_block.html
+  # css: ["https://unpkg.com/tachyons@4/css/tachyons.min.css", css/style.css, css/r-colors.css, css/smltar.css]
+  config:
+    toc:
+      # collapse: section
+      scroll_highlight: yes
+      # before: |
+      #   <li><strong><a href="./">PIP Internal Guidelines</a></strong></li>
+      # after: |
+      #   <li><a href="https://github.com/PIP-Technical-Team/PIPmanual" target="blank">Published with bookdown</a></li>
+    toolbar:
+      position: fixed
+    edit:
+      link: https://github.com/worldbank/PIP-Methodology/edit/master/%s
+    search:
+      engine: fuse
+    sharing: yes
+    info: yes
+  # pandoc_args: [ "--top-level-division=chapter", "--csl", "taylor-and-francis-chicago-author-date.csl" ]

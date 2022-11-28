@@ -1,4 +1,4 @@
-book_filename: "Methodology"
+book_filename: "PIP Methodology"
 repo: https://github.com/worldbank/PIP-Methodology/
 output_dir: "docs"
 delete_merged_file: true
