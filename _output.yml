@@ -14,10 +14,19 @@ bookdown::gitbook:
       #   <li><a href="https://github.com/PIP-Technical-Team/PIPmanual" target="blank">Published with bookdown</a></li>
     toolbar:
       position: fixed
-    edit:
-      link: https://github.com/worldbank/PIP-Methodology/edit/master/%s
+    edit: null
+      # link: https://github.com/worldbank/PIP-Methodology/master/%s
     search:
-      engine: fuse
-    sharing: yes
+      engine: lunr
+      options: null
+    sharing:
+      facebook: true
+      github: true
+      twitter: true
+      linkedin: true
+      weibo: true
+      instapaper: true
+      vk: true
+      whatsapp: true
     info: yes
   # pandoc_args: [ "--top-level-division=chapter", "--csl", "taylor-and-francis-chicago-author-date.csl" ]

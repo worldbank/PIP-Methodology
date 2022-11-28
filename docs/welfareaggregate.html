@@ -47,6 +47,7 @@
 
 
 
+
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
@@ -281,6 +282,7 @@ World Bank. 2018. <em>Poverty and Shared Prosperity 2018: Piecing Together the P
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -291,16 +293,23 @@ World Bank. 2018. <em>Poverty and Shared Prosperity 2018: Piecing Together the P
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": true,
+"sharing": {
+"github": true,
+"facebook": true,
+"twitter": true,
+"linkedin": true,
+"weibo": true,
+"instapaper": true,
+"vk": true,
+"whatsapp": true,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
 "fontsettings": {
 "theme": "white",
 "family": "sans",
 "size": 2
 },
-"edit": {
-"link": "https://github.com/worldbank/PIP-Methodology/edit/master/02-Constructing-welfare-aggregates.Rmd",
-"text": "Edit"
-},
+"edit": null,
 "history": {
 "link": null,
 "text": null
@@ -311,7 +320,7 @@ gitbook.start({
 },
 "download": null,
 "search": {
-"engine": "fuse",
+"engine": "lunr",
 "options": null
 },
 "toc": {

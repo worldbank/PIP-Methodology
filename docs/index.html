@@ -47,6 +47,7 @@
 
 
 
+
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
@@ -199,8 +200,8 @@ the chapters that follow are governed by the World Bank’s Global Poverty
 Working Group, which is composed of staff from the Poverty and Equity
 Global Practice, the Development Data Group, and the Development
 Research Group.</p>
-<div id="htmlwidget-78062561366a3257ead0" style="width:672px;height:500px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-78062561366a3257ead0">{"x":{"diagram":"digraph {\n  graph [layout = dot, rankdir = TD]\n  \n  node [shape = box,style=filled, color=lightblue2]        \n  box1 [label = \"Step 1\nAcquiring household survey data\"]\n  box2 [label = \"Step 2\nConstructing welfare aggregates\"]\n  box3 [label = \"Step 3\nConverting welfare aggregates\"]\n  box4 [label = \"Step 4\nCalculating survey estimates of poverty and inequality\"]\n  box5 [label = \"Step 5\nCalculating global and regional poverty\"]\n  box1 -> box2 -> box3 -> box4 -> box5\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-4f6a4f47ed4391cf4408" style="width:672px;height:500px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4f6a4f47ed4391cf4408">{"x":{"diagram":"digraph {\n  graph [layout = dot, rankdir = TD]\n  \n  node [shape = box,style=filled, color=lightblue2]        \n  box1 [label = \"Step 1\nAcquiring household survey data\"]\n  box2 [label = \"Step 2\nConstructing welfare aggregates\"]\n  box3 [label = \"Step 3\nConverting welfare aggregates\"]\n  box4 [label = \"Step 4\nCalculating survey estimates of poverty and inequality\"]\n  box5 [label = \"Step 5\nCalculating global and regional poverty\"]\n  box1 -> box2 -> box3 -> box4 -> box5\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <div id="step-1-acquiring-household-survey-data" class="section level2 unnumbered hasAnchor">
 <h2>Step 1: <a href="acquiring.html#acquiring">Acquiring household survey data</a><a href="index.html#step-1-acquiring-household-survey-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Poverty rates are estimated from <a href="acquiring.html#selection">selected</a> household
@@ -287,6 +288,7 @@ for global and regional numbers to be presented.</p>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -297,16 +299,23 @@ for global and regional numbers to be presented.</p>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": true,
+"sharing": {
+"github": true,
+"facebook": true,
+"twitter": true,
+"linkedin": true,
+"weibo": true,
+"instapaper": true,
+"vk": true,
+"whatsapp": true,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
 "fontsettings": {
 "theme": "white",
 "family": "sans",
 "size": 2
 },
-"edit": {
-"link": "https://github.com/worldbank/PIP-Methodology/edit/master/index.Rmd",
-"text": "Edit"
-},
+"edit": null,
 "history": {
 "link": null,
 "text": null
@@ -317,7 +326,7 @@ gitbook.start({
 },
 "download": null,
 "search": {
-"engine": "fuse",
+"engine": "lunr",
 "options": null
 },
 "toc": {
