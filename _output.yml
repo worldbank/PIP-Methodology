@@ -1,3 +1,18 @@
+bookdown::bs4_book:
+  theme:
+    primary: "#0d6efd"   
+    base_font: 
+      google: Sen
+    heading_font:
+      google:
+        family: Bitter
+        wght: 200
+    code_font:
+      google: 
+        # arguments to sass::font_google() 
+        family: DM Mono
+        local: false
+
 bookdown::gitbook:
   highlight: tango
   # includes:
