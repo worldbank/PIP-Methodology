@@ -13,6 +13,9 @@ biblio-style: "apalike"
 link-citations: yes
 links-as-notes: true
 colorlinks: yes
+description: |
+  This site describes how global and regional poverty rates are 
+  •calculated.
 ---
 
 ```{=html}
