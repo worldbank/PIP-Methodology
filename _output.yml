@@ -57,7 +57,7 @@ bookdown::gitbook:
       position: fixed
     edit: null
       # link: https://github.com/worldbank/PIP-Methodology/master/%s
-    search: null
+    # search: null
     sharing:
       facebook: true
       github: true
