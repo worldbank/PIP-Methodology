@@ -1,11 +1,9 @@
 ---
 title: "Poverty and Inequality Platform Methodology Handbook"
 zotero: "PovcalNet Team"
-url: "https://povcalnet-team.github.io/Methodology"
-github-repo: PovcalNet-Team/Methodology
+url: "https://worldbank.github.io/PIP-Methodology/"
+github-repo: worldbank/PIP-Methodology
 site: "bookdown::bookdown_site"
-output:
-  bookdown::gitbook: default
 documentclass: book 
 editor_options: 
   markdown: 
@@ -15,6 +13,9 @@ biblio-style: "apalike"
 link-citations: yes
 links-as-notes: true
 colorlinks: yes
+description: |
+  This site describes how global and regional poverty rates are 
+  •calculated.
 ---
 
 ```{=html}
@@ -37,7 +38,7 @@ text-align: justify}
 knitr::opts_chunk$set(echo = TRUE) 
 ```
 
-*Suggested citation: World Bank. 2022. "Poverty and Inequality Platform
+* Suggested citation: World Bank. 2022. "Poverty and Inequality Platform
 Methodology Handbook." Edition 2022-04. Available at
 [<https://worldbank.github.io/PIP-Methodology-2022-04>](https://worldbank.github.io/PIP-Methodology/index.html).*
 

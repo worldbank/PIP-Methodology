@@ -1,5 +1,5 @@
-book_filename: "Methodology"
-repo: https://github.com/PovcalNet-Team/Methodology/
+book_filename: "PIP Methodology"
+repo: https://github.com/worldbank/PIP-Methodology/
 output_dir: "docs"
 delete_merged_file: true
 
