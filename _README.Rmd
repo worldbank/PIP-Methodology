@@ -10,7 +10,7 @@ This file contains the information you need to update the Methodology Handbook. 
 ## Installation
 
 To work on this book, you will need to have R and RStudio installed.
-You will also need to have the following packages installed: [NEEDS UPDATING]
+You will also need to have the following packages installed: downlit, [INCOMPLETE]
 
 ## Working with the book
 
