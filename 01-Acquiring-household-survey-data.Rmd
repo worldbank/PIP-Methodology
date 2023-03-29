@@ -8,7 +8,7 @@ For most countries, the Poverty and Inequality Platform (PIP) relies on househol
 
 Other surveys on consumption or income, such as surveys carried out by academic institutions and private sector companies are generally not included in PIP. The primary reason for this is that the estimates from PIP are the official vehicle for countries' reporting on the [Sustainable Development Goal target 1.1.1](https://sdgs.un.org/goals/goal1) on extreme poverty, which ought to come from sources that are officially recognized by countries.
 
-For high-income countries in the European Union (with the exception of Germany), the data are obtained from the [EU Statistics on Income and Living Conditions (EU-SILC)](https://ec.europa.eu/eurostat/web/microdata/european-union-statistics-on-income-and-living-conditions). EU-SILC data are partly obtained from surveys and partly obtained from administrative records. For other high-income economies (Australia; Canada; Germany; Israel; Japan; South Korea; Taiwan, China; the United Kingdom and the United States) data from the [Luxembourg Income Study (LIS) Database](https://www.lisdatacenter.org) are used. These data rely on surveys carried out by NSOs or by academic institutions. Data from the LIS database are also used for high-income countries from the European Union for years predating EU-SILC, which naturally causes a break in the series.
+For high-income countries in the European Union (with the exception of Germany), the data are obtained from the [EU Statistics on Income and Living Conditions (EU-SILC)](https://ec.europa.eu/eurostat/web/microdata/european-union-statistics-on-income-and-living-conditions). EU-SILC data are partly obtained from surveys and partly obtained from administrative records. For other high-income economies (Australia; Canada; Germany; Israel; Japan; South Korea; Taiwan, China; the United Kingdom; and the United States) data from the [Luxembourg Income Study (LIS) Database](https://www.lisdatacenter.org) are used. These data rely on surveys carried out by NSOs or by academic institutions. Data from the LIS database are also used for high-income countries from the European Union for years predating EU-SILC, which naturally causes a break in the series.
 
 The estimates for India from 2015-2019 rely on the Consumer Pyramids Household Survey conducted by the Centre for Monitoring Indian Economy, a private company. The survey data are adjusted to be representative of India and reflect the consumption basket of the National Sample Survey (see @sinha2022 for details).
 
@@ -16,11 +16,11 @@ Occasionally, a survey fulfilling the above criteria is not incorporated into th
 
 The input data used in PIP from these sources are most often unit record data of welfare and occasionally [grouped data](#grouped), which is [converted](#tgd) to a full distribution. PIP cannot take as input data the resultant international poverty rate from a welfare distribution without the underlying distribution, such as a point estimate published on an NSO website. There are many reasons for this:
 
-1.  [Extrapolating](#extrapolations) or [interpolating](#interpolations)) country estimates to a common reference year, which is needed to calculate global poverty, requires a full distribution.
+1.  [Extrapolating](#extrapolations) or [interpolating](#interpolations) country estimates to a common reference year, which is needed to calculate global poverty, requires a full distribution.
 
 2.  The lack of detailed information on the distribution would not allow for inequality metrics to be calculated, including the data needed for SDG 10.1.1 and 10.2.1, and would not allow users to access poverty rates as a function of the poverty line chosen.
 
-3.  Updates to poverty estimates in the face of revised PPPs and CPIs would not be possible to perform by the World Bank, imposing a higher burden on NSOs potentially becoming an obstacle for timely publication of updated data.
+3.  Updates to poverty estimates in the face of revised PPPs and CPIs would not be possible to perform by the World Bank, imposing a higher burden on NSOs and potentially becoming an obstacle for timely publication of updated data.
 
 4.  Unit-record data allows for quality checking the data and ensuring that the choices used to create the welfare aggregate are as comparable as possible across countries.
 
