@@ -1,72 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="" xml:lang="">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 4 Calculating survey estimates of poverty and inequality | Poverty and Inequality Platform Methodology Handbook</title>
-<meta name="description" content="4.1 Monetary poverty measures Armed with welfare distributions expressed in 2017 PPPs and an international poverty line, poverty and inequality can be calculated and compared across countries and...">
-<meta name="generator" content="bookdown 0.24 with bs4_book()">
-<meta property="og:title" content="Chapter 4 Calculating survey estimates of poverty and inequality | Poverty and Inequality Platform Methodology Handbook">
-<meta property="og:type" content="book">
-<meta property="og:url" content="https://worldbank.github.io/PIP-Methodology/surveyestimates.html">
-<meta property="og:description" content="4.1 Monetary poverty measures Armed with welfare distributions expressed in 2017 PPPs and an international poverty line, poverty and inequality can be calculated and compared across countries and...">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 4 Calculating survey estimates of poverty and inequality | Poverty and Inequality Platform Methodology Handbook">
-<meta name="twitter:description" content="4.1 Monetary poverty measures Armed with welfare distributions expressed in 2017 PPPs and an international poverty line, poverty and inequality can be calculated and compared across countries and...">
-<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/_Sen-0.4.0/font.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=DM%20Mono&amp;display=swap" rel="stylesheet">
-<link href="libs/_Bitter-0.4.0/font.css" rel="stylesheet">
-<script src="libs/bs3compat-0.2.5.1/tabs.js"></script><script src="libs/bs3compat-0.2.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script><script src="libs/viz-1.8.2/viz.js"></script><link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
-<script src="libs/grViz-binding-1.0.8/grViz.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Calculating survey estimates of poverty and inequality | Poverty and Inequality Platform Methodology Handbook</title>
+  <meta name="description" content="<p>This site describes how global and regional poverty rates are
+•calculated.</p>" />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Calculating survey estimates of poverty and inequality | Poverty and Inequality Platform Methodology Handbook" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This site describes how global and regional poverty rates are
+•calculated.</p>" />
+  <meta name="github-repo" content="worldbank/PIP-Methodology" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Calculating survey estimates of poverty and inequality | Poverty and Inequality Platform Methodology Handbook" />
+  
+  <meta name="twitter:description" content="<p>This site describes how global and regional poverty rates are
+•calculated.</p>" />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="convert.html"/>
+<link rel="next" href="lineupestimates.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.9/grViz.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
 </head>
-<body data-spy="scroll" data-target="#toc">
 
-<div class="container-fluid">
-<div class="row">
-  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+<body>
 
-    <div class="d-flex align-items-start justify-content-between">
-      <h1>
-        <a href="index.html" title="">Poverty and Inequality Platform Methodology Handbook</a>
-      </h1>
-      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
-    </div>
 
-    <div id="main-nav" class="collapse-lg">
-      <form role="search">
-        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
-</form>
 
-      <nav aria-label="Table of contents"><h2>Table of contents</h2>
-        <ul class="book-toc list-unstyled">
-<li><a class="" href="index.html">Non-technical summary</a></li>
-<li><a class="" href="acquiring.html"><span class="header-section-number">1</span> Acquiring household survey data</a></li>
-<li><a class="" href="welfareaggregate.html"><span class="header-section-number">2</span> Constructing welfare aggregates</a></li>
-<li><a class="" href="convert.html"><span class="header-section-number">3</span> Converting welfare aggregates</a></li>
-<li><a class="active" href="surveyestimates.html"><span class="header-section-number">4</span> Calculating survey estimates of poverty and inequality</a></li>
-<li><a class="" href="lineupestimates.html"><span class="header-section-number">5</span> Calculating global and regional estimates</a></li>
-<li><a class="" href="revisions.html"><span class="header-section-number">6</span> Revisions made to this handbook</a></li>
-<li><a class="" href="references.html">References</a></li>
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Non-technical summary</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#step-1-acquiring-household-survey-data"><i class="fa fa-check"></i>Step 1: Acquiring household survey data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#step-2-constructing-welfare-aggregates"><i class="fa fa-check"></i>Step 2: Constructing welfare aggregates</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#step-3-converting-welfare-aggregates"><i class="fa fa-check"></i>Step 3: Converting welfare aggregates</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#step-4-calculating-survey-estimates-of-poverty-and-inequality"><i class="fa fa-check"></i>Step 4: Calculating survey estimates of poverty and inequality</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#step-5-calculating-global-and-regional-poverty"><i class="fa fa-check"></i>Step 5: Calculating global and regional poverty</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="acquiring.html"><a href="acquiring.html"><i class="fa fa-check"></i><b>1</b> Acquiring household survey data</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="acquiring.html"><a href="acquiring.html#selection"><i class="fa fa-check"></i><b>1.1</b> Selection criteria and source of data</a></li>
+<li class="chapter" data-level="1.2" data-path="acquiring.html"><a href="acquiring.html#how-data-are-obtained"><i class="fa fa-check"></i><b>1.2</b> How data are obtained</a></li>
+<li class="chapter" data-level="1.3" data-path="acquiring.html"><a href="acquiring.html#representativeness"><i class="fa fa-check"></i><b>1.3</b> Representativeness</a></li>
+<li class="chapter" data-level="1.4" data-path="acquiring.html"><a href="acquiring.html#grouped"><i class="fa fa-check"></i><b>1.4</b> Grouped vs. unit record data</a></li>
+<li class="chapter" data-level="1.5" data-path="acquiring.html"><a href="acquiring.html#imputed"><i class="fa fa-check"></i><b>1.5</b> Multiple imputed micro data</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="welfareaggregate.html"><a href="welfareaggregate.html"><i class="fa fa-check"></i><b>2</b> Constructing welfare aggregates</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="welfareaggregate.html"><a href="welfareaggregate.html#incomeorconsumption"><i class="fa fa-check"></i><b>2.1</b> Income or consumption</a></li>
+<li class="chapter" data-level="2.2" data-path="welfareaggregate.html"><a href="welfareaggregate.html#questionnaire"><i class="fa fa-check"></i><b>2.2</b> Questionnaire design</a></li>
+<li class="chapter" data-level="2.3" data-path="welfareaggregate.html"><a href="welfareaggregate.html#imputedrent"><i class="fa fa-check"></i><b>2.3</b> Imputed rent</a></li>
+<li class="chapter" data-level="2.4" data-path="welfareaggregate.html"><a href="welfareaggregate.html#spatialtemporal"><i class="fa fa-check"></i><b>2.4</b> Within-survey spatial/temporal deflation</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="welfareaggregate.html"><a href="welfareaggregate.html#spatial-deflation"><i class="fa fa-check"></i><b>2.4.1</b> Spatial deflation</a></li>
+<li class="chapter" data-level="2.4.2" data-path="welfareaggregate.html"><a href="welfareaggregate.html#temporal-deflation"><i class="fa fa-check"></i><b>2.4.2</b> Temporal deflation</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="welfareaggregate.html"><a href="welfareaggregate.html#equivalence-scale"><i class="fa fa-check"></i><b>2.5</b> Equivalence scale</a></li>
+<li class="chapter" data-level="2.6" data-path="welfareaggregate.html"><a href="welfareaggregate.html#tgd"><i class="fa fa-check"></i><b>2.6</b> Treatment of grouped data</a></li>
+<li class="chapter" data-level="2.7" data-path="welfareaggregate.html"><a href="welfareaggregate.html#comparability"><i class="fa fa-check"></i><b>2.7</b> Comparability of estimates</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="convert.html"><a href="convert.html"><i class="fa fa-check"></i><b>3</b> Converting welfare aggregates</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="convert.html"><a href="convert.html#CPIs"><i class="fa fa-check"></i><b>3.1</b> Consumer Price Indices (CPIs)</a></li>
+<li class="chapter" data-level="3.2" data-path="convert.html"><a href="convert.html#PPPs"><i class="fa fa-check"></i><b>3.2</b> Purchasing Power Parities (PPPs)</a></li>
+<li class="chapter" data-level="3.3" data-path="convert.html"><a href="convert.html#IPL"><i class="fa fa-check"></i><b>3.3</b> Derivation of the international poverty line</a></li>
+<li class="chapter" data-level="3.4" data-path="convert.html"><a href="convert.html#derivation-of-other-global-poverty-lines"><i class="fa fa-check"></i><b>3.4</b> Derivation of other global poverty lines</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="surveyestimates.html"><a href="surveyestimates.html"><i class="fa fa-check"></i><b>4</b> Calculating survey estimates of poverty and inequality</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="surveyestimates.html"><a href="surveyestimates.html#monetarypoverty"><i class="fa fa-check"></i><b>4.1</b> Monetary poverty measures</a></li>
+<li class="chapter" data-level="4.2" data-path="surveyestimates.html"><a href="surveyestimates.html#mpm"><i class="fa fa-check"></i><b>4.2</b> Multidimensional Poverty Measure</a></li>
+<li class="chapter" data-level="4.3" data-path="surveyestimates.html"><a href="surveyestimates.html#inequality"><i class="fa fa-check"></i><b>4.3</b> Inequality measures</a></li>
+<li class="chapter" data-level="4.4" data-path="surveyestimates.html"><a href="surveyestimates.html#dist"><i class="fa fa-check"></i><b>4.4</b> Other distributional statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="lineupestimates.html"><a href="lineupestimates.html"><i class="fa fa-check"></i><b>5</b> Calculating global and regional estimates</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="lineupestimates.html"><a href="lineupestimates.html#extrapolations"><i class="fa fa-check"></i><b>5.1</b> Extrapolations</a></li>
+<li class="chapter" data-level="5.2" data-path="lineupestimates.html"><a href="lineupestimates.html#interpolations"><i class="fa fa-check"></i><b>5.2</b> Interpolations</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="lineupestimates.html"><a href="lineupestimates.html#same-direction-interpolation"><i class="fa fa-check"></i><b>5.2.1</b> “Same direction” interpolation</a></li>
+<li class="chapter" data-level="5.2.2" data-path="lineupestimates.html"><a href="lineupestimates.html#diverging-directions-interpolation"><i class="fa fa-check"></i><b>5.2.2</b> “Diverging directions” interpolation</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="lineupestimates.html"><a href="lineupestimates.html#nationalaccounts"><i class="fa fa-check"></i><b>5.3</b> National accounts data</a></li>
+<li class="chapter" data-level="5.4" data-path="lineupestimates.html"><a href="lineupestimates.html#inccon"><i class="fa fa-check"></i><b>5.4</b> Choosing between consumption and income estimates</a></li>
+<li class="chapter" data-level="5.5" data-path="lineupestimates.html"><a href="lineupestimates.html#regionsandcountries"><i class="fa fa-check"></i><b>5.5</b> Regional classification</a></li>
+<li class="chapter" data-level="5.6" data-path="lineupestimates.html"><a href="lineupestimates.html#population"><i class="fa fa-check"></i><b>5.6</b> Population</a></li>
+<li class="chapter" data-level="5.7" data-path="lineupestimates.html"><a href="lineupestimates.html#nodata"><i class="fa fa-check"></i><b>5.7</b> Treatment of countries without any poverty data</a></li>
+<li class="chapter" data-level="5.8" data-path="lineupestimates.html"><a href="lineupestimates.html#coverage"><i class="fa fa-check"></i><b>5.8</b> Coverage rule</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="revisions.html"><a href="revisions.html"><i class="fa fa-check"></i><b>6</b> Revisions made to this handbook</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="revisions.html"><a href="revisions.html#march"><i class="fa fa-check"></i><b>6.1</b> 2023 March</a></li>
+<li class="chapter" data-level="6.2" data-path="revisions.html"><a href="revisions.html#september"><i class="fa fa-check"></i><b>6.2</b> 2022 September</a></li>
+<li class="chapter" data-level="6.3" data-path="revisions.html"><a href="revisions.html#may"><i class="fa fa-check"></i><b>6.3</b> 2022 May</a></li>
+<li class="chapter" data-level="6.4" data-path="revisions.html"><a href="revisions.html#april"><i class="fa fa-check"></i><b>6.4</b> 2022 April</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 </ul>
 
-        <div class="book-extra">
-          
-        </div>
       </nav>
-</div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="surveyestimates" class="section level1" number="4">
-<h1>
-<span class="header-section-number">4</span> Calculating survey estimates of poverty and inequality<a class="anchor" aria-label="anchor" href="#surveyestimates"><i class="fas fa-link"></i></a>
-</h1>
-<div id="monetarypoverty" class="section level2" number="4.1">
-<h2>
-<span class="header-section-number">4.1</span> Monetary poverty measures<a class="anchor" aria-label="anchor" href="#monetarypoverty"><i class="fas fa-link"></i></a>
-</h2>
-<p>Armed with welfare distributions expressed in 2017 PPPs and an international poverty line, poverty and inequality can be calculated and compared across countries and over time. The poverty and inequality measures used in the Poverty and Equity Platform (PIP) for micro data are mainly based on formula in <span class="citation">Haughton and Khandker (<a href="references.html#ref-haughton2009" role="doc-biblioref">2009</a>)</span>, while the poverty and inequality measures estimated from grouped data are mainly based on formula in <span class="citation">Datt (<a href="references.html#ref-datt1998" role="doc-biblioref">1998</a>)</span>. In the formulas below we abstract from household weights for simplicity.</p>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Poverty and Inequality Platform Methodology Handbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="surveyestimates" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Calculating survey estimates of poverty and inequality<a href="surveyestimates.html#surveyestimates" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="monetarypoverty" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Monetary poverty measures<a href="surveyestimates.html#monetarypoverty" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Armed with welfare distributions expressed in 2017 PPPs and an international poverty line, poverty and inequality can be calculated and compared across countries and over time. The poverty and inequality measures used in the Poverty and Equity Platform (PIP) for micro data are mainly based on formula in <span class="citation">Haughton and Khandker (<a href="#ref-haughton2009" role="doc-biblioref">2009</a>)</span>, while the poverty and inequality measures estimated from grouped data are mainly based on formula in <span class="citation">Datt (<a href="#ref-datt1998" role="doc-biblioref">1998</a>)</span>. In the formulas below we abstract from household weights for simplicity.</p>
 <p><strong>Poverty headcount ratio</strong>: The poverty headcount ratio (<span class="math inline">\(P_0\)</span>) measures the proportion of the population that is counted as poor. When using micro data, the poverty headcount ratio is obtained using the following expression:<span class="math display">\[ P_0 = \frac{1}{N} \sum_{i=1}^{N} I (y_i &lt; z), \]</span></p>
 <p>where <span class="math inline">\(N\)</span> is the total population size, <span class="math inline">\(y_i\)</span> is the welfare of individual <span class="math inline">\(i\)</span>, <span class="math inline">\(z\)</span> is the poverty line, and <span class="math inline">\(I(.)\)</span> is an indicator function that takes on the value 1 if the bracketed expression is true or 0 otherwise. You can find the source code where this calculation is carried out <a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R">here</a>. For grouped data that rely on the GQ Lorenz function, the poverty headcount rate is obtained using the following expression (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lq.R#L546-L550">source code</a>):</p>
 <p><span class="math display">\[
@@ -106,33 +223,33 @@ B(k,r,s) = \int_0^k p^{r-1}(1 - p)^{s - 1} ~dp
 <p><span class="math display">\[ W  = \frac{1}{N} \sum_{i=1}^{q} ln \left(\frac{z}{y_i} \right), \]</span></p>
 <p>where the <span class="math inline">\(N\)</span> individuals of the population are indexed in ascending order of welfare, and the sum is taken over <span class="math inline">\(q\)</span> individuals whose welfare, <span class="math inline">\(y_i\)</span>, falls below the poverty line <span class="math inline">\(z\)</span>. This formula applies to both micro and grouped data. It also holds for both the GQ and Beta Lorenz functions, which are evaluated at the poverty line <span class="math inline">\(z\)</span> and other percentiles <span class="math inline">\(y_i\)</span>. A percentile is given as the product of the mean and the first derivative of the GQ or Beta Lorenz function at the respective rank in the distribution. The first derivative of the GQ Lorenz function is given as:</p>
 <p><span class="math display">\[
-L^{'}(p) = -\frac{b}{2} - \frac{(2mp + n)(mp^2 + np + e^2)^
+L^{&#39;}(p) = -\frac{b}{2} - \frac{(2mp + n)(mp^2 + np + e^2)^
 {-1/2}}{4}
 \]</span></p>
 <p>with all variables and parameter estimates as previously defined. The first derivative of the Beta Lorenz function is given as:</p>
 <p><span class="math display">\[
-L^{'}(p) = 1 - \theta p^\gamma (1 - p)^\delta \left[\frac{\gamma}{p} - \frac{\delta}{1 - p}\right]
+L^{&#39;}(p) = 1 - \theta p^\gamma (1 - p)^\delta \left[\frac{\gamma}{p} - \frac{\delta}{1 - p}\right]
 \]</span></p>
 <p>with all variables and parameter estimates as previously defined.</p>
 <p>An item for discussion regarding the Watts index and the Mean Log Deviation, defined below, is the treatment of zeros in the welfare distribution given that the logarithm of zero is not defined. As explained in section <a href="welfareaggregate.html#incomeorconsumption">2.1</a>, PIP’s current practice is to drop observations with negative welfare, while zeros are included when the welfare distribution is based on income. One approach is to transform the zeros by either maintaining the same mean of the distribution or by adjusting it. Another solution is to exclude the zeros from the sample, but that would create inconsistencies with other poverty and inequalities measures that use the whole sample. Currently PIP excludes zeros from the sample when calculating the Watts index and the Mean Log Deviation.</p>
 </div>
-<div id="mpm" class="section level2" number="4.2">
-<h2>
-<span class="header-section-number">4.2</span> Multidimensional Poverty Measure<a class="anchor" aria-label="anchor" href="#mpm"><i class="fas fa-link"></i></a>
-</h2>
-<p>In many settings, important aspects of well-being, such as access to quality education or core services, are not captured by monetary measures of poverty. To address this issue, an established tradition of multidimensional poverty measures these nonmonetary dimensions and aggregates them into an index <span class="citation">(<a href="references.html#ref-alkire2015" role="doc-biblioref">Alkire et al. 2015</a>)</span>. The <a href="http://hdr.undp.org/en/2020-MPI">United Nations Development Programme’s Multidimensional Poverty Index (Global MPI)</a>, produced in conjunction with the <a href="https://ophi.org.uk/multidimensional-poverty-index/">Oxford Poverty and Human Development Initiative</a>, is a foremost example of such a multidimensional poverty measure. In 2018, the World Bank launched its own multidimensional poverty measure, building heavily on these prior efforts <span class="citation">(<a href="references.html#ref-worldbank2018" role="doc-biblioref">World Bank 2018</a>)</span>.</p>
+<div id="mpm" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Multidimensional Poverty Measure<a href="surveyestimates.html#mpm" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In many settings, important aspects of well-being, such as access to quality education or core services, are not captured by monetary measures of poverty. To address this issue, an established tradition of multidimensional poverty measures these nonmonetary dimensions and aggregates them into an index <span class="citation">(<a href="#ref-alkire2015" role="doc-biblioref">Alkire et al. 2015</a>)</span>. The <a href="http://hdr.undp.org/en/2020-MPI">United Nations Development Programme’s Multidimensional Poverty Index (Global MPI)</a>, produced in conjunction with the <a href="https://ophi.org.uk/multidimensional-poverty-index/">Oxford Poverty and Human Development Initiative</a>, is a foremost example of such a multidimensional poverty measure. In 2018, the World Bank launched its own multidimensional poverty measure, building heavily on these prior efforts <span class="citation">(<a href="#ref-worldbank2018" role="doc-biblioref">World Bank 2018</a>)</span>.</p>
 <p>The dimensions, indicators, and weights of the World Bank’s multidimensional poverty measure are given as follows:</p>
-<div class="inline-table"><table class="table table-sm">
+<table style="width:99%;">
 <colgroup>
-<col width="25%">
-<col width="67%">
-<col width="7%">
+<col width="25%" />
+<col width="66%" />
+<col width="6%" />
 </colgroup>
-<thead><tr class="header">
+<thead>
+<tr class="header">
 <th>Dimension</th>
 <th>Indicator</th>
 <th>Weight</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td>Monetary poverty</td>
@@ -165,13 +282,11 @@ L^{'}(p) = 1 - \theta p^\gamma (1 - p)^\delta \left[\frac{\gamma}{p} - \frac{\de
 <td>1/9</td>
 </tr>
 </tbody>
-</table></div>
+</table>
 <p>An individual is considered poor if she/he lives in a household that is deprived in at least 1/3 of the weighted indicators. PIP reports the share of individuals that are poor.</p>
 </div>
-<div id="inequality" class="section level2" number="4.3">
-<h2>
-<span class="header-section-number">4.3</span> Inequality measures<a class="anchor" aria-label="anchor" href="#inequality"><i class="fas fa-link"></i></a>
-</h2>
+<div id="inequality" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Inequality measures<a href="surveyestimates.html#inequality" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Gini index</strong>: The Gini index is derived from the Lorenz curve, which plots the cumulative welfare share (on the y-axis) against the cumulative population share (on the x-axis). A 45-degree line is defined over the Lorenz curve as a line of perfect equality. The Gini index is the area between the 45-degree line and the Lorenz curve (multiplied by 100). Let <span class="math inline">\(A\)</span> be the area between the 45-degree line and the Lorenz curve, and let <span class="math inline">\(B\)</span> be the area under the Lorenz curve. The Gini coefficient is given as: <span class="math inline">\(\frac{A}{A + B}= 2A\)</span> (since <span class="math inline">\(A + B = 0.5\)</span>).</p>
 <p>Formally, if <span class="math inline">\(x_i\)</span> is a point on the x-axis, and <span class="math inline">\(y_i\)</span> a point on the y-axis, then</p>
 <p><span class="math display">\[ Gini= 100*(1 - \sum_{i=1}^{N} (x_i - x_{i-1})(y_i + y_{i-1}))
@@ -198,12 +313,10 @@ Gini = 100 * 2\theta B(1 + \gamma, 1 + \delta)
 <p><span class="math display">\[
 P =  \frac{2(\mu^* - \mu^L)}{m},
 \]</span></p>
-<p>where <span class="math inline">\(\mu^*\)</span> is the distribution-corrected mean (i.e. <span class="math inline">\(\mu(1 - Gini/100)\)</span>), <span class="math inline">\(\mu^L\)</span> is the mean of the poorest half of the population, and <span class="math inline">\(m\)</span> is the median. Like the Gini coefficient, the polarization index ranges from 0 (no polarization) to 1 (complete polarization). The polarization index is based on <span class="citation">Wolfson (<a href="references.html#ref-wolfson1994" role="doc-biblioref">1994</a>)</span> and <span class="citation">Ravallion and Chen (<a href="references.html#ref-ravallion1997" role="doc-biblioref">1997</a>)</span>.</p>
+<p>where <span class="math inline">\(\mu^*\)</span> is the distribution-corrected mean (i.e. <span class="math inline">\(\mu(1 - Gini/100)\)</span>), <span class="math inline">\(\mu^L\)</span> is the mean of the poorest half of the population, and <span class="math inline">\(m\)</span> is the median. Like the Gini coefficient, the polarization index ranges from 0 (no polarization) to 1 (complete polarization). The polarization index is based on <span class="citation">Wolfson (<a href="#ref-wolfson1994" role="doc-biblioref">1994</a>)</span> and <span class="citation">Ravallion and Chen (<a href="#ref-ravallion1997" role="doc-biblioref">1997</a>)</span>.</p>
 </div>
-<div id="dist" class="section level2" number="4.4">
-<h2>
-<span class="header-section-number">4.4</span> Other distributional statistics<a class="anchor" aria-label="anchor" href="#dist"><i class="fas fa-link"></i></a>
-</h2>
+<div id="dist" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Other distributional statistics<a href="surveyestimates.html#dist" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Median</strong>:</p>
 <p>The median is the amount of welfare per capita that divides the distribution into two equal halves. For micro data, the median is estimated as:</p>
 <p><span class="math display">\[
@@ -215,9 +328,9 @@ Y \left[\frac{n}{2}\right] &amp; \text{if $n$ is even} \\
 <p>where <span class="math inline">\(Y\)</span> is the ordered list of welfare per capita in the sample, and <span class="math inline">\(n\)</span> is the sample size.</p>
 <p>For grouped data, the median is estimated as:</p>
 <p><span class="math display">\[
-Med = \mu L^{'}(0.5)
+Med = \mu L^{&#39;}(0.5)
 \]</span></p>
-<p>where <span class="math inline">\(\mu\)</span> is the mean and <span class="math inline">\(L^{'}(0.5)\)</span> is the first derivative of the GQ or Beta Lorenz function at the 50th percentile. See section on the Watts Index for the derivation of the first derivatives.</p>
+<p>where <span class="math inline">\(\mu\)</span> is the mean and <span class="math inline">\(L^{&#39;}(0.5)\)</span> is the first derivative of the GQ or Beta Lorenz function at the 50th percentile. See section on the Watts Index for the derivation of the first derivatives.</p>
 <p><strong>Decile shares</strong>:</p>
 <p>Imagine that we order all households according to their welfare per capita, such that the first decile contains the 10% of the population with the lowest welfare and so on. Decile shares measure the share of total welfare belonging to each decile. Formally, the decile share of decile <span class="math inline">\(d\)</span> is given by:</p>
 <p><span class="math display">\[ decileshare_d= \frac{\sum_{i \in d} {y_i}}{\sum_{i=1}^{N} {y_i}} ,  d \in \{1,2,..,10 \} \]</span></p>
@@ -246,69 +359,103 @@ Med = \mu L^{'}(0.5)
 
 </div>
 </div>
-  <div class="chapter-nav">
-<div class="prev"><a href="convert.html"><span class="header-section-number">3</span> Converting welfare aggregates</a></div>
-<div class="next"><a href="lineupestimates.html"><span class="header-section-number">5</span> Calculating global and regional estimates</a></div>
-</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
-    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#surveyestimates"><span class="header-section-number">4</span> Calculating survey estimates of poverty and inequality</a></li>
-<li><a class="nav-link" href="#monetarypoverty"><span class="header-section-number">4.1</span> Monetary poverty measures</a></li>
-<li><a class="nav-link" href="#mpm"><span class="header-section-number">4.2</span> Multidimensional Poverty Measure</a></li>
-<li><a class="nav-link" href="#inequality"><span class="header-section-number">4.3</span> Inequality measures</a></li>
-<li><a class="nav-link" href="#dist"><span class="header-section-number">4.4</span> Other distributional statistics</a></li>
-</ul>
-
-      <div class="book-extra">
-        <ul class="list-unstyled">
-          
-        </ul>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-alkire2015" class="csl-entry">
+Alkire, Sabina, José Manuel Roche, Paola Ballon, James Foster, Maria Emma Santos, and Suman Seth. 2015. <em>Multidimensional Poverty Measurement and Analysis</em>. Oxford University Press, USA. <a href="https://ophi.org.uk/multidimensional-poverty-measurement-and-analysis/">https://ophi.org.uk/multidimensional-poverty-measurement-and-analysis/</a>.
 </div>
-    </nav>
+<div id="ref-datt1998" class="csl-entry">
+Datt, Gaurav. 1998. <span>“Computational Tools for Poverty Measurement and Analysis.”</span> <a href="http://ebrary.ifpri.org/utils/getfile/collection/p15738coll2/id/125673/filename/125704.pdf">http://ebrary.ifpri.org/utils/getfile/collection/p15738coll2/id/125673/filename/125704.pdf</a>.
 </div>
-
+<div id="ref-haughton2009" class="csl-entry">
+Haughton, Jonathan, and Shahidur R Khandker. 2009. <em>Handbook on Poverty and Inequality</em>. World Bank Publications. <a href="https://openknowledge.worldbank.org/handle/10986/11985">https://openknowledge.worldbank.org/handle/10986/11985</a>.
 </div>
-</div> <!-- .container -->
+<div id="ref-ravallion1997" class="csl-entry">
+Ravallion, Martin, and Shaohua Chen. 1997. <span>“What Can New Survey Data Tell Us about Recent Changes in Distribution and Poverty?”</span> <em>The World Bank Economic Review</em> 11 (2): 357–82. <a href="https://www.jstor.org/stable/3990232">https://www.jstor.org/stable/3990232</a>.
+</div>
+<div id="ref-wolfson1994" class="csl-entry">
+Wolfson, Michael C. 1994. <span>“When Inequalities Diverge.”</span> <em>The American Economic Review</em> 84 (2): 353–58. <a href="https://www.jstor.org/stable/2117858">https://www.jstor.org/stable/2117858</a>.
+</div>
+<div id="ref-worldbank2018" class="csl-entry">
+World Bank. 2018. <em>Poverty and Shared Prosperity 2018: Piecing Together the Poverty Puzzle</em>. Washington, DC: World Bank. <a href="https://openknowledge.worldbank.org/handle/10986/30418">https://openknowledge.worldbank.org/handle/10986/30418</a>.
+</div>
+</div>
+            </section>
 
-<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
-
-  <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Poverty and Inequality Platform Methodology Handbook</strong>" was written by . </p>
+          </div>
+        </div>
+      </div>
+<a href="convert.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lineupestimates.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
   </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": true,
+"twitter": true,
+"linkedin": true,
+"weibo": true,
+"instapaper": true,
+"vk": true,
+"whatsapp": true,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+},
+"info": true
+});
+});
+</script>
 
-  <div class="col-12 col-md-6 mt-3">
-    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
-  </div>
-
-</div></div>
-</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
-</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
-for (let popover of popovers) {
-  const div = document.createElement('div');
-  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
-  div.innerHTML = popover.getAttribute('data-content');
-
-  var has_math = div.querySelector("span.math");
-  if (has_math) {
-    document.body.appendChild(div);
-    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
-    MathJax.Hub.Queue(function() {
-      popover.setAttribute('data-content', div.innerHTML);
-      document.body.removeChild(div);
-    })
-  }
-}
 </script>
 </body>
+
 </html>
