@@ -1,8 +1,9 @@
 ---
 title: "Poverty and Inequality Platform Methodology Handbook"
 zotero: "PovcalNet Team"
-url: "https://worldbank.github.io/PIP-Methodology/"
+url: "https://datanalytics.worldbank.org/PIP-Methodology/"
 github-repo: worldbank/PIP-Methodology
+cover-image: figures/WB-PIP-E-vertical-RGB-med.png
 site: "bookdown::bookdown_site"
 documentclass: book 
 editor_options: 
@@ -38,16 +39,19 @@ text-align: justify}
 knitr::opts_chunk$set(echo = TRUE) 
 ```
 
--   Suggested citation: World Bank. 2022. "Poverty and Inequality
-    Platform Methodology Handbook." Edition 2022-04. Available at
-    [\<https://worldbank.github.io/PIP-Methodology-2022-04\>](https://worldbank.github.io/PIP-Methodology/index.html).\*
-
 # Non-technical summary {.unnumbered}
 
-This site describes how global and regional poverty rates are
-calculated. This particular page summarizes the methodology in
-non-technical terms using five steps. The summary is followed by five
-chapters that dig into these steps in detail.
+```{r pip-logo, out.width='30%', fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'), fig.link='https://pip.worldbank.org/', fig.show='hold',  out.extra='style="float:right; padding:10px"'}
+knitr::include_graphics('figures/WB-PIP-E-vertical-RGB-med.png')
+```
+
+This site describes the methodology implemented by the World Bank to
+calculate global and regional poverty rates that are officially reported
+in the the [Poverty and Inequality
+Platform](https://pip.worldbank.org/home) (PIP). This particular page
+summarizes the methodology in non-technical terms using five steps. The
+summary is followed by five chapters that dig into these steps in
+detail.
 
 The five steps are illustrated in the figure below and summarized after
 the figure. First, household survey data are obtained from relevant
