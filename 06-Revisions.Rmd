@@ -1,17 +1,23 @@
 # Revisions made to this handbook {#revisions}
 
-As the methodology underlying the global poverty counts is updated, revisions are made to this handbook. Below is a description of the revisions that have taken place. 
+As the methodology underlying the global poverty counts is updated, revisions are made to this handbook. Below is a description of the revisions that have taken place.
 
 ## 2023 March
-A paragraph was added in section 1 related to the input data necessary for poverty rates from a household survey to be featured in PIP. In addition, a subsection was added explaining the percentiles database. Finally, minor changes were made to account for changes to Timor-Leste's PPP and the removal of Somalia's survey data. 
-This is the latest version of the handbook.
+
+A paragraph was added in section 1 related to the input data necessary for poverty rates from a household survey to be featured in PIP. In addition, a subsection was added explaining the percentiles database. Finally, minor changes were made to account for changes to Timor-Leste's PPP and the removal of Somalia's survey data. This is the latest version of the handbook.
 
 ## 2022 September
+
 The handbook was adjusted based on the switch from 2011 PPPs to 2017 PPPs and the resultant change in the international poverty line. This particularly concerns the sections on purchasing power parities and derivation of the international poverty line and other global poverty lines. In addition, the handbook was updated to account for new Indian data based on the CPHS. In particular a paragraph was added to the subsection on "Selection criteria and source of data" to reflect the new Indian data and the paragraph on the exceptional extrapolation rule for India was removed as it is no longer applied. Finally, the section on the comparability of estimates was revised to reflect updates in how the comparability data can be accessed. The September 2022 version of the handbook is available [here](https://worldbank.github.io/PIP-Methodology-2022-09).
 
 ## 2022 May
+
 The subsection on national accounts data was updated. National accounts data for Syria were made available through the World Development Indicators, so extrapolations for the country were no longer based on a special series drawn from academic papers. The May 2022 version of the handbook is available [here](https://worldbank.github.io/PIP-Methodology-2022-05).
 
 ## 2022 April
+
 This was the first version published of the handbook. It is available [here](https://worldbank.github.io/PIP-Methodology-2022-04).
 
+# Suggested citation {.unnumbered}
+
+World Bank. 2023. "Poverty and Inequality Platform Methodology Handbook." Edition 2023-03. Available at <https://datanalytics.worldbank.org/PIP-Methodology/>.
