@@ -7,7 +7,7 @@
   <title>Chapter 4 Calculating survey estimates of poverty and inequality | Poverty and Inequality Platform Methodology Handbook</title>
   <meta name="description" content="<p>This site describes how global and regional poverty rates are
 •calculated.</p>" />
-  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 Calculating survey estimates of poverty and inequality | Poverty and Inequality Platform Methodology Handbook" />
   <meta property="og:type" content="book" />
@@ -53,7 +53,7 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
 <script src="libs/viz-1.8.2/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
 <script src="libs/grViz-binding-1.0.9/grViz.js"></script>
@@ -162,7 +162,6 @@ div.csl-indent {
 <li class="chapter" data-level="6.4" data-path="revisions.html"><a href="revisions.html#april"><i class="fa fa-check"></i><b>6.4</b> 2022 April</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="suggested-citation.html"><a href="suggested-citation.html"><i class="fa fa-check"></i>Suggested citation</a></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 </ul>
 
       </nav>
@@ -308,7 +307,7 @@ Gini = 100 * 2\theta B(1 + \gamma, 1 + \delta)
 <p>Note that <span class="math inline">\(B(1 + \gamma, 1 + \delta)\)</span> is the Beta function <span class="math inline">\(\int_0^1 p^\gamma (1 - p)^\delta ~dp\)</span>.</p>
 <p><strong>Mean log deviation</strong>: The mean log deviation (MLD) belongs to the family of generalized entropy inequality measures. It is given as:</p>
 <p><span class="math display">\[ MLD  = \frac{1}{N} \sum_{i=1}^{N} ln \left(\frac{μ}{y_i} \right)*100, \]</span></p>
-<p>where <span class="math inline">\(N\)</span> is the total population size, <span class="math inline">\(μ\)</span> is the mean welfare per person, and <span class="math inline">\(y_i\)</span> is welfare of individual <span class="math inline">\(i\)</span>. The MLD has a minimum value of 0 (perfect equality) and has no upper bound. This formula applies for both micro and grouped data (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_mld.R">miicro data source code</a>, <a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lq.R#L327-L353">GQ source code</a>, <a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lb.R#L253-L279">Beta Lorenz source code</a>). For both the GQ and Beta Lorenz functions, the MLD is evaluated at the poverty line <span class="math inline">\(z\)</span> and percentiles <span class="math inline">\(y_i\)</span>. A percentile is given as the product of the mean and the first derivative of the GQ or Beta Lorenz function at the respective rank in the distribution (see section on the Watts Index for the derivation of the first derivatives).</p>
+<p>where <span class="math inline">\(N\)</span> is the total population size, <span class="math inline">\(μ\)</span> is the mean welfare per person, and <span class="math inline">\(y_i\)</span> is welfare of individual <span class="math inline">\(i\)</span>. The MLD has a minimum value of 0 (perfect equality) and has no upper bound. This formula applies for both micro and grouped data (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_mld.R">micro data source code</a>, <a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lq.R#L327-L353">GQ source code</a>, <a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lb.R#L253-L279">Beta Lorenz source code</a>). For both the GQ and Beta Lorenz functions, the MLD is evaluated at the poverty line <span class="math inline">\(z\)</span> and percentiles <span class="math inline">\(y_i\)</span>. A percentile is given as the product of the mean and the first derivative of the GQ or Beta Lorenz function at the respective rank in the distribution (see section on the Watts Index for the derivation of the first derivatives).</p>
 <p>In the same vein of the Watts Index, the MLD suffers from being undefined when there are zero values in the distribution. Currently PIP replaces zeros with ones when in order to use the same sample as with the other inequality measures.</p>
 <p><strong>Polarization</strong>: The polarization index (<span class="math inline">\(P\)</span>), also known as the Wolfson polarization index, measures the extent to which the distribution of welfare is “spread out” and bi-modal. It is given as (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_polarization.R">micro data source code</a>, <a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lq.R#L465-L475">GQ source code</a>, <a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lb.R#L424-L435">Beta Lorenz source code</a>):</p>
 <p><span class="math display">\[
@@ -354,13 +353,13 @@ Med = \mu L^{&#39;}(0.5)
 <p><span class="math display">\[ spp = \left(\frac{\mu_{b40,t_2}}{\mu_{b40,t_1}}\right)^{\frac{1}{t_2-t_1}} - \left(\frac{\mu_{t_2}}{\mu_{t_1}}\right)^{\frac{1}{t_2-t_1}}. \]</span></p>
 <p><strong>Percentiles database</strong></p>
 <p>The <a href="https://datacatalog.worldbank.org/int/search/dataset/0063646">percentiles database</a> reports 100 points ranked according to the consumption or income distributions for each survey data available in PIP.</p>
-<p>Each percentile distribution reports 100 points per country per survey year ranked from the smallest income (percentile 1) to the largest (percentile 100). For each percentile, the database reports the following variables: The average welfare within the percentile group (avg_welfare); the value for the upper threshold of the percentile group (quantile); the share of the population in the percentile group (which might deviate slightly from 1% due to coarseness in the raw data) (pop_share); and the share of income held by each percentile group (welfare_share). In addition, the database reports the welfare measure (welfare_type) used in the survey data — income or consumption — and the region covered (reporting_level) — urban, rural, or national. The database can be merged with the PIP data using the country_code, reporting_level, year, and welfare_type variables.</p>
-<p>For surveys with access to the microdata and for distributions based on binned data, the Stata quantiles function is used to allocate the survey population into 100 equally sized percentiles. The income and consumption averages, thresholds, and shares of each percentile are derived using the population and their income or consumption in each bin. The quantiles function to bin the distribution is used consistently throughout PIP when bins are necessary. For instance, the same approach is used to derive the 400 bins from LIS data.</p>
+<p>Each percentile distribution reports 100 points per country per survey year ranked from the smallest income (percentile 1) to the largest (percentile 100). For each percentile, the database reports the following variables: The average welfare within the percentile group (avg_welfare); the value for the upper threshold of the percentile group (quantile); the share of the population in the percentile group (which might deviate slightly from 1% due to coarseness in the raw data) (pop_share); and the share of income held by each percentile group (welfare_share). In addition, the database reports the welfare measure (welfare_type) used in the survey data — income or consumption — and the region covered (reporting_level) - urban, rural, or national. The database can be merged with the PIP data using the country_code, reporting_level, year, and welfare_type variables.</p>
+<p>For surveys with access to the microdata and for distributions based on binned data, the Stata quantiles function is used to allocate the survey population into 100 equally sized percentiles. The income and consumption averages, thresholds, and shares of each percentile is derived using the population and their income or consumption in each bin. The quantiles function to bin the distribution is used consistently throughout PIP when bins are necessary. For instance, the same approach is used to derive the 400 bins from LIS data.</p>
 <p><a href="acquiring.html#grouped">Grouped data</a> often have fewer than 100 observations, in which case the percentiles for grouped data are based on <a href="welfareaggregate.html#tgd">a parametric fit of the Lorenz curve</a>. The percentiles are based on the Lorenz curve used for distributional statistics (like the decile shares, Gini coefficient, and median) in the PIP output.</p>
 
 </div>
 </div>
-<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3>References</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-alkire2015" class="csl-entry">
 Alkire, Sabina, José Manuel Roche, Paola Ballon, James Foster, Maria Emma Santos, and Suman Seth. 2015. <em>Multidimensional Poverty Measurement and Analysis</em>. Oxford University Press, USA. <a href="https://ophi.org.uk/multidimensional-poverty-measurement-and-analysis/">https://ophi.org.uk/multidimensional-poverty-measurement-and-analysis/</a>.
