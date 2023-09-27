@@ -7,44 +7,50 @@ output: html_document
 
 This file contains the information you need to update the Methodology Handbook. It is still incomplete.
 
-## Installation
+## Setting everything up
 
-To work on this book, you will need to have R and RStudio installed.
-You will also need to have the following packages installed: downlit, [INCOMPLETE]
+To work on this book, you will need to have R and RStudio installed. You will also need to have the following packages installed: downlit, rsconnect, bookdown, DiagrammeR. Next you need to connect to posit, which eventually will allow you to update the website. To connect you need to go through the following steps:
+
+1.  Have an internal and external posit connect account. You can request this through e-services, look for [RStudio Connect Account](https://worldbankgroup.service-now.com/wbg?id=wbg_sc_catalog&sys_id=990fc3681bf47850a4d2fff7cc4bcbca)
+
+2.  Once granted, add the server where the handbook is hosted using the following code in R:
+
+    `# Add new server`
+
+    `rsconnect::addServer(`
+
+    `"http://w0lxopshyprd1b.worldbank.org:3939",`
+
+    `name = "external-server")`
+
+3.  Then connect your account.
+
+    1.  To do so, first create an API-key through posit connect. To that end, login [here](https://datanalytics.worldbank.org/connect/), and then follow the instructions [here](https://docs.posit.co/connect/user/api-keys/#:~:text=To%20create%20an%20API%20Key,to%20the%20API%20Keys%20page.). Copy the API-key.
+
+    2.  Run the code `file.edit("~/.Renviron").`
+
+    3.  In .Renviron type `"connect_key_ext={paste your API key here}".` Add one empty line and save
+
+    4.  Run the following code:
+
+        `# Connect your account`
+
+        `rsconnect::connectApiUser(`
+
+        `server = "external-server",`
+
+        `account = "dmahler", # The same of your @worldbank.org email`
+
+        `apiKey = Sys.getenv("connect_key_ext"))`
 
 ## Working with the book
 
-To update the text, just open whichever of the ".Rmd" files which needs updating. 
+To update the text, just open whichever of the ".Rmd" files which needs updating. To update references, the easiest is just to open references.bib in notepad and manually make changes. You can also work with it through Zotero but I find that to be less reliable.
 
-## Updating references
+## Publishing the book
 
-To update a reference, the easiest is just to open references.bib in notepad and manually make changes. You can also work with it through Zotero but I find that to be less reliable. Once you've updated some references, you need to knit the relevant files where they appear and then render the book (see below on that).
+Once you are done with all the changes you want, take the following steps to update the online version of the handbook by running this code:
 
-## Rendering the book
+`bookdown::publish_book(name = "PIP-Methodology2", account = "dmahler", server = "external-server", render = "local")`
 
-To render the book, make sure you have opened the file "Methodology.Rproj" in the main folder. You can check you have this file open if the very top-left of the RStudio reads "Methodology - RStudio". The buttons in RStudio, "Knit" and "Build Book" do not work. Rather you will need to type the following line directly in the console: bookdown::render_book(). Once you have rendered the book, stage and commit in git and merge with the master branch. Then you should see the updated version on the main hyperlink.
-
-## Archieving the book
-
-Once a global poverty update has taken place, the new version of the handbook needs to be archived. For that, complete the following steps.
-
-
-1. The version of the handbook just prior to the update should already exist in PIP-Methodology-YYYY-MM.You need to add a disclaimer box on this version to make it clear that it is no longer the most recent. Do that by going to the latest archived version and copy the "css" and "files" folder. In addition change "index.Rmd" by adding the following right after "bookdown::gitbook:"
-    includes:
-      before_body: files/open_review_block.html
-    css: [css/style.css]
-The number of spaces/indents matter so don't change that!
-
-2. Render that book following the guidelines above
-
-
-3. Make all the updates to the handbook necessary and render that book following the guidelines above. Remember to edit the links and citation in the beginning of index.Rmd.
-
-
-4. Create a new repository called PIP-Methodology-YYYY-MM where YYYY-MM is the year and month of the present update, i.e. most likely the year and month you are currently in. You need to have the rights to create a new repo on behalf of the Bank. You need to ask Andres for help on this. 
-
-5. Once it is created, go to github.com/worldbank/PIP-Methodology-YYYY-MM/settings/pages, in "Build and development", select "Deploy from a branch", chose "main", and "/docs", and click save. This is what allows the website to publish the content.
-
-6. Copy everything from the live repo except for the ".git" folder and "docs" folder. The ".git" folder may not be visible, but you can find the content by typing it in directly, i.e. "...\PIP-Methodology-YYYY-MM\.git\"
-
-7. Render the book using the guidelines above. 
+Obviosuly replace `dmahler` with your posit connect username, which is the part of your World Bank e-mail before the "\@".

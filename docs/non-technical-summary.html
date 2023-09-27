@@ -4,12 +4,12 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | Poverty and Inequality Platform Methodology Handbook</title>
+  <title>Non-technical summary | Poverty and Inequality Platform Methodology Handbook</title>
   <meta name="description" content="<p>This site describes how global and regional poverty rates are
 •calculated.</p>" />
   <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | Poverty and Inequality Platform Methodology Handbook" />
+  <meta property="og:title" content="Non-technical summary | Poverty and Inequality Platform Methodology Handbook" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="https://datanalytics.worldbank.org/PIP-Methodology/figures/WB-PIP-E-vertical-RGB-med.png" />
   <meta property="og:description" content="<p>This site describes how global and regional poverty rates are
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="worldbank/PIP-Methodology" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | Poverty and Inequality Platform Methodology Handbook" />
+  <meta name="twitter:title" content="Non-technical summary | Poverty and Inequality Platform Methodology Handbook" />
   
   <meta name="twitter:description" content="<p>This site describes how global and regional poverty rates are
 •calculated.</p>" />
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-
+<link rel="prev" href="index.html"/>
+<link rel="next" href="acquiring.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -176,19 +176,104 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="non-technical-summary" class="section level1 unnumbered hasAnchor">
+<h1>Non-technical summary<a href="non-technical-summary.html#non-technical-summary" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This page summarizes the methodology in non-technical terms using five steps. The summary is followed by five chapters that dig into these steps in detail.</p>
+<p>The five steps are illustrated in the figure below and summarized after
+the figure. First, household survey data are obtained from relevant
+sources. Second, the survey data are used to create an estimate of
+households’ income or consumption, known as welfare aggregates. Third,
+the welfare aggregates are adjusted for differences in price levels
+across countries and over time to foster international comparability.
+Fourth, poverty and inequality are estimated for a particular country
+for a particular year. Fifth, the estimates of poverty are extrapolated
+or interpolated to a common year and the population-weighted poverty
+rate is calculated.</p>
+<div id="htmlwidget-1aa0d820962717a8e12d" style="width:672px;height:500px;" class="grViz html-widget "></div>
+<script type="application/json" data-for="htmlwidget-1aa0d820962717a8e12d">{"x":{"diagram":"digraph {\n  graph [layout = dot, rankdir = TD]\n  \n  node [shape = box,style=filled, color=lightblue2]        \n  box1 [label = \"Step 1\nAcquiring household survey data\"]\n  box2 [label = \"Step 2\nConstructing welfare aggregates\"]\n  box3 [label = \"Step 3\nConverting welfare aggregates\"]\n  box4 [label = \"Step 4\nCalculating survey estimates of poverty and inequality\"]\n  box5 [label = \"Step 5\nCalculating global and regional poverty\"]\n  box1 -> box2 -> box3 -> box4 -> box5\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="step-1-acquiring-household-survey-data" class="section level2 unnumbered hasAnchor">
+<h2>Step 1: <a href="acquiring.html#acquiring">Acquiring household survey data</a><a href="non-technical-summary.html#step-1-acquiring-household-survey-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Poverty rates are estimated from <a href="acquiring.html#selection">selected</a> household
+surveys. In general, the surveys used ask a
+<a href="acquiring.html#representativeness">representative</a> subset of households in a country
+about their consumption or income. These surveys are often the official
+surveys used by countries to monitor and report on poverty. Most
+household surveys from developing countries <a href="acquiring.html#selection">are obtained</a>
+through collaboration with countries’ National Statistical Offices,
+while most data for high-income countries are obtained from the <a href="https://ec.europa.eu/eurostat/web/microdata/european-union-statistics-on-income-and-living-conditions">EU
+Statistics on Income and Living Conditions
+(EU-SILC)</a>
+or from the <a href="https://www.lisdatacenter.org">Luxembourg Income Study (LIS)
+Database</a>. At times, household-level data
+cannot be obtained in which case, as a second best,
+<a href="acquiring.html#grouped">aggregated</a> data are used, such as income or consumption by
+population deciles.</p>
+</div>
+<div id="step-2-constructing-welfare-aggregates" class="section level2 unnumbered hasAnchor">
+<h2>Step 2: <a href="welfareaggregate.html#welfareaggregate">Constructing welfare aggregates</a><a href="non-technical-summary.html#step-2-constructing-welfare-aggregates" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The Poverty and Inequality Platform (PIP) primarily utilizes a monetary
+measure of poverty. Monetary poverty is estimated from an aggregation of
+household’s income or from the monetary value of their consumption. We
+refer to such aggregates jointly as welfare aggregates. Welfare
+aggregates are harmonized across countries and over time to maximize
+<a href="welfareaggregate.html#comparability">comparability</a>, but country-specific decisions on
+issues such as <a href="welfareaggregate.html#incomeorconsumption">whether income or consumption is
+used</a>, <a href="welfareaggregate.html#questionnaire">the design of the
+questionnaire</a> of the household survey, what <a href="welfareaggregate.html#imputedrent">components
+that are included</a> in the welfare aggregate, and whether
+<a href="welfareaggregate.html#spatialtemporal">price differences within a country</a> are accounted
+for, imply that full comparability is not feasible.</p>
+</div>
+<div id="step-3-converting-welfare-aggregates" class="section level2 unnumbered hasAnchor">
+<h2>Step 3: <a href="convert.html#convert">Converting welfare aggregates</a><a href="non-technical-summary.html#step-3-converting-welfare-aggregates" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Welfare aggregates are often expressed in local currencies in the prices
+prevailing at the time of the collection of the data. To compare the
+consumption of an Indian household in 2011 to the consumption of a
+Nigerian household in 2018, the welfare aggregates need to be expressed
+in the same prices. To this end, <a href="convert.html#CPIs">consumer price indices</a> are
+used to express all welfare aggregates in local 2017 prices, and
+<a href="convert.html#PPPs">purchasing power parities</a> are used to account for price
+differences between countries. Once all welfare aggregates are expressed
+in the same units, a common poverty line is needed to estimate poverty.
+<a href="convert.html#IPL">The international poverty line</a> used in PIP is constructed from
+the poverty lines used by the poorest countries of the world.</p>
+</div>
+<div id="step-4-calculating-survey-estimates-of-poverty-and-inequality" class="section level2 unnumbered hasAnchor">
+<h2>Step 4: <a href="surveyestimates.html#surveyestimates">Calculating survey estimates of poverty and inequality</a><a href="non-technical-summary.html#step-4-calculating-survey-estimates-of-poverty-and-inequality" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Armed with welfare distributions expressed in 2017 PPPs and an
+international poverty line, poverty and inequality can be calculated and
+compared across countries and over time. PIP contains a range of
+different <a href="surveyestimates.html#monetarypoverty">monetary poverty measures</a>, a
+<a href="surveyestimates.html#mpm">multidimensional poverty measure</a>, <a href="surveyestimates.html#inequality">inequality
+measures</a>, and <a href="surveyestimates.html#dist">other distributional statistics</a>.</p>
+</div>
+<div id="step-5-calculating-global-and-regional-poverty" class="section level2 unnumbered hasAnchor">
+<h2>Step 5: <a href="lineupestimates.html#lineupestimates">Calculating global and regional poverty</a><a href="non-technical-summary.html#step-5-calculating-global-and-regional-poverty" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Most countries do not conduct household surveys every year. Yet, to
+estimate regional and global poverty for a particular year, one needs an
+estimate of poverty for every country for the year in question. When a
+poverty estimate is not available for a given year, the estimates are
+<a href="lineupestimates.html#extrapolations">extrapolated</a> or <a href="lineupestimates.html#interpolations">interpolated</a> from
+other years. The extrapolations assume that everyone’s income or
+consumption grows in accordance with per capita growth rates from
+<a href="lineupestimates.html#nationalaccounts">national accounts</a> between the time of the survey
+and the year in question. For <a href="lineupestimates.html#nodata">countries without any household
+data</a> at all, it is assumed that their poverty rate is equal to
+the population-weighted average poverty rate in their
+<a href="lineupestimates.html#regionsandcountries">region</a>. To ensure the quality of the regional
+and global numbers, <a href="lineupestimates.html#coverage">coverage rules</a> are used to determine
+whether a particular reference year has sufficient nearby survey data
+for global and regional numbers to be presented.</p>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="acquiring.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
