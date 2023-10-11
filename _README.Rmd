@@ -53,4 +53,4 @@ Once you are done with all the changes you want, take the following steps to upd
 
 `bookdown::publish_book(name = "PIP-Methodology2", account = "dmahler", server = "external-server", render = "local")`
 
-Obviosuly replace `dmahler` with your posit connect username, which is the part of your World Bank e-mail before the "\@".
+Obviously replace `dmahler` with your posit connect username, which is the part of your World Bank e-mail before the "\@".
