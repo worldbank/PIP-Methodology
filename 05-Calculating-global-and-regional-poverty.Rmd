@@ -26,7 +26,7 @@ In cases where the reference year falls between two surveys, poverty is interpol
 
 "Same direction" interpolation is used when growth in the survey mean between the two surveys is of the same sign as (1) the growth in national accounts from the first survey to the reference year, and (2) from the reference year to the second survey. Denoting $survey1$ the survey predating the reference year and $survey2$ the survey after the reference year, this means that same direction interpolation is used when
 
-$$sign \bigg(\dfrac{μ_{survey2}}{μ_{survey1}}-1\bigg) = 
+$$sign \bigg(\dfrac{\mu_{survey2}}{\mu_{survey1}}-1\bigg) = 
   sign \bigg(\dfrac{NA_{survey2}}{NA_{reference}}-1\bigg) = 
   sign \bigg(\dfrac{NA_{reference}}{NA_{survey1}}-1\bigg)$$
 
@@ -38,13 +38,13 @@ Interpolations are never done between consumption and income aggregates. Wheneve
 
 "Same direction" interpolation works in three steps.
 
-First, the survey mean at the reference year, $μ_{reference}$, is estimated using the following interpolation formula:
+First, the survey mean at the reference year, $\mu_{reference}$, is estimated using the following interpolation formula:
 
-$$μ_{reference} = (μ_{survey2} - μ_{survey1}) \times \dfrac{NA_{reference} - NA_{survey1}}{NA_{survey2} - NA_{survey1}} + μ_{survey1}$$
+$$\mu_{reference} = (\mu_{survey2} - \mu_{survey1}) \times \dfrac{NA_{reference} - NA_{survey1}}{NA_{survey2} - NA_{survey1}} + \mu_{survey1}$$
 
 Second, the welfare distributions at the two surveys are scaled to reflect this mean:
 
-$$f(y_{reference,i}) = \dfrac{μ_{reference}}{μ_{survey,i}} \times f(y_{survey,i}), $$where $i={1,2}$ . After this alignment, there will be two distributions with the same mean for the reference year but with different distributional shapes.
+$$f(y_{reference,i}) = \dfrac{\mu_{reference}}{\mu_{survey,i}} \times f(y_{survey,i}), $$where $i={1,2}$ . After this alignment, there will be two distributions with the same mean for the reference year but with different distributional shapes.
 
 At the third step, poverty is estimated from each of these distributions, and the final poverty estimate at the reference year is the weighted average poverty rate from both distributions where each poverty estimate is weighted by the inverse of the relative distance between the survey year and the reference year:
 
@@ -68,7 +68,7 @@ It is important to note that the extrapolations and interpolations use only the 
 
 The discussion on interpolation and extrapolation for simplicity assumed that only one welfare aggregate was available for a given country at a given year. Yet, a number of countries have poverty estimates available from both [consumption and income aggregates](#incomeorconsumption). Due to its closer connection to welfare, whenever both income and consumption estimates are available for a given reference year, consumption estimates are preferred. Likewise, when both kinds of poverty estimates are available for the same years (but not for a particular reference year), interpolations and extrapolation are made using the consumption estimates. When consumption and income estimates are available at different years, the choice is a bit more complicated. The precise rules are outlined in the following decision tree:
 
-![](figures/Income%20consumption%20decision%20tree.svg "Income consumption decision tree")
+![](figures/Income consumption decision tree.jpg "Income consumption decision tree")
 
 ## Regional classification {#regionsandcountries}
 

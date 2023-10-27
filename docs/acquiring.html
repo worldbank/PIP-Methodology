@@ -7,7 +7,7 @@
   <title>Chapter 1 Acquiring household survey data | Poverty and Inequality Platform Methodology Handbook</title>
   <meta name="description" content="<p>This site describes how global and regional poverty rates are
 •calculated.</p>" />
-  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35.1 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 1 Acquiring household survey data | Poverty and Inequality Platform Methodology Handbook" />
   <meta property="og:type" content="book" />
@@ -53,10 +53,6 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
-<script src="libs/viz-1.8.2/viz.js"></script>
-<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-<script src="libs/grViz-binding-1.0.10/grViz.js"></script>
 
 
 
@@ -184,7 +180,7 @@ div.csl-indent {
 <p>For most countries, the Poverty and Inequality Platform (PIP) relies on household surveys carried out by countries’ National Statistical Offices (NSO). Typically, official surveys used to report poverty for the country are used. This includes household budget surveys or household income and expenditure surveys. These surveys ask a representative sample households in the country detailed questions about their income and/or consumption and much more. In some occasions, the World Bank is a co-producer of these surveys.</p>
 <p>Other surveys on consumption or income, such as surveys carried out by academic institutions and private sector companies are generally not included in PIP. The primary reason for this is that the estimates from PIP are the official vehicle for countries’ reporting on the <a href="https://sdgs.un.org/goals/goal1">Sustainable Development Goal target 1.1.1</a> on extreme poverty, which ought to come from sources that are officially recognized by countries.</p>
 <p>For high-income countries in the European Union (with the exception of Germany), the data are obtained from the <a href="https://ec.europa.eu/eurostat/web/microdata/european-union-statistics-on-income-and-living-conditions">EU Statistics on Income and Living Conditions (EU-SILC)</a>. EU-SILC data are partly obtained from surveys and partly obtained from administrative records. For other high-income economies (Australia; Canada; Germany; Israel; Japan; South Korea; Taiwan, China; the United Kingdom; and the United States) data from the <a href="https://www.lisdatacenter.org">Luxembourg Income Study (LIS) Database</a> are used. These data rely on surveys carried out by NSOs or by academic institutions. Data from the LIS database are also used for high-income countries from the European Union for years predating EU-SILC, which naturally causes a break in the series.</p>
-<p>The estimates for India from 2015-2021 rely on the Consumer Pyramids Household Survey conducted by the Centre for Monitoring Indian Economy, a private company. The survey data are adjusted to be representative of India and reflect the consumption basket of the National Sample Survey (see <span class="citation">Sinha Roy and Van Der Weide (<a href="#ref-sinha2022" role="doc-biblioref">2022</a>)</span> and <span class="citation">Aron et al. (<a href="#ref-aron2023" role="doc-biblioref">2023</a>)</span>).</p>
+<p>The estimates for India from 2015-2021 rely on the Consumer Pyramids Household Survey conducted by the Centre for Monitoring Indian Economy, a private company. The survey data are adjusted to be representative of India and reflect the consumption basket of the National Sample Survey (see <span class="citation">Sinha Roy and Van Der Weide (<a href="#ref-sinha2022">2022</a>)</span> and <span class="citation">Aron et al. (<a href="#ref-aron2023">2023</a>)</span>).</p>
 <p>Occasionally, a survey fulfilling the above criteria is not incorporated into the platform because the World Bank does not have access to the data, because of concerns about the survey design or welfare aggregate, or because the auxiliary data needed (such as <a href="convert.html#CPIs">consumer price indices</a> and <a href="convert.html#PPPs">purchasing power parities</a>) are unavailable. Decisions to exclude a survey from the platform that has previously been available are discussed carefully in the Global Poverty Working Group within the World Bank and the reason for the exclusion of a data point is summarized in the “What’s New” documents.</p>
 <p>The input data used in PIP from these sources are most often unit record data of welfare and occasionally <a href="acquiring.html#grouped">grouped data</a>, which is <a href="welfareaggregate.html#tgd">converted</a> to a full distribution. PIP cannot take as input data the resultant international poverty rate from a welfare distribution without the underlying distribution, such as a point estimate published on an NSO website. There are many reasons for this:</p>
 <ol style="list-style-type: decimal">
@@ -218,7 +214,7 @@ div.csl-indent {
 </div>
 <div id="imputed" class="section level2 hasAnchor" number="1.5">
 <h2><span class="header-section-number">1.5</span> Multiple imputed micro data<a href="acquiring.html#imputed" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In some countries, a full household survey with a comprehensive consumption measure cannot be collected due to concerns over the safety of enumerators and respondents, however, shorter interviews without a full welfare aggregate which minimize safety risks can be conducted. In these cases, a full welfare aggregate can be imputed using statistical models. These methods, described in greater detail in <span class="citation">Arayavechkit et al. (<a href="#ref-arayavechkit2021" role="doc-biblioref">2021</a>)</span> and <span class="citation">Castaneda Aguilar et al. (<a href="#ref-castanedaaguilar2022" role="doc-biblioref">2022</a>)</span>, typically use multiple imputations, resulting in a dataset with many consumption values for each household. These multiple consumption values reflect the uncertainty that arises from the statistical modelling. Statistics of interest, such as poverty or inequality are computed separately on each of these consumption vectors and averaged to get to a final estimate. Currently such data are used for South Sudan 2016, Zimbabwe 2017, Nigeria 2010, 2012, and 2015, and India 2015-2021.</p>
+<p>In some countries, a full household survey with a comprehensive consumption measure cannot be collected due to concerns over the safety of enumerators and respondents, however, shorter interviews without a full welfare aggregate which minimize safety risks can be conducted. In these cases, a full welfare aggregate can be imputed using statistical models. These methods, described in greater detail in <span class="citation">Arayavechkit et al. (<a href="#ref-arayavechkit2021">2021</a>)</span> and <span class="citation">Castaneda Aguilar et al. (<a href="#ref-castanedaaguilar2022">2022</a>)</span>, typically use multiple imputations, resulting in a dataset with many consumption values for each household. These multiple consumption values reflect the uncertainty that arises from the statistical modelling. Statistics of interest, such as poverty or inequality are computed separately on each of these consumption vectors and averaged to get to a final estimate. Currently such data are used for South Sudan 2016, Zimbabwe 2017, Nigeria 2010, 2012, and 2015, and India 2015-2021.</p>
 
 </div>
 </div>
@@ -299,20 +295,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>
