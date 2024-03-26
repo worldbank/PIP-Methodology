@@ -47,11 +47,10 @@ knitr::include_graphics('figures/WB-PIP-E-vertical-RGB-med.png')
 
 This site describes the methodology implemented by the World Bank to
 calculate global and regional poverty rates that are officially reported
-in the [Poverty and Inequality
-Platform](https://pip.worldbank.org/home) (PIP). The next page
-summarizes the methodology in non-technical terms using five steps. The
-summary is followed by five chapters that dig into these steps in
-detail.
+in the [Poverty and Inequality Platform](https://pip.worldbank.org/home)
+(PIP). The next page summarizes the methodology in non-technical terms
+using five steps. The summary is followed by five chapters that dig into
+these steps in detail.
 
 All decisions, assumptions, and protocols involved in these steps and in
 the chapters that follow are governed by the World Bank's Global Poverty
@@ -59,6 +58,6 @@ Working Group, which is composed of staff from the Poverty and Equity
 Global Practice, the Development Data Group, and the Development
 Research Group.
 
-
-Please cite the handbook as follows:
-World Bank. 2023. “Poverty and Inequality Platform Methodology Handbook.” Edition 2023-09. Available at https://datanalytics.worldbank.org/PIP-Methodology/.
+Please cite the handbook as follows: World Bank. 2024. "Poverty and
+Inequality Platform Methodology Handbook." Edition 2024-03. Available at
+<https://datanalytics.worldbank.org/PIP-Methodology/>.

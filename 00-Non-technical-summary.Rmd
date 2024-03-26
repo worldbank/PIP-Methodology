@@ -93,7 +93,7 @@ estimate of poverty for every country for the year in question. When a
 poverty estimate is not available for a given year, the estimates are
 [extrapolated](#extrapolations) or [interpolated](#interpolations) from
 other years. The extrapolations assume that everyone's income or
-consumption grows in accordance with per capita growth rates from
+consumption grows in parallel with per capita growth rates from
 [national accounts](#nationalaccounts) between the time of the survey
 and the year in question. For [countries without any household
 data](#nodata) at all, it is assumed that their poverty rate is equal to
