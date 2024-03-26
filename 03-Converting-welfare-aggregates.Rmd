@@ -32,7 +32,6 @@ The current international poverty line of \$2.15/day in 2017 PPPs has been deriv
 
 ## Derivation of other global poverty lines
 
-In addition to the [international poverty line](#IPL), the World Bank uses two higher poverty lines to measure and monitor poverty in countries with a low incidence of extreme poverty. These higher lines, namely \$3.65 and \$6.85 in 2017 PPPs, are derived as the median values of national poverty lines of lower- and upper-middle income countries, respectively. These lines have been derived along with the international poverty line, using the same methodology [@jolliffe2022]. All these poverty lines are absolute poverty lines. 
+In addition to the [international poverty line](#IPL), the World Bank uses two higher poverty lines to measure and monitor poverty in countries with a low incidence of extreme poverty. These higher lines, namely \$3.65 and \$6.85 in 2017 PPPs, are derived as the median values of national poverty lines of lower- and upper-middle income countries, respectively. These lines have been derived along with the international poverty line, using the same methodology [@jolliffe2022]. All these poverty lines are absolute poverty lines.
 
 The World Bank also uses a societal poverty line (SPL) that reflects a more relative concept of poverty. With 2017 PPPs, the societal poverty line is defined as \$1.15 plus half the median level of consumption in a country, or the international poverty line if \$1.15 plus half the median level of consumption is lower than the international poverty line [@jolliffe2022]. This line increases as a country grows (and the median increases).
-

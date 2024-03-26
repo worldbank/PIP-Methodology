@@ -25,11 +25,11 @@ To work on this book, you will need to have R and RStudio installed. You will al
 
 3.  Then connect your account.
 
-    1.  To do so, first create an API-key through posit connect. To that end, login [here](https://datanalytics.worldbank.org/connect/), and then follow the instructions [here](https://docs.posit.co/connect/user/api-keys/#:~:text=To%20create%20an%20API%20Key,to%20the%20API%20Keys%20page.). Copy the API-key.
+    1.  To do so, first create an API-key through posit connect. To that end, log in [here](https://datanalytics.worldbank.org/connect/), and then follow the instructions [here](https://docs.posit.co/connect/user/api-keys/#:~:text=To%20create%20an%20API%20Key,to%20the%20API%20Keys%20page.). Copy the API-key.
 
     2.  Run the code `file.edit("~/.Renviron").`
 
-    3.  In .Renviron type `"connect_key_ext={paste your API key here}".` Add one empty line and save
+    3.  In .Renviron type `"connect_key_ext={paste your API key here}".` Add one empty line and save.
 
     4.  Run the following code:
 
@@ -45,7 +45,7 @@ To work on this book, you will need to have R and RStudio installed. You will al
 
 ## Working with the book
 
-To update the text, just open whichever of the ".Rmd" files which needs updating. To update references, the easiest is just to open references.bib in notepad and manually make changes. You can also work with it through Zotero but I find that to be less reliable.
+To update the text, just open whichever of the ".Rmd" files which needs updating. To update references, the easiest is just to open references.bib in notepad and manually make changes.
 
 ## Publishing the book
 
