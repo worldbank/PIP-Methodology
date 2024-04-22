@@ -93,7 +93,13 @@ The regional and global population may differ from the aggregates given in the W
 
 ## Treatment of countries without any poverty data {#nodata}
 
-With the [interpolation](#interpolations) and [extrapolation](#extrapolations) rules, all economies with at least one data point will have poverty estimates available for all years (conditional on [national accounts data](#nationalaccounts) being present). Yet some economies have no household survey data that can be used to monitor poverty (or they lack credible [PPPs](#PPPs) or [CPIs](#CPIs) necessary to compute international poverty). In order to include these economies in the regional and global poverty estimates, it is assumed that they have a poverty headcount equal to their [region's](#regionsandcountries) population-weighted average.
+With the [interpolation](#interpolations) and [extrapolation](#extrapolations) rules, all economies with at least one welfare vector in PIP will have poverty estimates available for all years as long as [national accounts data](#nationalaccounts) are available. Yet, if an economy falls under any of the following three conditions, it is not possible to calculate interpolated and extrapolated poverty estimates:
+
+1.  The economy entirely lacks household data that can be used to monitor poverty.
+2.  The economy does not have credible [PPPs](#PPPs) necessary to convert welfare vectors to cross-country comparable currencies.
+3.  The economy is missing GDP data for a subset of years necessary to extrapolate and interpolate survey estimates.
+
+If either of the first two conditions apply, the economy will be missing for all years, while if only the last condition applies, the economy will be missing in the years where GDP data is missing. In these country-year combinations, for the purpose of calculating regional and global poverty estimates, it is assumed that the country has a poverty headcount equal to its [region's](#regionsandcountries) population-weighted average poverty rate.
 
 ## Coverage rule {#coverage}
 
