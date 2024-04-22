@@ -242,7 +242,13 @@ div.csl-indent {
 </div>
 <div id="nodata" class="section level2 hasAnchor" number="5.7">
 <h2><span class="header-section-number">5.7</span> Treatment of countries without any poverty data<a href="lineupestimates.html#nodata" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>With the <a href="lineupestimates.html#interpolations">interpolation</a> and <a href="lineupestimates.html#extrapolations">extrapolation</a> rules, all economies with at least one data point will have poverty estimates available for all years (conditional on <a href="lineupestimates.html#nationalaccounts">national accounts data</a> being present). Yet some economies have no household survey data that can be used to monitor poverty (or they lack credible <a href="convert.html#PPPs">PPPs</a> or <a href="convert.html#CPIs">CPIs</a> necessary to compute international poverty). In order to include these economies in the regional and global poverty estimates, it is assumed that they have a poverty headcount equal to their <a href="lineupestimates.html#regionsandcountries">region’s</a> population-weighted average.</p>
+<p>With the <a href="lineupestimates.html#interpolations">interpolation</a> and <a href="lineupestimates.html#extrapolations">extrapolation</a> rules, all economies with at least one welfare vector in PIP will have poverty estimates available for all years as long as <a href="lineupestimates.html#nationalaccounts">national accounts data</a> are available. Yet, if an economy falls under any of the following three conditions, it is not possible to calculate interpolated and extrapolated poverty estimates:</p>
+<ol style="list-style-type: decimal">
+<li>The economy entirely lacks household data that can be used to monitor poverty.</li>
+<li>The economy does not have credible <a href="convert.html#PPPs">PPPs</a> necessary to convert welfare vectors to cross-country comparable currencies.</li>
+<li>The economy is missing GDP data for a subset of years necessary to extrapolate and interpolate survey estimates.</li>
+</ol>
+<p>If either of the first two conditions apply, the economy will be missing for all years, while if only the last condition applies, the economy will be missing in the years where GDP data is missing. In these country-year combinations, for the purpose of calculating regional and global poverty estimates, it is assumed that the country has a poverty headcount equal to its <a href="lineupestimates.html#regionsandcountries">region’s</a> population-weighted average poverty rate.</p>
 </div>
 <div id="coverage" class="section level2 hasAnchor" number="5.8">
 <h2><span class="header-section-number">5.8</span> Coverage rule<a href="lineupestimates.html#coverage" class="anchor-section" aria-label="Anchor link to header"></a></h2>
