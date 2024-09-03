@@ -6,82 +6,23 @@ Armed with welfare distributions expressed in 2017 PPPs and an international pov
 
 **Poverty headcount ratio**: The poverty headcount ratio ($P_0$) measures the proportion of the population that is counted as poor. When using micro data, the poverty headcount ratio is obtained using the following expression:$$ P_0 = \frac{1}{N} \sum_{i=1}^{N} I (y_i < z), $$
 
-where $N$ is the total population size, $y_i$ is the welfare of individual $i$, $z$ is the poverty line, and $I(.)$ is an indicator function that takes on the value 1 if the bracketed expression is true or 0 otherwise. You can find the source code where this calculation is carried out [here](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R). For grouped data that rely on the GQ Lorenz function, the poverty headcount rate is obtained using the following expression ([source code](https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lq.R#L546-L550)):
-
-$$
-P_0 = - \frac{1}{2m}[n + r(b+2z/\mu)((b+2z/\mu)^2-m)^{-1/2}],
-$$
-
-where $a, b, c$ are the parameter estimates of the General Quadratic Lorenz function, $\mu$ is mean welfare, $z$ is the poverty line, $e = -(a + b + c + 1)$, $m$ = $b^2 - 4a$, $n = 2be - 4c$, and $r = (n^2 - 4me^2)^{1/2}$.
-
-If the Beta Lorenz function is used, the poverty headcount ratio is estimated using the expression below ([source code](https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lb.R#L646-L670)):
-
-$$
-\theta {P_0}^\gamma (1 - {P_0})^\delta \left[\frac{\gamma}{P_0} - \frac{\delta}{(1 - {P_0})}\right] = 1 - \frac{z}{\mu}
-$$
-
-where $\theta$, $\delta$, and $\gamma$ are parameter estimates. See the [section on treatment of grouped data](#tgd) for details on the GQ and Beta Lorenz functions.
+where $N$ is the total population size, $y_i$ is the welfare of individual $i$, $z$ is the poverty line, and $I(.)$ is an indicator function that takes on the value 1 if the bracketed expression is true or 0 otherwise. You can find the source code where this calculation is carried out [here](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R).
 
 **Poverty gap index**: The poverty gap index ($P_1$) is a measure that adds up the extent to which individuals on average fall below the poverty line (i.e. the depth of poverty), and expresses it as a percentage of the poverty line. The poverty gap index is obtained from micro data with the following expression ([source code](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R)):
 
 $$ P_1 = \frac{1}{N} \sum_{i=1}^{N} \frac{G_i}{z} $$with $G_i = (z - y_i) × I (y_i < z)$, where $G_i$ is defined as the poverty gap (i.e. poverty line ($z$) less welfare ($y_i$)) of poor individuals; the gap is considered to be zero for everyone else.
 
-For grouped data, the poverty gap index is obtained using the following expression ([Beta Lorenz source code](https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lb.R#L806-L815), [GQ source code](https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lq.R#L568)).
-
-$$
-P_1 = P_0 - (\mu/z)L(P_0)
-$$
-
-with all variables defined as before. The expression holds for both GQ and Beta Lorenz functions.
-
 **Poverty severity index**: The poverty severity index ($P_2$) is a measure of the weighted sum of poverty gaps (as a proportion of the poverty line), where the weights are the proportionate poverty gaps themselves. The poverty severity index is obtained from micro data with the following expression ([source code](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R)):
 
 $$ P_2 = \frac{1}{N} \sum_{i=1}^{N} \left(\frac{G_i}{z} \right)^2 $$
 
-with all variables defined as before. Also known as the squared poverty gap index, the poverty severity index accounts for inequality among the poor .
+with all variables defined as before. Also known as the squared poverty gap index, the poverty severity index accounts for inequality among the poor.
 
-With the GQ Lorenz function, the poverty severity index is obtained from grouped data using the following expression ([source code](https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lq.R#L572-L575)):
-
-$$
-P_2 = 2(P_1) - P_0 - \left(\frac{\mu}{z}\right)^2 \left[aP_0 + bL(P_0) - \left(\frac{r}{16}\right)ln \left(\frac{1 - P_0/s_1}{1 - P_0/s_2}\right)     \right],
-$$
-
-where $s_1 = (r- n)/(2m)$, $s_2 = -(r + n)/(2m)$, and all other variables are defined as before.
-
-With the the Beta Lorenz function, the poverty severity index is given as ([source code](https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lb.R#L828-L847)):
-
-$$
-P_2 = (1 -\mu/z)  \left[ 2P_1 - (1- \mu/z) P_0) \right] \\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ + \theta^2 \left(\frac{\mu}{z}\right)^2\left[\gamma^2B(P_0,2\gamma-1,2\delta+1) \\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ - 2\gamma\delta B(P_0,2\gamma,2\delta) + \delta^2 B(P_0,2\gamma + 1,2\delta-1) \right]
-$$
-
-with
-
-$$
-B(k,r,s) = \int_0^k p^{r-1}(1 - p)^{s - 1} ~dp
-$$
-
-where $k$, $r$, $s$ are parameters and all other notations are defined as before for the Beta Lorenz function.
-
-**The Watts index**: The Watts index ($W$) is also an inequality-sensitive poverty measure that is given as ([mirco data source code](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R), [GQ source code](https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lq.R#L402-L450), [Beta Lorenz source code](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lb.R#L328-L376)):
+**The Watts index**: The Watts index ($W$) is also an inequality-sensitive poverty measure that is given as ([source code](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R)):
 
 $$ W  = \frac{1}{N} \sum_{i=1}^{q} ln \left(\frac{z}{y_i} \right), $$
 
-where the $N$ individuals of the population are indexed in ascending order of welfare, and the sum is taken over $q$ individuals whose welfare, $y_i$, falls below the poverty line $z$. This formula applies to both micro and grouped data. It also holds for both the GQ and Beta Lorenz functions, which are evaluated at the poverty line $z$ and other percentiles $y_i$. A percentile is given as the product of the mean and the first derivative of the GQ or Beta Lorenz function at the respective rank in the distribution. The first derivative of the GQ Lorenz function is given as:
-
-$$
-L^{'}(p) = -\frac{b}{2} - \frac{(2mp + n)(mp^2 + np + e^2)^
-{-1/2}}{4}
-$$
-
-with all variables and parameter estimates as previously defined. The first derivative of the Beta Lorenz function is given as:
-
-$$
-L^{'}(p) = 1 - \theta p^\gamma (1 - p)^\delta \left[\frac{\gamma}{p} - \frac{\delta}{1 - p}\right]
-$$
-
-with all variables and parameter estimates as previously defined.
-
-An item for discussion regarding the Watts index and the Mean Log Deviation, defined below, is the treatment of zeros in the welfare distribution given that the logarithm of zero is not defined. As explained in section \@ref(incomeorconsumption), PIP's current practice is to drop observations with negative welfare, while zeros are included when the welfare distribution is based on income. One approach is to transform the zeros by either maintaining the same mean of the distribution or by adjusting it. Another solution is to exclude the zeros from the sample, but that would create inconsistencies with other poverty and inequalities measures that use the whole sample. Currently PIP excludes zeros from the sample when calculating the Watts index.
+where the $N$ individuals of the population are indexed in ascending order of welfare, and the sum is taken over $q$ individuals whose welfare, $y_i$, falls below the poverty line $z$. This formula applies to both micro and grouped data. It also holds for both the GQ and Beta Lorenz functions, which are evaluated at the poverty line $z$ and other percentiles $y_i$.
 
 ## Multidimensional Poverty Measure {#mpm}
 
@@ -89,21 +30,14 @@ In many settings, important aspects of well-being, such as access to quality edu
 
 The dimensions, indicators, and weights of the World Bank's multidimensional poverty measure are given as follows:
 
-+--------------------------------+-------------------------------------------------------------------------------------+--------+
 | Dimension                      | Indicator                                                                           | Weight |
-+================================+=====================================================================================+========+
+|---------------|-------------------------------------------|--------------|
 | Monetary poverty               | Daily consumption or income is less than US\$2.15 per person                        | 1/3    |
-+--------------------------------+-------------------------------------------------------------------------------------+--------+
 | Education                      | At least one school-age child up to the age of grade 8 is not enrolled in school    | 1/6    |
-+--------------------------------+-------------------------------------------------------------------------------------+--------+
 | Education                      | No adult in the household (age of grade 9 or above) has completed primary education | 1/6    |
-+--------------------------------+-------------------------------------------------------------------------------------+--------+
 | Access to basic infrastructure | The household lacks access to limited-standard drinking water                       | 1/9    |
-+--------------------------------+-------------------------------------------------------------------------------------+--------+
 | Access to basic infrastructure | The household lacks access to limited-standard sanitation                           | 1/9    |
-+--------------------------------+-------------------------------------------------------------------------------------+--------+
 | Access to basic infrastructure | The household has no access to electricity                                          | 1/9    |
-+--------------------------------+-------------------------------------------------------------------------------------+--------+
 
 An individual is considered poor if she/he lives in a household that is deprived in at least 1/3 of the weighted indicators. PIP reports the share of individuals that are poor.
 
@@ -119,32 +53,13 @@ $$
 
 where there are $N$ equal intervals on the x-axis ([source code](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_gini.R)). The Gini index ranges from 0 (perfect equality) to 100 (complete inequality) .
 
-With the GQ Lorenz function, the Gini index is obtained from grouped data using the following expression ([source code](https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lq.R#L254-L288)):
-
-$$
-Gini = 100*\begin{cases}
- \frac{e}{2} - \frac{n(b + 2)}{4m} + \frac{r^2}{8m\sqrt{-m}} \left[\sin^{-1} \frac{(2m + n)}{r} - \sin^{-1}\frac{n}{r} \right] & \text{if $m<0$} \\ 
- \frac{e}{2} - \frac{n(b + 2)}{4m} + \frac{r^2}{8m\sqrt{m}} ln\left[\text{abs}\left( \frac{2m + n + 2\sqrt{m}(a + c - 1)}{n - 2e\sqrt{m}}\right) \right]  & \text{if $m>0$}
- \end{cases} 
- $$
-
-with all parameters defined as before. With the Beta Lorenz function, the Gini index is given as ([source code](https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lb.R#L208-L221)):
-
-$$
-Gini = 100 * 2\theta B(1 + \gamma, 1 + \delta)
-$$
-
-Note that $B(1 + \gamma, 1 + \delta)$ is the Beta function $\int_0^1 p^\gamma (1 - p)^\delta ~dp$.
-
 **Mean log deviation**: The mean log deviation (MLD) belongs to the family of generalized entropy inequality measures. It is given as:
 
 $$ MLD  = \frac{1}{N} \sum_{i=1}^{N} ln \left(\frac{μ}{y_i} \right)*100, $$
 
-where $N$ is the total population size, $μ$ is the mean welfare per person, and $y_i$ is welfare of individual $i$. The MLD has a minimum value of 0 (perfect equality) and has no upper bound. This formula applies for both micro and grouped data ([micro data source code](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_mld.R), [GQ source code](https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lq.R#L327-L353), [Beta Lorenz source code](https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lb.R#L253-L279)). For both the GQ and Beta Lorenz functions, the MLD is evaluated at the poverty line $z$ and percentiles $y_i$. A percentile is given as the product of the mean and the first derivative of the GQ or Beta Lorenz function at the respective rank in the distribution (see section on the Watts Index for the derivation of the first derivatives).
+where $N$ is the total population size, $μ$ is the mean welfare per person, and $y_i$ is welfare of individual $i$. The MLD has a minimum value of 0 (perfect equality) and has no upper bound. This formula applies for both micro and grouped data ([source code](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_mld.R)).
 
-The MLD is undefined when there are zeros in the distribution. Currently PIP replaces zeros with ones when in order to use the same sample as with the other inequality measures.
-
-**Polarization**: The polarization index ($P$), also known as the Wolfson polarization index, measures the extent to which the distribution of welfare is "spread out" and bi-modal. It is given as ([micro data source code](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_polarization.R), [GQ source code](https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lq.R#L465-L475), [Beta Lorenz source code](https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lb.R#L424-L435)):
+**Polarization**: The polarization index ($P$), also known as the Wolfson polarization index, measures the extent to which the distribution of welfare is "spread out" and bi-modal. It is given as ([source code](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_polarization.R)):
 
 $$
 P =  \frac{2(\mu^* - \mu^L)}{m},
@@ -165,15 +80,7 @@ Med = \begin{cases}
  \end{cases} 
  $$
 
-where $Y$ is the ordered list of welfare per capita in the sample, and $n$ is the sample size.
-
-For grouped data, the median is estimated as:
-
-$$
-Med = \mu L^{'}(0.5)
-$$
-
-where $\mu$ is the mean and $L^{'}(0.5)$ is the first derivative of the GQ or Beta Lorenz function at the 50th percentile. See section on the Watts Index for the derivation of the first derivatives.
+where $Y$ is the ordered list of welfare per capita in the sample, and $n$ is the sample size..
 
 **Decile shares**:
 
@@ -181,7 +88,11 @@ Imagine that we order all households according to their welfare per capita, such
 
 $$ decileshare_d= \frac{\sum_{i \in d} {y_i}}{\sum_{i=1}^{N} {y_i}} ,  d \in \{1,2,..,10 \} $$
 
-This formula holds for both micro and grouped data. For grouped data, ordered welfare levels, $y_i$, are the product of the mean and the first derivative of the GQ or Beta Lorenz function at the respective rank in the distribution.
+**Prosperity gap**
+The prosperity gap (PG) is the average factor by which incomes fall short of a prosperity standard of \$25 per person per day (expressed in 2017 PPP dollars) [@kraay2023]. It is given by:
+
+$$ PG  = \frac{1}{N} \sum_{i=1}^{N} \frac{25}{y_i}. $$
+For a person whose welfare is $\$2.50$ per day, this ratio is $10$, meaning that their welfare falls short of the prosperity standard by a factor of $10$. This measure unambiguously gives greater weight to poorer people. The poorest person with daily welfare equal to $\$2.50$ gets twice the weight of a person with twice the welfare (at $\$5.00$), and ten times the weight of a person with ten times higher welfare (at $\$25$).
 
 **Shared prosperity**
 
@@ -213,10 +124,8 @@ $$ spp = \left(\frac{\mu_{b40,t_2}}{\mu_{b40,t_1}}\right)^{\frac{1}{t_2-t_1}} - 
 
 **Percentiles database**
 
-The [percentiles database](https://datacatalog.worldbank.org/int/search/dataset/0063646) reports 100 points ranked according to the consumption or income distributions for each survey data available in PIP. 
+The [percentiles database](https://datacatalog.worldbank.org/int/search/dataset/0063646) reports 100 points ranked according to the consumption or income distributions for each survey data available in PIP.
 
-Each percentile distribution reports 100 points per country per survey year ranked from the smallest income (percentile 1) to the largest (percentile 100). For each percentile, the database reports the following variables: The average welfare within the percentile group (avg_welfare); the value for the upper threshold of the percentile group (quantile); the share of the population in the percentile group (which might deviate slightly from 1% due to coarseness in the raw data) (pop_share); and the share of income held by each percentile group (welfare_share). In addition, the database reports the welfare measure (welfare_type) used in the survey data — income or consumption — and the region covered (reporting_level) - urban, rural, or national. The database can be merged with the PIP data using the country_code, reporting_level, year, and welfare_type variables. 
+Each percentile distribution reports 100 points per country per survey year ranked from the smallest income (percentile 1) to the largest (percentile 100). For each percentile, the database reports the following variables: The average welfare within the percentile group (avg_welfare); the value for the upper threshold of the percentile group (quantile); the share of the population in the percentile group (which might deviate slightly from 1% due to coarseness in the raw data) (pop_share); and the share of income held by each percentile group (welfare_share). In addition, the database reports the welfare measure (welfare_type) used in the survey data — income or consumption — and the region covered (reporting_level) - urban, rural, or national. The database can be merged with the PIP data using the country_code, reporting_level, year, and welfare_type variables.
 
-For surveys with access to the microdata and for distributions based on binned data, the Stata quantiles function is used to allocate the survey population into 100 equally sized percentiles. The income and consumption averages, thresholds, and shares of each percentile is derived using the population and their income or consumption in each bin. The quantiles function to bin the distribution is used consistently throughout PIP when bins are necessary. For instance, the same approach is used to derive the 400 bins from LIS data. 
-
-[Grouped data](#grouped) often have fewer than 100 observations, in which case the percentiles for grouped data are based on [a parametric fit of the Lorenz curve](#tgd). The percentiles are based on the Lorenz curve used for distributional statistics (like the decile shares, Gini coefficient, and median) in the PIP output. 
+For surveys with access to the microdata and for distributions based on binned data, the Stata quantiles function is used to allocate the survey population into 100 equally sized percentiles. The income and consumption averages, thresholds, and shares of each percentile is derived using the population and their income or consumption in each bin. The quantiles function to bin the distribution is used consistently throughout PIP when bins are necessary. For instance, the same approach is used to derive the 400 bins from LIS data.

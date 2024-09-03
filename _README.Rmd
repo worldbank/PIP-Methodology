@@ -5,13 +5,13 @@ output: html_document
 
 ## Introduction
 
-This file contains the information you need to update the Methodology Handbook. It is still incomplete.
+This file contains the information you need to update the Methodology Handbook.
 
 ## Setting everything up
 
-To work on this book, you will need to have R and RStudio installed. You will also need to have the following packages installed: downlit, rsconnect, bookdown, DiagrammeR. Next you need to connect to posit, which eventually will allow you to update the website. To connect you need to go through the following steps:
+To work on this book, you will need to have R and RStudio installed. You will also need to have the following packages installed: downlit, rsconnect, bookdown, DiagrammeR. Next, you need to connect to posit, which eventually will allow you to update the website. To connect you need to go through the following steps:
 
-1.  Have an internal and external posit connect account. You can request this through e-services, look for [RStudio Connect Account](https://worldbankgroup.service-now.com/wbg?id=wbg_sc_catalog&sys_id=990fc3681bf47850a4d2fff7cc4bcbca)
+1.  Have an internal and external posit connect account. You can request this through e-services, look for [RStudio Connect Account](https://worldbankgroup.service-now.com/wbg?id=wbg_sc_catalog&sys_id=990fc3681bf47850a4d2fff7cc4bcbca). If you have any questions on posit connect, ask Tony Fujs.
 
 2.  Once granted, add the server where the handbook is hosted using the following code in R:
 
@@ -39,13 +39,13 @@ To work on this book, you will need to have R and RStudio installed. You will al
 
         `server = "external-server",`
 
-        `account = "dmahler", # The same of your @worldbank.org email`
+        `account = "dmahler", # The part before @worldbank.org in your email`
 
         `apiKey = Sys.getenv("connect_key_ext"))`
 
 ## Working with the book
 
-To update the text, just open whichever of the ".Rmd" files which needs updating. To update references, the easiest is just to open references.bib in notepad and manually make changes.
+To update the text, just open whichever of the ".Rmd" files that needs updating. To update references, the easiest is just to open references.bib in notepad and manually make changes.
 
 ## Publishing the book
 
