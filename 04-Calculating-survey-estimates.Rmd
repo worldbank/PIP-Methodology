@@ -2,7 +2,7 @@
 
 ## Monetary poverty measures {#monetarypoverty}
 
-Armed with welfare distributions expressed in 2017 PPPs and an international poverty line, poverty and inequality can be calculated and compared across countries and over time. The poverty and inequality measures used in the Poverty and Equity Platform (PIP) for micro data are mainly based on formula in @haughton2009, while the poverty and inequality measures estimated from grouped data are mainly based on formula in @datt1998. In the formulas below we abstract from household weights for simplicity.
+Armed with welfare distributions expressed in 2017 PPPs and an international poverty line, poverty and inequality can be calculated and compared across countries and over time. The poverty and inequality measures used in the Poverty and Equity Platform (PIP) are mainly based on formula in @haughton2009. In the formulas below we abstract from household weights for simplicity.
 
 **Poverty headcount ratio**: The poverty headcount ratio ($P_0$) measures the proportion of the population that is counted as poor. When using micro data, the poverty headcount ratio is obtained using the following expression:$$ P_0 = \frac{1}{N} \sum_{i=1}^{N} I (y_i < z), $$
 
@@ -22,7 +22,7 @@ with all variables defined as before. Also known as the squared poverty gap inde
 
 $$ W  = \frac{1}{N} \sum_{i=1}^{q} ln \left(\frac{z}{y_i} \right), $$
 
-where the $N$ individuals of the population are indexed in ascending order of welfare, and the sum is taken over $q$ individuals whose welfare, $y_i$, falls below the poverty line $z$. This formula applies to both micro and grouped data. It also holds for both the GQ and Beta Lorenz functions, which are evaluated at the poverty line $z$ and other percentiles $y_i$.
+where the $N$ individuals of the population are indexed in ascending order of welfare, and the sum is taken over $q$ individuals whose welfare, $y_i$, falls below the poverty line $z$.
 
 ## Multidimensional Poverty Measure {#mpm}
 
@@ -53,11 +53,13 @@ $$
 
 where there are $N$ equal intervals on the x-axis ([source code](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_gini.R)). The Gini index ranges from 0 (perfect equality) to 100 (complete inequality) .
 
+**Number of countries with high inequality**: This indicator, which is only reported at the regional and global level, counts the number of countries with a Gini index greater than 40. For more information on this indicator, see @haddad2024.
+
 **Mean log deviation**: The mean log deviation (MLD) belongs to the family of generalized entropy inequality measures. It is given as:
 
 $$ MLD  = \frac{1}{N} \sum_{i=1}^{N} ln \left(\frac{μ}{y_i} \right)*100, $$
 
-where $N$ is the total population size, $μ$ is the mean welfare per person, and $y_i$ is welfare of individual $i$. The MLD has a minimum value of 0 (perfect equality) and has no upper bound. This formula applies for both micro and grouped data ([source code](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_mld.R)).
+where $N$ is the total population size, $μ$ is the mean welfare per person, and $y_i$ is welfare of individual $i$. The MLD has a minimum value of 0 (perfect equality) and has no upper bound ([source code](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_mld.R)).
 
 **Polarization**: The polarization index ($P$), also known as the Wolfson polarization index, measures the extent to which the distribution of welfare is "spread out" and bi-modal. It is given as ([source code](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_polarization.R)):
 
