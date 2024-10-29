@@ -53,6 +53,10 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.11/grViz.js"></script>
 
 
 
@@ -220,7 +224,7 @@ div.csl-indent {
 <div id="equivalence-scale" class="section level2 hasAnchor" number="2.5">
 <h2><span class="header-section-number">2.5</span> Equivalence scale<a href="welfareaggregate.html#equivalence-scale" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>All welfare aggregates are converted into per capita terms by dividing the total household welfare with the number of household members. The use of a per capita normalization is standard in the literature on developing countries. Behind the per capita conversion lies an assumption that all household members have equal consumption levels or derive equal welfare from the total household income. This is based on the assumption that there is little scope for economies of size in consumption for poor people.</p>
-<p>This assumption can be questioned <span class="citation">(<a href="#ref-lanjouw1995">Lanjouw and Ravallion 1995</a>; <a href="#ref-jolliffe2024">Jolliffe and Tetteh-Baah 2024</a>)</span>. If household members have different needs, which could be the case if children, for example, require less consumption than adults, then using per capita welfare might be misleading. The assumption would also be violated if household members with the same needs do not get the same share of household income and consumption. Evidence has shown that females often get less than an equal part of household income and consumption (see chapter 5 of <span class="citation">World Bank (<a href="#ref-worldbank2018">2018</a>)</span> and references therein). An alternative assumption often used by countries when measuring poverty, is to use an adult equivalence scale. Such a scale defines the consumption need of each household member—often based on age and the household size—relative to a benchmark. Total household welfare is then converted into welfare per adult equivalent household member.</p>
+<p>This assumption can be questioned <span class="citation">(<a href="#ref-lanjouw1995">Lanjouw and Ravallion 1995</a>; <a href="#ref-jolliffe2024b">Jolliffe and Tetteh-Baah 2024</a>)</span>. If household members have different needs, which could be the case if children, for example, require less consumption than adults, then using per capita welfare might be misleading. The assumption would also be violated if household members with the same needs do not get the same share of household income and consumption. Evidence has shown that females often get less than an equal part of household income and consumption (see chapter 5 of <span class="citation">World Bank (<a href="#ref-worldbank2018">2018</a>)</span> and references therein). An alternative assumption often used by countries when measuring poverty, is to use an adult equivalence scale. Such a scale defines the consumption need of each household member—often based on age and the household size—relative to a benchmark. Total household welfare is then converted into welfare per adult equivalent household member.</p>
 <p>Despite of its compelling features, the lack of agreement on which equivalence scale to use across countries and the more difficult interpretation of the final poverty rates have prevented the World Bank from using such numbers for global poverty monitoring thus far. Per capita estimates have the advantage that they have a clear counterpart in national accounts, which matters for <a href="lineupestimates.html#extrapolations">extrapolating</a> and <a href="lineupestimates.html#interpolations">interpolating poverty</a> estimates to a common reference year.</p>
 <p>Though equivalence scales aren’t used, it is important to note that each household is weighted by the product of its sampling weight and the household size. The latter implies that the poverty rates show the share of the <em>population</em> living in poverty, not the share of <em>households</em> living in poverty.</p>
 </div>
@@ -280,7 +284,7 @@ Gasparini, Leonardo, and Walter Sosa Escudero. 2004. <span>“Implicit Rents fro
 <div id="ref-hlasny2022" class="csl-entry">
 Hlasny, Vladimir, Lidia Ceriani, and Paolo Verme. 2022. <span>“Bottom Incomes and the Measurement of Poverty and Inequality.”</span> <em>Review of Income and Wealth</em> 68 (4): 970–1006. <a href="https://doi.org/10.1111/roiw.12535">https://doi.org/10.1111/roiw.12535</a>.
 </div>
-<div id="ref-jolliffe2024" class="csl-entry">
+<div id="ref-jolliffe2024b" class="csl-entry">
 Jolliffe, Dean, and Samuel Tetteh-Baah. 2024. <span>“Identifying the Poor - Accounting for Household Economies of Scale in Global Poverty Estimates.”</span> <em>World Development</em> 179. <a href="https://doi.org/10.1016/j.worlddev.2024.106593">https://doi.org/10.1016/j.worlddev.2024.106593</a>.
 </div>
 <div id="ref-lanjouw1995" class="csl-entry">
@@ -290,7 +294,7 @@ Lanjouw, Peter, and Martin Ravallion. 1995. <span>“Poverty and Household Size.
 Mancini, Giulia, and Giovanni Vecchi. 2022. <span>“On the Construction of a Consumption Aggregate for Inequality and Poverty Analysis.”</span> <em>World Bank Group, Washington, DC</em>. <a href="https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099225003092220001/p1694340e80f9a00a09b20042de5a9cd47e">https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099225003092220001/p1694340e80f9a00a09b20042de5a9cd47e</a>.
 </div>
 <div id="ref-ravallion2016" class="csl-entry">
-Ravallion, Martin. 2016. <span>“Are the World’s Poorest Being Left Behind?”</span> <em>Journal of Economic Growth</em> 21: 139–64. <a href="https://doi.org/10.1007/s10887-016-9126-7">https://doi.org/10.1007/s10887-016-9126-7</a>.
+———. 2016. <span>“Are the World’s Poorest Being Left Behind?”</span> <em>Journal of Economic Growth</em> 21: 139–64. <a href="https://doi.org/10.1007/s10887-016-9126-7">https://doi.org/10.1007/s10887-016-9126-7</a>.
 </div>
 <div id="ref-worldbank2018" class="csl-entry">
 World Bank. 2018. <em>Poverty and Shared Prosperity 2018: Piecing Together the Poverty Puzzle</em>. Washington, DC: World Bank. <a href="https://openknowledge.worldbank.org/handle/10986/30418">https://openknowledge.worldbank.org/handle/10986/30418</a>.

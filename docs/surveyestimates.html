@@ -7,7 +7,7 @@
   <title>Chapter 4 Calculating survey estimates of poverty and inequality | Poverty and Inequality Platform Methodology Handbook</title>
   <meta name="description" content="<p>This site describes how global and regional poverty rates are
 •calculated.</p>" />
-  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 Calculating survey estimates of poverty and inequality | Poverty and Inequality Platform Methodology Handbook" />
   <meta property="og:type" content="book" />
@@ -53,10 +53,10 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
 <script src="libs/viz-1.8.2/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-<script src="libs/grViz-binding-1.0.10/grViz.js"></script>
+<script src="libs/grViz-binding-1.0.11/grViz.js"></script>
 
 
 
@@ -69,6 +69,7 @@
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -127,8 +128,9 @@ div.csl-indent {
 <li class="chapter" data-level="2.4.2" data-path="welfareaggregate.html"><a href="welfareaggregate.html#temporal-deflation"><i class="fa fa-check"></i><b>2.4.2</b> Temporal deflation</a></li>
 </ul></li>
 <li class="chapter" data-level="2.5" data-path="welfareaggregate.html"><a href="welfareaggregate.html#equivalence-scale"><i class="fa fa-check"></i><b>2.5</b> Equivalence scale</a></li>
-<li class="chapter" data-level="2.6" data-path="welfareaggregate.html"><a href="welfareaggregate.html#tgd"><i class="fa fa-check"></i><b>2.6</b> Treatment of grouped data</a></li>
-<li class="chapter" data-level="2.7" data-path="welfareaggregate.html"><a href="welfareaggregate.html#comparability"><i class="fa fa-check"></i><b>2.7</b> Comparability of estimates</a></li>
+<li class="chapter" data-level="2.6" data-path="welfareaggregate.html"><a href="welfareaggregate.html#bottom"><i class="fa fa-check"></i><b>2.6</b> Bottom coding of welfare</a></li>
+<li class="chapter" data-level="2.7" data-path="welfareaggregate.html"><a href="welfareaggregate.html#tgd"><i class="fa fa-check"></i><b>2.7</b> Treatment of grouped data</a></li>
+<li class="chapter" data-level="2.8" data-path="welfareaggregate.html"><a href="welfareaggregate.html#comparability"><i class="fa fa-check"></i><b>2.8</b> Comparability of estimates</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="convert.html"><a href="convert.html"><i class="fa fa-check"></i><b>3</b> Converting welfare aggregates</a>
 <ul>
@@ -154,10 +156,11 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="lineupestimates.html"><a href="lineupestimates.html#nationalaccounts"><i class="fa fa-check"></i><b>5.3</b> National accounts data</a></li>
 <li class="chapter" data-level="5.4" data-path="lineupestimates.html"><a href="lineupestimates.html#inccon"><i class="fa fa-check"></i><b>5.4</b> Choosing between consumption and income estimates</a></li>
-<li class="chapter" data-level="5.5" data-path="lineupestimates.html"><a href="lineupestimates.html#regionsandcountries"><i class="fa fa-check"></i><b>5.5</b> Regional classification</a></li>
-<li class="chapter" data-level="5.6" data-path="lineupestimates.html"><a href="lineupestimates.html#population"><i class="fa fa-check"></i><b>5.6</b> Population</a></li>
-<li class="chapter" data-level="5.7" data-path="lineupestimates.html"><a href="lineupestimates.html#nodata"><i class="fa fa-check"></i><b>5.7</b> Treatment of countries without any poverty data</a></li>
-<li class="chapter" data-level="5.8" data-path="lineupestimates.html"><a href="lineupestimates.html#coverage"><i class="fa fa-check"></i><b>5.8</b> Coverage rule</a></li>
+<li class="chapter" data-level="5.5" data-path="lineupestimates.html"><a href="lineupestimates.html#nowcasts"><i class="fa fa-check"></i><b>5.5</b> Nowcasts</a></li>
+<li class="chapter" data-level="5.6" data-path="lineupestimates.html"><a href="lineupestimates.html#regionsandcountries"><i class="fa fa-check"></i><b>5.6</b> Regional classification</a></li>
+<li class="chapter" data-level="5.7" data-path="lineupestimates.html"><a href="lineupestimates.html#population"><i class="fa fa-check"></i><b>5.7</b> Population</a></li>
+<li class="chapter" data-level="5.8" data-path="lineupestimates.html"><a href="lineupestimates.html#nodata"><i class="fa fa-check"></i><b>5.8</b> Treatment of countries without any poverty data</a></li>
+<li class="chapter" data-level="5.9" data-path="lineupestimates.html"><a href="lineupestimates.html#coverage"><i class="fa fa-check"></i><b>5.9</b> Coverage rule</a></li>
 </ul></li>
 </ul>
 
@@ -180,65 +183,27 @@ div.csl-indent {
 <h1><span class="header-section-number">Chapter 4</span> Calculating survey estimates of poverty and inequality<a href="surveyestimates.html#surveyestimates" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="monetarypoverty" class="section level2 hasAnchor" number="4.1">
 <h2><span class="header-section-number">4.1</span> Monetary poverty measures<a href="surveyestimates.html#monetarypoverty" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Armed with welfare distributions expressed in 2017 PPPs and an international poverty line, poverty and inequality can be calculated and compared across countries and over time. The poverty and inequality measures used in the Poverty and Equity Platform (PIP) for micro data are mainly based on formula in <span class="citation">Haughton and Khandker (<a href="#ref-haughton2009" role="doc-biblioref">2009</a>)</span>, while the poverty and inequality measures estimated from grouped data are mainly based on formula in <span class="citation">Datt (<a href="#ref-datt1998" role="doc-biblioref">1998</a>)</span>. In the formulas below we abstract from household weights for simplicity.</p>
+<p>Armed with welfare distributions expressed in 2017 PPPs and an international poverty line, poverty and inequality can be calculated and compared across countries and over time. The poverty and inequality measures used in the Poverty and Equity Platform (PIP) are mainly based on formula in <span class="citation">Haughton and Khandker (<a href="#ref-haughton2009">2009</a>)</span>. In the formulas below we abstract from household weights for simplicity.</p>
 <p><strong>Poverty headcount ratio</strong>: The poverty headcount ratio (<span class="math inline">\(P_0\)</span>) measures the proportion of the population that is counted as poor. When using micro data, the poverty headcount ratio is obtained using the following expression:<span class="math display">\[ P_0 = \frac{1}{N} \sum_{i=1}^{N} I (y_i &lt; z), \]</span></p>
-<p>where <span class="math inline">\(N\)</span> is the total population size, <span class="math inline">\(y_i\)</span> is the welfare of individual <span class="math inline">\(i\)</span>, <span class="math inline">\(z\)</span> is the poverty line, and <span class="math inline">\(I(.)\)</span> is an indicator function that takes on the value 1 if the bracketed expression is true or 0 otherwise. You can find the source code where this calculation is carried out <a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R">here</a>. For grouped data that rely on the GQ Lorenz function, the poverty headcount rate is obtained using the following expression (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lq.R#L546-L550">source code</a>):</p>
-<p><span class="math display">\[
-P_0 = - \frac{1}{2m}[n + r(b+2z/\mu)((b+2z/\mu)^2-m)^{-1/2}],
-\]</span></p>
-<p>where <span class="math inline">\(a, b, c\)</span> are the parameter estimates of the General Quadratic Lorenz function, <span class="math inline">\(\mu\)</span> is mean welfare, <span class="math inline">\(z\)</span> is the poverty line, <span class="math inline">\(e = -(a + b + c + 1)\)</span>, <span class="math inline">\(m\)</span> = <span class="math inline">\(b^2 - 4a\)</span>, <span class="math inline">\(n = 2be - 4c\)</span>, and <span class="math inline">\(r = (n^2 - 4me^2)^{1/2}\)</span>.</p>
-<p>If the Beta Lorenz function is used, the poverty headcount ratio is estimated using the expression below (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lb.R#L646-L670">source code</a>):</p>
-<p><span class="math display">\[
-\theta {P_0}^\gamma (1 - {P_0})^\delta \left[\frac{\gamma}{P_0} - \frac{\delta}{(1 - {P_0})}\right] = 1 - \frac{z}{\mu}
-\]</span></p>
-<p>where <span class="math inline">\(\theta\)</span>, <span class="math inline">\(\delta\)</span>, and <span class="math inline">\(\gamma\)</span> are parameter estimates. See the <a href="welfareaggregate.html#tgd">section on treatment of grouped data</a> for details on the GQ and Beta Lorenz functions.</p>
+<p>where <span class="math inline">\(N\)</span> is the total population size, <span class="math inline">\(y_i\)</span> is the welfare of individual <span class="math inline">\(i\)</span>, <span class="math inline">\(z\)</span> is the poverty line, and <span class="math inline">\(I(.)\)</span> is an indicator function that takes on the value 1 if the bracketed expression is true or 0 otherwise. You can find the source code where this calculation is carried out <a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R">here</a>.</p>
 <p><strong>Poverty gap index</strong>: The poverty gap index (<span class="math inline">\(P_1\)</span>) is a measure that adds up the extent to which individuals on average fall below the poverty line (i.e. the depth of poverty), and expresses it as a percentage of the poverty line. The poverty gap index is obtained from micro data with the following expression (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R">source code</a>):</p>
 <p><span class="math display">\[ P_1 = \frac{1}{N} \sum_{i=1}^{N} \frac{G_i}{z} \]</span>with <span class="math inline">\(G_i = (z - y_i) × I (y_i &lt; z)\)</span>, where <span class="math inline">\(G_i\)</span> is defined as the poverty gap (i.e. poverty line (<span class="math inline">\(z\)</span>) less welfare (<span class="math inline">\(y_i\)</span>)) of poor individuals; the gap is considered to be zero for everyone else.</p>
-<p>For grouped data, the poverty gap index is obtained using the following expression (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lb.R#L806-L815">Beta Lorenz source code</a>, <a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lq.R#L568">GQ source code</a>).</p>
-<p><span class="math display">\[
-P_1 = P_0 - (\mu/z)L(P_0)
-\]</span></p>
-<p>with all variables defined as before. The expression holds for both GQ and Beta Lorenz functions.</p>
 <p><strong>Poverty severity index</strong>: The poverty severity index (<span class="math inline">\(P_2\)</span>) is a measure of the weighted sum of poverty gaps (as a proportion of the poverty line), where the weights are the proportionate poverty gaps themselves. The poverty severity index is obtained from micro data with the following expression (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R">source code</a>):</p>
 <p><span class="math display">\[ P_2 = \frac{1}{N} \sum_{i=1}^{N} \left(\frac{G_i}{z} \right)^2 \]</span></p>
-<p>with all variables defined as before. Also known as the squared poverty gap index, the poverty severity index accounts for inequality among the poor .</p>
-<p>With the GQ Lorenz function, the poverty severity index is obtained from grouped data using the following expression (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lq.R#L572-L575">source code</a>):</p>
-<p><span class="math display">\[
-P_2 = 2(P_1) - P_0 - \left(\frac{\mu}{z}\right)^2 \left[aP_0 + bL(P_0) - \left(\frac{r}{16}\right)ln \left(\frac{1 - P_0/s_1}{1 - P_0/s_2}\right)     \right],
-\]</span></p>
-<p>where <span class="math inline">\(s_1 = (r- n)/(2m)\)</span>, <span class="math inline">\(s_2 = -(r + n)/(2m)\)</span>, and all other variables are defined as before.</p>
-<p>With the the Beta Lorenz function, the poverty severity index is given as (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lb.R#L828-L847">source code</a>):</p>
-<p><span class="math display">\[
-P_2 = (1 -\mu/z)  \left[ 2P_1 - (1- \mu/z) P_0) \right] \\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ + \theta^2 \left(\frac{\mu}{z}\right)^2\left[\gamma^2B(P_0,2\gamma-1,2\delta+1) \\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ - 2\gamma\delta B(P_0,2\gamma,2\delta) + \delta^2 B(P_0,2\gamma + 1,2\delta-1) \right]
-\]</span></p>
-<p>with</p>
-<p><span class="math display">\[
-B(k,r,s) = \int_0^k p^{r-1}(1 - p)^{s - 1} ~dp
-\]</span></p>
-<p>where <span class="math inline">\(k\)</span>, <span class="math inline">\(r\)</span>, <span class="math inline">\(s\)</span> are parameters and all other notations are defined as before for the Beta Lorenz function.</p>
-<p><strong>The Watts index</strong>: The Watts index (<span class="math inline">\(W\)</span>) is also an inequality-sensitive poverty measure that is given as (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R">mirco data source code</a>, <a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lq.R#L402-L450">GQ source code</a>, <a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/gd_compute_pip_stats_lb.R#L328-L376">Beta Lorenz source code</a>):</p>
+<p>with all variables defined as before. Also known as the squared poverty gap index, the poverty severity index accounts for inequality among the poor.</p>
+<p><strong>The Watts index</strong>: The Watts index (<span class="math inline">\(W\)</span>) is also an inequality-sensitive poverty measure that is given as (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R">source code</a>):</p>
 <p><span class="math display">\[ W  = \frac{1}{N} \sum_{i=1}^{q} ln \left(\frac{z}{y_i} \right), \]</span></p>
-<p>where the <span class="math inline">\(N\)</span> individuals of the population are indexed in ascending order of welfare, and the sum is taken over <span class="math inline">\(q\)</span> individuals whose welfare, <span class="math inline">\(y_i\)</span>, falls below the poverty line <span class="math inline">\(z\)</span>. This formula applies to both micro and grouped data. It also holds for both the GQ and Beta Lorenz functions, which are evaluated at the poverty line <span class="math inline">\(z\)</span> and other percentiles <span class="math inline">\(y_i\)</span>. A percentile is given as the product of the mean and the first derivative of the GQ or Beta Lorenz function at the respective rank in the distribution. The first derivative of the GQ Lorenz function is given as:</p>
-<p><span class="math display">\[
-L^{&#39;}(p) = -\frac{b}{2} - \frac{(2mp + n)(mp^2 + np + e^2)^
-{-1/2}}{4}
-\]</span></p>
-<p>with all variables and parameter estimates as previously defined. The first derivative of the Beta Lorenz function is given as:</p>
-<p><span class="math display">\[
-L^{&#39;}(p) = 1 - \theta p^\gamma (1 - p)^\delta \left[\frac{\gamma}{p} - \frac{\delta}{1 - p}\right]
-\]</span></p>
-<p>with all variables and parameter estimates as previously defined.</p>
-<p>An item for discussion regarding the Watts index and the Mean Log Deviation, defined below, is the treatment of zeros in the welfare distribution given that the logarithm of zero is not defined. As explained in section <a href="welfareaggregate.html#incomeorconsumption">2.1</a>, PIP’s current practice is to drop observations with negative welfare, while zeros are included when the welfare distribution is based on income. One approach is to transform the zeros by either maintaining the same mean of the distribution or by adjusting it. Another solution is to exclude the zeros from the sample, but that would create inconsistencies with other poverty and inequalities measures that use the whole sample. Currently PIP excludes zeros from the sample when calculating the Watts index.</p>
+<p>where the <span class="math inline">\(N\)</span> individuals of the population are indexed in ascending order of welfare, and the sum is taken over <span class="math inline">\(q\)</span> individuals whose welfare, <span class="math inline">\(y_i\)</span>, falls below the poverty line <span class="math inline">\(z\)</span>.</p>
 </div>
 <div id="mpm" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> Multidimensional Poverty Measure<a href="surveyestimates.html#mpm" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In many settings, important aspects of well-being, such as access to quality education or core services, are not captured by monetary measures of poverty. To address this issue, an established tradition of multidimensional poverty measures these nonmonetary dimensions and aggregates them into an index <span class="citation">(<a href="#ref-alkire2015" role="doc-biblioref">Alkire et al. 2015</a>)</span>. The <a href="http://hdr.undp.org/en/2020-MPI">United Nations Development Programme’s Multidimensional Poverty Index (Global MPI)</a>, produced in conjunction with the <a href="https://ophi.org.uk/multidimensional-poverty-index/">Oxford Poverty and Human Development Initiative</a>, is a foremost example of such a multidimensional poverty measure. In 2018, the World Bank launched its own multidimensional poverty measure, building heavily on these prior efforts <span class="citation">(<a href="#ref-worldbank2018" role="doc-biblioref">World Bank 2018</a>)</span>.</p>
+<p>In many settings, important aspects of well-being, such as access to quality education or core services, are not captured by monetary measures of poverty. To address this issue, an established tradition of multidimensional poverty measures these nonmonetary dimensions and aggregates them into an index <span class="citation">(<a href="#ref-alkire2015">Alkire et al. 2015</a>)</span>. The <a href="http://hdr.undp.org/en/2020-MPI">United Nations Development Programme’s Multidimensional Poverty Index (Global MPI)</a>, produced in conjunction with the <a href="https://ophi.org.uk/multidimensional-poverty-index/">Oxford Poverty and Human Development Initiative</a>, is a foremost example of such a multidimensional poverty measure. In 2018, the World Bank launched its own multidimensional poverty measure, building heavily on these prior efforts <span class="citation">(<a href="#ref-worldbank2018">World Bank 2018</a>)</span>.</p>
 <p>The dimensions, indicators, and weights of the World Bank’s multidimensional poverty measure are given as follows:</p>
-<table style="width:99%;">
+<table>
 <colgroup>
-<col width="25%" />
-<col width="66%" />
-<col width="6%" />
+<col width="20%" />
+<col width="59%" />
+<col width="19%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -290,27 +255,15 @@ L^{&#39;}(p) = 1 - \theta p^\gamma (1 - p)^\delta \left[\frac{\gamma}{p} - \frac
 ,
 \]</span></p>
 <p>where there are <span class="math inline">\(N\)</span> equal intervals on the x-axis (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_gini.R">source code</a>). The Gini index ranges from 0 (perfect equality) to 100 (complete inequality) .</p>
-<p>With the GQ Lorenz function, the Gini index is obtained from grouped data using the following expression (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lq.R#L254-L288">source code</a>):</p>
-<p><span class="math display">\[
-Gini = 100*\begin{cases}
-\frac{e}{2} - \frac{n(b + 2)}{4m} + \frac{r^2}{8m\sqrt{-m}} \left[\sin^{-1} \frac{(2m + n)}{r} - \sin^{-1}\frac{n}{r} \right] &amp; \text{if $m&lt;0$} \\
-\frac{e}{2} - \frac{n(b + 2)}{4m} + \frac{r^2}{8m\sqrt{m}} ln\left[\text{abs}\left( \frac{2m + n + 2\sqrt{m}(a + c - 1)}{n - 2e\sqrt{m}}\right) \right]  &amp; \text{if $m&gt;0$}
-\end{cases}
-\]</span></p>
-<p>with all parameters defined as before. With the Beta Lorenz function, the Gini index is given as (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lb.R#L208-L221">source code</a>):</p>
-<p><span class="math display">\[
-Gini = 100 * 2\theta B(1 + \gamma, 1 + \delta)
-\]</span></p>
-<p>Note that <span class="math inline">\(B(1 + \gamma, 1 + \delta)\)</span> is the Beta function <span class="math inline">\(\int_0^1 p^\gamma (1 - p)^\delta ~dp\)</span>.</p>
+<p><strong>Number of countries with high inequality</strong>: This indicator, which is only reported at the regional and global level, counts the number of countries with a Gini index greater than 40. For more information on this indicator, see <span class="citation">Haddad et al. (<a href="#ref-haddad2024">2024</a>)</span>.</p>
 <p><strong>Mean log deviation</strong>: The mean log deviation (MLD) belongs to the family of generalized entropy inequality measures. It is given as:</p>
 <p><span class="math display">\[ MLD  = \frac{1}{N} \sum_{i=1}^{N} ln \left(\frac{μ}{y_i} \right)*100, \]</span></p>
-<p>where <span class="math inline">\(N\)</span> is the total population size, <span class="math inline">\(μ\)</span> is the mean welfare per person, and <span class="math inline">\(y_i\)</span> is welfare of individual <span class="math inline">\(i\)</span>. The MLD has a minimum value of 0 (perfect equality) and has no upper bound. This formula applies for both micro and grouped data (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_mld.R">micro data source code</a>, <a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lq.R#L327-L353">GQ source code</a>, <a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lb.R#L253-L279">Beta Lorenz source code</a>). For both the GQ and Beta Lorenz functions, the MLD is evaluated at the poverty line <span class="math inline">\(z\)</span> and percentiles <span class="math inline">\(y_i\)</span>. A percentile is given as the product of the mean and the first derivative of the GQ or Beta Lorenz function at the respective rank in the distribution (see section on the Watts Index for the derivation of the first derivatives).</p>
-<p>The MLD is undefined when there are zeros in the distribution. Currently PIP replaces zeros with ones when in order to use the same sample as with the other inequality measures.</p>
-<p><strong>Polarization</strong>: The polarization index (<span class="math inline">\(P\)</span>), also known as the Wolfson polarization index, measures the extent to which the distribution of welfare is “spread out” and bi-modal. It is given as (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_polarization.R">micro data source code</a>, <a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lq.R#L465-L475">GQ source code</a>, <a href="https://github.com/PIP-Technical-Team/wbpip/blob/0cf9aa7bc168400ecf78ae5455f4c4247b841e9d/R/gd_compute_pip_stats_lb.R#L424-L435">Beta Lorenz source code</a>):</p>
+<p>where <span class="math inline">\(N\)</span> is the total population size, <span class="math inline">\(μ\)</span> is the mean welfare per person, and <span class="math inline">\(y_i\)</span> is welfare of individual <span class="math inline">\(i\)</span>. The MLD has a minimum value of 0 (perfect equality) and has no upper bound (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_mld.R">source code</a>).</p>
+<p><strong>Polarization</strong>: The polarization index (<span class="math inline">\(P\)</span>), also known as the Wolfson polarization index, measures the extent to which the distribution of welfare is “spread out” and bi-modal. It is given as (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_polarization.R">source code</a>):</p>
 <p><span class="math display">\[
 P =  \frac{2(\mu^* - \mu^L)}{m},
 \]</span></p>
-<p>where <span class="math inline">\(\mu^*\)</span> is the distribution-corrected mean (i.e. <span class="math inline">\(\mu(1 - Gini/100)\)</span>), <span class="math inline">\(\mu^L\)</span> is the mean of the poorest half of the population, and <span class="math inline">\(m\)</span> is the median. Like the Gini coefficient, the polarization index ranges from 0 (no polarization) to 1 (complete polarization). The polarization index is based on <span class="citation">Wolfson (<a href="#ref-wolfson1994" role="doc-biblioref">1994</a>)</span> and <span class="citation">Ravallion and Chen (<a href="#ref-ravallion1997" role="doc-biblioref">1997</a>)</span>.</p>
+<p>where <span class="math inline">\(\mu^*\)</span> is the distribution-corrected mean (i.e. <span class="math inline">\(\mu(1 - Gini/100)\)</span>), <span class="math inline">\(\mu^L\)</span> is the mean of the poorest half of the population, and <span class="math inline">\(m\)</span> is the median. Like the Gini coefficient, the polarization index ranges from 0 (no polarization) to 1 (complete polarization). The polarization index is based on <span class="citation">Wolfson (<a href="#ref-wolfson1994">1994</a>)</span> and <span class="citation">Ravallion and Chen (<a href="#ref-ravallion1997">1997</a>)</span>.</p>
 </div>
 <div id="dist" class="section level2 hasAnchor" number="4.4">
 <h2><span class="header-section-number">4.4</span> Other distributional statistics<a href="surveyestimates.html#dist" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -322,16 +275,14 @@ Y \left[\frac{n}{2}\right] &amp; \text{if $n$ is even} \\
    \left(Y\left[\frac{n - 1}{2} \right] + Y \left[\frac{n + 1}{2} \right]\right) &amp;  \text{if $n$ is odd}
 \end{cases}
 \]</span></p>
-<p>where <span class="math inline">\(Y\)</span> is the ordered list of welfare per capita in the sample, and <span class="math inline">\(n\)</span> is the sample size.</p>
-<p>For grouped data, the median is estimated as:</p>
-<p><span class="math display">\[
-Med = \mu L^{&#39;}(0.5)
-\]</span></p>
-<p>where <span class="math inline">\(\mu\)</span> is the mean and <span class="math inline">\(L^{&#39;}(0.5)\)</span> is the first derivative of the GQ or Beta Lorenz function at the 50th percentile. See section on the Watts Index for the derivation of the first derivatives.</p>
+<p>where <span class="math inline">\(Y\)</span> is the ordered list of welfare per capita in the sample, and <span class="math inline">\(n\)</span> is the sample size..</p>
 <p><strong>Decile shares</strong>:</p>
 <p>Imagine that we order all households according to their welfare per capita, such that the first decile contains the 10% of the population with the lowest welfare and so on. Decile shares measure the share of total welfare belonging to each decile. Formally, the decile share of decile <span class="math inline">\(d\)</span> is given by:</p>
 <p><span class="math display">\[ decileshare_d= \frac{\sum_{i \in d} {y_i}}{\sum_{i=1}^{N} {y_i}} ,  d \in \{1,2,..,10 \} \]</span></p>
-<p>This formula holds for both micro and grouped data. For grouped data, ordered welfare levels, <span class="math inline">\(y_i\)</span>, are the product of the mean and the first derivative of the GQ or Beta Lorenz function at the respective rank in the distribution.</p>
+<p><strong>Prosperity gap</strong>
+The prosperity gap (PG) is the average factor by which incomes fall short of a prosperity standard of $25 per person per day (expressed in 2017 PPP dollars) <span class="citation">(<a href="#ref-kraay2023">Kraay et al. 2023</a>)</span>. It is given by:</p>
+<p><span class="math display">\[ PG  = \frac{1}{N} \sum_{i=1}^{N} \frac{25}{y_i}. \]</span>
+For a person whose welfare is <span class="math inline">\(\$2.50\)</span> per day, this ratio is <span class="math inline">\(10\)</span>, meaning that their welfare falls short of the prosperity standard by a factor of <span class="math inline">\(10\)</span>. This measure unambiguously gives greater weight to poorer people. The poorest person with daily welfare equal to <span class="math inline">\(\$2.50\)</span> gets twice the weight of a person with twice the welfare (at <span class="math inline">\(\$5.00\)</span>), and ten times the weight of a person with ten times higher welfare (at <span class="math inline">\(\$25\)</span>).</p>
 <p><strong>Shared prosperity</strong></p>
 <p>Shared prosperity measures the extent to which welfare growth is inclusive by focusing on growth of the population at the bottom of the distribution. It is defined as the annualized growth rate of mean household per capita welfare of the bottom 40%. Promoting shared prosperity is one of the twin goals of the World Bank Group together with eradicating extreme poverty. The selection of the bottom 40% is a compromise between competing considerations; the bottom 40% still focuses on the bottom of the distribution but is not too small that it risks introducing measurement errors.</p>
 <p>Formally, shared prosperity, <span class="math inline">\(sp\)</span>, is calculated as</p>
@@ -352,20 +303,22 @@ Med = \mu L^{&#39;}(0.5)
 <p>The <a href="https://datacatalog.worldbank.org/int/search/dataset/0063646">percentiles database</a> reports 100 points ranked according to the consumption or income distributions for each survey data available in PIP.</p>
 <p>Each percentile distribution reports 100 points per country per survey year ranked from the smallest income (percentile 1) to the largest (percentile 100). For each percentile, the database reports the following variables: The average welfare within the percentile group (avg_welfare); the value for the upper threshold of the percentile group (quantile); the share of the population in the percentile group (which might deviate slightly from 1% due to coarseness in the raw data) (pop_share); and the share of income held by each percentile group (welfare_share). In addition, the database reports the welfare measure (welfare_type) used in the survey data — income or consumption — and the region covered (reporting_level) - urban, rural, or national. The database can be merged with the PIP data using the country_code, reporting_level, year, and welfare_type variables.</p>
 <p>For surveys with access to the microdata and for distributions based on binned data, the Stata quantiles function is used to allocate the survey population into 100 equally sized percentiles. The income and consumption averages, thresholds, and shares of each percentile is derived using the population and their income or consumption in each bin. The quantiles function to bin the distribution is used consistently throughout PIP when bins are necessary. For instance, the same approach is used to derive the 400 bins from LIS data.</p>
-<p><a href="acquiring.html#grouped">Grouped data</a> often have fewer than 100 observations, in which case the percentiles for grouped data are based on <a href="welfareaggregate.html#tgd">a parametric fit of the Lorenz curve</a>. The percentiles are based on the Lorenz curve used for distributional statistics (like the decile shares, Gini coefficient, and median) in the PIP output.</p>
 
 </div>
 </div>
 <h3>References</h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
 <div id="ref-alkire2015" class="csl-entry">
 Alkire, Sabina, José Manuel Roche, Paola Ballon, James Foster, Maria Emma Santos, and Suman Seth. 2015. <em>Multidimensional Poverty Measurement and Analysis</em>. Oxford University Press, USA. <a href="https://ophi.org.uk/multidimensional-poverty-measurement-and-analysis/">https://ophi.org.uk/multidimensional-poverty-measurement-and-analysis/</a>.
 </div>
-<div id="ref-datt1998" class="csl-entry">
-Datt, Gaurav. 1998. <span>“Computational Tools for Poverty Measurement and Analysis.”</span> <a href="http://ebrary.ifpri.org/utils/getfile/collection/p15738coll2/id/125673/filename/125704.pdf">http://ebrary.ifpri.org/utils/getfile/collection/p15738coll2/id/125673/filename/125704.pdf</a>.
+<div id="ref-haddad2024" class="csl-entry">
+Haddad, Cameron Nadim, Daniel Gerszon Mahler, Carolina Diaz-Bonilla, Ruth Hill, Christoph Lakner, and Gabriel Lara Ibarra. 2024. <span>“The World Bank’s New Inequality Indicator.”</span> <em>World <span>B</span>ank <span>P</span>olicy <span>R</span>esearch <span>W</span>orking <span>P</span>aper</em> 10796. <a href="http://documents.worldbank.org/curated/en/099549506102441825/IDU1bd155bac16d78143af188331f87564a9d6c8">http://documents.worldbank.org/curated/en/099549506102441825/IDU1bd155bac16d78143af188331f87564a9d6c8</a>.
 </div>
 <div id="ref-haughton2009" class="csl-entry">
 Haughton, Jonathan, and Shahidur R Khandker. 2009. <em>Handbook on Poverty and Inequality</em>. World Bank Publications. <a href="https://openknowledge.worldbank.org/handle/10986/11985">https://openknowledge.worldbank.org/handle/10986/11985</a>.
+</div>
+<div id="ref-kraay2023" class="csl-entry">
+Kraay, Aart, Benoit Decerf, Dean Jolliffe, Christoph Lakner, Berk Ozler, Olivier Sterck, and Nishant Yonzan. 2023. <span>“A New Distribution Sensitive Index for Measuring Welfare, Poverty, and Inequality.”</span> <em>World <span>B</span>ank <span>P</span>olicy <span>R</span>esearch <span>W</span>orking <span>P</span>aper</em> 10470. <a href="https://documents1.worldbank.org/curated/en/099934305302318791/pdf/IDU0325015fc0a4d6046420afe405cb6b6a87b0b.pdf">https://documents1.worldbank.org/curated/en/099934305302318791/pdf/IDU0325015fc0a4d6046420afe405cb6b6a87b0b.pdf</a>.
 </div>
 <div id="ref-ravallion1997" class="csl-entry">
 Ravallion, Martin, and Shaohua Chen. 1997. <span>“What Can New Survey Data Tell Us about Recent Changes in Distribution and Poverty?”</span> <em>The World Bank Economic Review</em> 11 (2): 357–82. <a href="https://www.jstor.org/stable/3990232">https://www.jstor.org/stable/3990232</a>.
