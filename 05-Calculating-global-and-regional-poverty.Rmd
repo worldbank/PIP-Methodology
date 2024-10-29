@@ -67,6 +67,10 @@ The discussion on interpolation and extrapolation for simplicity assumed that on
 
 ![](figures/Income%20consumption%20decision%20tree.svg "Income consumption decision tree"){width="1500"}
 
+## Nowcasts
+
+PIP includes nowcasts of poverty, that is, poverty estimates for the year in question. Two types of nowcasts are available, referred to as the *global model* estimates and *local model* estimates. The *global model* poverty nowcasts follow the method described in the [extrapolation session](#extrapolations). The national accounts data for the nowcasts are not available in the WDI, and are instead taken from the World Bank's Macro Poverty Outlook or Global Economic Prospects, supplemented with GDP nowcasts from IMFs' World Economic Outlook where necessary. These nowcasts are available through the API or through [pip.worldbank.org/nowcasts](https://pip.worldbank.org/nowcasts). The *local model* poverty nowcasts use country-specific methods by World Bank experts on poverty in a country. The source of these estimates is the Macro & Poverty Outlook and are the preferred country nowcasts. These estimates are available through [pip.worldbank.org/nowcasts](https://pip.worldbank.org/nowcasts), where the specific method used for each country is also described.
+
 ## Regional classification {#regionsandcountries}
 
 In total, 218 economies are included in the global poverty estimates. The entire universe of economies considered corresponds to the universe of economies in the [World Bank's Country and Lending Groups](https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups). The regions employed in PIP, however, differ from the regional classifications used by the World Bank. Some economies, mostly high-income economies, are excluded from the geographical regions and are included as a separate group referred to as "other high income" (or "industrialized economies" or "rest of the world" in earlier publications). The list of economies included in each region is as follows:

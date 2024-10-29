@@ -32,7 +32,7 @@ DiagrammeR::grViz("digraph {
 ## Step 1: [Acquiring household survey data](#acquiring) {.unnumbered}
 
 Poverty rates are estimated from [selected](#selection) household
-surveys. In general, the surveys used ask a
+surveys. In general, the surveys ask a
 [representative](#representativeness) subset of households in a country
 about their consumption or income. These surveys are often the official
 surveys used by countries to monitor and report on poverty. Most
@@ -51,7 +51,7 @@ population deciles.
 
 The Poverty and Inequality Platform (PIP) primarily utilizes a monetary
 measure of poverty. Monetary poverty is estimated from an aggregation of
-household's income or from the monetary value of their consumption. We
+households' income or from the monetary value of their consumption. We
 refer to such aggregates jointly as welfare aggregates. Welfare
 aggregates are harmonized across countries and over time to maximize
 [comparability](#comparability), but country-specific decisions on
@@ -70,7 +70,7 @@ consumption of an Indian household in 2011 to the consumption of a
 Nigerian household in 2018, the welfare aggregates need to be expressed
 in the same prices. To this end, [consumer price indices](#CPIs) are
 used to express all welfare aggregates in local 2017 prices, and
-[purchasing power parities](#PPPs) are used to account for price
+[purchasing power parities](#PPPs)(PPPs) are used to account for price
 differences between countries. Once all welfare aggregates are expressed
 in the same units, a common poverty line is needed to estimate poverty.
 [The international poverty line](#IPL) used in PIP is constructed from
