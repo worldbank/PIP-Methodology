@@ -7,7 +7,7 @@
   <title>Chapter 4 Calculating survey estimates of poverty and inequality | Poverty and Inequality Platform Methodology Handbook</title>
   <meta name="description" content="<p>This site describes how global and regional poverty rates are
 •calculated.</p>" />
-  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 Calculating survey estimates of poverty and inequality | Poverty and Inequality Platform Methodology Handbook" />
   <meta property="og:type" content="book" />
@@ -53,10 +53,6 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
-<script src="libs/viz-1.8.2/viz.js"></script>
-<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-<script src="libs/grViz-binding-1.0.11/grViz.js"></script>
 
 
 
@@ -69,7 +65,6 @@
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -183,7 +178,7 @@ div.csl-indent {
 <h1><span class="header-section-number">Chapter 4</span> Calculating survey estimates of poverty and inequality<a href="surveyestimates.html#surveyestimates" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="monetarypoverty" class="section level2 hasAnchor" number="4.1">
 <h2><span class="header-section-number">4.1</span> Monetary poverty measures<a href="surveyestimates.html#monetarypoverty" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Armed with welfare distributions expressed in 2017 PPPs and an international poverty line, poverty and inequality can be calculated and compared across countries and over time. The poverty and inequality measures used in the Poverty and Equity Platform (PIP) are mainly based on formula in <span class="citation">Haughton and Khandker (<a href="#ref-haughton2009">2009</a>)</span>. In the formulas below we abstract from household weights for simplicity.</p>
+<p>Armed with welfare distributions expressed in 2021 PPPs and an international poverty line, poverty and inequality can be calculated and compared across countries and over time. The poverty and inequality measures used in the Poverty and Equity Platform (PIP) are mainly based on formula in <span class="citation">Haughton and Khandker (<a href="#ref-haughton2009">2009</a>)</span>. In the formulas below we abstract from household weights for simplicity.</p>
 <p><strong>Poverty headcount ratio</strong>: The poverty headcount ratio (<span class="math inline">\(P_0\)</span>) measures the proportion of the population that is counted as poor. When using micro data, the poverty headcount ratio is obtained using the following expression:<span class="math display">\[ P_0 = \frac{1}{N} \sum_{i=1}^{N} I (y_i &lt; z), \]</span></p>
 <p>where <span class="math inline">\(N\)</span> is the total population size, <span class="math inline">\(y_i\)</span> is the welfare of individual <span class="math inline">\(i\)</span>, <span class="math inline">\(z\)</span> is the poverty line, and <span class="math inline">\(I(.)\)</span> is an indicator function that takes on the value 1 if the bracketed expression is true or 0 otherwise. You can find the source code where this calculation is carried out <a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R">here</a>.</p>
 <p><strong>Poverty gap index</strong>: The poverty gap index (<span class="math inline">\(P_1\)</span>) is a measure that adds up the extent to which individuals on average fall below the poverty line (i.e. the depth of poverty), and expresses it as a percentage of the poverty line. The poverty gap index is obtained from micro data with the following expression (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R">source code</a>):</p>
@@ -201,9 +196,9 @@ div.csl-indent {
 <p>The dimensions, indicators, and weights of the World Bank’s multidimensional poverty measure are given as follows:</p>
 <table>
 <colgroup>
-<col width="20%" />
-<col width="59%" />
-<col width="19%" />
+<col width="25%" />
+<col width="68%" />
+<col width="6%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -215,7 +210,7 @@ div.csl-indent {
 <tbody>
 <tr class="odd">
 <td>Monetary poverty</td>
-<td>Daily consumption or income is less than US$2.15 per person</td>
+<td>Daily consumption or income is less than US$3.00 per person</td>
 <td>1/3</td>
 </tr>
 <tr class="even">
@@ -279,10 +274,8 @@ Y \left[\frac{n}{2}\right] &amp; \text{if $n$ is even} \\
 <p><strong>Decile shares</strong>:</p>
 <p>Imagine that we order all households according to their welfare per capita, such that the first decile contains the 10% of the population with the lowest welfare and so on. Decile shares measure the share of total welfare belonging to each decile. Formally, the decile share of decile <span class="math inline">\(d\)</span> is given by:</p>
 <p><span class="math display">\[ decileshare_d= \frac{\sum_{i \in d} {y_i}}{\sum_{i=1}^{N} {y_i}} ,  d \in \{1,2,..,10 \} \]</span></p>
-<p><strong>Prosperity gap</strong>
-The prosperity gap (PG) is the average factor by which incomes fall short of a prosperity standard of $25 per person per day (expressed in 2017 PPP dollars) <span class="citation">(<a href="#ref-kraay2023">Kraay et al. 2023</a>)</span>. It is given by:</p>
-<p><span class="math display">\[ PG  = \frac{1}{N} \sum_{i=1}^{N} \frac{25}{y_i}. \]</span>
-For a person whose welfare is <span class="math inline">\(\$2.50\)</span> per day, this ratio is <span class="math inline">\(10\)</span>, meaning that their welfare falls short of the prosperity standard by a factor of <span class="math inline">\(10\)</span>. This measure unambiguously gives greater weight to poorer people. The poorest person with daily welfare equal to <span class="math inline">\(\$2.50\)</span> gets twice the weight of a person with twice the welfare (at <span class="math inline">\(\$5.00\)</span>), and ten times the weight of a person with ten times higher welfare (at <span class="math inline">\(\$25\)</span>).</p>
+<p><strong>Prosperity gap</strong> The prosperity gap (PG) is the average factor by which incomes fall short of a prosperity standard of $28 per person per day (expressed in 2021 PPP dollars) <span class="citation">(<a href="#ref-kraay2023">Kraay et al. 2023</a>)</span> &amp; <span class="citation">(<a href="#ref-jolliffe2025">Jolliffe et al. 2025</a>)</span>. It is given by:</p>
+<p><span class="math display">\[ PG  = \frac{1}{N} \sum_{i=1}^{N} \frac{28}{y_i}. \]</span> For a person whose welfare is <span class="math inline">\(\$2.80\)</span> per day, this ratio is <span class="math inline">\(10\)</span>, meaning that their welfare falls short of the prosperity standard by a factor of <span class="math inline">\(10\)</span>. This measure unambiguously gives greater weight to poorer people. The poorest person with daily welfare equal to <span class="math inline">\(\$2.80\)</span> gets twice the weight of a person with twice the welfare (at <span class="math inline">\(\$5.60\)</span>), and ten times the weight of a person with ten times higher welfare (at <span class="math inline">\(\$28\)</span>).</p>
 <p><strong>Shared prosperity</strong></p>
 <p>Shared prosperity measures the extent to which welfare growth is inclusive by focusing on growth of the population at the bottom of the distribution. It is defined as the annualized growth rate of mean household per capita welfare of the bottom 40%. Promoting shared prosperity is one of the twin goals of the World Bank Group together with eradicating extreme poverty. The selection of the bottom 40% is a compromise between competing considerations; the bottom 40% still focuses on the bottom of the distribution but is not too small that it risks introducing measurement errors.</p>
 <p>Formally, shared prosperity, <span class="math inline">\(sp\)</span>, is calculated as</p>
@@ -307,7 +300,7 @@ For a person whose welfare is <span class="math inline">\(\$2.50\)</span> per da
 </div>
 </div>
 <h3>References</h3>
-<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-alkire2015" class="csl-entry">
 Alkire, Sabina, José Manuel Roche, Paola Ballon, James Foster, Maria Emma Santos, and Suman Seth. 2015. <em>Multidimensional Poverty Measurement and Analysis</em>. Oxford University Press, USA. <a href="https://ophi.org.uk/multidimensional-poverty-measurement-and-analysis/">https://ophi.org.uk/multidimensional-poverty-measurement-and-analysis/</a>.
 </div>
@@ -316,6 +309,9 @@ Haddad, Cameron Nadim, Daniel Gerszon Mahler, Carolina Diaz-Bonilla, Ruth Hill, 
 </div>
 <div id="ref-haughton2009" class="csl-entry">
 Haughton, Jonathan, and Shahidur R Khandker. 2009. <em>Handbook on Poverty and Inequality</em>. World Bank Publications. <a href="https://openknowledge.worldbank.org/handle/10986/11985">https://openknowledge.worldbank.org/handle/10986/11985</a>.
+</div>
+<div id="ref-jolliffe2025" class="csl-entry">
+Jolliffe, Dean, Elizabeth Foster, Christoph Lakner, Gabriel Lara Ibarra, and Samuel Tetteh-Baah. 2025. <span>“<a href="">The 2021 PPPs and Global Poverty: The Role of Better Consumption Surveys (Forthcoming)</a>.”</span> <em>The World Bank</em>.
 </div>
 <div id="ref-kraay2023" class="csl-entry">
 Kraay, Aart, Benoit Decerf, Dean Jolliffe, Christoph Lakner, Berk Ozler, Olivier Sterck, and Nishant Yonzan. 2023. <span>“A New Distribution Sensitive Index for Measuring Welfare, Poverty, and Inequality.”</span> <em>World <span>B</span>ank <span>P</span>olicy <span>R</span>esearch <span>W</span>orking <span>P</span>aper</em> 10470. <a href="https://documents1.worldbank.org/curated/en/099934305302318791/pdf/IDU0325015fc0a4d6046420afe405cb6b6a87b0b.pdf">https://documents1.worldbank.org/curated/en/099934305302318791/pdf/IDU0325015fc0a4d6046420afe405cb6b6a87b0b.pdf</a>.

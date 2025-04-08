@@ -22,7 +22,7 @@ Constructing a welfare aggregate, particularly a consumption aggregate, requires
 
 To give one concrete example, the recall period affects reported consumption through two main channels: memory decay and telescoping. A longer recall period is better at encompassing expenditure on infrequently purchased items, but it can lead to underreporting if respondents forget about past purchases. Despite lower average consumption, measured poverty might be lower under the longer recall period because it captures the purchases of low frequency items of households in the lower parts of the distribution. Short recall periods can mitigate underreporting but can lead to telescoping, where respondents mistakenly report the consumption that took place outside of the reference period.
 
-India provides one example of the relevance of the recall period for poverty estimation. The official 2004--05 poverty rate for India based on a uniform recall period of 30 days was 27.5 percent. Using a mixed recall period of 7 and 30 days on food and tobacco and a 365-day recall period for non-food items, the corresponding figure was 21.8 percent [@worldbank2018].
+India provides one example of the relevance of the recall period for poverty estimation. Prior to the 2011/12 Indian National Sample Survey (NSS), the Indian surveys collected information on consumption using a uniform reference period (URP) — where consumption items are recorded based on a recall period of 30 days for all items. Starting with the 2022/23 NSS, items are only collected using a modified mixed reference period (MMRP) -- where consumption items are recorded based on a 7 or 30-day recall for frequently purchased items, 365 days for infrequent purchases. The 2011/12 NSS (Schedule 1 and Schedule 2) collected consumption aggregates using both the URP and the MMRP allowing us to examine the impact on the poverty. The 2011/12 international poverty rate for India based on the 2017 PPPs and using the URP was 22.9 percent compared to 16.2 percent using the MMRP [@castanedaaguilar2025].
 
 Changes in questionnaire design imply that poverty estimates within countries become incomparable. Whenever such changes occur, they are marked in the [comparability database](#comparability).
 
@@ -46,7 +46,7 @@ Suppose a household pays \$1 for a kilo of rice in an urban center, while a rura
 
 There are several ways to account for spatial price differences. One way is to compare the price of a representative basket of goods across locations and convert household consumption expenditure into the prices of a reference location, such as the capital city or the national average price level.
 
-Currently most surveys from East Asia & Pacific, Latin America & the Caribbean, and Europe & Central Asia are spatially deflated, while it is less common in Sub-Saharan Africa, South Asia, and the Middle East & North Africa. China and India have rural/urban [purchasing power parities (PPPs)](#PPPs) that are used to deflate welfare aggregates to account for rural/urban price differences within these countries.
+Currently most surveys from East Asia & Pacific, Latin America & the Caribbean, and Europe & Central Asia are spatially deflated, while it is less common in Sub-Saharan Africa, South Asia, and the Middle East & North Africa. China has rural/urban [purchasing power parities (PPPs)](#PPPs) that are used to deflate welfare aggregates to account for rural/urban price differences within these countries.
 
 ### Temporal deflation
 
@@ -70,7 +70,7 @@ Though equivalence scales aren't used, it is important to note that each househo
 
 The bottom of consumption and income distributions is typically prone to measurement errors [@ravallion2016]. Zero (or very low) consumption is not plausible, given that a minimum consumption of food is required for human survival. Very low, zero, and even negative incomes are plausible due to negative capital income shocks, negative self-employment income, and more. In many cases, households with negative incomes might be relatively well off, and can cope by drawing down on savings [@hlasny2022]. As such, households with negative incomes might not be living in poverty.
 
-All poverty and inequality indicators in PIP are calculated using income and consumption distributions that drop negative incomes and replace all observations below $\$0.25$ per person per day with $\$0.25$ per person per day [@yonzanF].
+All poverty and inequality indicators in PIP are calculated using income and consumption distributions that drop negative incomes and replace all observations below $\$0.28$ per person per day with $\$0.28$ per person per day [@yonzanF] and [@jolliffe2025].
 
 Bottom coding distributions do not affect the headcount ratio (all individuals are identified as poor either way) but are relevant for distribution-sensitive measures, such as the Gini index, mean log deviation, poverty gap, Watts index, and the Prosperity Gap. Small positive values can have an extreme influence on distribution sensitive indices [@cowell2006; @cowell2007].
 

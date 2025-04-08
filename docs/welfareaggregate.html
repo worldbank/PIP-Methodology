@@ -7,7 +7,7 @@
   <title>Chapter 2 Constructing welfare aggregates | Poverty and Inequality Platform Methodology Handbook</title>
   <meta name="description" content="<p>This site describes how global and regional poverty rates are
 •calculated.</p>" />
-  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Constructing welfare aggregates | Poverty and Inequality Platform Methodology Handbook" />
   <meta property="og:type" content="book" />
@@ -53,10 +53,6 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
-<script src="libs/viz-1.8.2/viz.js"></script>
-<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-<script src="libs/grViz-binding-1.0.11/grViz.js"></script>
 
 
 
@@ -69,7 +65,6 @@
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -195,7 +190,7 @@ div.csl-indent {
 <h2><span class="header-section-number">2.2</span> Questionnaire design<a href="welfareaggregate.html#questionnaire" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Constructing a welfare aggregate, particularly a consumption aggregate, requires many specific questions to be asked in household surveys. There are many different ways to ask survey respondents about their consumption habits, and how one asks has a significant effect on how people respond. Consumption aggregates are sensitive to whether respondents recall consumption from memory or use consumption diaries, how many and how detailed consumption items are listed, and the time period interviewers ask respondents to recall. <span class="citation">De Weerdt, Gibson, and Beegle (<a href="#ref-deweerdt2020">2020</a>)</span> provide a recent review of the impact these choices can have on the final poverty estimates.</p>
 <p>To give one concrete example, the recall period affects reported consumption through two main channels: memory decay and telescoping. A longer recall period is better at encompassing expenditure on infrequently purchased items, but it can lead to underreporting if respondents forget about past purchases. Despite lower average consumption, measured poverty might be lower under the longer recall period because it captures the purchases of low frequency items of households in the lower parts of the distribution. Short recall periods can mitigate underreporting but can lead to telescoping, where respondents mistakenly report the consumption that took place outside of the reference period.</p>
-<p>India provides one example of the relevance of the recall period for poverty estimation. The official 2004–05 poverty rate for India based on a uniform recall period of 30 days was 27.5 percent. Using a mixed recall period of 7 and 30 days on food and tobacco and a 365-day recall period for non-food items, the corresponding figure was 21.8 percent <span class="citation">(<a href="#ref-worldbank2018">World Bank 2018</a>)</span>.</p>
+<p>India provides one example of the relevance of the recall period for poverty estimation. Prior to the 2011/12 Indian National Sample Survey (NSS), the Indian surveys collected information on consumption using a uniform reference period (URP) — where consumption items are recorded based on a recall period of 30 days for all items. Starting with the 2022/23 NSS, items are only collected using a modified mixed reference period (MMRP) – where consumption items are recorded based on a 7 or 30-day recall for frequently purchased items, 365 days for infrequent purchases. The 2011/12 NSS (Schedule 1 and Schedule 2) collected consumption aggregates using both the URP and the MMRP allowing us to examine the impact on the poverty. The 2011/12 international poverty rate for India based on the 2017 PPPs and using the URP was 22.9 percent compared to 16.2 percent using the MMRP <span class="citation">(<a href="#ref-castanedaaguilar2025">Castaneda Aguilar et al. 2025</a>)</span>.</p>
 <p>Changes in questionnaire design imply that poverty estimates within countries become incomparable. Whenever such changes occur, they are marked in the <a href="welfareaggregate.html#comparability">comparability database</a>.</p>
 </div>
 <div id="imputedrent" class="section level2 hasAnchor" number="2.3">
@@ -212,7 +207,7 @@ div.csl-indent {
 <h3><span class="header-section-number">2.4.1</span> Spatial deflation<a href="welfareaggregate.html#spatial-deflation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Suppose a household pays $1 for a kilo of rice in an urban center, while a rural household in the same country only pays $0.5 for a similar quality and amount of rice. If one were to assess poverty based on the value of the goods and services consumed without accounting for these price differences, everything else equal, one would conclude that the rural household is poorer than the urban household. Yet, from a welfare perspective, they are equally well off. To properly compare the welfare levels of the two households one needs to account for the differences in price levels that the two households face.</p>
 <p>There are several ways to account for spatial price differences. One way is to compare the price of a representative basket of goods across locations and convert household consumption expenditure into the prices of a reference location, such as the capital city or the national average price level.</p>
-<p>Currently most surveys from East Asia &amp; Pacific, Latin America &amp; the Caribbean, and Europe &amp; Central Asia are spatially deflated, while it is less common in Sub-Saharan Africa, South Asia, and the Middle East &amp; North Africa. China and India have rural/urban <a href="convert.html#PPPs">purchasing power parities (PPPs)</a> that are used to deflate welfare aggregates to account for rural/urban price differences within these countries.</p>
+<p>Currently most surveys from East Asia &amp; Pacific, Latin America &amp; the Caribbean, and Europe &amp; Central Asia are spatially deflated, while it is less common in Sub-Saharan Africa, South Asia, and the Middle East &amp; North Africa. China has rural/urban <a href="convert.html#PPPs">purchasing power parities (PPPs)</a> that are used to deflate welfare aggregates to account for rural/urban price differences within these countries.</p>
 </div>
 <div id="temporal-deflation" class="section level3 hasAnchor" number="2.4.2">
 <h3><span class="header-section-number">2.4.2</span> Temporal deflation<a href="welfareaggregate.html#temporal-deflation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -231,7 +226,7 @@ div.csl-indent {
 <div id="bottom" class="section level2 hasAnchor" number="2.6">
 <h2><span class="header-section-number">2.6</span> Bottom coding of welfare<a href="welfareaggregate.html#bottom" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The bottom of consumption and income distributions is typically prone to measurement errors <span class="citation">(<a href="#ref-ravallion2016">Ravallion 2016</a>)</span>. Zero (or very low) consumption is not plausible, given that a minimum consumption of food is required for human survival. Very low, zero, and even negative incomes are plausible due to negative capital income shocks, negative self-employment income, and more. In many cases, households with negative incomes might be relatively well off, and can cope by drawing down on savings <span class="citation">(<a href="#ref-hlasny2022">Hlasny, Ceriani, and Verme 2022</a>)</span>. As such, households with negative incomes might not be living in poverty.</p>
-<p>All poverty and inequality indicators in PIP are calculated using income and consumption distributions that drop negative incomes and replace all observations below <span class="math inline">\(\$0.25\)</span> per person per day with <span class="math inline">\(\$0.25\)</span> per person per day <span class="citation">(<a href="#ref-yonzanF">Yonzan et al. Forthcoming</a>)</span>.</p>
+<p>All poverty and inequality indicators in PIP are calculated using income and consumption distributions that drop negative incomes and replace all observations below <span class="math inline">\(\$0.28\)</span> per person per day with <span class="math inline">\(\$0.28\)</span> per person per day <span class="citation">(<a href="#ref-yonzanF">Yonzan et al. Forthcoming</a>)</span> and <span class="citation">(<a href="#ref-jolliffe2025">Jolliffe et al. 2025</a>)</span>.</p>
 <p>Bottom coding distributions do not affect the headcount ratio (all individuals are identified as poor either way) but are relevant for distribution-sensitive measures, such as the Gini index, mean log deviation, poverty gap, Watts index, and the Prosperity Gap. Small positive values can have an extreme influence on distribution sensitive indices <span class="citation">(<a href="#ref-cowell2006">Cowell and Victoria-Feser 2006</a>; <a href="#ref-cowell2007">Cowell and Flachaire 2007</a>)</span>.</p>
 </div>
 <div id="tgd" class="section level2 hasAnchor" number="2.7">
@@ -256,12 +251,15 @@ L(p) = p - \theta p^\gamma (1-p)^\delta,
 </div>
 </div>
 <h3>References</h3>
-<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-atamanov2019" class="csl-entry">
 Atamanov, Aziz, R. Andres Castaneda Aguilar, Carolina Diaz-Bonilla, Dean Jolliffe, Christoph Lakner, Daniel Gerszon Mahler, Jose Montes, et al. 2019. <span>“September 2019 PovcalNet Update: What’s New.”</span> <em>Global Poverty Monitoring Technical Note</em> 10. <a href="https://openknowledge.worldbank.org/handle/10986/32478">https://openknowledge.worldbank.org/handle/10986/32478</a>.
 </div>
 <div id="ref-balcazar2017" class="csl-entry">
 Balcázar, Carlos Felipe, Lidia Ceriani, Sergio Olivieri, and Marco Ranzani. 2017. <span>“Rent-Imputation for Welfare Measurement: A Review of Methodologies and Empirical Findings.”</span> <em>Review of Income and Wealth</em> 63 (4): 881–98. <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/roiw.12312">https://onlinelibrary.wiley.com/doi/abs/10.1111/roiw.12312</a>.
+</div>
+<div id="ref-castanedaaguilar2025" class="csl-entry">
+Castaneda Aguilar, R. Andres, Reno Dewina, Nandini Krishnan, Christoph Lakner, Gabriel Lara Ibarra, Daniel Gerszon Mahler, Laura Moreno Herrera, et al. 2025. <span>“Spring 2025 Update to the Poverty and Inequality Platform (PIP).”</span> <em>Global Poverty Monitoring Technical Note</em> XX. <a href="http://documents.worldbank.org/curated/en/">http://documents.worldbank.org/curated/en/</a>.
 </div>
 <div id="ref-cowell2007" class="csl-entry">
 Cowell, Frank A, and Emmanuel Flachaire. 2007. <span>“Income Distribution and Inequality Measurement: The Problem of Extreme Values.”</span> <em>Journal of Econometrics</em> 141 (2): 1044–72. <a href="https://doi.org/10.1016/j.jeconom.2007.01.001">https://doi.org/10.1016/j.jeconom.2007.01.001</a>.
@@ -284,6 +282,9 @@ Gasparini, Leonardo, and Walter Sosa Escudero. 2004. <span>“Implicit Rents fro
 <div id="ref-hlasny2022" class="csl-entry">
 Hlasny, Vladimir, Lidia Ceriani, and Paolo Verme. 2022. <span>“Bottom Incomes and the Measurement of Poverty and Inequality.”</span> <em>Review of Income and Wealth</em> 68 (4): 970–1006. <a href="https://doi.org/10.1111/roiw.12535">https://doi.org/10.1111/roiw.12535</a>.
 </div>
+<div id="ref-jolliffe2025" class="csl-entry">
+Jolliffe, Dean, Elizabeth Foster, Christoph Lakner, Gabriel Lara Ibarra, and Samuel Tetteh-Baah. 2025. <span>“<a href="">The 2021 PPPs and Global Poverty: The Role of Better Consumption Surveys (Forthcoming)</a>.”</span> <em>The World Bank</em>.
+</div>
 <div id="ref-jolliffe2024b" class="csl-entry">
 Jolliffe, Dean, and Samuel Tetteh-Baah. 2024. <span>“Identifying the Poor - Accounting for Household Economies of Scale in Global Poverty Estimates.”</span> <em>World Development</em> 179. <a href="https://doi.org/10.1016/j.worlddev.2024.106593">https://doi.org/10.1016/j.worlddev.2024.106593</a>.
 </div>
@@ -294,7 +295,7 @@ Lanjouw, Peter, and Martin Ravallion. 1995. <span>“Poverty and Household Size.
 Mancini, Giulia, and Giovanni Vecchi. 2022. <span>“On the Construction of a Consumption Aggregate for Inequality and Poverty Analysis.”</span> <em>World Bank Group, Washington, DC</em>. <a href="https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099225003092220001/p1694340e80f9a00a09b20042de5a9cd47e">https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099225003092220001/p1694340e80f9a00a09b20042de5a9cd47e</a>.
 </div>
 <div id="ref-ravallion2016" class="csl-entry">
-———. 2016. <span>“Are the World’s Poorest Being Left Behind?”</span> <em>Journal of Economic Growth</em> 21: 139–64. <a href="https://doi.org/10.1007/s10887-016-9126-7">https://doi.org/10.1007/s10887-016-9126-7</a>.
+Ravallion, Martin. 2016. <span>“Are the World’s Poorest Being Left Behind?”</span> <em>Journal of Economic Growth</em> 21: 139–64. <a href="https://doi.org/10.1007/s10887-016-9126-7">https://doi.org/10.1007/s10887-016-9126-7</a>.
 </div>
 <div id="ref-worldbank2018" class="csl-entry">
 World Bank. 2018. <em>Poverty and Shared Prosperity 2018: Piecing Together the Poverty Puzzle</em>. Washington, DC: World Bank. <a href="https://openknowledge.worldbank.org/handle/10986/30418">https://openknowledge.worldbank.org/handle/10986/30418</a>.

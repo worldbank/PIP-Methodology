@@ -2,7 +2,7 @@
 
 ## Monetary poverty measures {#monetarypoverty}
 
-Armed with welfare distributions expressed in 2017 PPPs and an international poverty line, poverty and inequality can be calculated and compared across countries and over time. The poverty and inequality measures used in the Poverty and Equity Platform (PIP) are mainly based on formula in @haughton2009. In the formulas below we abstract from household weights for simplicity.
+Armed with welfare distributions expressed in 2021 PPPs and an international poverty line, poverty and inequality can be calculated and compared across countries and over time. The poverty and inequality measures used in the Poverty and Equity Platform (PIP) are mainly based on formula in @haughton2009. In the formulas below we abstract from household weights for simplicity.
 
 **Poverty headcount ratio**: The poverty headcount ratio ($P_0$) measures the proportion of the population that is counted as poor. When using micro data, the poverty headcount ratio is obtained using the following expression:$$ P_0 = \frac{1}{N} \sum_{i=1}^{N} I (y_i < z), $$
 
@@ -31,8 +31,8 @@ In many settings, important aspects of well-being, such as access to quality edu
 The dimensions, indicators, and weights of the World Bank's multidimensional poverty measure are given as follows:
 
 | Dimension                      | Indicator                                                                           | Weight |
-|---------------|-------------------------------------------|--------------|
-| Monetary poverty               | Daily consumption or income is less than US\$2.15 per person                        | 1/3    |
+|--------------------------------|-------------------------------------------------------------------------------------|--------|
+| Monetary poverty               | Daily consumption or income is less than US\$3.00 per person                        | 1/3    |
 | Education                      | At least one school-age child up to the age of grade 8 is not enrolled in school    | 1/6    |
 | Education                      | No adult in the household (age of grade 9 or above) has completed primary education | 1/6    |
 | Access to basic infrastructure | The household lacks access to limited-standard drinking water                       | 1/9    |
@@ -90,11 +90,9 @@ Imagine that we order all households according to their welfare per capita, such
 
 $$ decileshare_d= \frac{\sum_{i \in d} {y_i}}{\sum_{i=1}^{N} {y_i}} ,  d \in \{1,2,..,10 \} $$
 
-**Prosperity gap**
-The prosperity gap (PG) is the average factor by which incomes fall short of a prosperity standard of \$25 per person per day (expressed in 2017 PPP dollars) [@kraay2023]. It is given by:
+**Prosperity gap** The prosperity gap (PG) is the average factor by which incomes fall short of a prosperity standard of \$28 per person per day (expressed in 2021 PPP dollars) [@kraay2023] & [@jolliffe2025]. It is given by:
 
-$$ PG  = \frac{1}{N} \sum_{i=1}^{N} \frac{25}{y_i}. $$
-For a person whose welfare is $\$2.50$ per day, this ratio is $10$, meaning that their welfare falls short of the prosperity standard by a factor of $10$. This measure unambiguously gives greater weight to poorer people. The poorest person with daily welfare equal to $\$2.50$ gets twice the weight of a person with twice the welfare (at $\$5.00$), and ten times the weight of a person with ten times higher welfare (at $\$25$).
+$$ PG  = \frac{1}{N} \sum_{i=1}^{N} \frac{28}{y_i}. $$ For a person whose welfare is $\$2.80$ per day, this ratio is $10$, meaning that their welfare falls short of the prosperity standard by a factor of $10$. This measure unambiguously gives greater weight to poorer people. The poorest person with daily welfare equal to $\$2.80$ gets twice the weight of a person with twice the welfare (at $\$5.60$), and ten times the weight of a person with ten times higher welfare (at $\$28$).
 
 **Shared prosperity**
 
