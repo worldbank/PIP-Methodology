@@ -70,7 +70,7 @@ consumption of an Indian household in 2011 to the consumption of a
 Nigerian household in 2018, the welfare aggregates need to be expressed
 in the same prices. To this end, [consumer price indices](#CPIs) are
 used to express all welfare aggregates in local 2021 prices, and
-[purchasing power parities](#PPPs)(PPPs) are used to account for price
+[purchasing power parities](#PPPs) (PPPs) are used to account for price
 differences between countries. Once all welfare aggregates are expressed
 in the same units, a common poverty line is needed to estimate poverty.
 [The international poverty line](#IPL) used in PIP is constructed from

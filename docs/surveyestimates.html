@@ -7,7 +7,7 @@
   <title>Chapter 4 Calculating survey estimates of poverty and inequality | Poverty and Inequality Platform Methodology Handbook</title>
   <meta name="description" content="<p>This site describes how global and regional poverty rates are
 •calculated.</p>" />
-  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 Calculating survey estimates of poverty and inequality | Poverty and Inequality Platform Methodology Handbook" />
   <meta property="og:type" content="book" />
@@ -53,6 +53,10 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.11/grViz.js"></script>
 
 
 
@@ -65,6 +69,7 @@
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -274,7 +279,7 @@ Y \left[\frac{n}{2}\right] &amp; \text{if $n$ is even} \\
 <p><strong>Decile shares</strong>:</p>
 <p>Imagine that we order all households according to their welfare per capita, such that the first decile contains the 10% of the population with the lowest welfare and so on. Decile shares measure the share of total welfare belonging to each decile. Formally, the decile share of decile <span class="math inline">\(d\)</span> is given by:</p>
 <p><span class="math display">\[ decileshare_d= \frac{\sum_{i \in d} {y_i}}{\sum_{i=1}^{N} {y_i}} ,  d \in \{1,2,..,10 \} \]</span></p>
-<p><strong>Prosperity gap</strong> The prosperity gap (PG) is the average factor by which incomes fall short of a prosperity standard of $28 per person per day (expressed in 2021 PPP dollars) <span class="citation">(<a href="#ref-kraay2023">Kraay et al. 2023</a>)</span> &amp; <span class="citation">(<a href="#ref-jolliffe2025">Jolliffe et al. 2025</a>)</span>. It is given by:</p>
+<p><strong>Prosperity gap</strong> The prosperity gap (PG) is the average factor by which incomes fall short of a prosperity standard of $28 per person per day (expressed in 2021 PPP dollars) (<span class="citation">Kraay et al. (<a href="#ref-kraay2023">2023</a>)</span> and <span class="citation">Foster et al. (<a href="#ref-jolliffe2025">2025</a>)</span>). It is given by:</p>
 <p><span class="math display">\[ PG  = \frac{1}{N} \sum_{i=1}^{N} \frac{28}{y_i}. \]</span> For a person whose welfare is <span class="math inline">\(\$2.80\)</span> per day, this ratio is <span class="math inline">\(10\)</span>, meaning that their welfare falls short of the prosperity standard by a factor of <span class="math inline">\(10\)</span>. This measure unambiguously gives greater weight to poorer people. The poorest person with daily welfare equal to <span class="math inline">\(\$2.80\)</span> gets twice the weight of a person with twice the welfare (at <span class="math inline">\(\$5.60\)</span>), and ten times the weight of a person with ten times higher welfare (at <span class="math inline">\(\$28\)</span>).</p>
 <p><strong>Shared prosperity</strong></p>
 <p>Shared prosperity measures the extent to which welfare growth is inclusive by focusing on growth of the population at the bottom of the distribution. It is defined as the annualized growth rate of mean household per capita welfare of the bottom 40%. Promoting shared prosperity is one of the twin goals of the World Bank Group together with eradicating extreme poverty. The selection of the bottom 40% is a compromise between competing considerations; the bottom 40% still focuses on the bottom of the distribution but is not too small that it risks introducing measurement errors.</p>
@@ -284,8 +289,8 @@ Y \left[\frac{n}{2}\right] &amp; \text{if $n$ is even} \\
 <p>In order for shared prosperity to be calculated for a country the following three criteria must be met:</p>
 <ol style="list-style-type: decimal">
 <li><p>Two <a href="welfareaggregate.html#comparability">comparable</a> household surveys must be available.</p></li>
-<li><p>Among comparable surveys, one must be conducted within two years of the latest reference year (currently 2019) and the other within two years of five years prior to the reference year (currently 2014).</p></li>
-<li><p>The period between the initial and end years should range between three and seven years. For example, a shared prosperity period of 2015–16 meets the second selection criterion but would not be allowed because it does not meet this third requirement.</p></li>
+<li><p>Among comparable surveys, one must be conducted within two years of the latest reference year and the other within two years of five years prior to the reference year.</p></li>
+<li><p>The period between the initial and end years should range between three and seven years. For example, a shared prosperity period of 2021–22 meets the second selection criterion but would not be allowed because it does not meet this third requirement.</p></li>
 </ol>
 <p>In cases where multiple surveys fulfill these criteria, the most recent survey years are typically chosen. In countries in Europe and Central Asia using incomes as the welfare aggregate, households with negative incomes are included when estimating shared prosperity.</p>
 <p>More information on shared prosperity can be found at the <a href="https://www.worldbank.org/en/topic/poverty/brief/global-database-of-shared-prosperity">Global Database of Shared Prosperity</a>.</p>
@@ -300,18 +305,18 @@ Y \left[\frac{n}{2}\right] &amp; \text{if $n$ is even} \\
 </div>
 </div>
 <h3>References</h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
 <div id="ref-alkire2015" class="csl-entry">
 Alkire, Sabina, José Manuel Roche, Paola Ballon, James Foster, Maria Emma Santos, and Suman Seth. 2015. <em>Multidimensional Poverty Measurement and Analysis</em>. Oxford University Press, USA. <a href="https://ophi.org.uk/multidimensional-poverty-measurement-and-analysis/">https://ophi.org.uk/multidimensional-poverty-measurement-and-analysis/</a>.
+</div>
+<div id="ref-jolliffe2025" class="csl-entry">
+Foster, Elizabeth, Dean Jolliffe, Gabriel Lara Ibarra, Christoph Lakner, and Samuel [randomized order] Tetteh-Baah. 2025. <span>“Global Poverty Revisited Using 2021 PPPs and New Data on Consumption.”</span> <em>The World Bank</em>, no. 11137. <a href="https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099503206032533226">https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099503206032533226</a>.
 </div>
 <div id="ref-haddad2024" class="csl-entry">
 Haddad, Cameron Nadim, Daniel Gerszon Mahler, Carolina Diaz-Bonilla, Ruth Hill, Christoph Lakner, and Gabriel Lara Ibarra. 2024. <span>“The World Bank’s New Inequality Indicator.”</span> <em>World <span>B</span>ank <span>P</span>olicy <span>R</span>esearch <span>W</span>orking <span>P</span>aper</em> 10796. <a href="http://documents.worldbank.org/curated/en/099549506102441825/IDU1bd155bac16d78143af188331f87564a9d6c8">http://documents.worldbank.org/curated/en/099549506102441825/IDU1bd155bac16d78143af188331f87564a9d6c8</a>.
 </div>
 <div id="ref-haughton2009" class="csl-entry">
 Haughton, Jonathan, and Shahidur R Khandker. 2009. <em>Handbook on Poverty and Inequality</em>. World Bank Publications. <a href="https://openknowledge.worldbank.org/handle/10986/11985">https://openknowledge.worldbank.org/handle/10986/11985</a>.
-</div>
-<div id="ref-jolliffe2025" class="csl-entry">
-Jolliffe, Dean, Elizabeth Foster, Christoph Lakner, Gabriel Lara Ibarra, and Samuel Tetteh-Baah. 2025. <span>“<a href="">The 2021 PPPs and Global Poverty: The Role of Better Consumption Surveys (Forthcoming)</a>.”</span> <em>The World Bank</em>.
 </div>
 <div id="ref-kraay2023" class="csl-entry">
 Kraay, Aart, Benoit Decerf, Dean Jolliffe, Christoph Lakner, Berk Ozler, Olivier Sterck, and Nishant Yonzan. 2023. <span>“A New Distribution Sensitive Index for Measuring Welfare, Poverty, and Inequality.”</span> <em>World <span>B</span>ank <span>P</span>olicy <span>R</span>esearch <span>W</span>orking <span>P</span>aper</em> 10470. <a href="https://documents1.worldbank.org/curated/en/099934305302318791/pdf/IDU0325015fc0a4d6046420afe405cb6b6a87b0b.pdf">https://documents1.worldbank.org/curated/en/099934305302318791/pdf/IDU0325015fc0a4d6046420afe405cb6b6a87b0b.pdf</a>.

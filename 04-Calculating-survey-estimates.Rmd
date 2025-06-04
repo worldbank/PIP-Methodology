@@ -90,7 +90,7 @@ Imagine that we order all households according to their welfare per capita, such
 
 $$ decileshare_d= \frac{\sum_{i \in d} {y_i}}{\sum_{i=1}^{N} {y_i}} ,  d \in \{1,2,..,10 \} $$
 
-**Prosperity gap** The prosperity gap (PG) is the average factor by which incomes fall short of a prosperity standard of \$28 per person per day (expressed in 2021 PPP dollars) [@kraay2023] & [@jolliffe2025]. It is given by:
+**Prosperity gap** The prosperity gap (PG) is the average factor by which incomes fall short of a prosperity standard of \$28 per person per day (expressed in 2021 PPP dollars) (@kraay2023 and @jolliffe2025). It is given by:
 
 $$ PG  = \frac{1}{N} \sum_{i=1}^{N} \frac{28}{y_i}. $$ For a person whose welfare is $\$2.80$ per day, this ratio is $10$, meaning that their welfare falls short of the prosperity standard by a factor of $10$. This measure unambiguously gives greater weight to poorer people. The poorest person with daily welfare equal to $\$2.80$ gets twice the weight of a person with twice the welfare (at $\$5.60$), and ten times the weight of a person with ten times higher welfare (at $\$28$).
 
@@ -108,9 +108,9 @@ In order for shared prosperity to be calculated for a country the following thre
 
 1.  Two [comparable](#comparability) household surveys must be available.
 
-2.  Among comparable surveys, one must be conducted within two years of the latest reference year (currently 2019) and the other within two years of five years prior to the reference year (currently 2014).
+2.  Among comparable surveys, one must be conducted within two years of the latest reference year and the other within two years of five years prior to the reference year.
 
-3.  The period between the initial and end years should range between three and seven years. For example, a shared prosperity period of 2015--16 meets the second selection criterion but would not be allowed because it does not meet this third requirement.
+3.  The period between the initial and end years should range between three and seven years. For example, a shared prosperity period of 2021--22 meets the second selection criterion but would not be allowed because it does not meet this third requirement.
 
 In cases where multiple surveys fulfill these criteria, the most recent survey years are typically chosen. In countries in Europe and Central Asia using incomes as the welfare aggregate, households with negative incomes are included when estimating shared prosperity.
 

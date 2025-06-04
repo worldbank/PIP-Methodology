@@ -7,7 +7,7 @@
   <title>Non-technical summary | Poverty and Inequality Platform Methodology Handbook</title>
   <meta name="description" content="<p>This site describes how global and regional poverty rates are
 •calculated.</p>" />
-  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Non-technical summary | Poverty and Inequality Platform Methodology Handbook" />
   <meta property="og:type" content="book" />
@@ -63,6 +63,29 @@
 <style type="text/css">
   
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 </head>
@@ -169,8 +192,8 @@ Fourth, poverty and inequality are estimated for a particular country
 for a particular year. Fifth, the estimates of poverty are extrapolated
 or interpolated to a common year and the population-weighted poverty
 rate is calculated.</p>
-<div id="htmlwidget-e7b9237e6b22ee82ea14" style="width:672px;height:500px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e7b9237e6b22ee82ea14">{"x":{"diagram":"digraph {\n  graph [layout = dot, rankdir = TD]\n  \n  node [shape = box,style=filled, color=lightblue2]        \n  box1 [label = \"Step 1\nAcquiring household survey data\"]\n  box2 [label = \"Step 2\nConstructing welfare aggregates\"]\n  box3 [label = \"Step 3\nConverting welfare aggregates\"]\n  box4 [label = \"Step 4\nCalculating survey estimates of poverty and inequality\"]\n  box5 [label = \"Step 5\nCalculating global and regional poverty\"]\n  box1 -> box2 -> box3 -> box4 -> box5\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-2e018f1cf8e79ee50c00" style="width:672px;height:500px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2e018f1cf8e79ee50c00">{"x":{"diagram":"digraph {\n  graph [layout = dot, rankdir = TD]\n  \n  node [shape = box,style=filled, color=lightblue2]        \n  box1 [label = \"Step 1\nAcquiring household survey data\"]\n  box2 [label = \"Step 2\nConstructing welfare aggregates\"]\n  box3 [label = \"Step 3\nConverting welfare aggregates\"]\n  box4 [label = \"Step 4\nCalculating survey estimates of poverty and inequality\"]\n  box5 [label = \"Step 5\nCalculating global and regional poverty\"]\n  box1 -> box2 -> box3 -> box4 -> box5\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <div id="step-1-acquiring-household-survey-data" class="section level2 unnumbered hasAnchor">
 <h2>Step 1: <a href="acquiring.html#acquiring">Acquiring household survey data</a><a href="non-technical-summary.html#step-1-acquiring-household-survey-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Poverty rates are estimated from <a href="acquiring.html#selection">selected</a> household
@@ -212,7 +235,7 @@ consumption of an Indian household in 2011 to the consumption of a
 Nigerian household in 2018, the welfare aggregates need to be expressed
 in the same prices. To this end, <a href="convert.html#CPIs">consumer price indices</a> are
 used to express all welfare aggregates in local 2021 prices, and
-<a href="convert.html#PPPs">purchasing power parities</a>(PPPs) are used to account for price
+<a href="convert.html#PPPs">purchasing power parities</a> (PPPs) are used to account for price
 differences between countries. Once all welfare aggregates are expressed
 in the same units, a common poverty line is needed to estimate poverty.
 <a href="convert.html#IPL">The international poverty line</a> used in PIP is constructed from
@@ -309,6 +332,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
