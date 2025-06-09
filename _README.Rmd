@@ -11,7 +11,7 @@ This file contains the information you need to update the Methodology Handbook.
 
 To work on this book, you will need to have R and RStudio installed. You will also need to have the following packages installed: downlit, rsconnect, bookdown, DiagrammeR. Next, you need to connect to posit, which eventually will allow you to update the website. To connect you need to go through the following steps:
 
-1.  Have an internal and external posit connect account. You can request this through e-services, look for [Posit Connect Account](https://worldbankgroup.service-now.com/wbg?id=wbg_sc_catalog&sys_id=990fc3681bf47850a4d2fff7cc4bcbca). If you have any questions on posit connect, ask Tony Fujs.
+1.  Have an internal and external posit connect account. You can request this through e-services, look for [RStudio Connect Account](https://worldbankgroup.service-now.com/wbg?id=wbg_sc_catalog&sys_id=990fc3681bf47850a4d2fff7cc4bcbca). If you have any questions on posit connect, ask Tony Fujs.
 
 2.  Once granted, add the server where the handbook is hosted using the following code in R:
 
@@ -19,7 +19,7 @@ To work on this book, you will need to have R and RStudio installed. You will al
 
     `rsconnect::addServer(`
 
-    `"https://w0lxdshyprd1c01.worldbank.org:443/",`
+    `"http://w0lxopshyprd1b.worldbank.org:3939",`
 
     `name = "external-server")`
 

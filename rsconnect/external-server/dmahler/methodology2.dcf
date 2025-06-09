@@ -1,0 +1,12 @@
+name: methodology2
+title: Methodology
+username: dmahler
+account: dmahler
+server: external-server
+hostUrl: http://w0lxopshyprd1b.worldbank.org:3939/__api__
+appId: 1307
+bundleId: 49683
+url: http://w0lxopshyprd1b.worldbank.org:3939/content/dc3b42c6-4942-4126-a117-39332dc5e7f9/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
