@@ -69,8 +69,8 @@ prevailing at the time of the collection of the data. To compare the
 consumption of an Indian household in 2011 to the consumption of a
 Nigerian household in 2018, the welfare aggregates need to be expressed
 in the same prices. To this end, [consumer price indices](#CPIs) are
-used to express all welfare aggregates in local 2017 prices, and
-[purchasing power parities](#PPPs)(PPPs) are used to account for price
+used to express all welfare aggregates in local 2021 prices, and
+[purchasing power parities](#PPPs) (PPPs) are used to account for price
 differences between countries. Once all welfare aggregates are expressed
 in the same units, a common poverty line is needed to estimate poverty.
 [The international poverty line](#IPL) used in PIP is constructed from
@@ -78,7 +78,7 @@ the poverty lines used by the poorest countries of the world.
 
 ## Step 4: [Calculating survey estimates of poverty and inequality](#surveyestimates) {.unnumbered}
 
-Armed with welfare distributions expressed in 2017 PPPs and an
+Armed with welfare distributions expressed in 2021 PPPs and an
 international poverty line, poverty and inequality can be calculated and
 compared across countries and over time. PIP contains a range of
 different [monetary poverty measures](#monetarypoverty), a
