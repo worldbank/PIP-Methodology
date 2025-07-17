@@ -12,6 +12,7 @@ spatialtemporal
 spatial-deflation
 temporal-deflation
 equivalence-scale
+bottom
 tgd
 comparability
 convert
@@ -31,9 +32,8 @@ same-direction-interpolation
 diverging-directions-interpolation
 nationalaccounts
 inccon
+nowcasts
 regionsandcountries
 population
 nodata
 coverage
-bottom
-nowcasts

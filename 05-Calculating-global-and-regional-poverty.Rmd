@@ -83,7 +83,7 @@ In total, 218 economies are included in the global poverty estimates. The entire
 
 -   **South Asia:** Afghanistan; Bangladesh; Bhutan; India; Maldives; Nepal; Pakistan; Sri Lanka
 
--   **Sub-Saharan Africa:** Angola; Benin; Botswana; Burkina Faso; Burundi; Cabo Verde; Cameroon; Central African Republic; Chad; Comoros; Congo, Democratic Republic of; Congo, Republic of; Cote d'Ivoire; Equatorial Guinea; Eritrea; Eswatini; Ethiopia; Gabon; Gambia, the; Ghana; Guinea; Guinea-Bissau; Kenya; Lesotho; Liberia; Madagascar; Malawi; Mali; Mauritania; Mauritius; Mozambique; Namibia; Niger; Nigeria; Rwanda; Sao Tome and Principe; Senegal; Seychelles; Sierra Leone; Somalia; South Africa; South Sudan; Sudan; Tanzania; Togo; Uganda; Zambia; Zimbabwe.
+-   **Sub-Saharan Africa:** Angola; Benin; Botswana; Burkina Faso; Burundi; Cabo Verde; Cameroon; Central African Republic; Chad; Comoros; Congo, Democratic Republic of; Congo, Republic of; Cote d'Ivoire; Equatorial Guinea; Eritrea; Eswatini; Ethiopia; Gabon; Gambia, the; Ghana; Guinea; Guinea-Bissau; Kenya; Lesotho; Liberia; Madagascar; Malawi; Mali; Mauritania; Mauritius; Mozambique; Namibia; Niger; Nigeria; Rwanda; Sao Tome and Principe; Senegal; Seychelles; Sierra Leone; Somalia, Federal Republic of; South Africa; South Sudan; Sudan; Tanzania; Togo; Uganda; Zambia; Zimbabwe.
 
 ## Population {#population}
 
