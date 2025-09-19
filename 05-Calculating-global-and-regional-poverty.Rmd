@@ -37,7 +37,9 @@ $$μ_{r} = (μ_{s_2} - μ_{s_1}) \times \dfrac{\prod_{t=s_1}^{r-1}{(1+passthroug
 
 Second, the welfare distributions at the two surveys are scaled to reflect this mean:
 
-$$\mathbf{y_{r_1}} = \dfrac{μ_{r}}{μ_{s_1}} \times \mathbf{y_{s_1}}, \hspace{5mm} \mathbf{y_{r_2}} = \dfrac{μ_{r}}{μ_{s_2}} \times \mathbf{y_{s_2}}$$After this alignment, there will be two distributions with the same mean for the reference year but with different distributional shapes.
+$$\mathbf{y_{r_1}} = \dfrac{μ_{r}}{μ_{s_1}} \times \mathbf{y_{s_1}}, \hspace{5mm} \mathbf{y_{r_2}} = \dfrac{μ_{r}}{μ_{s_2}} \times \mathbf{y_{s_2}}$$
+
+After this alignment, there will be two distributions with the same mean for the reference year but with different distributional shapes.
 
 At the third step, poverty is estimated from each of these distributions, and the final poverty estimate at the reference year is the weighted average poverty rate from both distributions where each poverty estimate is weighted by the inverse of the relative distance between the survey year and the reference year:
 
@@ -69,21 +71,21 @@ PIP includes nowcasts of poverty, that is, poverty estimates for the year in que
 
 ## Regional classification {#regionsandcountries}
 
-In total, 218 economies are included in the global poverty estimates. The entire universe of economies considered corresponds to the universe of economies in the [World Bank's Country and Lending Groups](https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups). The regions employed in PIP, however, differ from the regional classifications used by the World Bank. Some economies, mostly high-income economies, are excluded from the geographical regions and are included as a separate group referred to as "other high income" (or "industrialized economies" or "rest of the world" in earlier publications). The list of economies included in each region is as follows:
+In total, 218 economies are included in the global poverty estimates. The entire universe of economies considered corresponds to the universe of economies in the [World Bank's Country and Lending Groups](https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups). The list of economies included in each region is as follows:
 
--   **East Asia and Pacific:** American Samoa; Cambodia; China; Fiji; Indonesia; Kiribati; Korea, Democratic People's Republic of; Lao People's Democratic Republic; Malaysia; Marshall Islands; Micronesia, Federated States of; Mongolia; Myanmar; Northern Mariana Islands; Palau; Papua New Guinea; Philippines; Samoa; Solomon Islands; Thailand; Timor-Leste; Tonga; Tuvalu; Vanuatu; Vietnam.
+-   **East Asia and Pacific:** American Samoa; Australia; Brunei Darussalam; Cambodia; China; Fiji; French Polynesia; Guam; Hong Kong SAR, China; Indonesia; Japan; Kiribati; Korea, Dem. Rep.; Korea, Rep.; Lao PDR; Macao SAR, China; Malaysia; Marshall Islands; Micronesia, Fed. Sts.; Mongolia; Myanmar; Nauru; New Caledonia; New Zealand; Northern Mariana Islands; Palau; Papua New Guinea; Philippines; Samoa; Singapore; Solomon Islands; Taiwan, China; Thailand; Timor-Leste; Tonga; Tuvalu; Vanuatu; Viet Nam.
 
--   **Europe and Central Asia:** Albania; Armenia; Azerbaijan; Belarus; Bosnia and Herzegovina; Bulgaria; Croatia; Czech Republic; Estonia; Georgia; Hungary; Kazakhstan; Kosovo; Kyrgyz Republic; Latvia; Lithuania; Moldova; Montenegro; North Macedonia; Poland; Romania; Russian Federation; Serbia; Slovak Republic; Slovenia; Tajikistan; Ukraine; Uzbekistan.
+-   **Europe and Central Asia:** Albania; Andorra; Armenia; Austria; Azerbaijan; Belarus; Belgium; Bosnia and Herzegovina; Bulgaria; Channel Islands; Croatia; Cyprus; Czechia; Denmark; Estonia; Faeroe Islands; Finland; France; Georgia; Germany; Gibraltar; Greece; Greenland; Hungary; Iceland; Ireland; Isle of Man; Italy; Kazakhstan; Kosovo; Kyrgyz Republic; Latvia; Liechtenstein; Lithuania; Luxembourg; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway; Poland; Portugal; Romania; Russian Federation; San Marino; Serbia; Slovak Republic; Slovenia; Spain; Sweden; Switzerland; Tajikistan; Turkmenistan; Türkiye; Ukraine; United Kingdom; Uzbekistan.
 
--   **Latin America and the Caribbean:** Argentina; Barbados; Belize; Bolivia; Brazil; Chile; Colombia; Costa Rica; Cuba; Dominica; Dominican Republic; Ecuador; El Salvador; Grenada; Guatemala; Guyana; Haiti; Honduras; Jamaica; Mexico; Nicaragua; Panama; Paraguay; Peru; St. Kitts and Nevis; St. Lucia; St. Vincent and the Grenadines; Suriname; Trinidad and Tobago; Uruguay; Venezuela, Republica Bolivariana de.
+-   **Latin America and the Caribbean:** Antigua and Barbuda; Argentina; Aruba; Bahamas, The; Barbados; Belize; Bolivia; Brazil; British Virgin Islands; Cayman Islands; Chile; Colombia; Costa Rica; Cuba; Curaçao; Dominica; Dominican Republic; Ecuador; El Salvador; Grenada; Guatemala; Guyana; Haiti; Honduras; Jamaica; Mexico; Nicaragua; Panama; Paraguay; Peru; Puerto Rico (U.S.); Sint Maarten (Dutch part); St. Kitts and Nevis; St. Lucia; St. Martin (French part); St. Vincent and the Grenadines; Suriname; Trinidad and Tobago; Turks and Caicos Islands; Uruguay; Venezuela, RB; Virgin Islands (U.S.).
 
--   **Middle East and North Africa:** Algeria; Djibouti; Egypt, Arab Republic of; Iran, Islamic Republic of; Iraq; Jordan; Lebanon; Libya; Morocco; Oman; Syrian Arab Republic; Tunisia; West Bank and Gaza; Yemen, Republic of.
+-   **Middle East, North Africa, Afghanistan and Pakistan:** Lebanon; Libya; Malta; Morocco; Oman; Pakistan; Qatar; Saudi Arabia; Syrian Arab Republic; Tunisia; United Arab Emirates; West Bank and Gaza; Yemen, Rep.
 
--   **Other High Income (at times referred to as "Rest of the World"):** Andorra; Antigua and Barbuda; Aruba; Australia; Austria; Bahamas, the; Bahrain; Belgium; Bermuda; British Virgin Islands; Brunei Darussalam; Canada; Cayman Islands; Channel Islands; Curacao; Cyprus; Denmark; Faroe Islands; Finland; France; French Polynesia; Germany; Gibraltar; Greece; Greenland; Guam; Hong Kong SAR, China; Iceland; Ireland; Isle of Man; Israel; Italy; Japan; Korea, Republic of; Kuwait; Liechtenstein; Macao SAR, China; Malta; Monaco; Nauru; Netherlands; New Caledonia; New Zealand; Norway; Portugal; Puerto Rico; Qatar; San Marino; Saudi Arabia; Singapore; Sint Maarten; Spain; St. Martin; Sweden; Switzerland; Taiwan, China; Turks and Caicos Islands; United Arab Emirates; United Kingdom; United States; Virgin Islands, US.
+-   **North America:** Bermuda; Canada; United States.
 
--   **South Asia:** Afghanistan; Bangladesh; Bhutan; India; Maldives; Nepal; Pakistan; Sri Lanka
+-   **South Asia:** Bangladesh; Bhutan; India; Maldives; Nepal; Sri Lanka.
 
--   **Sub-Saharan Africa:** Angola; Benin; Botswana; Burkina Faso; Burundi; Cabo Verde; Cameroon; Central African Republic; Chad; Comoros; Congo, Democratic Republic of; Congo, Republic of; Cote d'Ivoire; Equatorial Guinea; Eritrea; Eswatini; Ethiopia; Gabon; Gambia, the; Ghana; Guinea; Guinea-Bissau; Kenya; Lesotho; Liberia; Madagascar; Malawi; Mali; Mauritania; Mauritius; Mozambique; Namibia; Niger; Nigeria; Rwanda; Sao Tome and Principe; Senegal; Seychelles; Sierra Leone; Somalia, Federal Republic of; South Africa; South Sudan; Sudan; Tanzania; Togo; Uganda; Zambia; Zimbabwe.
+-   **Sub-Saharan Africa:** Angola; Benin; Botswana; Burkina Faso; Burundi; Cabo Verde; Cameroon; Central African Republic; Chad; Comoros; Congo, Dem. Rep.; Congo, Rep.; Côte d'Ivoire; Equatorial Guinea; Eritrea; Eswatini; Ethiopia; Gabon; Gambia, The; Ghana; Guinea; Guinea-Bissau; Kenya; Lesotho; Liberia; Madagascar; Malawi; Mali; Mauritania; Mauritius; Mozambique; Namibia; Niger; Nigeria; Rwanda; Senegal; Seychelles; Sierra Leone; Somalia; South Africa; South Sudan; Sudan; São Tomé and Príncipe; Tanzania; Togo; Uganda; Zambia; Zimbabwe.
 
 ## Population {#population}
 
@@ -99,7 +101,48 @@ With the [interpolation](#interpolations) and [extrapolation](#extrapolations) r
 2.  The economy does not have credible [PPPs](#PPPs) necessary to convert welfare vectors to cross-country comparable currencies.
 3.  The economy is missing GDP data for a subset of years necessary to extrapolate and interpolate survey estimates.
 
-If either of the first two conditions apply, the economy will be missing for all years, while if only the last condition applies, the economy will be missing in the years where GDP data is missing. In these country-year combinations, for the purpose of calculating regional and global poverty estimates, it is assumed that the country has a poverty headcount equal to its [region's](#regionsandcountries) population-weighted average poverty rate.
+If either of the first two conditions apply, the economy will be missing for all years, while if only the last condition applies, the economy will be missing in the years where GDP data is missing. In these country-year combinations, for the purpose of calculating regional and global poverty estimates, PIP applies an imputation approach developed in @mahler2025. The approach uses a handful of variables that are available in all (or nearly all) economies to predict full welfare distributions. Four models are used depending on whether GDP per capita data is available and depending on whether welfare should be predicted in 2021 PPPs or 2017 PPPs. The model where GDP per capita is available is referred to as Tier 1 while the model where GDP per capita is not available is referred to as Tier 2. Welfare, $y_{c,t}$ for country $c$ and year $t$ is predicted as follows:
+
+$$ln⁡(y_{c,t})=\mathbf{X_{c,t}β_X}+ln⁡(\frac{p}{1-p})\mathbf{Z_{c,t}β_Z}$$ Here $\mathbf{X}$ and $\mathbf{Z}$ are vectors of variables predictive of welfare and $\mathbf{β_X}$ and $\mathbf{β_Z}$ are vectors of corresponding coefficients, both shown in the table below. $p$ is a quantile on the distribution going from 0-1. 10,000 points using values of $p$ equally spaced between 0 and 1 are used to generate a full distribution of welfare $y_{c,t}$.
+
+Table : Coefficients estimated to predict full distributions for missing countries
+
+| Outcome variable: Log welfare, $ln(y)$        | 2021 PPPs     |                 | 2017 PPPs     |                 |
+|-------------------|--------------|--------------|--------------|--------------|
+|                                               | Tier 1        | Tier 2          | Tier 1        | Tier 2          |
+|                                               | GDP available | GDP unavailable | GDP available | GDP unavailable |
+| $\mathbf{X}$                                  |               |                 |               |                 |
+| Intercept                                     | -2.2640       | 1.6046          | -2.5147       | 1.4189          |
+| Log GDP per capita (2021 or 2017 PPP)         | 0.4316        |                 | 0.4915        |                 |
+| Log under-5 mortality (per 1,000 live births) | -0.1532       | -0.2566         | -0.1645       | -0.2323         |
+| Life expectancy (years)                       | 0.0142        | 0.0197          | 0.0090        | 0.0190          |
+| Rural population share (0-100)                | -0.0027       | -0.0077         | -0.0013       | -0.0078         |
+| Income group                                  |               |                 |               |                 |
+| Low income                                    |               | Base            |               | Base            |
+| Lower-middle income                           |               | 0.2219          |               | 0.2090          |
+| Upper-middle income                           |               | 0.4486          |               | 0.5520          |
+| High income                                   |               | 1.1389          |               | 1.2483          |
+| Welfare type (income=1, consumption=0)        | -4.1402       |                 | -4.4971       |                 |
+| Welfare type \* log GDP per capita            | 0.4328        |                 | 0.4708        |                 |
+| $\mathbf{Z}$                                  |               |                 |               |                 |
+| Intercept                                     | 0.3465        | 0.3453          | 0.3719        | 0.3181          |
+| I[Europe & Central Asia]                      | -0.0264       | -0.0229         | -0.0574       | -0.0037         |
+| I[Latin America & Caribbean}                  | 0.1482        | 0.1526          | 0.1232        | 0.1752          |
+| I[Sub-Saharan Africa]                         | 0.0609        | 0.0665          | 0.0246        | 0.0683          |
+
+The output from the table can be used to directly predict poverty rates if one isolates p, which can then be interpreted as a poverty rate, and y is interpreted as the corresponding poverty line, as per the following equation:
+
+$$p_{c,t}=\bigg[1+\Big(\frac{\mathbf{exp⁡(X_{c,t}β_X)}}{y}\Big)^{\frac{1}{\mathbf{Z_{c,t}β_Z}}}\bigg]^{-1}$$
+
+Suppose we want to predict the poverty rate at the \$8.30 line in Libya (a missing country in PIP) in 2024. GDP per capita in 2021 PPPs is available, so we can use the Tier 1 model. GDP per capita in 2021 PPPs is \$12,276, under-5 mortality is 14.8 per 1,000 live births, life expectancy at birth is 71.1 years, and the rural population share is 18.1. To predict a consumption-based poverty rate, we first evaluate the following equation:
+
+$${X_{c,t}β_X}=-2.2640+0.4316*log⁡(12,276)-0.1532*log⁡(14.8)+0.0142*71.1-0.0027*18.1=2.34762$$
+
+Using the extreme poverty line of \$3.00, the predicted poverty rate becomes
+
+$$p_{LBY,2024}=\bigg[1+\Big(\frac{exp(2.34762)}{8.30}\Big)^{\frac{1}{0.3465}}\bigg]^{-1}=33.9\%$$
+
+This method is applied to 47 economies without any data in PIP, which make up less than 3% of the global population. Due to the large possible errors from any poverty imputation model, the poverty rates recovered using the method above are not reported on the PIP website. They are produced to be included in the regional and global aggregates. Users can see the poverty rates generated from this method through the Stata command by using the fillgaps option.
 
 ## Coverage rule {#coverage}
 

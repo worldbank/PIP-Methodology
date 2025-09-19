@@ -55,9 +55,9 @@ these steps in detail.
 All decisions, assumptions, and protocols involved in these steps and in
 the chapters that follow are governed by the World Bank's Global Poverty
 Working Group, which is composed of staff from the Poverty and Equity
-Global Practice, the Development Data Group, and the Development
+Global Department, the Development Data Group, and the Development
 Research Group.
 
 Please cite the handbook as follows: World Bank. 2025. "Poverty and
-Inequality Platform Methodology Handbook." Edition 2025-06. Available at
+Inequality Platform Methodology Handbook." Edition 2025-09. Available at
 <https://datanalytics.worldbank.org/PIP-Methodology/>.

@@ -1,6 +1,14 @@
+---
+editor_options: 
+  markdown: 
+    wrap: 72
+---
 
 # Non-technical summary {.unnumbered}
-This page summarizes the methodology in non-technical terms using five steps. The summary is followed by five chapters that dig into these steps in detail.
+
+This page summarizes the methodology in non-technical terms using five
+steps. The summary is followed by five chapters that dig into these
+steps in detail.
 
 The five steps are illustrated in the figure below and summarized after
 the figure. First, household survey data are obtained from relevant
@@ -12,7 +20,6 @@ Fourth, poverty and inequality are estimated for a particular country
 for a particular year. Fifth, the estimates of poverty are extrapolated
 or interpolated to a common year and the population-weighted poverty
 rate is calculated.
-
 
 ```{r, echo=FALSE}
 DiagrammeR::grViz("digraph {
@@ -96,9 +103,8 @@ other years. The extrapolations assume that everyone's income or
 consumption grows in parallel with per capita growth rates from
 [national accounts](#nationalaccounts) between the time of the survey
 and the year in question. For [countries without any household
-data](#nodata) at all, it is assumed that their poverty rate is equal to
-the population-weighted average poverty rate in their
-[region](#regionsandcountries). To ensure the quality of the regional
-and global numbers, [coverage rules](#coverage) are used to determine
-whether a particular reference year has sufficient nearby survey data
-for global and regional numbers to be presented.
+data](#nodata) at all, welfare distributions are predicted from a
+handful of variables. To ensure the quality of the regional and global
+numbers, [coverage rules](#coverage) are used to determine whether a
+particular reference year has sufficient nearby survey data for global
+and regional numbers to be presented.

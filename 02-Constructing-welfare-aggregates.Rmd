@@ -70,7 +70,7 @@ Though equivalence scales aren't used, it is important to note that each househo
 
 The bottom of consumption and income distributions is typically prone to measurement errors [@ravallion2016]. Zero (or very low) consumption is not plausible, given that a minimum consumption of food is required for human survival. Very low, zero, and even negative incomes are plausible due to negative capital income shocks, negative self-employment income, and more. In many cases, households with negative incomes might be relatively well off, and can cope by drawing down on savings [@hlasny2022]. As such, households with negative incomes might not be living in poverty.
 
-All poverty and inequality indicators in PIP are calculated using income and consumption distributions that drop negative incomes and replace all observations below $\$0.28$ per person per day with $\$0.28$ per person per day [@yonzanF;@jolliffe2025].
+All poverty and inequality indicators in PIP are calculated using income and consumption distributions that drop negative incomes and replace all observations below $\$0.28$ per person per day with $\$0.28$ per person per day [@yonzanF; @jolliffe2025].
 
 Bottom coding distributions do not affect the headcount ratio (all individuals are identified as poor either way) but are relevant for distribution-sensitive measures, such as the Gini index, mean log deviation, poverty gap, Watts index, and the Prosperity Gap. Small positive values can have an extreme influence on distribution sensitive indices [@cowell2006; @cowell2007].
 

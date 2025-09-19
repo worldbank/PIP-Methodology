@@ -24,13 +24,13 @@ The input data used in PIP from these sources are most often unit record data of
 
 ## How data are obtained
 
-In many low-income countries, the Poverty and Equity Global Practice of the World Bank is cooperating with the National Statistical Offices and supporting their efforts of conducting household surveys and measuring poverty. Data are obtained through these partnerships. This concerns most countries in East Asia & Pacific, the Middle East & North Africa, South Asia, and Sub-Saharan Africa.
+In many low-income countries, the Poverty and Equity Global Department of the World Bank is cooperating with the National Statistical Offices and supporting their efforts of conducting household surveys and measuring poverty. Data are obtained through these partnerships. This concerns most countries in East Asia & Pacific, the Middle East & North Africa, South Asia, and Sub-Saharan Africa.
 
-For Latin America and the Caribbean, most of the data are obtained from and harmonized by the CEDLAS's Socio-Economic Database for Latin America and the Caribbean (SEDLAC), which is a partnership between the Center for Distributive, Labor and Social Studies (CEDLAS) at the National University of La Plata in Argentina and the World Bank's Poverty and Equity Global Practice for Latin America and the Caribbean.
+For Latin America and the Caribbean, most of the data are obtained from and harmonized by the CEDLAS's Socio-Economic Database for Latin America and the Caribbean (SEDLAC), which is a partnership between the Center for Distributive, Labor and Social Studies (CEDLAS) at the National University of La Plata in Argentina and the World Bank's Poverty and Equity Global Department.
 
 For most high-income countries data are obtained through the Luxembourg Income Study or EU-SILC.
 
-All the data go through validity checks by the Poverty and Equity Global Practice of the World Bank. In certain occasions, the Poverty and Equity Global Practice is also responsible for harmonizing and constructing the welfare aggregates. The harmonized welfare aggregates are passed on to PIP.
+All the data go through validity checks by the Poverty and Equity Global Department of the World Bank. In certain occasions, the Poverty and Equity Global Department is also responsible for harmonizing and constructing the welfare aggregates. The harmonized welfare aggregates are passed on to PIP.
 
 ## Representativeness {#representativeness}
 
@@ -42,7 +42,7 @@ In the majority of cases, the surveys used are nationally representative of all 
 
 For the purpose of calculating global or regional poverty, the poverty rates estimated in the surveys are assumed to be representative of the entire population despite of the three shortcomings above. This is largely because acquiring any alternative poverty estimate for the missing populations is challenging.
 
-PIP also contains some surveys which explicitly only target the urban or rural part of the population. These surveys are not used for the purposes of calculating regional or global poverty, except for in Argentina, which only has surveys representative of their urban population. For the urban population of Argentina, these surveys are used for the regional and global poverty counts, while the rural population of Argentina gets the same treatment as [countries for which we have no data](#nodata).
+PIP also contains some surveys which explicitly only target the urban or rural part of the population. These surveys are not used for the purposes of calculating regional or global poverty, except for in Argentina, which only has surveys representative of their urban population.
 
 ## Grouped vs. unit record data {#grouped}
 

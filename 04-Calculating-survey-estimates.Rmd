@@ -8,6 +8,12 @@ Armed with welfare distributions expressed in 2021 PPPs and an international pov
 
 where $N$ is the total population size, $y_i$ is the welfare of individual $i$, $z$ is the poverty line, and $I(.)$ is an indicator function that takes on the value 1 if the bracketed expression is true or 0 otherwise. You can find the source code where this calculation is carried out [here](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R).
 
+**Societal poverty headcount ratio**: The societal poverty headcount ratio reflects a more relative concept of poverty. With the 2021 PPPs, the societal poverty line ($z_{sp}$) is defined as
+
+$$ z_{sp} = max($3.00,$1.30+0.5*median) $$
+
+That is, the societal poverty line is defined as \$1.30 plus half the median level of consumption in a country, or the international poverty line if \$1.30 plus half the median level of consumption is lower than the international poverty line [@jolliffe2024a; @jolliffe2025]. This line increases as a country grows (and the median increases). The societal poverty headcount ratio is simply the poverty headcount ratio using $z_{sp}$ as the poverty line.
+
 **Poverty gap index**: The poverty gap index ($P_1$) is a measure that adds up the extent to which individuals on average fall below the poverty line (i.e. the depth of poverty), and expresses it as a percentage of the poverty line. The poverty gap index is obtained from micro data with the following expression ([source code](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R)):
 
 $$ P_1 = \frac{1}{N} \sum_{i=1}^{N} \frac{G_i}{z} $$with $G_i = (z - y_i) × I (y_i < z)$, where $G_i$ is defined as the poverty gap (i.e. poverty line ($z$) less welfare ($y_i$)) of poor individuals; the gap is considered to be zero for everyone else.
@@ -31,7 +37,7 @@ In many settings, important aspects of well-being, such as access to quality edu
 The dimensions, indicators, and weights of the World Bank's multidimensional poverty measure are given as follows:
 
 | Dimension                      | Indicator                                                                           | Weight |
-|--------------------------------|-------------------------------------------------------------------------------------|--------|
+|-----------------|--------------------------------------|-----------------|
 | Monetary poverty               | Daily consumption or income is less than US\$3.00 per person                        | 1/3    |
 | Education                      | At least one school-age child up to the age of grade 8 is not enrolled in school    | 1/6    |
 | Education                      | No adult in the household (age of grade 9 or above) has completed primary education | 1/6    |
