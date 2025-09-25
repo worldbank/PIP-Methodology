@@ -14,11 +14,11 @@ The example below illustrates the consumption distribution from the 2016 Ghanaia
 
 ![](figures/GHA_example.png)
 
-When household surveys span two calendar years, the national accounts data used for extrapolation thes survey forward is the weighted average of the two years. The weights of the national accounts data is determined by the share of the fieldwork that took place in each year (see the end of the section \@ref(selection) for details).
+When household surveys span two calendar years, the national accounts data used for extrapolating the survey forward is the weighted average of the two years. The weights of the national accounts data is determined by the share of the fieldwork that took place in each year (see the end of the section \@ref(selection) for details).
 
 ## Interpolations {#interpolations}
 
-In cases where the reference year falls between two surveys, poverty is interpolated for the reference year using the nearest survey on each side of the reference year. One of two approaches are used depending on the correspondence in growth between national accounts and survey data.
+In cases where the reference year falls between two surveys, poverty is interpolated using the nearest survey on each side of the reference year. One of two approaches are used depending on the correspondence in growth between national accounts and survey data.
 
 Denoting $s_1$ the survey predating the reference year and $s_2$ the survey after the reference year, "same direction" interpolation is used when growth in the survey mean, $g^\mu_{s_1,s_2}$, between the two surveys is of the same sign as (1) the growth in national accounts from the first survey to the reference year, $g^{NA}_{s_1,r}$ and (2) from the reference year to the second survey, $g^{NA}_{r,s_2}$. This means that same direction interpolation is used when
 
@@ -103,12 +103,12 @@ With the [interpolation](#interpolations) and [extrapolation](#extrapolations) r
 
 If either of the first two conditions apply, the economy will be missing for all years, while if only the last condition applies, the economy will be missing in the years where GDP data is missing. In these country-year combinations, for the purpose of calculating regional and global poverty estimates, PIP applies an imputation approach developed in @mahler2025. The approach uses a handful of variables that are available in all (or nearly all) economies to predict full welfare distributions. Four models are used depending on whether GDP per capita data is available and depending on whether welfare should be predicted in 2021 PPPs or 2017 PPPs. The model where GDP per capita is available is referred to as Tier 1 while the model where GDP per capita is not available is referred to as Tier 2. Welfare, $y_{c,t}$ for country $c$ and year $t$ is predicted as follows:
 
-$$ln⁡(y_{c,t})=\mathbf{X_{c,t}β_X}+ln⁡(\frac{p}{1-p})\mathbf{Z_{c,t}β_Z}$$ Here $\mathbf{X}$ and $\mathbf{Z}$ are vectors of variables predictive of welfare and $\mathbf{β_X}$ and $\mathbf{β_Z}$ are vectors of corresponding coefficients, both shown in the table below. $p$ is a quantile on the distribution going from 0-1. 10,000 points using values of $p$ equally spaced between 0 and 1 are used to generate a full distribution of welfare $y_{c,t}$.
+$$ln⁡(y_{c,t})=\mathbf{X_{c,t}β_X}+\ln⁡(\frac{p}{1-p})\mathbf{Z_{c,t}β_Z}$$ Here $\mathbf{X}$ and $\mathbf{Z}$ are vectors of variables predictive of welfare and $\mathbf{β_X}$ and $\mathbf{β_Z}$ are vectors of corresponding coefficients, both shown in the table below. $p$ is a quantile on the distribution going from 0-1. 10,000 points using values of $p$ equally spaced between 0 and 1 are used to generate a full distribution of welfare $y_{c,t}$.
 
 Table : Coefficients estimated to predict full distributions for missing countries
 
 | Outcome variable: Log welfare, $ln(y)$        | 2021 PPPs     |                 | 2017 PPPs     |                 |
-|-------------------|--------------|--------------|--------------|--------------|
+|---------------|---------------|---------------|---------------|---------------|
 |                                               | Tier 1        | Tier 2          | Tier 1        | Tier 2          |
 |                                               | GDP available | GDP unavailable | GDP available | GDP unavailable |
 | $\mathbf{X}$                                  |               |                 |               |                 |
@@ -127,7 +127,7 @@ Table : Coefficients estimated to predict full distributions for missing countri
 | $\mathbf{Z}$                                  |               |                 |               |                 |
 | Intercept                                     | 0.3465        | 0.3453          | 0.3719        | 0.3181          |
 | I[Europe & Central Asia]                      | -0.0264       | -0.0229         | -0.0574       | -0.0037         |
-| I[Latin America & Caribbean}                  | 0.1482        | 0.1526          | 0.1232        | 0.1752          |
+| I[Latin America & Caribbean]                  | 0.1482        | 0.1526          | 0.1232        | 0.1752          |
 | I[Sub-Saharan Africa]                         | 0.0609        | 0.0665          | 0.0246        | 0.0683          |
 
 The output from the table can be used to directly predict poverty rates if one isolates p, which can then be interpreted as a poverty rate, and y is interpreted as the corresponding poverty line, as per the following equation:
@@ -136,7 +136,7 @@ $$p_{c,t}=\bigg[1+\Big(\frac{\mathbf{exp⁡(X_{c,t}β_X)}}{y}\Big)^{\frac{1}{\ma
 
 Suppose we want to predict the poverty rate at the \$8.30 line in Libya (a missing country in PIP) in 2024. GDP per capita in 2021 PPPs is available, so we can use the Tier 1 model. GDP per capita in 2021 PPPs is \$12,276, under-5 mortality is 14.8 per 1,000 live births, life expectancy at birth is 71.1 years, and the rural population share is 18.1. To predict a consumption-based poverty rate, we first evaluate the following equation:
 
-$${X_{c,t}β_X}=-2.2640+0.4316*log⁡(12,276)-0.1532*log⁡(14.8)+0.0142*71.1-0.0027*18.1=2.34762$$
+$${X_{c,t}β_X}=-2.2640+0.4316*\ln(12,276)-0.1532*\ln(14.8)+0.0142*71.1-0.0027*18.1=2.34762$$
 
 Using the extreme poverty line of \$3.00, the predicted poverty rate becomes
 
@@ -153,3 +153,5 @@ To avoid presenting regional and global numbers based on outdated or no data, co
 An additional coverage requirement is applied to govern when global poverty estimates are reported for a given reference year. This requirement addresses the goal of focusing the measurement of global poverty on economies where most of the poor live. Specifically, it tries to avoid a situation in which the global population threshold is met by having recent data in high-income countries, East Asia & Pacific, and Latin America & the Caribbean, which together account for a small share of the global extreme poor. Under this requirement, global poverty estimates are reported only if data are representative of at least 50 percent of the population in low-income and lower-middle-income countries, because most of the poor live in these groups of countries. [The World Bank classification of economies according to income groups](https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups) in the reference year is used. This requirement is only applied to the global poverty estimate, not to regional estimates (for more details see @castanedaaguilar2020).
 
 During the COVID-19 pandemic, countries experienced economic shocks and volatility at an unprecedented scale, which means that [extrapolating](#extrapolations) from a pre-COVID survey may work less well. For that reason, for calculating coverage in 2020, 2021, and 2022, surveys before 2020 are not counted. Analogously, surveys conducted in 2020 and after are not counted for coverage calculations for 2017, 2018, and 2019. That is, a censored three-year window is used for coverage calculations, such that only regions with sufficient data pre or post-COVID have aggregates reported [@castanedaaguilar2024]. This is a conservative approach that is warranted by the exceptional volatility in economic conditions.
+
+In addition to the rules above, we do not consider there to be regional or global coverage for the present year because extrapolations to the present rely on GDP nowcasts, which involve greater uncertainty than official GDP estimates. We consider there to be coverage in a year when official GDP estimates exist in the World Development Indicators (WDI). GDP estimates for year $t-1$ are released in WDI July 1 of year $t$.

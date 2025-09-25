@@ -4,7 +4,7 @@ This chapter describes the data sources used for measuring poverty and inequalit
 
 ## Selection criteria and source of data {#selection}
 
-For most countries, the Poverty and Inequality Platform (PIP) relies on household surveys carried out by countries' National Statistical Offices (NSO). Typically, official surveys used to report poverty for the country are used. This includes household budget surveys or household income and expenditure surveys. These surveys ask a representative sample households in the country detailed questions about their income and/or consumption and much more. In some occasions, the World Bank is a co-producer of these surveys.
+For most countries, the Poverty and Inequality Platform (PIP) relies on household surveys carried out by countries' National Statistical Offices (NSO). Typically, official surveys used to report poverty for the country are used. This includes household budget surveys or household income and expenditure surveys. These surveys ask a representative sample of households in the country detailed questions about their income and/or consumption and much more. On some occasions, the World Bank is a co-producer of these surveys.
 
 Other surveys on consumption or income, such as surveys carried out by academic institutions and private sector companies are generally not included in PIP. The primary reason for this is that the estimates from PIP are the official vehicle for countries' reporting on the [Sustainable Development Goal target 1.1.1](https://sdgs.un.org/goals/goal1) on extreme poverty, which ought to come from sources that are officially recognized by countries.
 
@@ -40,11 +40,11 @@ In the majority of cases, the surveys used are nationally representative of all 
 2.  Some individuals do not reside in households as defined in household surveys and hence are not captured by the above sampling frame. This particularly concerns homeless people and individuals residing in nursery homes, prisons, and displacement camps.
 3.  At times, conflicts and extreme weather events prevent enumerators from going to certain parts of a country. In these cases, some geographical areas may be excluded from the survey. The 2018-19 Nigeria Living Standards Survey, for example, is not representative of the Borno state, since parts of the state became inaccessible over the course of the survey.
 
-For the purpose of calculating global or regional poverty, the poverty rates estimated in the surveys are assumed to be representative of the entire population despite of the three shortcomings above. This is largely because acquiring any alternative poverty estimate for the missing populations is challenging.
+For the purpose of calculating global or regional poverty, the poverty rates estimated in the surveys are assumed to be representative of the entire population despite the three shortcomings above. This is largely because acquiring any alternative poverty estimate for the missing populations is challenging.
 
-PIP also contains some surveys which explicitly only target the urban or rural part of the population. These surveys are not used for the purposes of calculating regional or global poverty, except for in Argentina, which only has surveys representative of their urban population.
+PIP also contains some surveys which explicitly only target the urban or rural part of the population. These surveys are not used for the purposes of calculating regional or global poverty, except in Argentina, which only has surveys representative of their urban population. In Argentina, for the purposes of calculating regional and global poverty rates, the urban poverty rate is applied as a national poverty rate.
 
-## Grouped vs. unit record data {#grouped}
+## Grouped vs. unit-record data {#grouped}
 
 In some cases, countries are unwilling to share unit-record data with the World Bank but they are willing to share grouped data. Grouped data are aggregated data, often to 5, 10, 20, or 100 quantiles of the distribution. Such data could reflect, for example, the mean income of each percentile or the income share of each percentile. For the purposes of estimating poverty and inequality, a Lorenz curve is estimated from these grouped data upon which inequality and poverty can be estimated ([described here](#tgd)). Grouped data are used for Algeria, China, Guyana, Turkmenistan, Trinidad & Tobago, Venezuela, and the United Arab Emirates and more countries for earlier years.
 

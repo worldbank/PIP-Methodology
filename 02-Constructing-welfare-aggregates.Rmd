@@ -42,7 +42,7 @@ When constructing a welfare aggregate, one is met with the challenge that prices
 
 ### Spatial deflation
 
-Suppose a household pays \$1 for a kilo of rice in an urban center, while a rural household in the same country only pays \$0.5 for a similar quality and amount of rice. If one were to assess poverty based on the value of the goods and services consumed without accounting for these price differences, everything else equal, one would conclude that the rural household is poorer than the urban household. Yet, from a welfare perspective, they are equally well off. To properly compare the welfare levels of the two households one needs to account for the differences in price levels that the two households face.
+Suppose a household pays \$1 for a kilo of rice in an urban center, while a rural household in the same country only pays \$0.5 for a similar quality and amount of rice. If one were to assess poverty based on the value of the goods and services consumed without accounting for these price differences, all else being equal, one would conclude that the rural household is poorer than the urban household. Yet, from a welfare perspective, they are equally well off. To properly compare the welfare levels of the two households one needs to account for the differences in price levels that the two households face.
 
 There are several ways to account for spatial price differences. One way is to compare the price of a representative basket of goods across locations and convert household consumption expenditure into the prices of a reference location, such as the capital city or the national average price level.
 
@@ -54,7 +54,7 @@ Household surveys are often carried out over several months, leading to the poss
 
 Sometimes, a spatio-temporal price index is used to jointly adjust for both spatial and temporal price differences. The household welfare aggregate from the survey conducted in Ghana in 2016-17, for example, is evaluated at 2013 Greater Accra regional prices.
 
-All surveys used by PIP are assigned to a particular year using two variables *year* and *datayear*. If all fieldwork for a survey took place during one calendar year, and relate to the consumption or income of that year, *year* and *datayear* are both equal to this calendar year. When household surveys span two calendar years, the *datayear* noted in the Poverty and Inequality Platform is not an integer. The Gambia, for example, has a datayear of 2015.31. This means that 69% of the fieldwork for this particular survey took place in 2015 while 31% of the fieldwork months took place in 2016. In these cases, the *year* information is the floor of *datayear.* The *datayear* is used for [interpolations](#interpolation), [extrapolations](#extrapolations), and at times, for the [inflation](#CPIs) to convert the welfare vector to constant prices. Notice that in some cases neither the *datayear* nor the *year* align with the year of the survey. For EU-SILC surveys, for example, the income information asked in a survey in given year relates to income of the previous year. Here, the *datayear* and *year* will both be one year prior to the year the survey was carried out.
+All surveys used by PIP are assigned to a particular year using two variables *year* and *datayear*. If all fieldwork for a survey took place during one calendar year, and relate to the consumption or income of that year, *year* and *datayear* are both equal to this calendar year. When household surveys span two calendar years, the *datayear* noted in the Poverty and Inequality Platform is not an integer. The Gambia, for example, has a datayear of 2015.31. This means that 69% of the fieldwork for this particular survey took place in 2015 while 31% of the fieldwork months took place in 2016. In these cases, the *year* information is the floor of *datayear.* The *datayear* is used for [interpolations](#interpolation), [extrapolations](#extrapolations), and at times, for the [inflation](#CPIs) to convert the welfare vector to constant prices. Notice that in some cases neither the *datayear* nor the *year* align with the year of the survey. For EU-SILC surveys, for example, the income information asked in a survey in a given year relates to income of the previous year. Here, the *datayear* and *year* will both be one year prior to the year the survey was carried out.
 
 ## Equivalence scale
 
@@ -62,7 +62,7 @@ All welfare aggregates are converted into per capita terms by dividing the total
 
 This assumption can be questioned [@lanjouw1995; @jolliffe2024b]. If household members have different needs, which could be the case if children, for example, require less consumption than adults, then using per capita welfare might be misleading. The assumption would also be violated if household members with the same needs do not get the same share of household income and consumption. Evidence has shown that females often get less than an equal part of household income and consumption (see chapter 5 of @worldbank2018 and references therein). An alternative assumption often used by countries when measuring poverty, is to use an adult equivalence scale. Such a scale defines the consumption need of each household member---often based on age and the household size---relative to a benchmark. Total household welfare is then converted into welfare per adult equivalent household member.
 
-Despite of its compelling features, the lack of agreement on which equivalence scale to use across countries and the more difficult interpretation of the final poverty rates have prevented the World Bank from using such numbers for global poverty monitoring thus far. Per capita estimates have the advantage that they have a clear counterpart in national accounts, which matters for [extrapolating](#extrapolations) and [interpolating poverty](#interpolations) estimates to a common reference year.
+Despite its compelling features, the lack of agreement on which equivalence scale to use across countries and the more difficult interpretation of the final poverty rates have prevented the World Bank from using such numbers for global poverty monitoring thus far. Per capita estimates have the advantage that they have a clear counterpart in national accounts, which matters for [extrapolating](#extrapolations) and [interpolating poverty](#interpolations) estimates to a common reference year.
 
 Though equivalence scales aren't used, it is important to note that each household is weighted by the product of its sampling weight and the household size. The latter implies that the poverty rates show the share of the *population* living in poverty, not the share of *households* living in poverty.
 
@@ -72,7 +72,7 @@ The bottom of consumption and income distributions is typically prone to measure
 
 All poverty and inequality indicators in PIP are calculated using income and consumption distributions that drop negative incomes and replace all observations below $\$0.28$ per person per day with $\$0.28$ per person per day [@yonzanF; @jolliffe2025].
 
-Bottom coding distributions do not affect the headcount ratio (all individuals are identified as poor either way) but are relevant for distribution-sensitive measures, such as the Gini index, mean log deviation, poverty gap, Watts index, and the Prosperity Gap. Small positive values can have an extreme influence on distribution sensitive indices [@cowell2006; @cowell2007].
+Bottom coding distributions do not affect the headcount ratio (all individuals are identified as poor either way) but are relevant for distribution-sensitive measures, such as the Gini index, mean log deviation, poverty gap, Watts index, and the Prosperity Gap. Small positive values can have an extreme influence on distribution-sensitive indices [@cowell2006; @cowell2007].
 
 ## Treatment of grouped data {#tgd}
 
@@ -90,7 +90,7 @@ $$
 L(p) = p - \theta p^\gamma (1-p)^\delta,
 $$ where $\theta$, $\gamma$, and $\delta$ are parameter estimates [@datt1998].
 
-After selecting the best approach (either GQ or Beta) for each set of group data, a synthetic welfare vector is generated, and it is treated as any unit-record data for poverty and inequality estimation.
+After selecting the best approach (either GQ or Beta) for each set of grouped data, a synthetic welfare vector is generated, and it is treated as any unit-record data for poverty and inequality estimation.
 
 ## Comparability of estimates {#comparability}
 

@@ -50,9 +50,8 @@ Statistics on Income and Living Conditions
 (EU-SILC)](https://ec.europa.eu/eurostat/web/microdata/european-union-statistics-on-income-and-living-conditions)
 or from the [Luxembourg Income Study (LIS)
 Database](https://www.lisdatacenter.org). At times, household-level data
-cannot be obtained in which case, as a second best,
-[aggregated](#grouped) data are used, such as income or consumption by
-population deciles.
+cannot be obtained in which case, as second best, [aggregated](#grouped)
+data are used, such as income or consumption by population deciles.
 
 ## Step 2: [Constructing welfare aggregates](#welfareaggregate) {.unnumbered}
 
@@ -65,9 +64,9 @@ aggregates are harmonized across countries and over time to maximize
 issues such as [whether income or consumption is
 used](#incomeorconsumption), [the design of the
 questionnaire](#questionnaire) of the household survey, what [components
-that are included](#imputedrent) in the welfare aggregate, and whether
-[price differences within a country](#spatialtemporal) are accounted
-for, imply that full comparability is not feasible.
+are included](#imputedrent) in the welfare aggregate, and whether [price
+differences within a country](#spatialtemporal) are accounted for, imply
+that full comparability is not feasible.
 
 ## Step 3: [Converting welfare aggregates](#convert) {.unnumbered}
 
