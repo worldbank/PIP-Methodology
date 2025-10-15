@@ -1,6 +1,6 @@
 # Calculating global and regional estimates {#lineupestimates}
 
-Few countries have survey estimates of poverty available every year. To estimate poverty at the regional and global level, the survey estimates need to be aligned to a reference year and aggregated. Such alignment and aggregation require assumptions about how to interpolate and extrapolate data as well as how to treat countries without any household survey data at all. This section explains how these calculations are made. Source code can be found [here](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/predict_request_year_mean.R) and [here](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/fill_gaps.R).
+Few countries have survey estimates of poverty available every year. To estimate poverty at the regional and global level, the survey estimates need to be aligned to a reference year and aggregated. Such alignment and aggregation require assumptions about how to interpolate and extrapolate data as well as how to treat countries without any household survey data at all. This section explains how these calculations are made. Source code can be found [here](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/predict_request_year_mean.R) and [here](https://github.com/PIP-Technical-Team/wbpip/blob/master/R/fill_gaps.R), and the estimations are implemented [here](https://github.com/PIP-Technical-Team/pip_lineups_pipeline).
 
 ## Extrapolations {#extrapolations}
 
@@ -8,7 +8,7 @@ For countries that do not have welfare aggregates at a specific reference year, 
 
 $$\mathbf{y_r} = \mathbf{y_{s}}*\prod_{t=s}^{r-1}{(1+passthrough*g^{NA}_{t,t+1})}$$
 
-where $g^{NA}_{t,t+1}$ is growth real GDP per capita or real HFCE per capita as explained in the [national accounts data section](#nationalaccounts), and $passthrough$ equals $0.7$ or $1$. Poverty for the reference year is then estimated using this extrapolated distribution. A similar approach is used to extrapolate backwards, when the earliest survey estimate available is more recent than the desired reference year. The extrapolation method assumes distribution-neutral growth, i.e. that everyone's welfare grows at the same rate. This implies that inequality is assumed to stay constant.
+where $g^{NA}_{t,t+1}$ is growth real GDP per capita or real HFCE per capita as explained in the [national accounts data section](#nationalaccounts), and $passthrough$ equals $0.7$ or $1$. Poverty for the reference year is then estimated using this extrapolated distribution, applying the relevant bottom-coding at the reference year, as discussed in the prior section on [bottom coding in chapter 2](#bottom). A similar approach is used to extrapolate backwards, when the earliest survey estimate available is more recent than the desired reference year. The extrapolation method assumes distribution-neutral growth, i.e. that everyone's welfare grows at the same rate. This implies that inequality is assumed to stay constant.
 
 The example below illustrates the consumption distribution from the 2016 Ghanaian survey expressed in 2021 PPP-adjusted dollars, and the 2023 Ghanaian distribution when extrapolating this welfare vector to 2023 using the method described above. The 2016 daily consumption mean is $\$4.91$ and the growth rate in real GDP per capita between 2016 and 2023 is $14\%$. The positive growth rate pushes the extrapolated distribution to the right, representing increased consumption levels, causing the share of extreme poor -- those living below the $\$3.00$ poverty line -- to decrease from $40.5\%$ in 2016 to $34.5\%$ in 2023.
 
@@ -31,7 +31,7 @@ Interpolations are never done between consumption and income aggregates. Wheneve
 
 ### "Same direction" interpolation
 
-"Same direction" interpolation works in three steps. First, the survey mean at the reference year, $μ_{r}$, is estimated using the following interpolation formula:
+"Same direction" interpolation works in five steps. First, the survey mean at the reference year, $μ_{r}$, is estimated using the following interpolation formula:
 
 $$μ_{r} = (μ_{s_2} - μ_{s_1}) \times \dfrac{\prod_{t=s_1}^{r-1}{(1+passthrough*g^{NA}_{t,t+1})}-1}{\prod_{t=s_1}^{s_2-1}{(1+passthrough*g^{NA}_{t,t+1})}-1} + μ_{s_1}$$
 
@@ -41,13 +41,11 @@ $$\mathbf{y_{r_1}} = \dfrac{μ_{r}}{μ_{s_1}} \times \mathbf{y_{s_1}}, \hspace{5
 
 After this alignment, there will be two distributions with the same mean for the reference year but with different distributional shapes.
 
-At the third step, poverty is estimated from each of these distributions, and the final poverty estimate at the reference year is the weighted average poverty rate from both distributions where each poverty estimate is weighted by the inverse of the relative distance between the survey year and the reference year:
-
-$$P_{0,r} = \dfrac{P_{0,r_1}*(t_{s_2}-t_{r})+P_{0,r_2}*(t_{r}-t_{s_1})}{t_{s_2}-t_{s_1}} $$For example, if a reference year falls two years after the first survey and one year before the second survey, the poverty estimate from the first survey is given a weight of $1/3$ and the estimate from the second survey a weight of $2/3$.
+Third, the interpolated surveys are stacked and reweighted by each survey's relative proximity to the reference year. Fourth, the weights of the stacked distribution are rescaled to match the population totals in the reference year. Lastly, the bottom-coding occurs for the new, full interpolated welfare distribution at the reference year. This distribution is now used to find attain the poverty estimates using the [methods discussed above](#monetarypoverty).
 
 ### "Diverging directions" interpolation
 
-If the growth rates in surveys and national accounts diverge, an approach similar to the extrapolation is applied to the two closest surveys; poverty is extrapolated forward by (a fraction of) the national account growth rate using the early survey and backwards using the later survey. Poverty for the reference year is estimated using both distributions and the estimates are averaged using the formula above.
+If the growth rates in surveys and national accounts diverge, an approach similar to the extrapolation is applied to the two closest surveys; the distributions are extrapolated forward by (a fraction of) the national account growth rate using the early survey and backwards using the later survey. At this point, steps three to five for the "same direction" interpolation are followed.
 
 The mechanics of the extrapolation and interpolation (without accounting for passthrough rates) are described in @ravallion2003, @chen2004, box 6.4 in @jolliffe2015, and in Appendix A of @worldbank2018.
 
