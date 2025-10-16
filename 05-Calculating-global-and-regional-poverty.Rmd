@@ -8,7 +8,7 @@ For countries that do not have welfare aggregates at a specific reference year, 
 
 $$\mathbf{y_r} = \mathbf{y_{s}}*\prod_{t=s}^{r-1}{(1+passthrough*g^{NA}_{t,t+1})}$$
 
-where $g^{NA}_{t,t+1}$ is growth real GDP per capita or real HFCE per capita as explained in the [national accounts data section](#nationalaccounts), and $passthrough$ equals $0.7$ or $1$. Poverty for the reference year is then estimated using this extrapolated distribution, applying the relevant bottom-coding at the reference year, as discussed in the prior section on [bottom coding in chapter 2](#bottom). A similar approach is used to extrapolate backwards, when the earliest survey estimate available is more recent than the desired reference year. The extrapolation method assumes distribution-neutral growth, i.e. that everyone's welfare grows at the same rate. This implies that inequality is assumed to stay constant.
+where $g^{NA}_{t,t+1}$ is growth real GDP per capita or real HFCE per capita as explained in the [national accounts data section](#nationalaccounts), and $passthrough$ equals $0.7$ or $1$. Poverty for the reference year is then estimated using this extrapolated distribution, applying the relevant [bottom-coding](#bottom) at the reference year. A similar approach is used to extrapolate backwards, when the earliest survey estimate available is more recent than the desired reference year. The extrapolation method assumes distribution-neutral growth, i.e. that everyone's welfare grows at the same rate. This implies that inequality is assumed to stay constant.
 
 The example below illustrates the consumption distribution from the 2016 Ghanaian survey expressed in 2021 PPP-adjusted dollars, and the 2023 Ghanaian distribution when extrapolating this welfare vector to 2023 using the method described above. The 2016 daily consumption mean is $\$4.91$ and the growth rate in real GDP per capita between 2016 and 2023 is $14\%$. The positive growth rate pushes the extrapolated distribution to the right, representing increased consumption levels, causing the share of extreme poor -- those living below the $\$3.00$ poverty line -- to decrease from $40.5\%$ in 2016 to $34.5\%$ in 2023.
 
@@ -41,7 +41,7 @@ $$\mathbf{y_{r_1}} = \dfrac{μ_{r}}{μ_{s_1}} \times \mathbf{y_{s_1}}, \hspace{5
 
 After this alignment, there will be two distributions with the same mean for the reference year but with different distributional shapes.
 
-Third, the interpolated surveys are stacked and reweighted by each survey's relative proximity to the reference year. Fourth, the weights of the stacked distribution are rescaled to match the population totals in the reference year. Lastly, the bottom-coding occurs for the new, full interpolated welfare distribution at the reference year. This distribution is now used to find attain the poverty estimates using the [methods discussed above](#monetarypoverty).
+Third, the interpolated surveys are stacked and reweighted by each survey's relative proximity to the reference year. Fourth, the weights of the stacked distribution are rescaled to match the population totals in the reference year. Lastly, the bottom-coding occurs for the new, interpolated welfare distribution at the reference year. This distribution is now used to derive poverty estimates.
 
 ### "Diverging directions" interpolation
 
