@@ -3,4 +3,7 @@
 .RData
 .Ruserdata
 /.Rhistory
+# Ignore all .json files...
 *.json
+# ...except manifest.json
+!manifest.json
