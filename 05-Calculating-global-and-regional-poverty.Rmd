@@ -99,14 +99,14 @@ With the [interpolation](#interpolations) and [extrapolation](#extrapolations) r
 2.  The economy does not have credible [PPPs](#PPPs) necessary to convert welfare vectors to cross-country comparable currencies.
 3.  The economy is missing GDP data for a subset of years necessary to extrapolate and interpolate survey estimates.
 
-If either of the first two conditions apply, the economy will be missing for all years, while if only the last condition applies, the economy will be missing in the years where GDP data is missing. In these country-year combinations, for the purpose of calculating regional and global poverty estimates, PIP applies an imputation approach developed in @mahler2025. The approach uses a handful of variables that are available in all (or nearly all) economies to predict full welfare distributions. Four models are used depending on whether GDP per capita data is available and depending on whether welfare should be predicted in 2021 PPPs or 2017 PPPs. The model where GDP per capita is available is referred to as Tier 1 while the model where GDP per capita is not available is referred to as Tier 2. Welfare, $y_{c,t}$ for country $c$ and year $t$ is predicted as follows:
+If either of the first two conditions apply, the economy will be missing for all years, while if only the last condition applies, the economy will be missing in the years where GDP data is missing. In these country-year combinations, for the purpose of calculating regional and global poverty estimates, PIP applies an imputation approach developed in @mahler2026. An excel tool to explore the method is available [here](https://github.com/PIP-Technical-Team/aux_missing_countries/raw/refs/heads/main/International_Poverty_Imputation_Calculator_For_Countries_Without_Microdata.xlsx). The approach uses a handful of variables that are available in all (or nearly all) economies to predict full welfare distributions. Four models are used depending on whether GDP per capita data is available and depending on whether welfare should be predicted in 2021 PPPs or 2017 PPPs. The model where GDP per capita is available is referred to as Tier 1 while the model where GDP per capita is not available is referred to as Tier 2. Welfare, $y_{c,t}$ for country $c$ and year $t$ is predicted as follows:
 
 $$ln⁡(y_{c,t})=\mathbf{X_{c,t}β_X}+\ln⁡(\frac{p}{1-p})\mathbf{Z_{c,t}β_Z}$$ Here $\mathbf{X}$ and $\mathbf{Z}$ are vectors of variables predictive of welfare and $\mathbf{β_X}$ and $\mathbf{β_Z}$ are vectors of corresponding coefficients, both shown in the table below. $p$ is a quantile on the distribution going from 0-1. 10,000 points using values of $p$ equally spaced between 0 and 1 are used to generate a full distribution of welfare $y_{c,t}$.
 
 Table : Coefficients estimated to predict full distributions for missing countries
 
 | Outcome variable: Log welfare, $ln(y)$        | 2021 PPPs     |                 | 2017 PPPs     |                 |
-|---------------|---------------|---------------|---------------|---------------|
+|------------------------|------------|------------|------------|------------|
 |                                               | Tier 1        | Tier 2          | Tier 1        | Tier 2          |
 |                                               | GDP available | GDP unavailable | GDP available | GDP unavailable |
 | $\mathbf{X}$                                  |               |                 |               |                 |
@@ -136,7 +136,7 @@ Suppose we want to predict the poverty rate at the \$8.30 line in Libya (a missi
 
 $${X_{c,t}β_X}=-2.2640+0.4316*\ln(12,276)-0.1532*\ln(14.8)+0.0142*71.1-0.0027*18.1=2.34762$$
 
-Using the extreme poverty line of \$3.00, the predicted poverty rate becomes
+Using the extreme poverty line of \$8.30, the predicted poverty rate becomes
 
 $$p_{LBY,2024}=\bigg[1+\Big(\frac{exp(2.34762)}{8.30}\Big)^{\frac{1}{0.3465}}\bigg]^{-1}=33.9\%$$
 
