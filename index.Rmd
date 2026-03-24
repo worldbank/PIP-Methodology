@@ -58,6 +58,6 @@ Working Group, which is composed of staff from the Poverty and Equity
 Global Department, the Development Data Group, and the Development
 Research Group.
 
-Please cite the handbook as follows: World Bank. 2025. "Poverty and
-Inequality Platform Methodology Handbook." Edition 2025-09. Available at
+Please cite the handbook as follows: World Bank. 2026. "Poverty and
+Inequality Platform Methodology Handbook." Edition 2026-03. Available at
 <https://datanalytics.worldbank.org/PIP-Methodology/>.
