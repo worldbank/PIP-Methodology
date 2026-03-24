@@ -37,7 +37,7 @@ In many settings, important aspects of well-being, such as access to quality edu
 The dimensions, indicators, and weights of the World Bank's multidimensional poverty measure are given as follows:
 
 | Dimension                      | Indicator                                                                           | Weight |
-|------------------|-------------------------------------|------------------|
+|------------------|------------------------------------|------------------|
 | Monetary poverty               | Daily consumption or income is less than US\$3.00 per person                        | 1/3    |
 | Education                      | At least one school-age child up to the age of grade 8 is not enrolled in school    | 1/6    |
 | Education                      | No adult in the household (age of grade 9 or above) has completed primary education | 1/6    |
@@ -136,4 +136,4 @@ The [percentiles database](https://datacatalog.worldbank.org/int/search/dataset/
 
 Each percentile distribution reports 100 points per country per survey year ranked from the smallest income (percentile 1) to the largest (percentile 100). For each percentile, the database reports the following variables: The average welfare within the percentile group (avg_welfare); the value for the upper threshold of the percentile group (quantile); the share of the population in the percentile group (which might deviate slightly from 1% due to coarseness in the raw data) (pop_share); and the share of income held by each percentile group (welfare_share). In addition, the database reports the welfare measure (welfare_type) used in the survey data — income or consumption — and the region covered (reporting_level) - urban, rural, or national. The database can be merged with the PIP data using the country_code, reporting_level, year, and welfare_type variables.
 
-For surveys with access to the microdata and for distributions based on binned data, the Stata quantiles function is used to allocate the survey population into 100 equally sized percentiles. The income and consumption averages, thresholds, and shares of each percentile is derived using the population and their income or consumption in each bin. The quantiles function to bin the distribution is used consistently throughout PIP when bins are necessary. For instance, the same approach is used to derive the 400 bins from LIS data.
+For surveys with access to the microdata and for distributions based on binned data, the Stata quantiles function is used to allocate the survey population into 100 equally sized percentiles. The income and consumption averages, thresholds, and shares of each percentile is derived using the population and their income or consumption in each bin. The quantiles function to bin the distribution is used consistently throughout PIP when bins are necessary. For instance, the same approach is used to derive the 1000 bins from LIS data.
