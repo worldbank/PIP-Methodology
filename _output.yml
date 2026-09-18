@@ -1,5 +1,7 @@
 bookdown::gitbook:
   highlight: tango
+  includes:
+    in_header: includes/deepwiki-icon.html
   config:
     toc:
       scroll_highlight: yes
