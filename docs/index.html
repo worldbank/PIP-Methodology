@@ -7,7 +7,7 @@
   <title>Poverty and Inequality Platform Methodology Handbook</title>
   <meta name="description" content="<p>This site describes how global and regional poverty rates are
 •calculated.</p>" />
-  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Poverty and Inequality Platform Methodology Handbook" />
   <meta property="og:type" content="book" />
@@ -57,6 +57,21 @@
 <script src="libs/viz-1.8.2/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
 <script src="libs/grViz-binding-1.0.11/grViz.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var githubLink = document.querySelector('.book-header a[href*="github.com/worldbank/PIP-Methodology"]');
+  if (githubLink) {
+    var deepwikiLink = document.createElement("a");
+    deepwikiLink.href = "https://deepwiki.com/worldbank/PIP-Methodology";
+    deepwikiLink.target = "_blank";
+    deepwikiLink.rel = "noopener noreferrer";
+    deepwikiLink.className = githubLink.className;
+    deepwikiLink.title = "Ask DeepWiki about this handbook";
+    deepwikiLink.innerHTML = '<i class="fa fa-comments"></i>';
+    githubLink.parentNode.insertBefore(deepwikiLink, githubLink.nextSibling);
+  }
+});
+</script>
 
 
 
@@ -114,7 +129,7 @@ div.csl-indent {
 <li class="chapter" data-level="1.1" data-path="acquiring.html"><a href="acquiring.html#selection"><i class="fa fa-check"></i><b>1.1</b> Selection criteria and source of data</a></li>
 <li class="chapter" data-level="1.2" data-path="acquiring.html"><a href="acquiring.html#how-data-are-obtained"><i class="fa fa-check"></i><b>1.2</b> How data are obtained</a></li>
 <li class="chapter" data-level="1.3" data-path="acquiring.html"><a href="acquiring.html#representativeness"><i class="fa fa-check"></i><b>1.3</b> Representativeness</a></li>
-<li class="chapter" data-level="1.4" data-path="acquiring.html"><a href="acquiring.html#grouped"><i class="fa fa-check"></i><b>1.4</b> Grouped vs. unit record data</a></li>
+<li class="chapter" data-level="1.4" data-path="acquiring.html"><a href="acquiring.html#grouped"><i class="fa fa-check"></i><b>1.4</b> Grouped vs. unit-record data</a></li>
 <li class="chapter" data-level="1.5" data-path="acquiring.html"><a href="acquiring.html#imputed"><i class="fa fa-check"></i><b>1.5</b> Multiple imputed micro data</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="welfareaggregate.html"><a href="welfareaggregate.html"><i class="fa fa-check"></i><b>2</b> Constructing welfare aggregates</a>
@@ -194,10 +209,13 @@ these steps in detail.</p>
 <p>All decisions, assumptions, and protocols involved in these steps and in
 the chapters that follow are governed by the World Bank’s Global Poverty
 Working Group, which is composed of staff from the Poverty and Equity
-Global Practice, the Development Data Group, and the Development
+Global Department, the Development Data Group, and the Development
 Research Group.</p>
-<p>Please cite the handbook as follows: World Bank. 2025. “Poverty and
-Inequality Platform Methodology Handbook.” Edition 2025-06. Available at
+<p>For an interactive way to explore this handbook and ask questions about
+its content, visit the <a href="https://deepwiki.com/worldbank/PIP-Methodology">DeepWiki page</a>
+for this repository.</p>
+<p>Please cite the handbook as follows: World Bank. 2026. “Poverty and
+Inequality Platform Methodology Handbook.” Edition 2026-03. Available at
 <a href="https://datanalytics.worldbank.org/PIP-Methodology/" class="uri">https://datanalytics.worldbank.org/PIP-Methodology/</a>.</p>
 
 </div>
@@ -221,44 +239,44 @@ Inequality Platform Methodology Handbook.” Edition 2025-06. Available at
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": true,
-"facebook": true,
-"twitter": true,
-"linkedin": true,
-"weibo": true,
-"instapaper": true,
-"vk": true,
-"whatsapp": true,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": null,
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": null,
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "subsection",
-"scroll_highlight": true
-},
-"toolbar": {
-"position": "fixed"
-},
-"info": true
+  "sharing": {
+    "github": true,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": true,
+    "weibo": true,
+    "instapaper": true,
+    "vk": true,
+    "whatsapp": true,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": null,
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection",
+    "scroll_highlight": true
+  },
+  "toolbar": {
+    "position": "fixed"
+  },
+  "info": true
 });
 });
 </script>

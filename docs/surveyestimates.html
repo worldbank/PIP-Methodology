@@ -7,7 +7,7 @@
   <title>Chapter 4 Calculating survey estimates of poverty and inequality | Poverty and Inequality Platform Methodology Handbook</title>
   <meta name="description" content="<p>This site describes how global and regional poverty rates are
 •calculated.</p>" />
-  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 Calculating survey estimates of poverty and inequality | Poverty and Inequality Platform Methodology Handbook" />
   <meta property="og:type" content="book" />
@@ -57,6 +57,21 @@
 <script src="libs/viz-1.8.2/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
 <script src="libs/grViz-binding-1.0.11/grViz.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var githubLink = document.querySelector('.book-header a[href*="github.com/worldbank/PIP-Methodology"]');
+  if (githubLink) {
+    var deepwikiLink = document.createElement("a");
+    deepwikiLink.href = "https://deepwiki.com/worldbank/PIP-Methodology";
+    deepwikiLink.target = "_blank";
+    deepwikiLink.rel = "noopener noreferrer";
+    deepwikiLink.className = githubLink.className;
+    deepwikiLink.title = "Ask DeepWiki about this handbook";
+    deepwikiLink.innerHTML = '<i class="fa fa-comments"></i>';
+    githubLink.parentNode.insertBefore(deepwikiLink, githubLink.nextSibling);
+  }
+});
+</script>
 
 
 
@@ -114,7 +129,7 @@ div.csl-indent {
 <li class="chapter" data-level="1.1" data-path="acquiring.html"><a href="acquiring.html#selection"><i class="fa fa-check"></i><b>1.1</b> Selection criteria and source of data</a></li>
 <li class="chapter" data-level="1.2" data-path="acquiring.html"><a href="acquiring.html#how-data-are-obtained"><i class="fa fa-check"></i><b>1.2</b> How data are obtained</a></li>
 <li class="chapter" data-level="1.3" data-path="acquiring.html"><a href="acquiring.html#representativeness"><i class="fa fa-check"></i><b>1.3</b> Representativeness</a></li>
-<li class="chapter" data-level="1.4" data-path="acquiring.html"><a href="acquiring.html#grouped"><i class="fa fa-check"></i><b>1.4</b> Grouped vs. unit record data</a></li>
+<li class="chapter" data-level="1.4" data-path="acquiring.html"><a href="acquiring.html#grouped"><i class="fa fa-check"></i><b>1.4</b> Grouped vs. unit-record data</a></li>
 <li class="chapter" data-level="1.5" data-path="acquiring.html"><a href="acquiring.html#imputed"><i class="fa fa-check"></i><b>1.5</b> Multiple imputed micro data</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="welfareaggregate.html"><a href="welfareaggregate.html"><i class="fa fa-check"></i><b>2</b> Constructing welfare aggregates</a>
@@ -183,16 +198,19 @@ div.csl-indent {
 <h1><span class="header-section-number">Chapter 4</span> Calculating survey estimates of poverty and inequality<a href="surveyestimates.html#surveyestimates" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="monetarypoverty" class="section level2 hasAnchor" number="4.1">
 <h2><span class="header-section-number">4.1</span> Monetary poverty measures<a href="surveyestimates.html#monetarypoverty" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Armed with welfare distributions expressed in 2021 PPPs and an international poverty line, poverty and inequality can be calculated and compared across countries and over time. The poverty and inequality measures used in the Poverty and Equity Platform (PIP) are mainly based on formula in <span class="citation">Haughton and Khandker (<a href="#ref-haughton2009">2009</a>)</span>. In the formulas below we abstract from household weights for simplicity.</p>
+<p>Armed with welfare distributions expressed in 2021 PPPs and an international poverty line, poverty and inequality can be calculated and compared across countries and over time. The poverty and inequality measures used in the Poverty and Equity Platform (PIP) are mainly based on a formula in <span class="citation">Haughton and Khandker (<a href="#ref-haughton2009">2009</a>)</span>. In the formulas below we abstract from household weights for simplicity.</p>
 <p><strong>Poverty headcount ratio</strong>: The poverty headcount ratio (<span class="math inline">\(P_0\)</span>) measures the proportion of the population that is counted as poor. When using micro data, the poverty headcount ratio is obtained using the following expression:<span class="math display">\[ P_0 = \frac{1}{N} \sum_{i=1}^{N} I (y_i &lt; z), \]</span></p>
 <p>where <span class="math inline">\(N\)</span> is the total population size, <span class="math inline">\(y_i\)</span> is the welfare of individual <span class="math inline">\(i\)</span>, <span class="math inline">\(z\)</span> is the poverty line, and <span class="math inline">\(I(.)\)</span> is an indicator function that takes on the value 1 if the bracketed expression is true or 0 otherwise. You can find the source code where this calculation is carried out <a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R">here</a>.</p>
+<p><strong>Societal poverty headcount ratio</strong>: The societal poverty headcount ratio reflects a more relative concept of poverty. With the 2021 PPPs, the societal poverty line (<span class="math inline">\(z_{sp}\)</span>) is defined as</p>
+<p><span class="math display">\[ z_{sp} = max($3.00,$1.30+0.5*median) \]</span></p>
+<p>That is, the societal poverty line is defined as $1.30 plus half the median level of consumption in a country, or the international poverty line if $1.30 plus half the median level of consumption is lower than the international poverty line <span class="citation">(<a href="#ref-jolliffe2024a">Jolliffe et al. 2024</a>; <a href="#ref-jolliffe2025">Foster et al. 2025</a>)</span>. This line increases as a country grows (and the median increases). The societal poverty headcount ratio is simply the poverty headcount ratio using <span class="math inline">\(z_{sp}\)</span> as the poverty line.</p>
 <p><strong>Poverty gap index</strong>: The poverty gap index (<span class="math inline">\(P_1\)</span>) is a measure that adds up the extent to which individuals on average fall below the poverty line (i.e. the depth of poverty), and expresses it as a percentage of the poverty line. The poverty gap index is obtained from micro data with the following expression (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R">source code</a>):</p>
 <p><span class="math display">\[ P_1 = \frac{1}{N} \sum_{i=1}^{N} \frac{G_i}{z} \]</span>with <span class="math inline">\(G_i = (z - y_i) × I (y_i &lt; z)\)</span>, where <span class="math inline">\(G_i\)</span> is defined as the poverty gap (i.e. poverty line (<span class="math inline">\(z\)</span>) less welfare (<span class="math inline">\(y_i\)</span>)) of poor individuals; the gap is considered to be zero for everyone else.</p>
 <p><strong>Poverty severity index</strong>: The poverty severity index (<span class="math inline">\(P_2\)</span>) is a measure of the weighted sum of poverty gaps (as a proportion of the poverty line), where the weights are the proportionate poverty gaps themselves. The poverty severity index is obtained from micro data with the following expression (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R">source code</a>):</p>
 <p><span class="math display">\[ P_2 = \frac{1}{N} \sum_{i=1}^{N} \left(\frac{G_i}{z} \right)^2 \]</span></p>
 <p>with all variables defined as before. Also known as the squared poverty gap index, the poverty severity index accounts for inequality among the poor.</p>
 <p><strong>The Watts index</strong>: The Watts index (<span class="math inline">\(W\)</span>) is also an inequality-sensitive poverty measure that is given as (<a href="https://github.com/PIP-Technical-Team/wbpip/blob/master/R/md_compute_poverty_stats.R">source code</a>):</p>
-<p><span class="math display">\[ W  = \frac{1}{N} \sum_{i=1}^{q} ln \left(\frac{z}{y_i} \right), \]</span></p>
+<p><span class="math display">\[ W  = \frac{1}{N} \sum_{i=1}^{q} \ln \left(\frac{z}{y_i} \right), \]</span></p>
 <p>where the <span class="math inline">\(N\)</span> individuals of the population are indexed in ascending order of welfare, and the sum is taken over <span class="math inline">\(q\)</span> individuals whose welfare, <span class="math inline">\(y_i\)</span>, falls below the poverty line <span class="math inline">\(z\)</span>.</p>
 </div>
 <div id="mpm" class="section level2 hasAnchor" number="4.2">
@@ -202,8 +220,8 @@ div.csl-indent {
 <table>
 <colgroup>
 <col width="25%" />
-<col width="68%" />
-<col width="6%" />
+<col width="50%" />
+<col width="25%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -275,11 +293,12 @@ Y \left[\frac{n}{2}\right] &amp; \text{if $n$ is even} \\
    \left(Y\left[\frac{n - 1}{2} \right] + Y \left[\frac{n + 1}{2} \right]\right) &amp;  \text{if $n$ is odd}
 \end{cases}
 \]</span></p>
-<p>where <span class="math inline">\(Y\)</span> is the ordered list of welfare per capita in the sample, and <span class="math inline">\(n\)</span> is the sample size..</p>
+<p>where <span class="math inline">\(Y\)</span> is the ordered list of welfare per capita in the sample, and <span class="math inline">\(n\)</span> is the sample size.</p>
 <p><strong>Decile shares</strong>:</p>
 <p>Imagine that we order all households according to their welfare per capita, such that the first decile contains the 10% of the population with the lowest welfare and so on. Decile shares measure the share of total welfare belonging to each decile. Formally, the decile share of decile <span class="math inline">\(d\)</span> is given by:</p>
 <p><span class="math display">\[ decileshare_d= \frac{\sum_{i \in d} {y_i}}{\sum_{i=1}^{N} {y_i}} ,  d \in \{1,2,..,10 \} \]</span></p>
-<p><strong>Prosperity gap</strong> The prosperity gap (PG) is the average factor by which incomes fall short of a prosperity standard of $28 per person per day (expressed in 2021 PPP dollars) (<span class="citation">Kraay et al. (<a href="#ref-kraay2023">2023</a>)</span> and <span class="citation">Foster et al. (<a href="#ref-jolliffe2025">2025</a>)</span>). It is given by:</p>
+<p><strong>Prosperity gap</strong></p>
+<p>The prosperity gap (PG) is the average factor by which incomes fall short of a prosperity standard of $28 per person per day (expressed in 2021 PPP dollars) (<span class="citation">Kraay et al. (<a href="#ref-kraay2023">2023</a>)</span> and <span class="citation">Foster et al. (<a href="#ref-jolliffe2025">2025</a>)</span>). It is given by:</p>
 <p><span class="math display">\[ PG  = \frac{1}{N} \sum_{i=1}^{N} \frac{28}{y_i}. \]</span> For a person whose welfare is <span class="math inline">\(\$2.80\)</span> per day, this ratio is <span class="math inline">\(10\)</span>, meaning that their welfare falls short of the prosperity standard by a factor of <span class="math inline">\(10\)</span>. This measure unambiguously gives greater weight to poorer people. The poorest person with daily welfare equal to <span class="math inline">\(\$2.80\)</span> gets twice the weight of a person with twice the welfare (at <span class="math inline">\(\$5.60\)</span>), and ten times the weight of a person with ten times higher welfare (at <span class="math inline">\(\$28\)</span>).</p>
 <p><strong>Shared prosperity</strong></p>
 <p>Shared prosperity measures the extent to which welfare growth is inclusive by focusing on growth of the population at the bottom of the distribution. It is defined as the annualized growth rate of mean household per capita welfare of the bottom 40%. Promoting shared prosperity is one of the twin goals of the World Bank Group together with eradicating extreme poverty. The selection of the bottom 40% is a compromise between competing considerations; the bottom 40% still focuses on the bottom of the distribution but is not too small that it risks introducing measurement errors.</p>
@@ -300,7 +319,7 @@ Y \left[\frac{n}{2}\right] &amp; \text{if $n$ is even} \\
 <p><strong>Percentiles database</strong></p>
 <p>The <a href="https://datacatalog.worldbank.org/int/search/dataset/0063646">percentiles database</a> reports 100 points ranked according to the consumption or income distributions for each survey data available in PIP.</p>
 <p>Each percentile distribution reports 100 points per country per survey year ranked from the smallest income (percentile 1) to the largest (percentile 100). For each percentile, the database reports the following variables: The average welfare within the percentile group (avg_welfare); the value for the upper threshold of the percentile group (quantile); the share of the population in the percentile group (which might deviate slightly from 1% due to coarseness in the raw data) (pop_share); and the share of income held by each percentile group (welfare_share). In addition, the database reports the welfare measure (welfare_type) used in the survey data — income or consumption — and the region covered (reporting_level) - urban, rural, or national. The database can be merged with the PIP data using the country_code, reporting_level, year, and welfare_type variables.</p>
-<p>For surveys with access to the microdata and for distributions based on binned data, the Stata quantiles function is used to allocate the survey population into 100 equally sized percentiles. The income and consumption averages, thresholds, and shares of each percentile is derived using the population and their income or consumption in each bin. The quantiles function to bin the distribution is used consistently throughout PIP when bins are necessary. For instance, the same approach is used to derive the 400 bins from LIS data.</p>
+<p>For surveys with access to the microdata and for distributions based on binned data, the Stata quantiles function is used to allocate the survey population into 100 equally sized percentiles. The income and consumption averages, thresholds, and shares of each percentile is derived using the population and their income or consumption in each bin. The quantiles function to bin the distribution is used consistently throughout PIP when bins are necessary. For instance, the same approach is used to derive the 1000 bins from LIS data.</p>
 
 </div>
 </div>
@@ -317,6 +336,9 @@ Haddad, Cameron Nadim, Daniel Gerszon Mahler, Carolina Diaz-Bonilla, Ruth Hill, 
 </div>
 <div id="ref-haughton2009" class="csl-entry">
 Haughton, Jonathan, and Shahidur R Khandker. 2009. <em>Handbook on Poverty and Inequality</em>. World Bank Publications. <a href="https://openknowledge.worldbank.org/handle/10986/11985">https://openknowledge.worldbank.org/handle/10986/11985</a>.
+</div>
+<div id="ref-jolliffe2024a" class="csl-entry">
+Jolliffe, Dean, Daniel Gerszon Mahler, Christoph Lakner, Aziz Atamanov, and Samuel Kofi Tetteh Baah [randomized order]. 2024. <span>“Poverty and Prices: Assessing the Impact of the 2017 PPPs on the International Poverty Line and Global Poverty.”</span> <em>The World Bank Economic Review</em>, no. 9941. <a href="https://doi.org10.1093/wber/lhae0351">https://doi.org10.1093/wber/lhae0351</a>.
 </div>
 <div id="ref-kraay2023" class="csl-entry">
 Kraay, Aart, Benoit Decerf, Dean Jolliffe, Christoph Lakner, Berk Ozler, Olivier Sterck, and Nishant Yonzan. 2023. <span>“A New Distribution Sensitive Index for Measuring Welfare, Poverty, and Inequality.”</span> <em>World <span>B</span>ank <span>P</span>olicy <span>R</span>esearch <span>W</span>orking <span>P</span>aper</em> 10470. <a href="https://documents1.worldbank.org/curated/en/099934305302318791/pdf/IDU0325015fc0a4d6046420afe405cb6b6a87b0b.pdf">https://documents1.worldbank.org/curated/en/099934305302318791/pdf/IDU0325015fc0a4d6046420afe405cb6b6a87b0b.pdf</a>.
@@ -351,44 +373,44 @@ World Bank. 2018. <em>Poverty and Shared Prosperity 2018: Piecing Together the P
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": true,
-"facebook": true,
-"twitter": true,
-"linkedin": true,
-"weibo": true,
-"instapaper": true,
-"vk": true,
-"whatsapp": true,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": null,
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": null,
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "subsection",
-"scroll_highlight": true
-},
-"toolbar": {
-"position": "fixed"
-},
-"info": true
+  "sharing": {
+    "github": true,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": true,
+    "weibo": true,
+    "instapaper": true,
+    "vk": true,
+    "whatsapp": true,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": null,
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection",
+    "scroll_highlight": true
+  },
+  "toolbar": {
+    "position": "fixed"
+  },
+  "info": true
 });
 });
 </script>

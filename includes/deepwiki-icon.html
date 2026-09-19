@@ -1,0 +1,15 @@
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var githubLink = document.querySelector('.book-header a[href*="github.com/worldbank/PIP-Methodology"]');
+  if (githubLink) {
+    var deepwikiLink = document.createElement("a");
+    deepwikiLink.href = "https://deepwiki.com/worldbank/PIP-Methodology";
+    deepwikiLink.target = "_blank";
+    deepwikiLink.rel = "noopener noreferrer";
+    deepwikiLink.className = githubLink.className;
+    deepwikiLink.title = "Ask DeepWiki about this handbook";
+    deepwikiLink.innerHTML = '<i class="fa fa-comments"></i>';
+    githubLink.parentNode.insertBefore(deepwikiLink, githubLink.nextSibling);
+  }
+});
+</script>

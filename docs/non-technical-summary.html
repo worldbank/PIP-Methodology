@@ -7,7 +7,7 @@
   <title>Non-technical summary | Poverty and Inequality Platform Methodology Handbook</title>
   <meta name="description" content="<p>This site describes how global and regional poverty rates are
 •calculated.</p>" />
-  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Non-technical summary | Poverty and Inequality Platform Methodology Handbook" />
   <meta property="og:type" content="book" />
@@ -57,6 +57,21 @@
 <script src="libs/viz-1.8.2/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
 <script src="libs/grViz-binding-1.0.11/grViz.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var githubLink = document.querySelector('.book-header a[href*="github.com/worldbank/PIP-Methodology"]');
+  if (githubLink) {
+    var deepwikiLink = document.createElement("a");
+    deepwikiLink.href = "https://deepwiki.com/worldbank/PIP-Methodology";
+    deepwikiLink.target = "_blank";
+    deepwikiLink.rel = "noopener noreferrer";
+    deepwikiLink.className = githubLink.className;
+    deepwikiLink.title = "Ask DeepWiki about this handbook";
+    deepwikiLink.innerHTML = '<i class="fa fa-comments"></i>';
+    githubLink.parentNode.insertBefore(deepwikiLink, githubLink.nextSibling);
+  }
+});
+</script>
 
 
 
@@ -114,7 +129,7 @@ div.csl-indent {
 <li class="chapter" data-level="1.1" data-path="acquiring.html"><a href="acquiring.html#selection"><i class="fa fa-check"></i><b>1.1</b> Selection criteria and source of data</a></li>
 <li class="chapter" data-level="1.2" data-path="acquiring.html"><a href="acquiring.html#how-data-are-obtained"><i class="fa fa-check"></i><b>1.2</b> How data are obtained</a></li>
 <li class="chapter" data-level="1.3" data-path="acquiring.html"><a href="acquiring.html#representativeness"><i class="fa fa-check"></i><b>1.3</b> Representativeness</a></li>
-<li class="chapter" data-level="1.4" data-path="acquiring.html"><a href="acquiring.html#grouped"><i class="fa fa-check"></i><b>1.4</b> Grouped vs. unit record data</a></li>
+<li class="chapter" data-level="1.4" data-path="acquiring.html"><a href="acquiring.html#grouped"><i class="fa fa-check"></i><b>1.4</b> Grouped vs. unit-record data</a></li>
 <li class="chapter" data-level="1.5" data-path="acquiring.html"><a href="acquiring.html#imputed"><i class="fa fa-check"></i><b>1.5</b> Multiple imputed micro data</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="welfareaggregate.html"><a href="welfareaggregate.html"><i class="fa fa-check"></i><b>2</b> Constructing welfare aggregates</a>
@@ -181,7 +196,9 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="non-technical-summary" class="section level1 unnumbered hasAnchor">
 <h1>Non-technical summary<a href="non-technical-summary.html#non-technical-summary" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>This page summarizes the methodology in non-technical terms using five steps. The summary is followed by five chapters that dig into these steps in detail.</p>
+<p>This page summarizes the methodology in non-technical terms using five
+steps. The summary is followed by five chapters that dig into these
+steps in detail.</p>
 <p>The five steps are illustrated in the figure below and summarized after
 the figure. First, household survey data are obtained from relevant
 sources. Second, the survey data are used to create an estimate of
@@ -192,8 +209,8 @@ Fourth, poverty and inequality are estimated for a particular country
 for a particular year. Fifth, the estimates of poverty are extrapolated
 or interpolated to a common year and the population-weighted poverty
 rate is calculated.</p>
-<div id="htmlwidget-92f7a3eafb1565a3b739" style="width:672px;height:500px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-92f7a3eafb1565a3b739">{"x":{"diagram":"digraph {\n  graph [layout = dot, rankdir = TD]\n  \n  node [shape = box,style=filled, color=lightblue2]        \n  box1 [label = \"Step 1\nAcquiring household survey data\"]\n  box2 [label = \"Step 2\nConstructing welfare aggregates\"]\n  box3 [label = \"Step 3\nConverting welfare aggregates\"]\n  box4 [label = \"Step 4\nCalculating survey estimates of poverty and inequality\"]\n  box5 [label = \"Step 5\nCalculating global and regional poverty\"]\n  box1 -> box2 -> box3 -> box4 -> box5\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-4abdff8c606e9ad5cdd9" style="width:672px;height:500px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4abdff8c606e9ad5cdd9">{"x":{"diagram":"digraph {\n  graph [layout = dot, rankdir = TD]\n  \n  node [shape = box,style=filled, color=lightblue2]        \n  box1 [label = \"Step 1\nAcquiring household survey data\"]\n  box2 [label = \"Step 2\nConstructing welfare aggregates\"]\n  box3 [label = \"Step 3\nConverting welfare aggregates\"]\n  box4 [label = \"Step 4\nCalculating survey estimates of poverty and inequality\"]\n  box5 [label = \"Step 5\nCalculating global and regional poverty\"]\n  box1 -> box2 -> box3 -> box4 -> box5\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <div id="step-1-acquiring-household-survey-data" class="section level2 unnumbered hasAnchor">
 <h2>Step 1: <a href="acquiring.html#acquiring">Acquiring household survey data</a><a href="non-technical-summary.html#step-1-acquiring-household-survey-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Poverty rates are estimated from <a href="acquiring.html#selection">selected</a> household
@@ -208,9 +225,8 @@ Statistics on Income and Living Conditions
 (EU-SILC)</a>
 or from the <a href="https://www.lisdatacenter.org">Luxembourg Income Study (LIS)
 Database</a>. At times, household-level data
-cannot be obtained in which case, as a second best,
-<a href="acquiring.html#grouped">aggregated</a> data are used, such as income or consumption by
-population deciles.</p>
+cannot be obtained in which case, as second best, <a href="acquiring.html#grouped">aggregated</a>
+data are used, such as income or consumption by population deciles.</p>
 </div>
 <div id="step-2-constructing-welfare-aggregates" class="section level2 unnumbered hasAnchor">
 <h2>Step 2: <a href="welfareaggregate.html#welfareaggregate">Constructing welfare aggregates</a><a href="non-technical-summary.html#step-2-constructing-welfare-aggregates" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -223,9 +239,9 @@ aggregates are harmonized across countries and over time to maximize
 issues such as <a href="welfareaggregate.html#incomeorconsumption">whether income or consumption is
 used</a>, <a href="welfareaggregate.html#questionnaire">the design of the
 questionnaire</a> of the household survey, what <a href="welfareaggregate.html#imputedrent">components
-that are included</a> in the welfare aggregate, and whether
-<a href="welfareaggregate.html#spatialtemporal">price differences within a country</a> are accounted
-for, imply that full comparability is not feasible.</p>
+are included</a> in the welfare aggregate, and whether <a href="welfareaggregate.html#spatialtemporal">price
+differences within a country</a> are accounted for, imply
+that full comparability is not feasible.</p>
 </div>
 <div id="step-3-converting-welfare-aggregates" class="section level2 unnumbered hasAnchor">
 <h2>Step 3: <a href="convert.html#convert">Converting welfare aggregates</a><a href="non-technical-summary.html#step-3-converting-welfare-aggregates" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -261,12 +277,11 @@ other years. The extrapolations assume that everyone’s income or
 consumption grows in parallel with per capita growth rates from
 <a href="lineupestimates.html#nationalaccounts">national accounts</a> between the time of the survey
 and the year in question. For <a href="lineupestimates.html#nodata">countries without any household
-data</a> at all, it is assumed that their poverty rate is equal to
-the population-weighted average poverty rate in their
-<a href="lineupestimates.html#regionsandcountries">region</a>. To ensure the quality of the regional
-and global numbers, <a href="lineupestimates.html#coverage">coverage rules</a> are used to determine
-whether a particular reference year has sufficient nearby survey data
-for global and regional numbers to be presented.</p>
+data</a> at all, welfare distributions are predicted from a
+handful of variables. To ensure the quality of the regional and global
+numbers, <a href="lineupestimates.html#coverage">coverage rules</a> are used to determine whether a
+particular reference year has sufficient nearby survey data for global
+and regional numbers to be presented.</p>
 
 </div>
 </div>
@@ -290,44 +305,44 @@ for global and regional numbers to be presented.</p>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": true,
-"facebook": true,
-"twitter": true,
-"linkedin": true,
-"weibo": true,
-"instapaper": true,
-"vk": true,
-"whatsapp": true,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": null,
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": null,
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "subsection",
-"scroll_highlight": true
-},
-"toolbar": {
-"position": "fixed"
-},
-"info": true
+  "sharing": {
+    "github": true,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": true,
+    "weibo": true,
+    "instapaper": true,
+    "vk": true,
+    "whatsapp": true,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": null,
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection",
+    "scroll_highlight": true
+  },
+  "toolbar": {
+    "position": "fixed"
+  },
+  "info": true
 });
 });
 </script>
