@@ -1,0 +1,250 @@
+{
+  "version": 1,
+  "locale": "en_US",
+  "platform": "4.3.2",
+  "metadata": {
+    "appmode": "static",
+    "primary_rmd": null,
+    "primary_html": "index.html",
+    "content_category": null,
+    "has_parameters": false
+  },
+  "packages": null,
+  "files": {
+    "404.html": {
+      "checksum": "e9df0e8f36c96aee8fc8ba80657fb42b"
+    },
+    "acquiring.html": {
+      "checksum": "1dbabe5b4235abc86ffe0e466e89d073"
+    },
+    "convert.html": {
+      "checksum": "b6c326380924491f3d9c590ed793932e"
+    },
+    "figures/ETHdist_example.png": {
+      "checksum": "a1675da66b2f141d62b77074e6865b10"
+    },
+    "figures/GHA_example.png": {
+      "checksum": "fe8cffe88c32f5062513ada14c6f4f9d"
+    },
+    "figures/Income consumption decision tree.svg": {
+      "checksum": "5cc7b20f956caf6922b46692934c5c85"
+    },
+    "figures/SDN_example.png": {
+      "checksum": "e475ef58ffb12eecbf3e8bc6b98796fc"
+    },
+    "figures/WB-PIP-E-vertical-RGB-med.png": {
+      "checksum": "e8dcafe6c18e960a8159dbe993f85cff"
+    },
+    "index.html": {
+      "checksum": "dedcf3453c56959b190e9c6b4fa74c07"
+    },
+    "libs/_Bitter-0.4.0/font.css": {
+      "checksum": "54c401232255bb28cf398691a6364d16"
+    },
+    "libs/_Bitter-0.4.0/raxhHiqOu8IVPmnRc6SY1KXhnF_Y8XbfCLw.woff": {
+      "checksum": "c7ce087d3a63ae173f355fffcca0498d"
+    },
+    "libs/_Sen-0.4.0/6xKjdSxYI9_HmA.woff": {
+      "checksum": "89b4f16af3741e7c1fe9eaa3fc298c63"
+    },
+    "libs/_Sen-0.4.0/font.css": {
+      "checksum": "edb2defe0066a8d1a0c65dbfa58173bb"
+    },
+    "libs/anchor-sections-1.0.1/anchor-sections.css": {
+      "checksum": "b3d5239b4e9c555e9810348a88a2128a"
+    },
+    "libs/anchor-sections-1.0.1/anchor-sections.js": {
+      "checksum": "fe670a73ed88b0ae14b690cb867853d9"
+    },
+    "libs/anchor-sections-1.1.0/anchor-sections-hash.css": {
+      "checksum": "cc71c646c089ba898bbfdc599c3b08a1"
+    },
+    "libs/anchor-sections-1.1.0/anchor-sections.css": {
+      "checksum": "fd81c56ce3a57e25675af031c4559784"
+    },
+    "libs/anchor-sections-1.1.0/anchor-sections.js": {
+      "checksum": "1884622a348633e8b7d5db59a84b5df9"
+    },
+    "libs/Bitter-0.4.2/font.css": {
+      "checksum": "54c401232255bb28cf398691a6364d16"
+    },
+    "libs/Bitter-0.4.2/raxhHiqOu8IVPmnRc6SY1KXhnF_Y8XbfCLw.woff": {
+      "checksum": "c7ce087d3a63ae173f355fffcca0498d"
+    },
+    "libs/Bitter-0.4.3/font.css": {
+      "checksum": "54c401232255bb28cf398691a6364d16"
+    },
+    "libs/Bitter-0.4.3/raxhHiqOu8IVPmnRc6SY1KXhnF_Y8XbfCLw.woff": {
+      "checksum": "e67ded80a2cd703b8c8aeb139703dd67"
+    },
+    "libs/bootstrap-4.6.0/bootstrap.bundle.min.js": {
+      "checksum": "782dfc8f51e9d722ac9bfd9b38117eb5"
+    },
+    "libs/bootstrap-4.6.0/bootstrap.min.css": {
+      "checksum": "54e2c2dfc6a1827893da056f39bfddde"
+    },
+    "libs/bootstrap-4.6.0/fonts/bootstrap/glyphicons-halflings-regular.eot": {
+      "checksum": "f4769f9bdb7466be65088239c12046d1"
+    },
+    "libs/bootstrap-4.6.0/fonts/bootstrap/glyphicons-halflings-regular.svg": {
+      "checksum": "f721466883998665b87923b92dea655b"
+    },
+    "libs/bootstrap-4.6.0/fonts/bootstrap/glyphicons-halflings-regular.ttf": {
+      "checksum": "e18bbf611f2a2e43afc071aa2f4e1512"
+    },
+    "libs/bootstrap-4.6.0/fonts/bootstrap/glyphicons-halflings-regular.woff": {
+      "checksum": "fa2772327f55d8198301fdb8bcfc8158"
+    },
+    "libs/bootstrap-4.6.0/fonts/bootstrap/glyphicons-halflings-regular.woff2": {
+      "checksum": "448c34a56d699c29117adc64c43affeb"
+    },
+    "libs/bs3compat-0.2.5.1/bs3compat.js": {
+      "checksum": "77dcfd1235104641fbcece4bf6e4251d"
+    },
+    "libs/bs3compat-0.2.5.1/tabs.js": {
+      "checksum": "0f9d67729ea2ac288530a183607be3a4"
+    },
+    "libs/bs3compat-0.4.1/bs3compat.js": {
+      "checksum": "9ef08069ba4f3c5c4402079e00904f2d"
+    },
+    "libs/bs3compat-0.4.1/tabs.js": {
+      "checksum": "aaaef68eafbd51ddca965393e153e5cd"
+    },
+    "libs/bs3compat-0.4.1/transition.js": {
+      "checksum": "920e52f83d89c13c625149603c30b6cd"
+    },
+    "libs/bs4_book-1.0.0/bs4_book.css": {
+      "checksum": "f1137aa8bb80f9cf350341bd9aa24e2c"
+    },
+    "libs/bs4_book-1.0.0/bs4_book.js": {
+      "checksum": "18b067762655abdbb68d07962bea531c"
+    },
+    "libs/DiagrammeR-styles-0.2/styles.css": {
+      "checksum": "4c6828671350452fdcb46bf28af7f42a"
+    },
+    "libs/gitbook-2.6.7/css/fontawesome/fontawesome-webfont.ttf": {
+      "checksum": "b06871f281fee6b241d60582ae9369b9"
+    },
+    "libs/gitbook-2.6.7/css/plugin-bookdown.css": {
+      "checksum": "511b32706d0828b46237a7cdebf52126"
+    },
+    "libs/gitbook-2.6.7/css/plugin-clipboard.css": {
+      "checksum": "e4a3bdc1e3d5590f47cbac67976f3961"
+    },
+    "libs/gitbook-2.6.7/css/plugin-fontsettings.css": {
+      "checksum": "ddba6e8649d659db2ca0e963ee4b76fb"
+    },
+    "libs/gitbook-2.6.7/css/plugin-highlight.css": {
+      "checksum": "bd8308dfb2f6b1f91838d5c6186138e1"
+    },
+    "libs/gitbook-2.6.7/css/plugin-search.css": {
+      "checksum": "0d7a6bb6a50e00c7358cf61027f099f0"
+    },
+    "libs/gitbook-2.6.7/css/plugin-table.css": {
+      "checksum": "8cb82f94ce1446fa4bafe7a3933e6c65"
+    },
+    "libs/gitbook-2.6.7/css/style.css": {
+      "checksum": "8ca22ea18b283f8df1cdd191c2c6646f"
+    },
+    "libs/gitbook-2.6.7/js/app.min.js": {
+      "checksum": "395a8093ce46450cabfaa545a0705a3b"
+    },
+    "libs/gitbook-2.6.7/js/clipboard.min.js": {
+      "checksum": "be72101c8c16ba95fd8b69760d5ebc56"
+    },
+    "libs/gitbook-2.6.7/js/jquery.highlight.js": {
+      "checksum": "999424d32e03b9857098d2c7f53928c2"
+    },
+    "libs/gitbook-2.6.7/js/lunr.js": {
+      "checksum": "eedbf928d7385cf997a1488eafdcec55"
+    },
+    "libs/gitbook-2.6.7/js/plugin-bookdown.js": {
+      "checksum": "36b5487b9c1020c0de1352b8f26b8a8e"
+    },
+    "libs/gitbook-2.6.7/js/plugin-clipboard.js": {
+      "checksum": "1b9c02dda66377b4fe429c85b58efd6e"
+    },
+    "libs/gitbook-2.6.7/js/plugin-fontsettings.js": {
+      "checksum": "70f0867847e1a973320a799265debaf6"
+    },
+    "libs/gitbook-2.6.7/js/plugin-search.js": {
+      "checksum": "a906e04e1fc7aa9e057f3de4668f4a68"
+    },
+    "libs/gitbook-2.6.7/js/plugin-sharing.js": {
+      "checksum": "e2b65328457b1e2b16c46a0fd4f2852c"
+    },
+    "libs/grViz-binding-1.0.10/grViz.js": {
+      "checksum": "a65f484632c13a3b6fd6395d88e60975"
+    },
+    "libs/grViz-binding-1.0.11/grViz.js": {
+      "checksum": "7d2760fbd2e891bb1894a223be1f092f"
+    },
+    "libs/grViz-binding-1.0.8/grViz.js": {
+      "checksum": "d0363f658602dff1dd406701590c436a"
+    },
+    "libs/grViz-binding-1.0.9/grViz.js": {
+      "checksum": "a65f484632c13a3b6fd6395d88e60975"
+    },
+    "libs/header-attrs-2.11/header-attrs.js": {
+      "checksum": "44e08c1b647c0f3f4c1dc4883dec686a"
+    },
+    "libs/htmlwidgets-1.5.3/htmlwidgets.js": {
+      "checksum": "8755eb2e82c1e5ecefc2148d195d9db3"
+    },
+    "libs/htmlwidgets-1.5.4/htmlwidgets.js": {
+      "checksum": "bdf632c099bd36f4d8a4948190aff386"
+    },
+    "libs/htmlwidgets-1.6.2/htmlwidgets.js": {
+      "checksum": "8688885dcbe5e6589b275ff4ecf5da64"
+    },
+    "libs/htmlwidgets-1.6.4/htmlwidgets.js": {
+      "checksum": "237f59bc086ccf24f39be55311023b91"
+    },
+    "libs/jquery-3.6.0/jquery-3.6.0.min.js": {
+      "checksum": "8fb8fee4fcc3cc86ff6c724154c49c42"
+    },
+    "libs/Sen-0.4.2/6xKjdSxYI9_HmA.woff": {
+      "checksum": "89b4f16af3741e7c1fe9eaa3fc298c63"
+    },
+    "libs/Sen-0.4.2/font.css": {
+      "checksum": "edb2defe0066a8d1a0c65dbfa58173bb"
+    },
+    "libs/Sen-0.4.3/6xKjdSxYI9_HmA.woff": {
+      "checksum": "89b4f16af3741e7c1fe9eaa3fc298c63"
+    },
+    "libs/Sen-0.4.3/font.css": {
+      "checksum": "edb2defe0066a8d1a0c65dbfa58173bb"
+    },
+    "libs/viz-1.8.2/viz.js": {
+      "checksum": "b9290abe772ea1ac5823a3bfa0844bd9"
+    },
+    "lineupestimates.html": {
+      "checksum": "99a884279cd8098c3d818e738463a4f0"
+    },
+    "non-technical-summary.html": {
+      "checksum": "3e48bc8b586404e7925350e722008191"
+    },
+    "reference-keys.txt": {
+      "checksum": "27cc1cf63475124dc50328e62838f0fa"
+    },
+    "references.html": {
+      "checksum": "a9b400d2179bf8dcbe8e76548efc767a"
+    },
+    "revisions.html": {
+      "checksum": "2adad82f52ba584ff9761741e558f8fd"
+    },
+    "search_index.json": {
+      "checksum": "b7179c4d8499d458c479d932261d1b40"
+    },
+    "suggested-citation.html": {
+      "checksum": "3387f4a7acb170f5eae01a1e22c8ffc7"
+    },
+    "surveyestimates.html": {
+      "checksum": "0a7f4c8e795a017ab39e6f2d7c5a16ab"
+    },
+    "welfareaggregate.html": {
+      "checksum": "bc35f7b1dec446aaf980bc2fa2d527d5"
+    }
+  },
+  "users": null
+}
