@@ -5,6 +5,6 @@ account: dmahler
 server: external-server
 hostUrl: https://w0lxdshyprd1c01.worldbank.org:443/__api__
 appId: 202
-bundleId: 1133
-url: https://w0lxdshyprd1c01.worldbank.org/PIP-Methodology/
+bundleId: 5247
+url: https://w0lxdshyprd1c01.worldbank.org/content/3c10056e-3822-4e73-bb88-d3e7e1872da5/
 version: 1
